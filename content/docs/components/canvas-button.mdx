@@ -1,0 +1,85 @@
+---
+title: Canvas Button
+date: 2024-03-19
+description: An artistic button component with paint-inspired styles and effects.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="canvas-button-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-button.tsx`
+
+<ComponentSource name="canvas-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Props
+
+### CanvasButton
+
+| Prop name | Type                                             | Default   | Description                 |
+| --------- | ------------------------------------------------ | --------- | --------------------------- |
+| variant   | "default" \| "watercolor" \| "oil" \| "charcoal" | "default" | The button's artistic style |
+| size      | "sm" \| "default" \| "lg"                        | "default" | The button's size           |
+| effect    | "none" \| "splash" \| "brush"                    | "none"    | The interactive effect      |
+| asChild   | boolean                                          | false     | Merge with child element    |
+| className | string                                           | -         | Additional CSS classes      |
+
+## Examples
+
+### Basic Button
+
+```tsx
+import { CanvasButton } from "@/components/ui-canvas/canvas-button";
+
+export default function Example() {
+  return <CanvasButton>Click me</CanvasButton>;
+}
+```
+
+### Artistic Styles
+
+```tsx
+<CanvasButton variant="watercolor">Watercolor</CanvasButton>
+<CanvasButton variant="oil">Oil Paint</CanvasButton>
+<CanvasButton variant="charcoal">Charcoal</CanvasButton>
+```
+
+### Interactive Effects
+
+```tsx
+<CanvasButton effect="splash">Click for Splash</CanvasButton>
+<CanvasButton effect="brush">Hover for Brush</CanvasButton>
+```
+
+### All Variants
+
+<ComponentPreview name="canvas-button-demo" />
+
+## Features
+
+The Canvas Button component brings artistic flair to your UI with:
+
+- Three distinct artistic styles: Watercolor, Oil Paint, and Charcoal
+- Interactive effects: Paint splash on click and brush stroke on hover
+- Multiple sizes and fully customizable appearance
+- Accessible and keyboard-navigable
+- Responsive and mobile-friendly
+
+## Accessibility
+
+The Canvas Button component follows WCAG guidelines:
+
+- Maintains color contrast ratios
+- Supports keyboard navigation
+- Includes focus indicators
+- Works with screen readers

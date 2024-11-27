@@ -1,4 +1,4 @@
-<!-- # Contributing to UI Canvas
+# Contributing to UI Canvas
 
 Thank you for your interest in contributing to UI Canvas! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to UI Canvas.
 
@@ -232,4 +232,4 @@ The CLI in development uses index.json from default `3000` port on localhost. Ot
 
 ## Ask for Help
 
-For any help or questions, please open a new GitHub issue. -->
+For any help or questions, please open a new GitHub issue.
