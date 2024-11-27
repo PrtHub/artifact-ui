@@ -16,10 +16,32 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "color-palette": {
+      name: "color-palette",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/color-palette.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/color-palette.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "color-palette-demo": {
+      name: "color-palette-demo",
+      type: "registry:example",
+      registryDependencies: ["color-palette"],
+      files: ["registry/default/example/color-palette-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/color-palette-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
-      registryDependencies: undefined,
+      registryDependencies: ["canvas-button"],
       files: ["registry/default/example/canvas-button-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-button-demo.tsx")),
       source: "",

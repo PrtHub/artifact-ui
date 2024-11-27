@@ -8,4 +8,10 @@ export const ui: Registry = [
     files: ["ui-canvas/canvas-button.tsx"],
     registryDependencies: [],
   },
+  {
+    name: "color-palette",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority"],
+    files: ["ui-canvas/color-palette.tsx"],
+  },
 ];

@@ -1,0 +1,81 @@
+---
+title: Color Palette
+date: 2024-03-19
+description: A collection of artistic color palettes inspired by different mediums.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="color-palette-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/color-palette.tsx`
+
+<ComponentSource name="color-palette" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Props
+
+### ColorPalette
+
+| Prop name | Type                                                              | Default      | Description                       |
+| --------- | ----------------------------------------------------------------- | ------------ | --------------------------------- |
+| variant   | "watercolor" \| "oilpaint" \| "charcoal" \| "pastel" \| "acrylic" | "watercolor" | The artistic style of the palette |
+| showNames | boolean                                                           | true         | Show color group names            |
+| className | string                                                            | -            | Additional CSS classes            |
+
+## Examples
+
+### Basic Palette
+
+```tsx
+import { ColorPalette } from "@/registry/default/ui-canvas/color-palette";
+
+export default function Example() {
+  return <ColorPalette variant="watercolor" />;
+}
+```
+
+### Without Names
+
+```tsx
+<ColorPalette variant="oilpaint" showNames={false} />
+```
+
+## Features
+
+The Color Palette component provides:
+
+- Five distinct artistic styles: Watercolor, Oil Paint, Charcoal, Pastel, and Acrylic
+- Three color groups per palette: Primary, Secondary, and Accent
+- Three shades per color group
+- Hover effects to display color codes
+- Responsive and mobile-friendly design
+- Customizable appearance through className prop
+
+## Color Schemes
+
+Each palette variant includes carefully curated colors that reflect the characteristics of their respective artistic mediums:
+
+- **Watercolor**: Soft, flowing blues and purples with aqua accents
+- **Oil Paint**: Rich, warm oranges and reds with deep undertones
+- **Charcoal**: Monochromatic grays with subtle variations
+- **Pastel**: Light, airy pinks and peaches with sunny accents
+- **Acrylic**: Vibrant greens and teals with bright highlights
+
+## Accessibility
+
+The Color Palette component follows accessibility best practices:
+
+- Color codes are displayed on hover for accurate color identification
+- Sufficient contrast between text and background colors
+- Interactive elements are keyboard accessible
+- Color information is conveyed through both visual and text means

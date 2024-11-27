@@ -95,6 +95,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Color Palette",
+          href: "/docs/components/color-palette",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

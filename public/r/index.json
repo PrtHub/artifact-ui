@@ -13,5 +13,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "color-palette",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/color-palette.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
