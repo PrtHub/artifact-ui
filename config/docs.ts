@@ -8,12 +8,12 @@ interface DocsConfig {
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Getting Started",
+      title: "Documentation",
       href: "/docs",
     },
     {
       title: "Components",
-      href: "/components",
+      href: "/docs/components/canvas-button",
     },
   ],
   sidebarNav: [
