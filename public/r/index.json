@@ -26,5 +26,20 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "sketch-input",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/sketch-input.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

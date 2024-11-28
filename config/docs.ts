@@ -47,6 +47,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Sketch Input",
+          href: "/docs/components/sketch-input",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

@@ -14,4 +14,11 @@ export const ui: Registry = [
     dependencies: ["class-variance-authority"],
     files: ["ui-canvas/color-palette.tsx"],
   },
+  {
+    name: "sketch-input",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "class-variance-authority"],
+    files: ["ui-canvas/sketch-input.tsx"],
+    registryDependencies: [],
+  },
 ];

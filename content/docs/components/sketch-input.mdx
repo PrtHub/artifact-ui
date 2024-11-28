@@ -1,0 +1,159 @@
+---
+title: Sketch Input
+date: 2024-03-19
+description: An artistic input field with brushstroke backgrounds and ink-flow animations.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="sketch-input-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/sketch-input.tsx`
+
+<ComponentSource name="sketch-input" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { SketchInput } from "@/components/ui-canvas/sketch-input";
+```
+
+</Steps>
+
+## Use Cases
+
+The Sketch Input component brings artistic flair to form inputs. Here are key scenarios where it excels:
+
+1. **Creative Applications**
+
+   - Digital art tools
+   - Design software interfaces
+   - Creative writing platforms
+   - Artistic portfolio builders
+
+2. **Interactive Forms**
+
+   - Comment sections
+   - Artist feedback forms
+   - Creative project submissions
+   - Artistic collaboration tools
+
+3. **Search Interfaces**
+
+   - Art gallery search
+   - Creative asset libraries
+   - Design inspiration platforms
+   - Portfolio browsing interfaces
+
+4. **Content Creation**
+   - Blog post editors
+   - Art description fields
+   - Creative brief forms
+   - Project naming inputs
+
+## Features
+
+### Variants
+
+The component comes with three distinct variants:
+
+1. **Default**
+
+   - Clean, minimal design
+   - Subtle hover effects
+   - Perfect for general use cases
+
+2. **Brush**
+
+   - Artistic brush stroke background
+   - Gradient effects on hover
+   - Ideal for creative interfaces
+
+3. **Ink**
+   - Elegant ink-flow animation
+   - Responsive to user input
+   - Great for writing-focused interfaces
+
+### States
+
+Supports multiple states for better user feedback:
+
+- **Default**: Clean, standard input state
+- **Error**: Visual feedback for validation errors
+- **Success**: Confirmation of successful input
+
+### Ink Flow Animation
+
+The ink-flow feature provides:
+
+- Smooth animation that follows typing
+- Adjustable opacity based on focus
+- Gradient effect that responds to input length
+
+## Examples
+
+### Default Input
+
+```tsx
+<SketchInput
+  placeholder="Type something..."
+  onChange={(e) => setValue(e.target.value)}
+/>
+```
+
+### Brush Stroke Input
+
+```tsx
+<SketchInput
+  variant="brush"
+  placeholder="Paint your thoughts..."
+  onChange={(e) => setValue(e.target.value)}
+/>
+```
+
+### Ink Flow Input
+
+```tsx
+<SketchInput
+  variant="ink"
+  placeholder="Write with style..."
+  inkFlow
+  onChange={(e) => setValue(e.target.value)}
+/>
+```
+
+## Accessibility
+
+The Sketch Input component maintains full accessibility while providing artistic styling:
+
+- Fully keyboard navigable
+- Screen reader compatible
+- Clear focus indicators
+- ARIA labels support
+- High contrast states
+
+## Props
+
+### Sketch Input
+
+| Prop name | Type                              | Default   | Description               |
+| --------- | --------------------------------- | --------- | ------------------------- |
+| variant   | "default" \| "brush" \| "ink"     | "default" | The input texture style   |
+| state     | "default" \| "error" \| "success" | "default" | The validation state      |
+| inkFlow   | boolean                           | false     | Enable ink-flow animation |
+| className | string                            | -         | Additional CSS classes    |
+
+### Styling
+
+The component uses Tailwind CSS for styling with:
+
+- Dark/light mode support
+- Responsive design
+- Customizable via className
+- Consistent theming support

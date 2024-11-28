@@ -27,6 +27,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "sketch-input": {
+      name: "sketch-input",
+      type: "registry:ui",
+      registryDependencies: [],
+      files: ["registry/default/ui-canvas/sketch-input.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/sketch-input.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -44,6 +55,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-button"],
       files: ["registry/default/example/canvas-button-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-button-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sketch-input-demo": {
+      name: "sketch-input-demo",
+      type: "registry:example",
+      registryDependencies: ["sketch-input"],
+      files: ["registry/default/example/sketch-input-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/sketch-input-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

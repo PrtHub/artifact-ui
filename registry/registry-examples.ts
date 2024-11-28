@@ -13,4 +13,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-button"],
     files: ["example/canvas-button-demo.tsx"],
   },
+  {
+    name: "sketch-input-demo",
+    type: "registry:example",
+    registryDependencies: ["sketch-input"],
+    files: ["example/sketch-input-demo.tsx"],
+  },
 ];
