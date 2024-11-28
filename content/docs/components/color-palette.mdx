@@ -22,6 +22,52 @@ published: true
 
 </Steps>
 
+## Use Cases
+
+The Color Palette component is designed to enhance your application's visual design system in various scenarios:
+
+1. **Theme Customization**
+
+   - Use in theme settings or customization panels where users can select color schemes
+   - Perfect for applications with user-customizable interfaces
+   - Ideal for design tools or creative applications
+
+2. **Design System Documentation**
+
+   - Display your application's color schemes in documentation
+   - Showcase different theme variations
+   - Present brand color guidelines
+
+3. **Creative Applications**
+
+   - Art or design applications where users need to select from predefined palettes
+   - Digital painting tools where different artistic styles are available
+   - Educational platforms teaching color theory or artistic techniques
+
+4. **Mood Boards**
+   - Create dynamic mood boards with different artistic styles
+   - Present color combinations for design projects
+   - Showcase different aesthetic directions
+
+### Example Implementation
+
+```tsx
+import { ColorPalette } from "@/components/ui-canvas/color-palette";
+
+// Theme switcher example
+export function ThemeCustomizer() {
+  return (
+    <div className="space-y-4">
+      <h3>Choose Your Theme Style</h3>
+      <ColorPalette
+        variant="watercolor"
+        onChange={(colors) => updateTheme(colors)}
+      />
+    </div>
+  );
+}
+```
+
 ## Props
 
 ### ColorPalette

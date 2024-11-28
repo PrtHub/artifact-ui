@@ -22,6 +22,72 @@ published: true
 
 </Steps>
 
+## Use Cases
+
+The Canvas Button component adds artistic flair to your interface's interactive elements. Here are key scenarios where it shines:
+
+1. **Creative Platforms**
+
+   - Art portfolio websites
+   - Digital art creation tools
+   - Creative agency websites
+   - Design showcase platforms
+
+2. **Interactive Storytelling**
+
+   - Children's educational apps
+   - Interactive storybooks
+   - Game interfaces
+   - Museum or gallery websites
+
+3. **Brand Expression**
+
+   - Websites for artists
+   - Creative professional portfolios
+   - Art supply e-commerce
+   - Design-focused landing pages
+
+4. **Call-to-Action Emphasis**
+   - Newsletter signups
+   - Feature highlights
+   - Special promotions
+   - Contact forms
+
+### Variant Usage Guide
+
+- **Default**: Clean, minimal style for general use
+- **Watercolor**: Soft, flowing effects for gentle emphasis
+- **Oil**: Bold, textured look for strong visual impact
+- **Charcoal**: Dramatic, sketchy style for artistic contrast
+
+### Example Implementation
+
+```tsx
+import { CanvasButton } from "@/components/ui-canvas/canvas-button";
+
+// Portfolio contact button
+export function ContactSection() {
+  return (
+    <div className="space-y-4">
+      <h3>Get in Touch</h3>
+      <CanvasButton variant="watercolor" onClick={() => openContactForm()}>
+        Start a Project
+      </CanvasButton>
+    </div>
+  );
+}
+
+// Art gallery navigation
+export function GalleryNav() {
+  return (
+    <div className="flex gap-4">
+      <CanvasButton variant="oil">Previous Artwork</CanvasButton>
+      <CanvasButton variant="oil">Next Artwork</CanvasButton>
+    </div>
+  );
+}
+```
+
 ## Props
 
 ### CanvasButton
