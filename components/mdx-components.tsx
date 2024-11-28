@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Callout } from "@/components/callout";
-import RepoDownload from "@/components/repo-download";
+// import RepoDownload from "@/components/repo-download";
 import TechStack from "@/components/tech-stack";
 import TemplatePreview from "@/components/template-preview";
 import {
@@ -46,7 +46,7 @@ const components = {
   AccordionTrigger,
   Callout,
   TechStack,
-  RepoDownload,
+  // RepoDownload,
   TemplatePreview,
   Image,
   Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,

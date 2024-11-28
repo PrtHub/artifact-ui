@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { DiscordLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import {
   AlertTriangle,

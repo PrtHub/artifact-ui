@@ -3,7 +3,6 @@ import { compareDesc } from "date-fns";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-import TechStack from "@/components/tech-stack";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -73,38 +72,8 @@ export default async function Hero() {
               Explore Components
               <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link
-              href="https://pro.magicui.design"
-              className={cn(
-                buttonVariants({
-                  variant: "rainbow-outline",
-                  size: "lg",
-                }),
-                "group",
-              )}
-            >
-              View Templates
-              <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
         </div>
-
-        {/* Tech stack */}
-        {/* <div className="mt-16 delay-500 duration-700 animate-in fade-in slide-in-from-bottom-6">
-          <p className="mb-6 text-center text-sm font-semibold text-muted-foreground">
-            Powered by modern technologies you already love
-          </p>
-          <TechStack
-            className="mx-auto flex max-w-3xl items-center justify-between px-4"
-            technologies={[
-              "react",
-              "typescript",
-              "tailwindcss",
-              "framermotion",
-              "shadcn",
-            ]}
-          />
-        </div> */}
       </div>
     </section>
   );

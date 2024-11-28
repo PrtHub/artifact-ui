@@ -1,4 +1,3 @@
-import { StarIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
 import { CommandMenu } from "@/components/command-menu";
@@ -9,35 +8,8 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import NumberTicker from "@/registry/default/ui-canvas/number-ticker";
 
 export async function SiteHeader() {
-  let stars = 300; // Default value
-
-  try {
-    const response = await fetch(
-      "https://api.github.com/repos/magicuidesign/magicui",
-      {
-        headers: process.env.GITHUB_OAUTH_TOKEN
-          ? {
-            Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-            "Content-Type": "application/json",
-          }
-          : {},
-        next: {
-          revalidate: 3600,
-        },
-      },
-    );
-
-    if (response.ok) {
-      const data = await response.json();
-      stars = data.stargazers_count || stars; // Update stars if API response is valid
-    }
-  } catch (error) {
-    console.error("Error fetching GitHub stars:", error);
-  }
-
   return (
     <header
       className={cn(
@@ -76,23 +48,6 @@ export async function SiteHeader() {
             <CommandMenu />
           </div>
           <nav className="flex items-center gap-1">
-            <Link
-              href={siteConfig.links.discord}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {/* <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.discord className="size-4" />
-                <span className="sr-only">Discord</span>
-              </div> */}
-            </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"

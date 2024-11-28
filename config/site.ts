@@ -3,12 +3,10 @@ export const siteConfig = {
   url: "https://magicui.design",
   ogImage: "https://magicui.design/og",
   description:
-    "Beautifully designed landing page components built with React & Tailwind CSS.",
+    "UI Canvas is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion.",
   links: {
-    twitter: "https://twitter.com/magicuidesign",
-    discord: "https://discord.gg/87p2vpsat5",
-    github: "https://github.com/magicuidesign/magicui",
-    instagram: "https://instagram.com/magicuidesign/",
+    twitter: "https://x.com/PritamGhosh010",
+    github: "https://github.com/PrtHub/ui-canvas",
   },
   keywords: [
     "React",

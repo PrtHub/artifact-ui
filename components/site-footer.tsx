@@ -6,7 +6,6 @@ export function SiteFooter() {
   return (
     <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex flex-col gap-8 py-8">
-        {/* Bottom section */}
         <div className="flex flex-col items-center justify-between gap-4  md:flex-row">
           <p className="text-center text-sm text-muted-foreground">
             {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
@@ -20,15 +19,6 @@ export function SiteFooter() {
             >
               <Icons.gitHub className="size-4" />
               <span className="sr-only">GitHub</span>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <Icons.twitter className="size-4" />
-              <span className="sr-only">Twitter</span>
             </Link>
           </div>
         </div>

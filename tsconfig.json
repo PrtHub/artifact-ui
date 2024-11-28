@@ -28,7 +28,7 @@
       "@/*": [
         "./*"
       ],
-      "@/components/magicui/*": [
+      "@/components/ui-canvas/*": [
         "registry/default/ui-canvas/*"
       ],
       "@/components/example/*": [

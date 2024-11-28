@@ -8,7 +8,6 @@ import posthog from "posthog-js";
 import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
 
 export function MainNav() {
@@ -21,7 +20,6 @@ export function MainNav() {
         <span className="hidden font-bold md:inline-block">
           {siteConfig.name}
         </span>
-        {/* <Badge variant="secondary">Beta</Badge> */}
       </Link>
       <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
         {docsConfig.mainNav.map((item) => (

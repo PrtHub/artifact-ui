@@ -9,18 +9,13 @@ const nextConfig = {
     optimizeCss: true,
   },
   images: {
-    domains: ["localhost", "cdn.magicui.design"],
+    domains: ["localhost"],
   },
   async redirects() {
     return [
       {
-        source: "/discord",
-        destination: "https://discord.gg/X4BBMBjHNf",
-        permanent: true,
-      },
-      {
         source: "/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/canvas-button",
         permanent: true,
       },
       {
@@ -30,7 +25,7 @@ const nextConfig = {
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/canvas-button",
         permanent: true,
       },
       {
