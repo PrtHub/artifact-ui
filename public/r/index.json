@@ -41,5 +41,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "gallery-grid",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/gallery-grid.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -9,7 +9,16 @@ const nextConfig = {
     optimizeCss: true,
   },
   images: {
-    domains: ["localhost"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*",
+      },
+      {
+        protocol: "http",
+        hostname: "*",
+      },
+    ],
   },
   async redirects() {
     return [

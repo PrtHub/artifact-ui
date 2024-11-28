@@ -1,0 +1,186 @@
+---
+title: Gallery Grid
+date: 2024-11-28
+description: A masonry-style grid layout with artistic frame effects and smooth animations.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="gallery-grid-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/gallery-grid.tsx`
+
+<ComponentSource name="gallery-grid" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { GalleryGrid, GalleryItem } from "@/components/ui-canvas/gallery-grid";
+```
+
+</Steps>
+
+## Use Cases
+
+The Gallery Grid component creates beautiful masonry layouts perfect for:
+
+1. **Art Portfolios**
+
+   - Artist galleries
+   - Photography collections
+   - Design showcases
+   - Creative portfolios
+
+2. **Image Collections**
+
+   - Photo albums
+   - Product galleries
+   - Mood boards
+   - Inspiration walls
+
+3. **Content Displays**
+   - Blog post grids
+   - Project showcases
+   - Event galleries
+   - Team member displays
+
+## Features
+
+### Masonry Layout
+
+- Responsive column layout
+- Dynamic item sizing
+- Automatic gap handling
+- Smooth flow of content
+
+### Gallery Items
+
+- Multiple aspect ratios
+- Frame-like borders
+- Hover animations
+- Focus effects
+
+### Visual Effects
+
+- Smooth zoom transitions
+- Gradient overlays
+- Backdrop blur effects
+- Shadow animations
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<GalleryGrid columns={3} gap={4}>
+  <GalleryItem aspectRatio="square">
+    <Image src="/art1.jpg" alt="Artwork" fill className="object-cover" />
+  </GalleryItem>
+  <GalleryItem aspectRatio="portrait">
+    <Image src="/art2.jpg" alt="Artwork" fill className="object-cover" />
+  </GalleryItem>
+</GalleryGrid>
+```
+
+### With Hover Effects and Metadata
+
+```tsx
+<GalleryGrid columns={2} gap={6} hover="tilt">
+  <GalleryItem aspectRatio="landscape">
+    <Image
+      src="/art3.jpg"
+      alt="Abstract Art"
+      fill
+      className="object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+    <div className="relative z-10 space-y-2">
+      <h3 className="text-lg font-semibold text-white">Abstract Harmony</h3>
+      <p className="text-sm text-white/80">
+        A vibrant exploration of color and form
+      </p>
+    </div>
+  </GalleryItem>
+</GalleryGrid>
+```
+
+### Interactive Hover Effects
+
+```tsx
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+
+export default function GalleryDemo() {
+  const [hoverEffect, setHoverEffect] = useState<
+    "zoom" | "lift" | "tilt" | "none"
+  >("tilt");
+
+  return (
+    <div className="space-y-8">
+      <div className="flex items-center gap-4">
+        <span className="text-sm text-muted-foreground">Hover Effect:</span>
+        {(["zoom", "lift", "tilt", "none"] as const).map((effect) => (
+          <button
+            key={effect}
+            onClick={() => setHoverEffect(effect)}
+            className={cn(
+              "z-20 cursor-pointer rounded-md px-3 py-1 text-sm transition-colors",
+              hoverEffect === effect
+                ? "bg-primary text-primary-foreground"
+                : "bg-muted hover:bg-muted/80"
+            )}
+          >
+            {effect.charAt(0).toUpperCase() + effect.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      <GalleryGrid columns={2} gap={6} hover={hoverEffect}>
+        {/* Gallery items */}
+      </GalleryGrid>
+    </div>
+  );
+}
+```
+
+## Props
+
+### Gallery Grid
+
+| Prop name | Type   | Default | Description                  |
+| --------- | ------ | ------- | ---------------------------- |
+| columns   | number | 3       | Number of grid columns       |
+| gap       | number | 4       | Gap between items (in rem/4) |
+| className | string | -       | Additional CSS classes       |
+
+### Gallery Item
+
+| Prop name   | Type                                             | Default  | Description              |
+| ----------- | ------------------------------------------------ | -------- | ------------------------ |
+| aspectRatio | "square" \| "video" \| "portrait" \| "landscape" | "square" | Aspect ratio of the item |
+| className   | string                                           | -        | Additional CSS classes   |
+
+## Accessibility
+
+The Gallery Grid component maintains accessibility standards:
+
+- Proper image alt texts
+- Keyboard navigation support
+- Focus visible states
+- ARIA labels support
+- Screen reader compatibility
+
+## Styling
+
+The component uses Tailwind CSS with:
+
+- Responsive design patterns
+- Dark/light mode support
+- Customizable animations
+- Flexible layout options
+- Custom aspect ratios

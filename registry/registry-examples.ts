@@ -19,4 +19,10 @@ export const examples: Registry = [
     registryDependencies: ["sketch-input"],
     files: ["example/sketch-input-demo.tsx"],
   },
+  {
+    name: "gallery-grid-demo",
+    type: "registry:example",
+    registryDependencies: ["gallery-grid"],
+    files: ["example/gallery-grid-demo.tsx"],
+  },
 ];

@@ -39,17 +39,20 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Button",
           href: "/docs/components/canvas-button",
           items: [],
-          label: "New",
         },
         {
           title: "Color Palette",
           href: "/docs/components/color-palette",
           items: [],
-          label: "New",
         },
         {
           title: "Sketch Input",
           href: "/docs/components/sketch-input",
+          items: [],
+        },
+        {
+          title: "Gallery Grid",
+          href: "/docs/components/gallery-grid",
           items: [],
           label: "New",
         },

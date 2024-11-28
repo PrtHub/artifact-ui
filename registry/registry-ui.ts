@@ -21,4 +21,10 @@ export const ui: Registry = [
     files: ["ui-canvas/sketch-input.tsx"],
     registryDependencies: [],
   },
+  {
+    name: "gallery-grid",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/gallery-grid.tsx"],
+  },
 ];
