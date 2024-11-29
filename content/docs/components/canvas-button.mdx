@@ -12,6 +12,12 @@ published: true
 
 <Steps>
 
+<Step>Install the following dependencies in your project:</Step>
+
+```bash
+npm install @radix-ui/react-slot
+```
+
 <Step>Copy and paste the following code into your project.</Step>
 
 `components/ui-canvas/canvas-button.tsx`
@@ -20,53 +26,15 @@ published: true
 
 <Step>Update the import paths to match your project setup.</Step>
 
-```tsx
+```bash
 import { CanvasButton } from "@/components/ui-canvas/canvas-button";
 ```
 
 </Steps>
 
-## Use Cases
-
-The Canvas Button component adds artistic flair to your interface's interactive elements. Here are key scenarios where it shines:
-
-1. **Creative Platforms**
-
-   - Art portfolio websites
-   - Digital art creation tools
-   - Creative agency websites
-   - Design showcase platforms
-
-2. **Interactive Storytelling**
-
-   - Children's educational apps
-   - Interactive storybooks
-   - Game interfaces
-   - Museum or gallery websites
-
-3. **Brand Expression**
-
-   - Websites for artists
-   - Creative professional portfolios
-   - Art supply e-commerce
-   - Design-focused landing pages
-
-4. **Call-to-Action Emphasis**
-   - Newsletter signups
-   - Feature highlights
-   - Special promotions
-   - Contact forms
-
-### Variant Usage Guide
-
-- **Default**: Clean, minimal style for general use
-- **Watercolor**: Soft, flowing effects for gentle emphasis
-- **Oil**: Bold, textured look for strong visual impact
-- **Charcoal**: Dramatic, sketchy style for artistic contrast
-
 ### Example Implementation
 
-```tsx
+```bash
 import { CanvasButton } from "@/components/ui-canvas/canvas-button";
 
 // Portfolio contact button
@@ -108,7 +76,7 @@ export function GalleryNav() {
 
 ### Basic Button
 
-```tsx
+```bash
 import { CanvasButton } from "@/components/ui-canvas/canvas-button";
 
 export default function Example() {
@@ -118,7 +86,7 @@ export default function Example() {
 
 ### Artistic Styles
 
-```tsx
+```bash
 <CanvasButton variant="watercolor">Watercolor</CanvasButton>
 <CanvasButton variant="oil">Oil Paint</CanvasButton>
 <CanvasButton variant="charcoal">Charcoal</CanvasButton>
@@ -126,30 +94,7 @@ export default function Example() {
 
 ### Interactive Effects
 
-```tsx
+```bash
 <CanvasButton effect="splash">Click for Splash</CanvasButton>
 <CanvasButton effect="brush">Hover for Brush</CanvasButton>
 ```
-
-### All Variants
-
-<ComponentPreview name="canvas-button-demo" />
-
-## Features
-
-The Canvas Button component brings artistic flair to your UI with:
-
-- Three distinct artistic styles: Watercolor, Oil Paint, and Charcoal
-- Interactive effects: Paint splash on click and brush stroke on hover
-- Multiple sizes and fully customizable appearance
-- Accessible and keyboard-navigable
-- Responsive and mobile-friendly
-
-## Accessibility
-
-The Canvas Button component follows WCAG guidelines:
-
-- Maintains color contrast ratios
-- Supports keyboard navigation
-- Includes focus indicators
-- Works with screen readers

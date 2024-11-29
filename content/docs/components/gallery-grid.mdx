@@ -20,64 +20,17 @@ published: true
 
 <Step>Update the import paths to match your project setup.</Step>
 
-```tsx
+```bash
 import { GalleryGrid, GalleryItem } from "@/components/ui-canvas/gallery-grid";
 ```
 
 </Steps>
 
-## Use Cases
-
-The Gallery Grid component creates beautiful masonry layouts perfect for:
-
-1. **Art Portfolios**
-
-   - Artist galleries
-   - Photography collections
-   - Design showcases
-   - Creative portfolios
-
-2. **Image Collections**
-
-   - Photo albums
-   - Product galleries
-   - Mood boards
-   - Inspiration walls
-
-3. **Content Displays**
-   - Blog post grids
-   - Project showcases
-   - Event galleries
-   - Team member displays
-
-## Features
-
-### Masonry Layout
-
-- Responsive column layout
-- Dynamic item sizing
-- Automatic gap handling
-- Smooth flow of content
-
-### Gallery Items
-
-- Multiple aspect ratios
-- Frame-like borders
-- Hover animations
-- Focus effects
-
-### Visual Effects
-
-- Smooth zoom transitions
-- Gradient overlays
-- Backdrop blur effects
-- Shadow animations
-
 ## Examples
 
 ### Basic Usage
 
-```tsx
+```bash
 <GalleryGrid columns={3} gap={4}>
   <GalleryItem aspectRatio="square">
     <Image src="/art1.jpg" alt="Artwork" fill className="object-cover" />
@@ -90,7 +43,7 @@ The Gallery Grid component creates beautiful masonry layouts perfect for:
 
 ### With Hover Effects and Metadata
 
-```tsx
+```bash
 <GalleryGrid columns={2} gap={6} hover="tilt">
   <GalleryItem aspectRatio="landscape">
     <Image
@@ -111,7 +64,7 @@ The Gallery Grid component creates beautiful masonry layouts perfect for:
 
 ### Interactive Hover Effects
 
-```tsx
+```bash
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -164,23 +117,3 @@ export default function GalleryDemo() {
 | ----------- | ------------------------------------------------ | -------- | ------------------------ |
 | aspectRatio | "square" \| "video" \| "portrait" \| "landscape" | "square" | Aspect ratio of the item |
 | className   | string                                           | -        | Additional CSS classes   |
-
-## Accessibility
-
-The Gallery Grid component maintains accessibility standards:
-
-- Proper image alt texts
-- Keyboard navigation support
-- Focus visible states
-- ARIA labels support
-- Screen reader compatibility
-
-## Styling
-
-The component uses Tailwind CSS with:
-
-- Responsive design patterns
-- Dark/light mode support
-- Customizable animations
-- Flexible layout options
-- Custom aspect ratios
