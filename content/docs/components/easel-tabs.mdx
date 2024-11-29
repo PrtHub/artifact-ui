@@ -1,0 +1,134 @@
+---
+title: Easel Tabs
+date: 2024-03-19
+description: Tabs styled like canvas sheets on an easel with artistic transitions and effects.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="easel-tabs-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies in your project:</Step>
+
+```bash
+npm install @radix-ui/react-tabs
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/easel-tabs.tsx`
+
+<ComponentSource name="easel-tabs" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import {
+  EaselTabs,
+  EaselTabsList,
+  EaselTabsTrigger,
+  EaselTabsContent,
+} from "@/components/ui-canvas/easel-tabs";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import {
+  EaselTabs,
+  EaselTabsList,
+  EaselTabsTrigger,
+  EaselTabsContent,
+} from "@/components/ui/easel-tabs";
+
+export default function ArtworkTabs() {
+  return (
+    <EaselTabs defaultValue="sketch">
+      <EaselTabsList>
+        <EaselTabsTrigger value="sketch">Sketch</EaselTabsTrigger>
+        <EaselTabsTrigger value="canvas">Canvas</EaselTabsTrigger>
+      </EaselTabsList>
+      <EaselTabsContent value="sketch">Sketch content</EaselTabsContent>
+      <EaselTabsContent value="canvas">Canvas content</EaselTabsContent>
+    </EaselTabs>
+  );
+}
+```
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<EaselTabs defaultValue="tab1">
+  <EaselTabsList>
+    <EaselTabsTrigger value="tab1">Tab 1</EaselTabsTrigger>
+    <EaselTabsTrigger value="tab2">Tab 2</EaselTabsTrigger>
+  </EaselTabsList>
+  <EaselTabsContent value="tab1">Content for tab 1</EaselTabsContent>
+  <EaselTabsContent value="tab2">Content for tab 2</EaselTabsContent>
+</EaselTabs>
+```
+
+### With Custom Styling
+
+```tsx
+<EaselTabs defaultValue="art">
+  <EaselTabsList className="bg-canvas-100 dark:bg-canvas-900">
+    <EaselTabsTrigger value="art" className="data-[state=active]:bg-primary/10">
+      Artwork
+    </EaselTabsTrigger>
+    <EaselTabsTrigger
+      value="gallery"
+      className="data-[state=active]:bg-primary/10"
+    >
+      Gallery
+    </EaselTabsTrigger>
+  </EaselTabsList>
+  <EaselTabsContent value="art" className="p-4">
+    Artwork content
+  </EaselTabsContent>
+  <EaselTabsContent value="gallery" className="p-4">
+    Gallery content
+  </EaselTabsContent>
+</EaselTabs>
+```
+
+## Props
+
+### EaselTabs
+
+| Prop          | Type     | Default | Description                                                        |
+| ------------- | -------- | ------- | ------------------------------------------------------------------ |
+| defaultValue  | string   | -       | The value of the tab that should be active when initially rendered |
+| value         | string   | -       | The controlled value of the tab to activate                        |
+| onValueChange | function | -       | Event handler called when the value changes                        |
+
+### EaselTabsList
+
+| Prop      | Type   | Default | Description            |
+| --------- | ------ | ------- | ---------------------- |
+| className | string | -       | Additional CSS classes |
+
+### EaselTabsTrigger
+
+| Prop      | Type    | Default | Description                 |
+| --------- | ------- | ------- | --------------------------- |
+| value     | string  | -       | A unique value for the tab  |
+| disabled  | boolean | false   | Whether the tab is disabled |
+| className | string  | -       | Additional CSS classes      |
+
+### EaselTabsContent
+
+| Prop      | Type   | Default | Description                                               |
+| --------- | ------ | ------- | --------------------------------------------------------- |
+| value     | string | -       | A unique value that associates the content with a trigger |
+| className | string | -       | Additional CSS classes                                    |
+
+The Easel Tabs component follows the [WAI-ARIA Tabs Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). It supports:

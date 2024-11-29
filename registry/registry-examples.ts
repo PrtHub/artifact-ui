@@ -25,4 +25,10 @@ export const examples: Registry = [
     registryDependencies: ["gallery-grid"],
     files: ["example/gallery-grid-demo.tsx"],
   },
+  {
+    name: "easel-tabs-demo",
+    type: "registry:example",
+    registryDependencies: ["easel-tabs"],
+    files: ["example/easel-tabs-demo.tsx"],
+  },
 ];

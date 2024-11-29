@@ -54,6 +54,11 @@ export const docsConfig: DocsConfig = {
           title: "Gallery Grid",
           href: "/docs/components/gallery-grid",
           items: [],
+        },
+        {
+          title: "Easel Tabs",
+          href: "/docs/components/easel-tabs",
+          items: [],
           label: "New",
         },
       ],

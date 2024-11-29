@@ -27,4 +27,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/gallery-grid.tsx"],
   },
+  {
+    name: "easel-tabs",
+    type: "registry:ui",
+    dependencies: ["@radix-ui/react-tabs", "framer-motion"],
+    files: ["ui-canvas/easel-tabs.tsx"],
+  },
 ];

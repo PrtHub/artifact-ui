@@ -54,5 +54,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "easel-tabs",
+    "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-tabs",
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/easel-tabs.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
