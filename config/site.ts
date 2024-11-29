@@ -1,7 +1,6 @@
 export const siteConfig = {
   name: "UI Canvas",
-  url: "https://magicui.design",
-  ogImage: "https://magicui.design/og",
+  url: "https://github.com/PrtHub/ui-canvas",
   description:
     "UI Canvas is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion.",
   links: {

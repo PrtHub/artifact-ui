@@ -16,7 +16,21 @@ export const metadata: Metadata = constructMetadata({
   title: "UI Canvas",
   description:
     "Beautiful UI components and templates to make your landing page look stunning.",
-  image: absoluteUrl("/og"),
+  icons: {
+    icon: "/logo.svg",
+  },
+  openGraph: {
+    type: "website",
+    title: "UI Canvas",
+    description: "Beautiful UI components and templates to make your landing page look stunning.",
+    images: [{ url: "/logo.svg", width: 1200, height: 630, alt: "UI Canvas Logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UI Canvas",
+    description: "Beautiful UI components and templates to make your landing page look stunning.",
+    images: ["/logo.svg"],
+  },
 });
 
 export const viewport: Viewport = {

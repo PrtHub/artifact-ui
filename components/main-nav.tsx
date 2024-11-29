@@ -17,11 +17,11 @@ export function MainNav() {
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="relative mr-6 flex items-center space-x-2">
         <Icons.logo className="size-6" />
-        <span className="hidden font-bold md:inline-block">
+        <span className="hidden text-xl font-extrabold md:inline-block">
           {siteConfig.name}
         </span>
       </Link>
-      <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
+      <nav className="ml-5 hidden items-center space-x-6 font-medium xl:flex">
         {docsConfig.mainNav.map((item) => (
           <Link
             key={item.href}
@@ -36,7 +36,7 @@ export function MainNav() {
                 : "text-foreground/60",
             )}
           >
-            <span className="shrink-0">{item.title}</span>
+            <span className="shrink-0 text-base">{item.title}</span>
             {item.label && (
               <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
                 {item.label}
