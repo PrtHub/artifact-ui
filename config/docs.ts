@@ -74,6 +74,11 @@ export const docsConfig: DocsConfig = {
           title: "Brush Stroke Loader",
           href: "/docs/components/brush-stroke-loader",
           items: [],
+        },
+        {
+          title: "Art Board Layout",
+          href: "/docs/components/art-board-layout",
+          items: [],
           label: "New",
         },
       ],

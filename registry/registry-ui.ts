@@ -51,4 +51,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/brush-stroke-loader.tsx"],
   },
+  {
+    name: "art-board-layout",
+    type: "registry:ui",
+    dependencies: ["@dnd-kit/core"],
+    files: ["ui-canvas/art-board-layout.tsx"],
+  },
 ];

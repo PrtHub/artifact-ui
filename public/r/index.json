@@ -110,5 +110,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "art-board-layout",
+    "type": "registry:ui",
+    "dependencies": [
+      "@dnd-kit/core"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/art-board-layout.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

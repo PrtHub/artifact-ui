@@ -49,4 +49,10 @@ export const examples: Registry = [
     registryDependencies: ["brush-stroke-loader"],
     files: ["example/brush-stroke-loader-demo.tsx"],
   },
+  {
+    name: "art-board-layout-demo",
+    type: "registry:example",
+    registryDependencies: ["art-board-layout"],
+    files: ["example/art-board-layout-demo.tsx"],
+  },
 ];
