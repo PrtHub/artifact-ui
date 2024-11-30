@@ -79,11 +79,11 @@ export function PaletteNavigation({
   const containerStyles = cn(
     "relative",
     layout === "flex" &&
-    "flex h-[400px] flex-wrap items-center justify-center gap-4 rounded-full p-4",
+      "flex h-[400px] flex-wrap items-center justify-center gap-4 rounded-full p-4",
     layout === "arc" && "flex h-[600px] items-start justify-center pt-16",
     layout !== "flex" &&
-    layout !== "arc" &&
-    "flex h-[400px] items-center justify-center",
+      layout !== "arc" &&
+      "flex h-[400px] items-center justify-center",
     "before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-white/10 before:backdrop-blur-md dark:before:bg-zinc-950/10",
     "after:absolute after:inset-0 after:-z-20 after:rounded-full after:bg-gradient-to-r after:from-primary/5 after:to-muted/5",
     className,
@@ -94,7 +94,9 @@ export function PaletteNavigation({
       <nav className={containerStyles}>
         {items.map((item, index) => {
           const position =
-            layout !== "flex" ? getItemPosition(index, items.length) : undefined;
+            layout !== "flex"
+              ? getItemPosition(index, items.length)
+              : undefined;
 
           return (
             <motion.div
@@ -231,7 +233,9 @@ function PaletteItem({
       >
         <div className="whitespace-nowrap font-medium">{item.label}</div>
         {item.description && (
-          <div className="text-xs text-muted-foreground">{item.description}</div>
+          <div className="text-xs text-muted-foreground">
+            {item.description}
+          </div>
         )}
       </TooltipContent>
     </Tooltip>

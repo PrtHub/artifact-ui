@@ -82,5 +82,20 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-modal",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "@radix-ui/react-dialog",
+      "luide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-modal.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -39,4 +39,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui-canvas/palette-navigation.tsx"],
   },
+  {
+    name: "canvas-modal",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "@radix-ui/react-dialog", "luide-react"],
+    files: ["ui-canvas/canvas-modal.tsx"],
+  },
 ];

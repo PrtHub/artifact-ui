@@ -64,7 +64,11 @@ export const docsConfig: DocsConfig = {
           title: "Palette Navigation",
           href: "/docs/components/palette-navigation",
           items: [],
-          label: "New",
+        },
+        {
+          title: "Canvas Modal",
+          href: "/docs/components/canvas-modal",
+          items: [],
         },
       ],
     },

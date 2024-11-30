@@ -1,0 +1,176 @@
+---
+title: Canvas Modal
+date: 2024-03-19
+description: A beautifully styled modal dialog with easel-frame design, paint-splash animations, and elevated user experience.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="canvas-modal-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-dialog framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-modal.tsx`
+
+<ComponentSource name="canvas-modal" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import {
+  CanvasModal,
+  CanvasModalContent,
+  CanvasModalDescription,
+  CanvasModalHeader,
+  CanvasModalTitle,
+  CanvasModalTrigger,
+  CanvasModalFooter,
+} from "@/components/ui-canvas/canvas-modal";
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import { Button } from "@/components/ui/button";
+import {
+  CanvasModal,
+  CanvasModalContent,
+  CanvasModalHeader,
+  CanvasModalTitle,
+  CanvasModalTrigger,
+} from "@/components/ui-canvas/canvas-modal";
+
+export function BasicModal() {
+  return (
+    <CanvasModal>
+      <CanvasModalTrigger asChild>
+        <Button variant="outline">Open Modal</Button>
+      </CanvasModalTrigger>
+      <CanvasModalContent>
+        <CanvasModalHeader>
+          <CanvasModalTitle>Modal Title</CanvasModalTitle>
+        </CanvasModalHeader>
+        <div className="py-6">Your content here</div>
+      </CanvasModalContent>
+    </CanvasModal>
+  );
+}
+```
+
+### With Description and Footer
+
+```tsx
+import {
+  CanvasModal,
+  CanvasModalContent,
+  CanvasModalDescription,
+  CanvasModalFooter,
+  CanvasModalHeader,
+  CanvasModalTitle,
+  CanvasModalTrigger,
+} from "@/components/ui-canvas/canvas-modal";
+
+export function ModalWithFooter() {
+  return (
+    <CanvasModal>
+      <CanvasModalTrigger asChild>
+        <Button variant="outline">Open Modal</Button>
+      </CanvasModalTrigger>
+      <CanvasModalContent className="sm:max-w-xl">
+        <CanvasModalHeader>
+          <CanvasModalTitle>Welcome</CanvasModalTitle>
+          <CanvasModalDescription>
+            A description of your modal content
+          </CanvasModalDescription>
+        </CanvasModalHeader>
+        <div className="py-6">
+          <p className="text-muted-foreground/80">
+            Your main content goes here
+          </p>
+        </div>
+        <CanvasModalFooter>
+          <Button variant="outline">Cancel</Button>
+          <Button>Continue</Button>
+        </CanvasModalFooter>
+      </CanvasModalContent>
+    </CanvasModal>
+  );
+}
+```
+
+### Custom Styling
+
+```tsx
+export function CustomStyledModal() {
+  return (
+    <CanvasModal>
+      <CanvasModalTrigger asChild>
+        <Button>Custom Modal</Button>
+      </CanvasModalTrigger>
+      <CanvasModalContent className="bg-gradient-to-br from-primary/5 via-background to-background/95">
+        <CanvasModalHeader className="border-b border-primary/10 pb-4">
+          <CanvasModalTitle className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            Custom Styled Modal
+          </CanvasModalTitle>
+        </CanvasModalHeader>
+        <div className="py-6">
+          <p className="text-muted-foreground/80">
+            Modal with custom gradient background and styled title
+          </p>
+        </div>
+      </CanvasModalContent>
+    </CanvasModal>
+  );
+}
+```
+
+## API Reference
+
+### CanvasModal
+
+The root modal component that manages the state of your dialog.
+
+### CanvasModalTrigger
+
+The button that opens the modal. Must be used with `asChild` prop when wrapping custom triggers.
+
+### CanvasModalContent
+
+The content wrapper for the modal. Accepts the following props:
+
+- `className` - Additional CSS classes
+- `children` - Modal content
+
+### CanvasModalHeader
+
+Container for the modal header section. Includes built-in spacing and responsive text alignment.
+
+### CanvasModalTitle
+
+The title component for the modal. Features gradient text styling by default.
+
+### CanvasModalDescription
+
+Optional description text that appears below the title.
+
+### CanvasModalFooter
+
+Container for modal actions. Automatically handles button layout and spacing.
+
+### CanvasModalClose
+
+The close button component. Automatically positioned in the top-right corner with hover animations.

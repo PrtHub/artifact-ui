@@ -71,6 +71,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "canvas-modal": {
+      name: "canvas-modal",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/canvas-modal.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/canvas-modal.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -132,6 +143,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["palette-navigation"],
       files: ["registry/default/example/palette-navigation-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/palette-navigation-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-modal-demo": {
+      name: "canvas-modal-demo",
+      type: "registry:example",
+      registryDependencies: ["canvas-modal"],
+      files: ["registry/default/example/canvas-modal-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/canvas-modal-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

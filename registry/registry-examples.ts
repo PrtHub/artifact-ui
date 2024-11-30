@@ -37,4 +37,10 @@ export const examples: Registry = [
     registryDependencies: ["palette-navigation"],
     files: ["example/palette-navigation-demo.tsx"],
   },
+  {
+    name: "canvas-modal-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-modal"],
+    files: ["example/canvas-modal-demo.tsx"],
+  },
 ];
