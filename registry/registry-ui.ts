@@ -45,4 +45,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "@radix-ui/react-dialog", "luide-react"],
     files: ["ui-canvas/canvas-modal.tsx"],
   },
+  {
+    name: "brush-stroke-loader",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/brush-stroke-loader.tsx"],
+  },
 ];

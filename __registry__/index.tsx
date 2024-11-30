@@ -82,6 +82,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "brush-stroke-loader": {
+      name: "brush-stroke-loader",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/brush-stroke-loader.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/brush-stroke-loader.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -154,6 +165,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-modal"],
       files: ["registry/default/example/canvas-modal-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-modal-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "brush-stroke-loader-demo": {
+      name: "brush-stroke-loader-demo",
+      type: "registry:example",
+      registryDependencies: ["brush-stroke-loader"],
+      files: ["registry/default/example/brush-stroke-loader-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/brush-stroke-loader-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

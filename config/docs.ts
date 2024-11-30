@@ -70,6 +70,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/canvas-modal",
           items: [],
         },
+        {
+          title: "Brush Stroke Loader",
+          href: "/docs/components/brush-stroke-loader",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

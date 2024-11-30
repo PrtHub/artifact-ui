@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
   CanvasModal,
   CanvasModalContent,
@@ -9,8 +9,8 @@ import {
   CanvasModalTitle,
   CanvasModalTrigger,
   CanvasModalFooter,
-} from '@/registry/default/ui-canvas/canvas-modal'
-import { Paintbrush, Palette } from 'lucide-react'
+} from "@/registry/default/ui-canvas/canvas-modal";
+import { Paintbrush, Palette } from "lucide-react";
 
 export default function CanvasModalDemo() {
   return (
@@ -27,13 +27,15 @@ export default function CanvasModalDemo() {
             <CanvasModalHeader>
               <CanvasModalTitle>Welcome to Canvas Modal</CanvasModalTitle>
               <CanvasModalDescription>
-                A beautifully crafted modal component with artistic styling and smooth animations.
+                A beautifully crafted modal component with artistic styling and
+                smooth animations.
               </CanvasModalDescription>
             </CanvasModalHeader>
             <div className="py-6">
               <p className="text-muted-foreground/80">
-                This modal features an easel-frame design with paint-splash animations and a modern, clean interface.
-                Perfect for creating engaging user interactions in your application.
+                This modal features an easel-frame design with paint-splash
+                animations and a modern, clean interface. Perfect for creating
+                engaging user interactions in your application.
               </p>
             </div>
           </CanvasModalContent>
@@ -50,7 +52,8 @@ export default function CanvasModalDemo() {
             <CanvasModalHeader>
               <CanvasModalTitle>Canvas Modal Features</CanvasModalTitle>
               <CanvasModalDescription>
-                Explore the advanced features and styling options available in the Canvas Modal component.
+                Explore the advanced features and styling options available in
+                the Canvas Modal component.
               </CanvasModalDescription>
             </CanvasModalHeader>
             <div className="grid gap-6 py-6">
@@ -77,12 +80,14 @@ export default function CanvasModalDemo() {
               </div>
             </div>
             <CanvasModalFooter>
-              <Button variant="outline" size="sm">Learn More</Button>
+              <Button variant="outline" size="sm">
+                Learn More
+              </Button>
               <Button size="sm">Get Started</Button>
             </CanvasModalFooter>
           </CanvasModalContent>
         </CanvasModal>
       </div>
     </div>
-  )
+  );
 }

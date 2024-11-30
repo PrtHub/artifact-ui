@@ -43,4 +43,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-modal"],
     files: ["example/canvas-modal-demo.tsx"],
   },
+  {
+    name: "brush-stroke-loader-demo",
+    type: "registry:example",
+    registryDependencies: ["brush-stroke-loader"],
+    files: ["example/brush-stroke-loader-demo.tsx"],
+  },
 ];

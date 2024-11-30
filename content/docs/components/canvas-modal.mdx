@@ -138,39 +138,56 @@ export function CustomStyledModal() {
 }
 ```
 
-## API Reference
+## Props
 
 ### CanvasModal
 
-The root modal component that manages the state of your dialog.
+| Prop         | Type                    | Default | Description                        |
+| ------------ | ----------------------- | ------- | ---------------------------------- |
+| open         | boolean                 | -       | Controlled open state of the modal |
+| onOpenChange | (open: boolean) => void | -       | Callback when open state changes   |
+| children     | React.ReactNode         | -       | The content of the modal           |
 
 ### CanvasModalTrigger
 
-The button that opens the modal. Must be used with `asChild` prop when wrapping custom triggers.
+| Prop     | Type            | Default | Description                                   |
+| -------- | --------------- | ------- | --------------------------------------------- |
+| asChild  | boolean         | false   | Whether to merge props onto the child element |
+| children | React.ReactNode | -       | The trigger element that opens the modal      |
 
 ### CanvasModalContent
 
-The content wrapper for the modal. Accepts the following props:
-
-- `className` - Additional CSS classes
-- `children` - Modal content
+| Prop      | Type            | Default | Description                             |
+| --------- | --------------- | ------- | --------------------------------------- |
+| className | string          | -       | Additional CSS classes for styling      |
+| children  | React.ReactNode | -       | The content to display inside the modal |
 
 ### CanvasModalHeader
 
-Container for the modal header section. Includes built-in spacing and responsive text alignment.
+| Prop      | Type            | Default | Description                                  |
+| --------- | --------------- | ------- | -------------------------------------------- |
+| className | string          | -       | Additional CSS classes for styling           |
+| children  | React.ReactNode | -       | Header content (typically Title/Description) |
 
 ### CanvasModalTitle
 
-The title component for the modal. Features gradient text styling by default.
+| Prop      | Type            | Default | Description                        |
+| --------- | --------------- | ------- | ---------------------------------- |
+| className | string          | -       | Additional CSS classes for styling |
+| children  | React.ReactNode | -       | The title text                     |
 
 ### CanvasModalDescription
 
-Optional description text that appears below the title.
+| Prop      | Type            | Default | Description                        |
+| --------- | --------------- | ------- | ---------------------------------- |
+| className | string          | -       | Additional CSS classes for styling |
+| children  | React.ReactNode | -       | The description text               |
 
 ### CanvasModalFooter
 
-Container for modal actions. Automatically handles button layout and spacing.
+| Prop      | Type            | Default | Description                               |
+| --------- | --------------- | ------- | ----------------------------------------- |
+| className | string          | -       | Additional CSS classes for styling        |
+| children  | React.ReactNode | -       | Footer content (typically action buttons) |
 
-### CanvasModalClose
-
-The close button component. Automatically positioned in the top-right corner with hover animations.
+The Canvas Modal is built on top of [Radix UI Dialog](https://www.radix-ui.com/primitives/docs/components/dialog) and follows the WAI-ARIA Dialog Pattern for accessibility.
