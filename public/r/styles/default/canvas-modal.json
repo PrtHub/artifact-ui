@@ -4,7 +4,7 @@
   "dependencies": [
     "framer-motion",
     "@radix-ui/react-dialog",
-    "luide-react"
+    "lucide-react"
   ],
   "files": [
     {

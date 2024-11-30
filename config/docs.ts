@@ -86,6 +86,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Canvas Drawer",
+          href: "/docs/components/canvas-drawer",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

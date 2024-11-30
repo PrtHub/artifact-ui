@@ -61,4 +61,10 @@ export const examples: Registry = [
     registryDependencies: ["palette-toast", "button"],
     files: ["example/palette-toast-demo.tsx"],
   },
+  {
+    name: "canvas-drawer-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-drawer", "button"],
+    files: ["example/canvas-drawer-demo.tsx"],
+  },
 ];

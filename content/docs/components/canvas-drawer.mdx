@@ -1,0 +1,96 @@
+---
+title: Canvas Drawer
+date: 2024-03-20
+description: A slide-out panel with canvas texture, brush stroke animations, and an artistic handle.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="canvas-drawer-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-drawer.tsx`
+
+<ComponentSource name="canvas-drawer" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CanvasDrawer } from "@/components/ui-canvas/canvas-drawer";
+```
+
+</Steps>
+
+## Usage
+
+### Basic Example
+
+```tsx
+import { CanvasDrawer } from "@/components/ui-canvas/canvas-drawer";
+
+export default function Example() {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <CanvasDrawer side="right" open={open} onOpenChange={setOpen}>
+      <div className="p-4">
+        <h2>Drawer Content</h2>
+        <p>Click the artistic handle or close icon to toggle</p>
+      </div>
+    </CanvasDrawer>
+  );
+}
+```
+
+### Without Handle
+
+Use `showHandle={false}` to create a cleaner look without the artistic handle. The drawer can still be toggled using the close icon, clicking outside, or through external controls.
+
+```tsx
+import { CanvasDrawer } from "@/components/ui-canvas/canvas-drawer";
+import { Button } from "@/components/ui/button";
+
+export default function Example() {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open Drawer</Button>
+
+      <CanvasDrawer
+        side="right"
+        open={open}
+        onOpenChange={setOpen}
+        showHandle={false}
+      >
+        <div className="p-4">
+          <h2>Drawer Content</h2>
+          <p>Use the close icon or click outside to dismiss</p>
+        </div>
+      </CanvasDrawer>
+    </>
+  );
+}
+```
+
+## Props
+
+| Prop         | Type                    | Default | Description                              |
+| ------------ | ----------------------- | ------- | ---------------------------------------- |
+| children     | React.ReactNode         | -       | The content to display inside the drawer |
+| open         | boolean                 | false   | Controls the open state of the drawer    |
+| onOpenChange | (open: boolean) => void | -       | Callback when drawer open state changes  |
+| side         | "left" \| "right"       | "right" | Which side the drawer appears from       |
+| showHandle   | boolean                 | true    | Show the artistic handle/toggle button   |
+| className    | string                  | -       | Additional CSS classes for styling       |

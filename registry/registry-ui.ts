@@ -42,7 +42,7 @@ export const ui: Registry = [
   {
     name: "canvas-modal",
     type: "registry:ui",
-    dependencies: ["framer-motion", "@radix-ui/react-dialog", "luide-react"],
+    dependencies: ["framer-motion", "@radix-ui/react-dialog", "lucide-react"],
     files: ["ui-canvas/canvas-modal.tsx"],
   },
   {
@@ -63,5 +63,11 @@ export const ui: Registry = [
     dependencies: [],
     files: ["ui-canvas/palette-toast.tsx"],
     registryDependencies: [],
+  },
+  {
+    name: "canvas-drawer",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/canvas-drawer.tsx"],
   },
 ];

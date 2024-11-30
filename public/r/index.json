@@ -89,7 +89,7 @@
     "dependencies": [
       "framer-motion",
       "@radix-ui/react-dialog",
-      "luide-react"
+      "lucide-react"
     ],
     "files": [
       {
@@ -132,6 +132,19 @@
     "files": [
       {
         "path": "ui-canvas/palette-toast.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "canvas-drawer",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-drawer.tsx",
         "type": "registry:ui"
       }
     ]
