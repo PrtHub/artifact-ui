@@ -59,6 +59,11 @@ export const docsConfig: DocsConfig = {
           title: "Easel Tabs",
           href: "/docs/components/easel-tabs",
           items: [],
+        },
+        {
+          title: "Palette Navigation",
+          href: "/docs/components/palette-navigation",
+          items: [],
           label: "New",
         },
       ],

@@ -33,4 +33,10 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-tabs", "framer-motion"],
     files: ["ui-canvas/easel-tabs.tsx"],
   },
+  {
+    name: "palette-navigation",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react"],
+    files: ["ui-canvas/palette-navigation.tsx"],
+  },
 ];

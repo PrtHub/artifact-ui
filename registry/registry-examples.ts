@@ -31,4 +31,10 @@ export const examples: Registry = [
     registryDependencies: ["easel-tabs"],
     files: ["example/easel-tabs-demo.tsx"],
   },
+  {
+    name: "palette-navigation-demo",
+    type: "registry:example",
+    registryDependencies: ["palette-navigation"],
+    files: ["example/palette-navigation-demo.tsx"],
+  },
 ];

@@ -68,5 +68,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "palette-navigation",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/palette-navigation.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

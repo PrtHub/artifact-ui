@@ -1,0 +1,230 @@
+---
+title: Palette Navigation
+date: 2024-03-19
+description: A navigation menu styled like a paint palette with smooth color transitions and interactive effects.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="palette-navigation-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install Tooltip Component from `shadcn`:</Step>
+
+```bash
+npx shadcn@latest add tooltip
+```
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/palette-navigation.tsx`
+
+<ComponentSource name="palette-navigation" />
+
+</Steps>
+
+## Usage
+
+```tsx
+import { PaletteNavigation } from "@/components/ui/palette-navigation";
+import { Home, Settings, User } from "lucide-react";
+
+export default function Navigation() {
+  const items = [
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-5 w-5" />,
+      description: "Return to homepage",
+    },
+    {
+      label: "Profile",
+      href: "/profile",
+      icon: <User className="h-5 w-5" />,
+      description: "View your profile",
+    },
+    {
+      label: "Settings",
+      href: "/settings",
+      icon: <Settings className="h-5 w-5" />,
+      description: "Configure preferences",
+    },
+  ];
+
+  return <PaletteNavigation items={items} />;
+}
+```
+
+## Examples
+
+### With Custom Colors
+
+```tsx
+<PaletteNavigation
+  items={[
+    {
+      label: "Design",
+      href: "/design",
+      color: "from-pink-500/80 to-rose-500/80",
+    },
+    {
+      label: "Develop",
+      href: "/develop",
+      color: "from-blue-500/80 to-indigo-500/80",
+    },
+  ]}
+/>
+```
+
+### With Descriptions
+
+```tsx
+<PaletteNavigation
+  items={[
+    {
+      label: "Gallery",
+      href: "/gallery",
+      description: "Browse your artwork",
+      icon: <Image className="h-5 w-5" />,
+    },
+    {
+      label: "Studio",
+      href: "/studio",
+      description: "Create new artwork",
+      icon: <Brush className="h-5 w-5" />,
+    },
+  ]}
+/>
+```
+
+## Features
+
+### Layout Options
+
+The Palette Navigation component supports four different layout options:
+
+- `flex` (default): Items are arranged in a flexible grid
+- `circle`: Items are arranged in a full circle
+- `arc`: Items are arranged in a semi-circle arc
+- `line`: Items are arranged in a horizontal line
+
+```tsx
+<PaletteNavigation
+  items={items}
+  layout="arc" // "flex" | "circle" | "arc" | "line"
+/>
+```
+
+### Smart Tooltips
+
+The component uses Radix UI's Tooltip for enhanced accessibility and positioning. Tooltips are intelligently positioned based on the layout:
+
+- Arc layout: Tooltips appear above/below based on item position
+- Circle layout: Tooltips point outward from the center
+- Flex/Line layout: Tooltips appear below items
+
+Each tooltip can display both a label and an optional description:
+
+```tsx
+<PaletteNavigation
+  items={[
+    {
+      label: "Gallery",
+      href: "/gallery",
+      description: "Browse your artwork", // Optional description
+      icon: <Image className="h-5 w-5" />,
+    },
+    // ... more items
+  ]}
+/>
+```
+
+## Examples
+
+### Different Layouts
+
+```tsx
+// Arc Layout
+<PaletteNavigation
+  layout="arc"
+  items={[
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-5 w-5" />,
+    },
+    {
+      label: "Gallery",
+      href: "/gallery",
+      icon: <Image className="h-5 w-5" />,
+    },
+    {
+      label: "Settings",
+      href: "/settings",
+      icon: <Settings className="h-5 w-5" />,
+    },
+  ]}
+/>
+
+// Circle Layout
+<PaletteNavigation
+  layout="circle"
+  items={[
+    // ... items
+  ]}
+/>
+
+// Line Layout
+<PaletteNavigation
+  layout="line"
+  items={[
+    // ... items
+  ]}
+/>
+```
+
+## Props
+
+### PaletteNavigation
+
+| Prop      | Type          | Default | Description               |
+| --------- | ------------- | ------- | ------------------------- |
+| items     | PaletteItem[] | []      | Array of navigation items |
+| layout    | string        | "flex"  | Layout option             |
+| className | string        | -       | Additional CSS classes    |
+
+### PaletteItem
+
+| Prop        | Type      | Default | Description                 |
+| ----------- | --------- | ------- | --------------------------- |
+| label       | string    | -       | Display text for the item   |
+| href        | string    | -       | Navigation URL              |
+| color       | string    | -       | Custom gradient color class |
+| description | string    | -       | Tooltip description         |
+| icon        | ReactNode | -       | Icon component to display   |
+
+## Features
+
+The Palette Navigation component includes:
+
+- Smooth hover animations
+- Paint drip effects
+- Descriptive tooltips
+- Color gradient transitions
+- Responsive layout
+- Dark mode support
+- Accessible navigation
+- Custom color support
+
+```
+
+```
