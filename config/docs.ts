@@ -79,6 +79,11 @@ export const docsConfig: DocsConfig = {
           title: "Art Board Layout",
           href: "/docs/components/art-board-layout",
           items: [],
+        },
+        {
+          title: "Palette Toast",
+          href: "/docs/components/palette-toast",
+          items: [],
           label: "New",
         },
       ],

@@ -1,0 +1,71 @@
+---
+title: Palette Toast
+date: 2024-03-19
+description: Artistic notifications styled like paint swatches with beautiful watercolor effects.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="palette-toast-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/palette-toast.tsx`
+
+<ComponentSource name="palette-toast" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { PaletteToast } from "@/components/ui-canvas/palette-toast";
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+export function BasicToast() {
+  return (
+    <PaletteToast message="A splash of information has arrived!" type="info" />
+  );
+}
+```
+
+### Custom Duration
+
+```tsx
+export function TimedToast() {
+  return (
+    <PaletteToast
+      message="Your masterpiece has been created!"
+      type="success"
+      duration={3000}
+    />
+  );
+}
+```
+
+## Props
+
+### PaletteToast
+
+| Prop      | Type                                        | Default | Description                                   |
+| --------- | ------------------------------------------- | ------- | --------------------------------------------- |
+| message   | string                                      | -       | The message to display in the toast           |
+| type      | "info" \| "success" \| "warning" \| "error" | "info"  | The type of toast, affects colors and styling |
+| duration  | number                                      | 5000    | Duration in ms before toast auto-dismisses    |
+| onClose   | () => void                                  | -       | Callback function when toast is dismissed     |
+| className | string                                      | -       | Additional CSS classes for styling            |

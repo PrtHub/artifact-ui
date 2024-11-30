@@ -104,6 +104,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "palette-toast": {
+      name: "palette-toast",
+      type: "registry:ui",
+      registryDependencies: [],
+      files: ["registry/default/ui-canvas/palette-toast.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/palette-toast.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -198,6 +209,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["art-board-layout"],
       files: ["registry/default/example/art-board-layout-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/art-board-layout-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "palette-toast-demo": {
+      name: "palette-toast-demo",
+      type: "registry:example",
+      registryDependencies: ["palette-toast","button"],
+      files: ["registry/default/example/palette-toast-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/palette-toast-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

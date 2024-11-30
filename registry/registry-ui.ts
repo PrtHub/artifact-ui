@@ -57,4 +57,11 @@ export const ui: Registry = [
     dependencies: ["@dnd-kit/core"],
     files: ["ui-canvas/art-board-layout.tsx"],
   },
+  {
+    name: "palette-toast",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/palette-toast.tsx"],
+    registryDependencies: [],
+  },
 ];

@@ -55,4 +55,10 @@ export const examples: Registry = [
     registryDependencies: ["art-board-layout"],
     files: ["example/art-board-layout-demo.tsx"],
   },
+  {
+    name: "palette-toast-demo",
+    type: "registry:example",
+    registryDependencies: ["palette-toast", "button"],
+    files: ["example/palette-toast-demo.tsx"],
+  },
 ];
