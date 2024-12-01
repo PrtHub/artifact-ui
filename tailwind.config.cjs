@@ -85,6 +85,8 @@ module.exports = {
         shine: "shine var(--duration) infinite linear",
         pulse: "pulse var(--duration) ease-out infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
+        "texture-float": "texture-float 8s ease-in-out infinite",
+        "hue-rotate": "hue-rotate 10s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -198,14 +200,28 @@ module.exports = {
             "background-position": "0% 0%",
           },
         },
+        "texture-float": {
+          "0%, 100%": { transform: "translate(0%, 0%)" },
+          "25%": { transform: "translate(1%, 1%)" },
+          "50%": { transform: "translate(-1%, -1%)" },
+          "75%": { transform: "translate(-1%, 1%)" },
+        },
+        "hue-rotate": {
+          "0%": { filter: "hue-rotate(0deg)" },
+          "100%": { filter: "hue-rotate(360deg)" },
+        },
+        rainbow: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
         pulse: {
           "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
           "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
-        rainbow: {
-          "0%": { "background-position": "0%" },
-          "100%": { "background-position": "200%" },
-        },
+      },
+      backgroundImage: {
+        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E\")",
       },
     },
   },

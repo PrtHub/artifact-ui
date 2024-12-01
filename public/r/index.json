@@ -163,5 +163,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "texture-overlay",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/texture-overlay.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

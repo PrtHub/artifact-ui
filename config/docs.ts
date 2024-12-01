@@ -8,12 +8,21 @@ interface DocsConfig {
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Docs",
+      title: "Documentation",
       href: "/docs",
     },
     {
       title: "Components",
-      href: "/docs/components/canvas-button",
+      href: "/docs/components/sketch-input",
+    },
+    {
+      title: "Examples",
+      href: "/examples",
+    },
+    {
+      title: "GitHub",
+      href: "https://github.com/codeui/ui-canvas",
+      external: true,
     },
   ],
   sidebarNav: [
@@ -50,12 +59,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/sketch-input",
           items: [],
         },
-        // {
-        //   title: "Painterly Select",
-        //   href: "/docs/components/painterly-select",
-        //   items: [],
-        //   label: "New",
-        // },
         {
           title: "Gallery Grid",
           href: "/docs/components/gallery-grid",
@@ -95,6 +98,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Canvas Drawer",
           href: "/docs/components/canvas-drawer",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Texture Overlay",
+          href: "/docs/components/texture-overlay",
           items: [],
           label: "New",
         },

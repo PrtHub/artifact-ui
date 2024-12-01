@@ -137,6 +137,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "texture-overlay": {
+      name: "texture-overlay",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/texture-overlay.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/texture-overlay.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -264,6 +275,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["painterly-select","button"],
       files: ["registry/default/example/painterly-select-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/painterly-select-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "texture-overlay-demo": {
+      name: "texture-overlay-demo",
+      type: "registry:example",
+      registryDependencies: ["texture-overlay"],
+      files: ["registry/default/example/texture-overlay-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/texture-overlay-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

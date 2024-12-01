@@ -76,4 +76,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "@radix-ui/react-select", "lucide-react"],
     files: ["ui-canvas/painterly-select.tsx"],
   },
+  {
+    name: "texture-overlay",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/texture-overlay.tsx"],
+  },
 ];
