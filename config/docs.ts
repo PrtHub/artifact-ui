@@ -15,15 +15,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       href: "/docs/components/sketch-input",
     },
-    {
-      title: "Examples",
-      href: "/examples",
-    },
-    {
-      title: "GitHub",
-      href: "https://github.com/codeui/ui-canvas",
-      external: true,
-    },
   ],
   sidebarNav: [
     {
@@ -65,6 +56,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Canvas Color Picker",
+          href: "/docs/components/canvas-color-picker",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Easel Tabs",
           href: "/docs/components/easel-tabs",
           items: [],
@@ -93,29 +90,25 @@ export const docsConfig: DocsConfig = {
           title: "Palette Toast",
           href: "/docs/components/palette-toast",
           items: [],
-          label: "New",
         },
         {
           title: "Canvas Drawer",
           href: "/docs/components/canvas-drawer",
           items: [],
-          label: "New",
         },
         {
           title: "Texture Overlay",
           href: "/docs/components/texture-overlay",
           items: [],
-          label: "New",
-        },
-        {
-          title: "Canvas Color Picker",
-          href: "/docs/components/canvas-color-picker",
-          items: [],
-          label: "New",
         },
         {
           title: "Canvas Grid",
           href: "/docs/components/canvas-grid",
+          items: [],
+        },
+        {
+          title: "Artistic Navigation",
+          href: "/docs/components/artistic-navigation",
           items: [],
           label: "New",
         },

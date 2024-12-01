@@ -170,6 +170,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "artistic-navigation": {
+      name: "artistic-navigation",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/artistic-navigation.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/artistic-navigation.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -330,6 +341,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-grid"],
       files: ["registry/default/example/canvas-grid-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-grid-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "artistic-navigation-demo": {
+      name: "artistic-navigation-demo",
+      type: "registry:example",
+      registryDependencies: ["artistic-navigation"],
+      files: ["registry/default/example/artistic-navigation-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/artistic-navigation-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

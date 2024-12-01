@@ -94,4 +94,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/canvas-grid.tsx"],
   },
+  {
+    name: "artistic-navigation",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/artistic-navigation.tsx"],
+  },
 ];

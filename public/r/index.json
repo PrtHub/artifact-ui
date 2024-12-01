@@ -200,5 +200,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "artistic-navigation",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/artistic-navigation.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

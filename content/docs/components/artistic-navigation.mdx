@@ -1,0 +1,38 @@
+---
+title: Artistic Navigation
+description: A stylish navigation component with artistic transitions and effects based on scroll position and hover states.
+component: true
+---
+
+<ComponentPreview name="artistic-navigation-demo" />
+
+## Usage
+
+```tsx
+import { ArtisticNavigation } from "@/components/ui/artistic-navigation";
+
+export default function Example() {
+  const navItems = [
+    { label: "Home", href: "#", icon: <HomeIcon /> },
+    { label: "Profile", href: "#", icon: <UserIcon /> },
+    // Add more items as needed
+  ];
+
+  return <ArtisticNavigation items={navItems} />;
+}
+```
+
+## Props
+
+| Prop name | Type                       | Default  | Description               |
+| --------- | -------------------------- | -------- | ------------------------- |
+| items     | `ArtisticNavigationItem[]` | Required | Array of navigation items |
+| className | `string`                   | ''       | Additional CSS classes    |
+
+## Examples
+
+### Basic Navigation
+
+```tsx
+<ArtisticNavigation items={navItems} />
+```
