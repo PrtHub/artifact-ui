@@ -50,6 +50,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/sketch-input",
           items: [],
         },
+        // {
+        //   title: "Painterly Select",
+        //   href: "/docs/components/painterly-select",
+        //   items: [],
+        //   label: "New",
+        // },
         {
           title: "Gallery Grid",
           href: "/docs/components/gallery-grid",

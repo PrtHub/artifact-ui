@@ -70,4 +70,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/canvas-drawer.tsx"],
   },
+  {
+    name: "painterly-select",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "@radix-ui/react-select", "lucide-react"],
+    files: ["ui-canvas/painterly-select.tsx"],
+  },
 ];

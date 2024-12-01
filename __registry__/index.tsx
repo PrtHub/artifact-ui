@@ -126,6 +126,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "painterly-select": {
+      name: "painterly-select",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/painterly-select.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/painterly-select.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -242,6 +253,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-drawer","button"],
       files: ["registry/default/example/canvas-drawer-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-drawer-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "painterly-select-demo": {
+      name: "painterly-select-demo",
+      type: "registry:example",
+      registryDependencies: ["painterly-select","button"],
+      files: ["registry/default/example/painterly-select-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/painterly-select-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
