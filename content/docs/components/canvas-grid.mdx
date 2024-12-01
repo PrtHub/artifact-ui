@@ -1,0 +1,153 @@
+---
+title: Canvas Grid
+description: A masonry-style grid system that arranges items like an art gallery, complete with frame effects and dynamic shadows.
+component: true
+---
+
+<ComponentPreview name="canvas-grid-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project</Step>
+
+`components/ui-canvas/canvas-grid.tsx`
+
+<ComponentSource name="canvas-grid" />
+
+<Step>Update the import paths to match your project setup</Step>
+
+```ts
+import { CanvasGrid } from "@/components/ui-canvas/canvas-grid";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { CanvasGrid } from "@/components/ui-canvas/canvas-grid";
+
+export default function GalleryExample() {
+  const items = [
+    {
+      id: "1",
+      content: (
+        <Card className="h-full overflow-hidden">
+          <div className="h-full bg-gradient-to-br from-blue-400 to-indigo-500 p-4">
+            <h3 className="text-lg font-semibold text-white">Landscape View</h3>
+          </div>
+        </Card>
+      ),
+      width: 2,
+      height: 1,
+    },
+    // ... more items
+  ];
+
+  return <CanvasGrid items={items} columns={4} gap={12} />;
+}
+```
+
+## Examples
+
+### Photo Gallery Grid
+
+A classic photo gallery layout with varying image sizes and beautiful gradients.
+
+```tsx
+<CanvasGrid
+  items={[
+    { width: 2, height: 1, id: "landscape" }, // Landscape image
+    { width: 1, height: 2, id: "portrait" }, // Portrait image
+    { width: 1, height: 1, id: "square" }, // Square image
+  ]}
+  columns={4}
+  gap={12}
+/>
+```
+
+### Dashboard Layout
+
+A modern dashboard with statistics, charts, and notification widgets.
+
+```tsx
+<CanvasGrid
+  items={[
+    { width: 2, height: 1, id: "stats" }, // Statistics overview
+    { width: 2, height: 2, id: "chart" }, // Analytics chart
+    { width: 2, height: 1, id: "notifications" }, // Notifications panel
+  ]}
+  columns={4}
+  gap={12}
+/>
+```
+
+### Interactive Art Gallery
+
+An immersive art gallery with animations and hover effects.
+
+```tsx
+<CanvasGrid
+  items={[
+    { width: 2, height: 2, id: "featured" }, // Featured artwork
+    { width: 1, height: 1, id: "piece1" }, // Art piece with rotation
+    { width: 1, height: 1, id: "piece2" }, // Art piece with scale
+    { width: 2, height: 1, id: "piece3" }, // Wide art piece
+  ]}
+  columns={4}
+  gap={12}
+/>
+```
+
+### Magazine Layout
+
+A modern editorial layout with featured stories and pull quotes.
+
+```tsx
+<CanvasGrid
+  items={[
+    { width: 3, height: 2, id: "cover" }, // Cover story
+    { width: 1, height: 2, id: "quote" }, // Pull quote
+  ]}
+  columns={4}
+  gap={12}
+/>
+```
+
+### Creative Studio Showcase
+
+A dynamic portfolio layout with project timelines and metrics.
+
+```tsx
+<CanvasGrid
+  items={[
+    { width: 2, height: 1, id: "metrics" }, // Studio metrics
+    { width: 2, height: 2, id: "timeline" }, // Project timeline
+    { width: 2, height: 1, id: "testimonial" }, // Client testimonial
+  ]}
+  columns={4}
+  gap={12}
+/>
+```
+
+## Props
+
+### Canvas Grid
+
+| Prop name | Type               | Default  | Description                           |
+| --------- | ------------------ | -------- | ------------------------------------- |
+| items     | `CanvasGridItem[]` | Required | Array of items to display in the grid |
+| columns   | `number`           | `4`      | Number of columns in the grid         |
+| gap       | `number`           | `12`     | Gap between grid items in pixels      |
+| className | `string`           | -        | Additional CSS classes                |
+
+### Canvas Grid Item
+
+| Prop name | Type        | Default  | Description                         |
+| --------- | ----------- | -------- | ----------------------------------- |
+| id        | `string`    | Required | Unique identifier for the item      |
+| content   | `ReactNode` | Required | Content to display in the grid item |
+| width     | `number`    | `1`      | Width of the item in column units   |
+| height    | `number`    | `1`      | Height of the item in row units     |

@@ -88,4 +88,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/canvas-color-picker.tsx"],
   },
+  {
+    name: "canvas-grid",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/canvas-grid.tsx"],
+  },
 ];

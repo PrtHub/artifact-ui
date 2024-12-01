@@ -187,5 +187,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-grid",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-grid.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

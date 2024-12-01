@@ -85,4 +85,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-color-picker"],
     files: ["example/canvas-color-picker-demo.tsx"],
   },
+  {
+    name: "canvas-grid-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-grid"],
+    files: ["example/canvas-grid-demo.tsx"],
+  },
 ];

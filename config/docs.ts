@@ -113,6 +113,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Canvas Grid",
+          href: "/docs/components/canvas-grid",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
