@@ -82,4 +82,10 @@ export const ui: Registry = [
     dependencies: [],
     files: ["ui-canvas/texture-overlay.tsx"],
   },
+  {
+    name: "canvas-color-picker",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/canvas-color-picker.tsx"],
+  },
 ];

@@ -107,6 +107,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Canvas Color Picker",
+          href: "/docs/components/canvas-color-picker",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

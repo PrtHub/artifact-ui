@@ -79,4 +79,10 @@ export const examples: Registry = [
     registryDependencies: ["texture-overlay"],
     files: ["example/texture-overlay-demo.tsx"],
   },
+  {
+    name: "canvas-color-picker-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-color-picker"],
+    files: ["example/canvas-color-picker-demo.tsx"],
+  },
 ];

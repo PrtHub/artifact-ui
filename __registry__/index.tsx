@@ -148,6 +148,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "canvas-color-picker": {
+      name: "canvas-color-picker",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/canvas-color-picker.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/canvas-color-picker.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -286,6 +297,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["texture-overlay"],
       files: ["registry/default/example/texture-overlay-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/texture-overlay-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-color-picker-demo": {
+      name: "canvas-color-picker-demo",
+      type: "registry:example",
+      registryDependencies: ["canvas-color-picker"],
+      files: ["registry/default/example/canvas-color-picker-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/canvas-color-picker-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

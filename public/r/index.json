@@ -174,5 +174,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-color-picker",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-color-picker.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
