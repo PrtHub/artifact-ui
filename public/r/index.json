@@ -227,5 +227,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-dock",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "next-themes"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-dock.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -107,6 +107,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Canvas Dock",
+          href: "/docs/components/canvas-dock",
+          items: [],
+        },
+        {
           title: "Artistic Navigation",
           href: "/docs/components/artistic-navigation",
           items: [],

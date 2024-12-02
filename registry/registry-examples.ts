@@ -103,4 +103,10 @@ export const examples: Registry = [
     registryDependencies: ["artistic-navigation"],
     files: ["example/artistic-navigation-demo.tsx"],
   },
+  {
+    name: "canvas-dock-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-dock"],
+    files: ["example/canvas-dock-demo.tsx"],
+  },
 ];

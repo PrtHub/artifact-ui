@@ -106,4 +106,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/artistic-navigation.tsx"],
   },
+  {
+    name: "canvas-dock",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "next-themes"],
+    files: ["ui-canvas/canvas-dock.tsx"],
+  },
 ];
