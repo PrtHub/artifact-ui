@@ -241,5 +241,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "studio-light",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "next-themes"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/studio-light.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

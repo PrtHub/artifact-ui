@@ -1,0 +1,175 @@
+---
+title: Studio Light
+description: A component that simulates studio lighting effects on UI elements with dynamic shadows and highlights.
+date: 2024-01-10
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="studio-light-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion next-themes
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="studio-light" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { StudioLight } from "@/components/ui-canvas/studio-light";
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import { StudioLight } from "@/components/ui-canvas/studio-light";
+
+export default function BasicExample() {
+  return (
+    <StudioLight>
+      <div className="p-6 text-center">
+        <h2 className="text-2xl font-bold">Hello World</h2>
+        <p>Move your mouse to see the lighting effect</p>
+      </div>
+    </StudioLight>
+  );
+}
+```
+
+### Different Variants
+
+```tsx
+// Soft lighting (default)
+<StudioLight variant="soft">
+  {/* Content */}
+</StudioLight>
+
+// Harsh lighting
+<StudioLight variant="harsh">
+  {/* Content */}
+</StudioLight>
+
+// Dramatic lighting
+<StudioLight variant="dramatic">
+  {/* Content */}
+</StudioLight>
+
+// Rim lighting
+<StudioLight variant="rim">
+  {/* Content */}
+</StudioLight>
+
+// Butterfly lighting
+<StudioLight variant="butterfly">
+  {/* Content */}
+</StudioLight>
+```
+
+### Custom Intensity and Color
+
+```tsx
+<StudioLight intensity={1.5} color="#FF5555">
+  {/* Content */}
+</StudioLight>
+```
+
+### Auto-Animated Light
+
+```tsx
+<StudioLight autoAnimate followMouse={false}>
+  {/* Content */}
+</StudioLight>
+```
+
+### Fixed Light Position
+
+```tsx
+<StudioLight followMouse={false} lightPosition={{ x: 0.3, y: 0.7 }}>
+  {/* Content */}
+</StudioLight>
+```
+
+### Different Sizes
+
+```tsx
+// Small container
+<StudioLight size="sm">
+  {/* Content */}
+</StudioLight>
+
+// Medium container (default)
+<StudioLight size="md">
+  {/* Content */}
+</StudioLight>
+
+// Large container
+<StudioLight size="lg">
+  {/* Content */}
+</StudioLight>
+
+// Full-width container
+<StudioLight size="full">
+  {/* Content */}
+</StudioLight>
+```
+
+### With Background
+
+```tsx
+<StudioLight className="bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-900 dark:to-neutral-800">
+  {/* Content */}
+</StudioLight>
+```
+
+### Interactive Card Example
+
+```tsx
+export function InteractiveCard() {
+  return (
+    <StudioLight
+      variant="dramatic"
+      intensity={1.2}
+      className="rounded-xl bg-white dark:bg-slate-900"
+    >
+      <div className="p-6 space-y-4">
+        <h3 className="text-2xl font-bold">Interactive Card</h3>
+        <p className="text-gray-600 dark:text-gray-400">
+          This card has a dramatic lighting effect that follows your mouse.
+        </p>
+        <button className="px-4 py-2 bg-blue-500 text-white rounded-md">
+          Click Me
+        </button>
+      </div>
+    </StudioLight>
+  );
+}
+```
+
+## Props
+
+### StudioLight
+
+| Prop          | Type                                                      | Description                                          | Default   |
+| ------------- | --------------------------------------------------------- | ---------------------------------------------------- | --------- |
+| children      | `React.ReactNode`                                         | The content to be wrapped by the studio light effect | -         |
+| intensity     | `number`                                                  | Controls the strength of the lighting effect         | 1         |
+| size          | `"sm" \| "md" \| "lg" \| "full"`                          | Sets the size of the light effect container          | "md"      |
+| color         | `string`                                                  | The color of the light effect                        | "#ffffff" |
+| autoAnimate   | `boolean`                                                 | Enables automatic light movement animation           | false     |
+| variant       | `"soft" \| "harsh" \| "dramatic" \| "rim" \| "butterfly"` | Determines the style of the lighting effect          | "soft"    |
+| followMouse   | `boolean`                                                 | Controls whether the light follows the mouse cursor  | true      |
+| lightPosition | `{ x: number; y: number }`                                | Sets a fixed position for the light effect           | -         |
+| className     | `string`                                                  | Additional CSS classes to apply to the container     | -         |

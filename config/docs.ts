@@ -123,6 +123,11 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Studio Light",
+          href: "/docs/components/studio-light",
+          items: [],
+        },
       ],
     },
   ],

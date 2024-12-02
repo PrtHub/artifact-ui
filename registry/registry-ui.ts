@@ -112,4 +112,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "next-themes"],
     files: ["ui-canvas/canvas-dock.tsx"],
   },
+  {
+    name: "studio-light",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "next-themes"],
+    files: ["ui-canvas/studio-light.tsx"],
+  },
 ];

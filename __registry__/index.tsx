@@ -203,6 +203,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "studio-light": {
+      name: "studio-light",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/studio-light.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/studio-light.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -396,6 +407,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-dock"],
       files: ["registry/default/example/canvas-dock-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-dock-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "studio-light-demo": {
+      name: "studio-light-demo",
+      type: "registry:example",
+      registryDependencies: ["studio-light"],
+      files: ["registry/default/example/studio-light-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/studio-light-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -109,4 +109,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-dock"],
     files: ["example/canvas-dock-demo.tsx"],
   },
+  {
+    name: "studio-light-demo",
+    type: "registry:example",
+    registryDependencies: ["studio-light"],
+    files: ["example/studio-light-demo.tsx"],
+  },
 ];

@@ -12,14 +12,14 @@ interface CanvasDockProps {
   collapsed?: boolean;
   onCollapsedChange?: (collapsed: boolean) => void;
   variant?:
-  | "wooden"
-  | "metallic"
-  | "modern"
-  | "glass"
-  | "neon"
-  | "chalk"
-  | "paper"
-  | "canvas";
+    | "wooden"
+    | "metallic"
+    | "modern"
+    | "glass"
+    | "neon"
+    | "chalk"
+    | "paper"
+    | "canvas";
 }
 
 interface CanvasDockItemProps {
@@ -171,7 +171,7 @@ export const CanvasDockItem = React.forwardRef<
                 style={{
                   background:
                     paintSplatterColors[
-                    Math.floor(Math.random() * paintSplatterColors.length)
+                      Math.floor(Math.random() * paintSplatterColors.length)
                     ],
                   filter: "url(#paint-splatter)",
                 }}
