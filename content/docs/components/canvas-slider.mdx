@@ -1,0 +1,258 @@
+---
+title: Canvas Slider
+description: A versatile slider component with multiple artistic styles and interactive animations
+date: 2024-01-10
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="canvas-slider-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion @radix-ui/react-slider
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="canvas-slider" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CanvasSlider } from "@/components/ui-canvas/canvas-slider";
+```
+
+</Steps>
+
+## Props
+
+| Prop           | Type     | Description                                            | Default      |
+| -------------- | -------- | ------------------------------------------------------ | ------------ |
+| defaultValue   | number[] | Initial value of the slider                            | [0]          |
+| min            | number   | Minimum value                                          | 0            |
+| max            | number   | Maximum value                                          | 100          |
+| step           | number   | Step increment                                         | 1            |
+| primaryColor   | string   | Start color of the gradient                            | "#4F46E5"    |
+| secondaryColor | string   | End color of the gradient                              | "#06B6D4"    |
+| disabled       | boolean  | Whether the slider is disabled                         | false        |
+| orientation    | string   | Orientation of the slider ("horizontal" or "vertical") | "horizontal" |
+| variant        | string   | Style variant                                          | "watercolor" |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import { CanvasSlider } from "@/components/ui-canvas/canvas-slider";
+
+export default function BasicSlider() {
+  return (
+    <CanvasSlider defaultValue={[50]} max={100} step={1} />
+  );
+}
+```
+
+### Available Variants
+
+```tsx
+// Default - Clean minimal gradient
+<CanvasSlider
+  variant="default"
+  defaultValue={[50]}
+  primaryColor="#000000"
+  secondaryColor="#666666"
+/>
+
+// Neon - Glowing effect
+<CanvasSlider
+  variant="neon"
+  defaultValue={[60]}
+  primaryColor="#FF0080"
+  secondaryColor="#7928CA"
+/>
+
+// Glass - Frosted glass effect
+<CanvasSlider
+  variant="glass"
+  defaultValue={[40]}
+  primaryColor="#0EA5E9"
+  secondaryColor="#6366F1"
+/>
+
+// Metallic - Shiny finish
+<CanvasSlider
+  variant="metallic"
+  defaultValue={[70]}
+  primaryColor="#94A3B8"
+  secondaryColor="#E2E8F0"
+/>
+
+// Gradient - Smooth transition
+<CanvasSlider
+  variant="gradient"
+  defaultValue={[30]}
+  primaryColor="#F97316"
+  secondaryColor="#FBBF24"
+/>
+
+// Watercolor - Artistic effect
+<CanvasSlider
+  variant="watercolor"
+  defaultValue={[50]}
+  primaryColor="#4F46E5"
+  secondaryColor="#06B6D4"
+/>
+```
+
+### With Event Handlers
+
+```tsx
+export default function SliderWithEvents() {
+  const handleValueChange = (value: number[]) => {
+    console.log("New value:", value);
+  };
+
+  return (
+    <CanvasSlider
+      defaultValue={[50]}
+      onValueChange={handleValueChange}
+      onValueCommit={(value) => console.log("Committed value:", value)}
+    />
+  );
+}
+```
+
+### Custom Range and Step
+
+```tsx
+// Custom range with decimal steps
+<CanvasSlider
+  min={-10}
+  max={10}
+  step={0.1}
+  defaultValue={[0]}
+/>
+
+// Percentage slider
+<CanvasSlider
+  min={0}
+  max={100}
+  step={5}
+  defaultValue={[50]}
+/>
+```
+
+### With Form Integration
+
+```tsx
+import { useForm, Controller } from "react-hook-form";
+
+export default function SliderForm() {
+  const { control } = useForm({
+    defaultValues: {
+      slider: [50],
+    },
+  });
+
+  return (
+    <form>
+      <Controller
+        name="slider"
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <CanvasSlider
+            defaultValue={value}
+            onValueChange={onChange}
+            variant="watercolor"
+          />
+        )}
+      />
+    </form>
+  );
+}
+```
+
+### Theme-Aware Usage
+
+```tsx
+import { useTheme } from "next-themes";
+
+export default function ThemeAwareSlider() {
+  const { theme } = useTheme();
+
+  return (
+    <div className="space-y-4">
+      {/* Colors will automatically adapt to theme */}
+      <CanvasSlider
+        variant="neon"
+        defaultValue={[50]}
+      />
+
+      {/* Custom colors based on theme */}
+      <CanvasSlider
+        variant="glass"
+        defaultValue={[50]}
+        primaryColor={theme === "dark" ? "#38BDF8" : "#0EA5E9"}
+        secondaryColor={theme === "dark" ? "#818CF8" : "#6366F1"}
+      />
+    </div>
+  );
+}
+```
+
+### Disabled State
+
+```tsx
+<CanvasSlider
+  defaultValue={[50]}
+  disabled
+  variant="watercolor"
+/>
+```
+
+### Vertical Orientation
+
+```tsx
+<div className="h-48">
+  <CanvasSlider
+    defaultValue={[50]}
+    orientation="vertical"
+    variant="gradient"
+  />
+</div>
+```
+
+### Multiple Instances with Different Styles
+
+```tsx
+export default function StyleShowcase() {
+  return (
+    <div className="space-y-8">
+      {[
+        "default",
+        "neon",
+        "glass",
+        "metallic",
+        "gradient",
+        "watercolor",
+      ].map((variant) => (
+        <div key={variant} className="space-y-2">
+          <h3 className="text-sm font-medium capitalize">
+            {variant} Style
+          </h3>
+          <CanvasSlider
+            defaultValue={[50]}
+            variant={variant as any}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+```

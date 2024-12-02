@@ -112,6 +112,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Canvas Slider",
+          href: "/docs/components/canvas-slider",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

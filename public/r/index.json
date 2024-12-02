@@ -112,6 +112,20 @@
     ]
   },
   {
+    "name": "canvas-slider",
+    "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-slider",
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-slider.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "art-board-layout",
     "type": "registry:ui",
     "dependencies": [

@@ -52,6 +52,12 @@ export const ui: Registry = [
     files: ["ui-canvas/brush-stroke-loader.tsx"],
   },
   {
+    name: "canvas-slider",
+    type: "registry:ui",
+    dependencies: ["@radix-ui/react-slider", "framer-motion"],
+    files: ["ui-canvas/canvas-slider.tsx"],
+  },
+  {
     name: "art-board-layout",
     type: "registry:ui",
     dependencies: ["@dnd-kit/core"],

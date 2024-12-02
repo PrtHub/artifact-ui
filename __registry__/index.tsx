@@ -93,6 +93,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "canvas-slider": {
+      name: "canvas-slider",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/canvas-slider.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/canvas-slider.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "art-board-layout": {
       name: "art-board-layout",
       type: "registry:ui",
@@ -264,6 +275,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["brush-stroke-loader"],
       files: ["registry/default/example/brush-stroke-loader-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/brush-stroke-loader-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-slider-demo": {
+      name: "canvas-slider-demo",
+      type: "registry:example",
+      registryDependencies: ["canvas-slider"],
+      files: ["registry/default/example/canvas-slider-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/canvas-slider-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
