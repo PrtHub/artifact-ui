@@ -255,5 +255,31 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "sketch-accordion",
+    "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-accordion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/sketch-accordion.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "canvas-menu",
+    "type": "registry:ui",
+    "registryDependencies": [
+      "@radix-ui/react-menu"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-menu.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

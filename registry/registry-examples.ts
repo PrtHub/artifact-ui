@@ -115,4 +115,16 @@ export const examples: Registry = [
     registryDependencies: ["studio-light"],
     files: ["example/studio-light-demo.tsx"],
   },
+  {
+    name: "sketch-accordion-demo",
+    type: "registry:example",
+    registryDependencies: ["sketch-accordion"],
+    files: ["example/sketch-accordion-demo.tsx"],
+  },
+  {
+    name: "canvas-menu-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-menu"],
+    files: ["example/canvas-menu-demo.tsx"],
+  },
 ];

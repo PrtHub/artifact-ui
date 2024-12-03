@@ -1,0 +1,144 @@
+---
+title: Sketch Accordion
+date: 2024-03-19
+description: An interactive accordion component with a sketchbook-like appearance and paper texture animations.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="sketch-accordion-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @radix-ui/react-accordion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/sketch-accordion.tsx`
+
+<ComponentSource name="sketch-accordion" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import {
+  SketchAccordion,
+  SketchAccordionContent,
+  SketchAccordionItem,
+  SketchAccordionTrigger,
+  PencilFilter,
+} from "@/components/ui-canvas/sketch-accordion";
+```
+
+<Step>Update your styles.</Step>
+
+The component uses Tailwind CSS for styling. Make sure your `tailwind.config.js` includes the following:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+};
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<SketchAccordion type="single" collapsible>
+  <SketchAccordionItem value="item-1">
+    <SketchAccordionTrigger>Section Title</SketchAccordionTrigger>
+    <SketchAccordionContent>Section content goes here</SketchAccordionContent>
+  </SketchAccordionItem>
+</SketchAccordion>
+```
+
+### Multiple Sections
+
+```tsx
+<SketchAccordion type="multiple">
+  <SketchAccordionItem value="item-1">
+    <SketchAccordionTrigger>First Section</SketchAccordionTrigger>
+    <SketchAccordionContent>First section content</SketchAccordionContent>
+  </SketchAccordionItem>
+  <SketchAccordionItem value="item-2">
+    <SketchAccordionTrigger>Second Section</SketchAccordionTrigger>
+    <SketchAccordionContent>Second section content</SketchAccordionContent>
+  </SketchAccordionItem>
+</SketchAccordion>
+```
+
+### Custom Styling
+
+```tsx
+<SketchAccordion type="single" collapsible>
+  <SketchAccordionItem
+    value="item-1"
+    className="border-blue-200 dark:border-blue-800"
+  >
+    <SketchAccordionTrigger className="hover:bg-blue-50 dark:hover:bg-blue-900">
+      Custom Styled Section
+    </SketchAccordionTrigger>
+    <SketchAccordionContent>Content with custom styling</SketchAccordionContent>
+  </SketchAccordionItem>
+</SketchAccordion>
+```
+
+## Props
+
+### Sketch Accordion
+
+| Prop name    | Type                   | Default  | Description                                               |
+| ------------ | ---------------------- | -------- | --------------------------------------------------------- |
+| type         | "single" \| "multiple" | "single" | Determines whether one or multiple items can be opened    |
+| collapsible  | boolean                | false    | When type is "single", allows closing content by clicking |
+| value        | string                 | -        | The controlled value of the opened item                   |
+| defaultValue | string                 | -        | The default value of the opened item                      |
+| className    | string                 | -        | Additional CSS classes                                    |
+
+### Sketch Accordion Item
+
+| Prop name | Type    | Default | Description                                        |
+| --------- | ------- | ------- | -------------------------------------------------- |
+| value     | string  | -       | A unique value for the accordion item              |
+| disabled  | boolean | false   | When true, prevents user interaction with the item |
+| className | string  | -       | Additional CSS classes                             |
+
+### Sketch Accordion Trigger
+
+| Prop name | Type            | Default | Description                   |
+| --------- | --------------- | ------- | ----------------------------- |
+| children  | React.ReactNode | -       | Content to display in trigger |
+| className | string          | -       | Additional CSS classes        |
+
+### Sketch Accordion Content
+
+| Prop name | Type            | Default | Description                  |
+| --------- | --------------- | ------- | ---------------------------- |
+| children  | React.ReactNode | -       | Content to display when open |
+| className | string          | -       | Additional CSS classes       |

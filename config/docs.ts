@@ -59,7 +59,6 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Color Picker",
           href: "/docs/components/canvas-color-picker",
           items: [],
-          label: "New",
         },
         {
           title: "Easel Tabs",
@@ -115,18 +114,27 @@ export const docsConfig: DocsConfig = {
           title: "Artistic Navigation",
           href: "/docs/components/artistic-navigation",
           items: [],
-          label: "New",
         },
         {
           title: "Canvas Slider",
           href: "/docs/components/canvas-slider",
           items: [],
-          label: "New",
+        },
+        {
+          title: "Sketch Accordion",
+          href: "/docs/components/sketch-accordion",
+          items: [],
         },
         {
           title: "Studio Light",
           href: "/docs/components/studio-light",
           items: [],
+        },
+        {
+          title: "Canvas Menu",
+          href: "/docs/components/canvas-menu",
+          items: [],
+          label: "new",
         },
       ],
     },

@@ -214,6 +214,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "sketch-accordion": {
+      name: "sketch-accordion",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/sketch-accordion.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/sketch-accordion.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-menu": {
+      name: "canvas-menu",
+      type: "registry:ui",
+      registryDependencies: ["@radix-ui/react-menu"],
+      files: ["registry/default/ui-canvas/canvas-menu.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/canvas-menu.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -418,6 +440,28 @@ export const Index: Record<string, any> = {
       registryDependencies: ["studio-light"],
       files: ["registry/default/example/studio-light-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/studio-light-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sketch-accordion-demo": {
+      name: "sketch-accordion-demo",
+      type: "registry:example",
+      registryDependencies: ["sketch-accordion"],
+      files: ["registry/default/example/sketch-accordion-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/sketch-accordion-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-menu-demo": {
+      name: "canvas-menu-demo",
+      type: "registry:example",
+      registryDependencies: ["canvas-menu"],
+      files: ["registry/default/example/canvas-menu-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/canvas-menu-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

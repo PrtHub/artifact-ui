@@ -118,4 +118,16 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "next-themes"],
     files: ["ui-canvas/studio-light.tsx"],
   },
+  {
+    name: "sketch-accordion",
+    type: "registry:ui",
+    dependencies: ["@radix-ui/react-accordion"],
+    files: ["ui-canvas/sketch-accordion.tsx"],
+  },
+  {
+    name: "canvas-menu",
+    type: "registry:ui",
+    registryDependencies: ["@radix-ui/react-menu"],
+    files: ["ui-canvas/canvas-menu.tsx"],
+  },
 ];

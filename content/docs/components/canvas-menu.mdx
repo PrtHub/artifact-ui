@@ -1,0 +1,210 @@
+---
+title: Canvas Menu
+description: A stylish menu component with artistic effects, built on top of Radix UI Menubar.
+component: true
+---
+
+<ComponentPreview name="canvas-menu-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install @radix-ui/react-menubar
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-menu.tsx`
+
+<ComponentSource name="canvas-menu" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import {
+  CanvasMenu,
+  CanvasMenuMenu,
+  CanvasMenuTrigger,
+  CanvasMenuContent,
+  CanvasMenuItem,
+  CanvasMenuSeparator,
+  CanvasMenuCheckboxItem,
+  CanvasMenuRadioGroup,
+  CanvasMenuRadioItem,
+  CanvasMenuSub,
+  CanvasMenuSubTrigger,
+  CanvasMenuSubContent,
+  CanvasMenuLabel,
+} from "@/components/ui-canvas/canvas-menu";
+```
+
+</Steps>
+
+## Usage
+
+### Basic Usage
+
+```tsx
+export default function ArtistTools() {
+  const [showGrid, setShowGrid] = React.useState(true);
+  const [artStyle, setArtStyle] = React.useState("modern");
+
+  return (
+    <CanvasMenu>
+      <CanvasMenuMenu>
+        <CanvasMenuTrigger>Artist Menu</CanvasMenuTrigger>
+        <CanvasMenuContent>
+          {/* File Operations */}
+          <CanvasMenuItem>
+            New Canvas{" "}
+            <span className="ml-auto text-xs text-muted-foreground">⌘N</span>
+          </CanvasMenuItem>
+          <CanvasMenuItem>
+            Open...{" "}
+            <span className="ml-auto text-xs text-muted-foreground">⌘O</span>
+          </CanvasMenuItem>
+          <CanvasMenuSeparator />
+
+          {/* Tools Submenu */}
+          <CanvasMenuSub>
+            <CanvasMenuSubTrigger>Art Tools</CanvasMenuSubTrigger>
+            <CanvasMenuSubContent>
+              <CanvasMenuItem>
+                Brush{" "}
+                <span className="ml-auto text-xs text-muted-foreground">B</span>
+              </CanvasMenuItem>
+              <CanvasMenuItem>
+                Pencil{" "}
+                <span className="ml-auto text-xs text-muted-foreground">P</span>
+              </CanvasMenuItem>
+            </CanvasMenuSubContent>
+          </CanvasMenuSub>
+
+          {/* Settings */}
+          <CanvasMenuSeparator />
+          <CanvasMenuCheckboxItem
+            checked={showGrid}
+            onCheckedChange={setShowGrid}
+          >
+            Show Grid{" "}
+            <span className="ml-auto text-xs text-muted-foreground">⌘G</span>
+          </CanvasMenuCheckboxItem>
+
+          {/* Art Style Selection */}
+          <CanvasMenuSeparator />
+          <CanvasMenuLabel>Art Style</CanvasMenuLabel>
+          <CanvasMenuRadioGroup value={artStyle} onValueChange={setArtStyle}>
+            <CanvasMenuRadioItem value="classic">Classic</CanvasMenuRadioItem>
+            <CanvasMenuRadioItem value="modern">Modern</CanvasMenuRadioItem>
+          </CanvasMenuRadioGroup>
+        </CanvasMenuContent>
+      </CanvasMenuMenu>
+    </CanvasMenu>
+  );
+}
+```
+
+## Props
+
+### CanvasMenu
+
+| Prop name | Type           | Default | Description                                             |
+| --------- | -------------- | ------- | ------------------------------------------------------- |
+| modal     | boolean        | true    | Whether to render in a modal context                    |
+| dir       | "ltr" \| "rtl" | "ltr"   | Text direction                                          |
+| loop      | boolean        | true    | Whether keyboard navigation should loop around items    |
+| asChild   | boolean        | false   | Change the root element using Radix UI's `Slot` utility |
+
+### CanvasMenuItem
+
+| Prop name | Type       | Default | Description                                     |
+| --------- | ---------- | ------- | ----------------------------------------------- |
+| disabled  | boolean    | false   | Whether the item is disabled                    |
+| onSelect  | () => void | -       | Callback when item is selected                  |
+| className | string     | -       | Additional CSS classes                          |
+| asChild   | boolean    | false   | Change the root element using Radix UI's `Slot` |
+| textValue | string     | -       | Optional text used for typeahead purposes       |
+
+### CanvasMenuCheckboxItem
+
+| Prop name       | Type                       | Default | Description                                     |
+| --------------- | -------------------------- | ------- | ----------------------------------------------- |
+| checked         | boolean                    | -       | Whether the item is checked                     |
+| onCheckedChange | (checked: boolean) => void | -       | Callback when checked state changes             |
+| disabled        | boolean                    | false   | Whether the item is disabled                    |
+| className       | string                     | -       | Additional CSS classes                          |
+| asChild         | boolean                    | false   | Change the root element using Radix UI's `Slot` |
+
+### CanvasMenuRadioGroup
+
+| Prop name     | Type                    | Default | Description                   |
+| ------------- | ----------------------- | ------- | ----------------------------- |
+| value         | string                  | -       | The selected value            |
+| onValueChange | (value: string) => void | -       | Callback when value changes   |
+| disabled      | boolean                 | false   | Whether the group is disabled |
+| className     | string                  | -       | Additional CSS classes        |
+
+### CanvasMenuRadioItem
+
+| Prop name | Type    | Default | Description                                     |
+| --------- | ------- | ------- | ----------------------------------------------- |
+| value     | string  | -       | Value of the radio item                         |
+| disabled  | boolean | false   | Whether the item is disabled                    |
+| className | string  | -       | Additional CSS classes                          |
+| asChild   | boolean | false   | Change the root element using Radix UI's `Slot` |
+
+## Examples
+
+### With Icons
+
+```tsx
+import { Brush, Eraser, Grid } from "lucide-react";
+
+<CanvasMenuItem>
+  <Brush className="mr-2 h-4 w-4" />
+  Brush Tool
+</CanvasMenuItem>;
+```
+
+### With Keyboard Shortcuts
+
+```tsx
+<CanvasMenuItem>
+  Save
+  <span className="ml-auto text-xs text-muted-foreground">⌘S</span>
+</CanvasMenuItem>
+```
+
+### With Submenu
+
+```tsx
+<CanvasMenuSub>
+  <CanvasMenuSubTrigger>More Tools</CanvasMenuSubTrigger>
+  <CanvasMenuSubContent>
+    <CanvasMenuItem>Tool 1</CanvasMenuItem>
+    <CanvasMenuItem>Tool 2</CanvasMenuItem>
+  </CanvasMenuSubContent>
+</CanvasMenuSub>
+```
+
+### With Groups
+
+```tsx
+<CanvasMenuContent>
+  <CanvasMenuGroup>
+    <CanvasMenuItem>New</CanvasMenuItem>
+    <CanvasMenuItem>Open</CanvasMenuItem>
+    <CanvasMenuItem>Save</CanvasMenuItem>
+  </CanvasMenuGroup>
+  <CanvasMenuSeparator />
+  <CanvasMenuGroup>
+    <CanvasMenuItem>Cut</CanvasMenuItem>
+    <CanvasMenuItem>Copy</CanvasMenuItem>
+    <CanvasMenuItem>Paste</CanvasMenuItem>
+  </CanvasMenuGroup>
+</CanvasMenuContent>
+```
