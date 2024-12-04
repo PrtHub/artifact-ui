@@ -1,0 +1,96 @@
+---
+title: Artistic Tooltip
+description: An interactive tooltip component with artistic styles that follows your cursor movement.
+component: true
+---
+
+<ComponentPreview name="artistic-tooltip-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project:</Step>
+
+<ComponentSource name="artistic-tooltip" />
+
+<Step>Update the import paths to match your project setup:</Step>
+
+```tsx
+import { ArtisticTooltip } from "@/components/ui-canvas/artistic-tooltip";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { useState } from "react";
+import { ArtisticTooltip } from "@/components/ui-canvas/artistic-tooltip";
+
+export default function MyComponent() {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  return (
+    <ArtisticTooltip
+      content="Your tooltip message"
+      show={showTooltip}
+      style="watercolor"
+    >
+      <button
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+      >
+        Hover me
+      </button>
+    </ArtisticTooltip>
+  );
+}
+```
+
+## Props
+
+| Prop      | Type                                    | Default      | Description                               |
+| --------- | --------------------------------------- | ------------ | ----------------------------------------- |
+| content   | `string`                                | -            | The content to display inside the tooltip |
+| show      | `boolean`                               | `false`      | Controls the visibility of the tooltip    |
+| style     | `"watercolor"` \| `"oil"` \| `"pencil"` | `"watercolor"` | The artistic style of the tooltip        |
+| className | `string`                                | -            | Additional CSS classes to apply           |
+| children  | `ReactNode`                             | -            | The element that triggers the tooltip     |
+
+## Examples
+
+### Watercolor Style
+
+```tsx
+<ArtisticTooltip
+  content="Elegant watercolor effect"
+  show={showTooltip}
+  style="watercolor"
+>
+  <Button>Hover me</Button>
+</ArtisticTooltip>
+```
+
+### Oil Paint Style
+
+```tsx
+<ArtisticTooltip
+  content="Rich oil painting texture"
+  show={showTooltip}
+  style="oil"
+>
+  <Button>Hover me</Button>
+</ArtisticTooltip>
+```
+
+### Pencil Style
+
+```tsx
+<ArtisticTooltip
+  content="Minimalist pencil sketch"
+  show={showTooltip}
+  style="pencil"
+>
+  <Button>Hover me</Button>
+</ArtisticTooltip>

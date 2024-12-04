@@ -295,5 +295,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "artistic-tooltip",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/artistic-tooltip.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

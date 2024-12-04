@@ -136,4 +136,10 @@ export const ui: Registry = [
     dependencies: ["class-variance-authority", "lucide-react"],
     files: ["ui-canvas/ink-alert.tsx"],
   },
+  {
+    name: "artistic-tooltip",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority"],
+    files: ["ui-canvas/artistic-tooltip.tsx"],
+  },
 ];

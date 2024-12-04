@@ -133,4 +133,10 @@ export const examples: Registry = [
     registryDependencies: ["ink-alert"],
     files: ["example/ink-alert-demo.tsx"],
   },
+  {
+    name: "artistic-tooltip-demo",
+    type: "registry:example",
+    registryDependencies: ["artistic-tooltip"],
+    files: ["example/artistic-tooltip-demo.tsx"],
+  },
 ];

@@ -147,6 +147,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Artistic Tooltip",
+          href: "/docs/components/artistic-tooltip",
+          items: [],
+          label: "New"
+        },
       ],
     },
   ],

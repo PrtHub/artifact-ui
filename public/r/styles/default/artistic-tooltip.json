@@ -1,0 +1,15 @@
+{
+  "name": "artistic-tooltip",
+  "type": "registry:ui",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "ui-canvas/artistic-tooltip.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\nimport { cn } from \"@/lib/utils\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst tooltipVariants = cva(\n  \"absolute z-50 select-none px-3 py-2 text-sm transition-all duration-300\",\n  {\n    variants: {\n      style: {\n        watercolor:\n          \"rounded-[40%_60%_70%_30%/40%_40%_60%_50%] border border-white/20 bg-gradient-to-br from-[#7FB3D5]/90 to-[#5499C7]/80 text-white shadow-lg shadow-[#7FB3D5]/20 backdrop-blur-md\",\n        oil: \"rounded-[60%_40%_50%_50%/60%_50%_40%_40%] border border-white/10 bg-gradient-to-br from-[#2C3E50]/95 to-[#34495E]/85 text-white shadow-lg shadow-[#2C3E50]/30 backdrop-blur-md\",\n        pencil:\n          \"rounded-[30%_70%_60%_40%/30%_40%_70%_60%] border border-white/10 bg-gradient-to-br from-zinc-800/90 to-zinc-900/80 text-white shadow-lg shadow-zinc-900/30 backdrop-blur-md\",\n      },\n      position: {\n        top: \"mb-3 -translate-x-1/2 -translate-y-full\",\n        bottom: \"mt-3 -translate-x-1/2 translate-y-full\",\n        left: \"mr-3 -translate-x-full -translate-y-1/2\",\n        right: \"ml-3 -translate-y-1/2 translate-x-full\",\n      },\n    },\n    defaultVariants: {\n      style: \"watercolor\",\n      position: \"top\",\n    },\n  }\n);\n\nexport type ArtisticTooltipProps = React.HTMLAttributes<HTMLDivElement> &\n  VariantProps<typeof tooltipVariants> & {\n    content: string;\n    show?: boolean;\n    children: React.ReactNode;\n  };\n\nexport default function ArtisticTooltip({\n  className,\n  style,\n  position,\n  content,\n  show = false,\n  children,\n  ...props\n}: ArtisticTooltipProps) {\n  return (\n    <div className=\"relative inline-block\">\n      {children}\n      {show && (\n        <div\n          className={cn(\n            tooltipVariants({ style, position }),\n            \"duration-200 animate-in fade-in-0 zoom-in-[98%]\",\n            \"after:absolute after:h-2 after:w-2 after:rotate-45\",\n            position === \"top\" && \"after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:rounded-sm after:bg-inherit\",\n            position === \"bottom\" && \"after:-top-1 after:left-1/2 after:-translate-x-1/2 after:rounded-sm after:bg-inherit\",\n            position === \"left\" && \"after:-right-1 after:top-1/2 after:-translate-y-1/2 after:rounded-sm after:bg-inherit\",\n            position === \"right\" && \"after:-left-1 after:top-1/2 after:-translate-y-1/2 after:rounded-sm after:bg-inherit\",\n            className\n          )}\n          {...props}\n        >\n          <span className=\"relative block\">{content}</span>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
