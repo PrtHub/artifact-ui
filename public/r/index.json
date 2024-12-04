@@ -319,5 +319,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "layer-manager",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/layer-manager.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

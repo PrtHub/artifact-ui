@@ -148,4 +148,10 @@ export const ui: Registry = [
     dependencies: [],
     files: ["ui-canvas/canvas-annotations.tsx"],
   },
+  {
+    name: "layer-manager",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/layer-manager.tsx"],
+  },
 ];

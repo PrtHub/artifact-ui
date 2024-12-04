@@ -1,0 +1,180 @@
+---
+title: Layer Manager
+date: 2024-03-19
+description: A powerful layer management component for canvas applications with support for visibility, locking, reordering, and renaming layers.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="layer-manager-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/layer-manager.tsx`
+
+<ComponentSource name="layer-manager" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```bash
+import { LayerManager } from "@/components/ui-canvas/layer-manager";
+```
+
+</Steps>
+
+## Usage
+
+### Basic Example
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { LayerManager } from "@/components/ui-canvas/layer-manager";
+
+export function SimpleLayerManager() {
+  const [layers, setLayers] = useState([
+    {
+      id: "1",
+      name: "Background",
+      visible: true,
+      locked: true,
+    },
+    {
+      id: "2",
+      name: "Content Layer",
+      visible: true,
+      locked: false,
+    },
+  ]);
+
+  return (
+    <LayerManager
+      layers={layers}
+      onLayerVisibilityToggle={(id) => {
+        setLayers((prev) =>
+          prev.map((layer) =>
+            layer.id === id ? { ...layer, visible: !layer.visible } : layer
+          )
+        );
+      }}
+    />
+  );
+}
+```
+
+### Advanced Example with All Features
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { LayerManager } from "@/components/ui-canvas/layer-manager";
+
+export function AdvancedLayerManager() {
+  const [layers, setLayers] = useState([
+    {
+      id: "1",
+      name: "Background",
+      visible: true,
+      locked: true,
+      thumbnail: "/thumbnails/bg.png",
+    },
+    {
+      id: "2",
+      name: "Artwork",
+      visible: true,
+      locked: false,
+      thumbnail: "/thumbnails/art.png",
+    },
+  ]);
+  const [selectedLayer, setSelectedLayer] = useState("1");
+
+  const handleMove = (id: string, direction: "up" | "down") => {
+    const index = layers.findIndex((layer) => layer.id === id);
+    if (
+      (direction === "up" && index === 0) ||
+      (direction === "down" && index === layers.length - 1)
+    ) {
+      return;
+    }
+
+    const newLayers = [...layers];
+    const newIndex = direction === "up" ? index - 1 : index + 1;
+    [newLayers[index], newLayers[newIndex]] = [
+      newLayers[newIndex],
+      newLayers[index],
+    ];
+    setLayers(newLayers);
+  };
+
+  return (
+    <LayerManager
+      layers={layers}
+      selectedLayerId={selectedLayer}
+      onLayerSelect={setSelectedLayer}
+      onLayerVisibilityToggle={(id) => {
+        setLayers((prev) =>
+          prev.map((layer) =>
+            layer.id === id ? { ...layer, visible: !layer.visible } : layer
+          )
+        );
+      }}
+      onLayerLockToggle={(id) => {
+        setLayers((prev) =>
+          prev.map((layer) =>
+            layer.id === id ? { ...layer, locked: !layer.locked } : layer
+          )
+        );
+      }}
+      onLayerMove={handleMove}
+      onLayerRename={(id, newName) => {
+        setLayers((prev) =>
+          prev.map((layer) =>
+            layer.id === id ? { ...layer, name: newName } : layer
+          )
+        );
+      }}
+      onLayerDelete={(id) => {
+        setLayers((prev) => prev.filter((layer) => layer.id !== id));
+      }}
+    />
+  );
+}
+```
+
+## Props
+
+| Name                      | Type                                        | Default     | Description                              |
+| ------------------------- | ------------------------------------------- | ----------- | ---------------------------------------- |
+| `layers`                  | `Layer[]`                                   | `[]`        | An array of layer objects.               |
+| `selectedLayerId`         | `string`                                    | `undefined` | The ID of the currently selected layer.  |
+| `onLayerSelect`           | `(id: string) => void`                      | `undefined` | Called when a layer is selected.         |
+| `onLayerVisibilityToggle` | `(id: string) => void`                      | `undefined` | Called when layer visibility is toggled. |
+| `onLayerLockToggle`       | `(id: string) => void`                      | `undefined` | Called when layer lock state is toggled. |
+| `onLayerDelete`           | `(id: string) => void`                      | `undefined` | Called when a layer is deleted.          |
+| `onLayerMove`             | `(id: string, dir: "up" \| "down") => void` | `undefined` | Called when a layer is moved up or down. |
+| `onLayerRename`           | `(id: string, name: string) => void`        | `undefined` | Called when a layer is renamed.          |
+| `className`               | `string`                                    | `undefined` | Additional CSS classes to apply.         |
+
+## Layer Object Structure
+
+```typescript
+interface Layer {
+  id: string; // Unique identifier for the layer
+  name: string; // Display name of the layer
+  visible: boolean; // Whether the layer is visible
+  locked: boolean; // Whether the layer is locked for editing
+  thumbnail?: string; // Optional thumbnail URL for the layer preview
+}
+```

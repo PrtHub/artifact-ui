@@ -269,6 +269,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "layer-manager": {
+      name: "layer-manager",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/layer-manager.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/layer-manager.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -528,6 +539,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-annotations"],
       files: ["registry/default/example/canvas-annotations-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-annotations-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "layer-manager-demo": {
+      name: "layer-manager-demo",
+      type: "registry:example",
+      registryDependencies: ["layer-manager"],
+      files: ["registry/default/example/layer-manager-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/layer-manager-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

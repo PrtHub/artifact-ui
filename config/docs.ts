@@ -156,6 +156,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New"
         },
+        {
+          title: "Layer Manager",
+          href: "/docs/components/layer-manager",
+          items: [],
+          label: "New"
+        },
       ],
     },
   ],

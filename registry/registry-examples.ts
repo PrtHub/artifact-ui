@@ -145,4 +145,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-annotations"],
     files: ["example/canvas-annotations-demo.tsx"],
   },
+  {
+    name: "layer-manager-demo",
+    type: "registry:example",
+    registryDependencies: ["layer-manager"],
+    files: ["example/layer-manager-demo.tsx"],
+  },
 ];
