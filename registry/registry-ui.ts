@@ -142,4 +142,10 @@ export const ui: Registry = [
     dependencies: ["class-variance-authority"],
     files: ["ui-canvas/artistic-tooltip.tsx"],
   },
+  {
+    name: "canvas-annotations",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/canvas-annotations.tsx"],
+  },
 ];

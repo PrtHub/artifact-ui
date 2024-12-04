@@ -139,17 +139,20 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Menu",
           href: "/docs/components/canvas-menu",
           items: [],
-          label: "new",
         },
         {
           title: "Ink Alert",
           href: "/docs/components/ink-alert",
           items: [],
-          label: "New",
         },
         {
           title: "Artistic Tooltip",
           href: "/docs/components/artistic-tooltip",
+          items: [],
+        },
+        {
+          title: "Canvas Annotations",
+          href: "/docs/components/canvas-annotations",
           items: [],
           label: "New"
         },

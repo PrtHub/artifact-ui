@@ -139,4 +139,10 @@ export const examples: Registry = [
     registryDependencies: ["artistic-tooltip"],
     files: ["example/artistic-tooltip-demo.tsx"],
   },
+  {
+    name: "canvas-annotations-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-annotations"],
+    files: ["example/canvas-annotations-demo.tsx"],
+  },
 ];

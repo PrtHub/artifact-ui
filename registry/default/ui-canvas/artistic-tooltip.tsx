@@ -19,7 +19,7 @@ const tooltipVariants = cva(
     defaultVariants: {
       style: "watercolor",
     },
-  }
+  },
 );
 
 export type ArtisticTooltipProps = React.HTMLAttributes<HTMLDivElement> &
@@ -69,7 +69,7 @@ export default function ArtisticTooltip({
             tooltipVariants({ style }),
             "whitespace-pre-wrap break-words transition-opacity duration-150",
             show ? "opacity-100" : "opacity-0",
-            className
+            className,
           )}
           {...props}
         >

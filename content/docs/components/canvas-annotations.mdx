@@ -1,0 +1,72 @@
+---
+title: Canvas Annotations
+date: 2024-03-19
+description: An interactive component for adding annotation markers with tooltips to any canvas or image.
+author: ui-canvas
+published: true
+component: true
+---
+
+<ComponentPreview name="canvas-annotations-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-annotations.tsx`
+
+<ComponentSource name="canvas-annotations" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```bash
+import { CanvasAnnotations } from "@/components/ui-canvas/canvas-annotations";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { CanvasAnnotations } from "@/components/ui-canvas/canvas-annotations";
+
+export function AnnotatedImage() {
+  const annotations = [
+    {
+      id: "1",
+      x: 25,
+      y: 30,
+      content: "Important detail here",
+    },
+    {
+      id: "2",
+      x: 75,
+      y: 60,
+      content: "Another feature",
+    },
+  ];
+
+  return (
+    <div className="relative h-[500px] w-full">
+      <img src="/your-image.jpg" className="h-full w-full object-cover" />
+      <CanvasAnnotations
+        annotations={annotations}
+        onAnnotationClick={(id) => {
+          console.log(`Annotation ${id} clicked`);
+        }}
+      />
+    </div>
+  );
+}
+```
+
+## Features
+
+- Add interactive annotation markers to any canvas, image, or container
+- Customizable annotation content using React nodes
+- Animated ping effect for better visibility
+- Click handling for interactive annotations
+- Fully responsive and works with any container size
+- Tailwind CSS classes for easy styling customization

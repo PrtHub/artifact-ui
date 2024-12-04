@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Paintbrush, Droplets, Pencil } from "lucide-react";
 
 export default function ArtisticTooltipDemo() {
-  const [activeTooltips, setActiveTooltips] = useState<Record<string, boolean>>({});
+  const [activeTooltips, setActiveTooltips] = useState<Record<string, boolean>>(
+    {},
+  );
 
   const toggleTooltip = (id: string) => {
     setActiveTooltips((prev) => ({ ...prev, [id]: !prev[id] }));

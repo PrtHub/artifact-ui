@@ -308,5 +308,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-annotations",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-annotations.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
