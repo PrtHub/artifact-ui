@@ -127,4 +127,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-menu"],
     files: ["example/canvas-menu-demo.tsx"],
   },
+  {
+    name: "ink-alert-demo",
+    type: "registry:example",
+    registryDependencies: ["ink-alert"],
+    files: ["example/ink-alert-demo.tsx"],
+  },
 ];

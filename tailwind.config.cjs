@@ -87,6 +87,9 @@ module.exports = {
         rainbow: "rainbow var(--speed, 2s) infinite linear",
         "texture-float": "texture-float 8s ease-in-out infinite",
         "hue-rotate": "hue-rotate 10s linear infinite",
+        "ink-spread": "ink-spread 0.5s ease-out forwards",
+        "ink-spread-fast": "ink-spread 0.3s ease-out forwards",
+        "ink-dissolve": "ink-dissolve 1s ease-out forwards",
       },
       keyframes: {
         "accordion-down": {
@@ -219,9 +222,35 @@ module.exports = {
           "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
           "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
+        "ink-spread": {
+          "0%": { 
+            transform: "scale(0.95)",
+            opacity: "0",
+            filter: "blur(4px)",
+          },
+          "100%": { 
+            transform: "scale(1)",
+            opacity: "1",
+            filter: "blur(0px)",
+          },
+        },
+        "ink-dissolve": {
+          "0%": { 
+            transform: "scale(1)",
+            opacity: "1",
+            filter: "blur(0px)",
+          },
+          "100%": { 
+            transform: "scale(0.95)",
+            opacity: "0",
+            filter: "blur(4px)",
+          },
+        },
       },
       backgroundImage: {
         'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        "ink-texture": "radial-gradient(circle at center, var(--ink-color) 0%, transparent 70%)",
+        "ink-splatter": "radial-gradient(ellipse at center, var(--ink-color) 0%, transparent 70%), radial-gradient(circle at 30% 50%, var(--ink-color) 0%, transparent 60%), radial-gradient(circle at 70% 50%, var(--ink-color) 0%, transparent 60%)",
       },
     },
   },

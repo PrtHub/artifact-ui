@@ -30,6 +30,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/installation",
           items: [],
         },
+        {
+          title: "Components",
+          href: "/docs/components",
+          items: [],
+        },
       ],
     },
     {
@@ -135,6 +140,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/canvas-menu",
           items: [],
           label: "new",
+        },
+        {
+          title: "Ink Alert",
+          href: "/docs/components/ink-alert",
+          items: [],
+          label: "New",
         },
       ],
     },

@@ -130,4 +130,10 @@ export const ui: Registry = [
     registryDependencies: ["@radix-ui/react-menu"],
     files: ["ui-canvas/canvas-menu.tsx"],
   },
+  {
+    name: "ink-alert",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority", "lucide-react"],
+    files: ["ui-canvas/ink-alert.tsx"],
+  },
 ];

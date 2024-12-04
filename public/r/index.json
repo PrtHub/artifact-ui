@@ -281,5 +281,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "ink-alert",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/ink-alert.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
