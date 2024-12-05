@@ -1,0 +1,105 @@
+---
+title: Texture Browser
+date: 2024-01-01
+description: An advanced component for browsing, previewing, and selecting textures with support for grid/list views and dark mode.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="texture-browser-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/texture-browser.tsx`
+
+<ComponentSource name="texture-browser" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { TextureBrowser } from "@/components/ui-canvas/texture-browser";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import TextureBrowser from "@/components/ui-canvas/texture-browser";
+
+export default function MyComponent() {
+  const textures = [
+    {
+      id: "1",
+      name: "Brushed Steel",
+      url: "/textures/steel.jpg",
+      thumbnail: "/textures/steel-thumb.jpg",
+      description: "Polished metal surface with brushed finish",
+      tags: ["metal", "steel", "industrial"],
+      dimensions: { width: 2048, height: 2048 },
+      fileSize: "2.4 MB",
+    },
+    // Add more textures...
+  ];
+
+  return (
+    <TextureBrowser
+      textures={textures}
+      onSelect={(texture) => console.log("Selected texture:", texture)}
+      defaultViewMode="grid"
+      gridCols={{
+        default: 2,
+        md: 3,
+        lg: 4,
+      }}
+      showDetails={true}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop            | Type                           | Description                                  | Default   |
+| --------------- | ------------------------------ | -------------------------------------------- | --------- |
+| textures        | TextureItem[]                  | Array of texture items to display            | []        |
+| onSelect        | (texture: TextureItem) => void | Callback when a texture is selected          | -         |
+| defaultSelected | string                         | Initial selected texture ID                  | -         |
+| defaultViewMode | "grid" \| "list"               | Initial view mode                            | "grid"    |
+| gridCols        | GridCols                       | Number of columns for different breakpoints  | See below |
+| showDetails     | boolean                        | Show texture details (dimensions, size, etc) | true      |
+| className       | string                         | Additional CSS classes                       | -         |
+| style           | React.CSSProperties            | Inline styles for the container              | -         |
+
+### Default GridCols
+
+```tsx
+{
+  default: 2, // Mobile
+  md: 3,      // Tablet
+  lg: 4       // Desktop
+}
+```
+
+## TextureItem Interface
+
+```tsx
+interface TextureItem {
+  id: string;
+  name: string;
+  url: string; // Full-size image URL
+  thumbnail: string; // Thumbnail image URL
+  description?: string; // Optional texture description
+  tags?: string[]; // Optional tags for filtering
+  dimensions?: {
+    // Optional image dimensions
+    width: number;
+    height: number;
+  };
+  fileSize?: string; // Optional file size
+}
+```

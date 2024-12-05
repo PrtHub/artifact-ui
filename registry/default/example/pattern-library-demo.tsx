@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import PatternLibrary, { Pattern } from "@/registry/default/ui-canvas/pattern-library";
+import PatternLibrary, {
+  Pattern,
+} from "@/registry/default/ui-canvas/pattern-library";
 
 const defaultPatterns: Pattern[] = [
   {
@@ -74,35 +76,41 @@ export default function PatternLibraryDemo() {
 
   const getPatternSvg = (pattern: Pattern) => {
     const shapes: Record<string, string> = {
-      dots: `<circle cx="${pattern.spacing / 2}" cy="${pattern.spacing / 2}" r="${pattern.size / 2
-        }" fill="${pattern.color}"/>`,
-      squares: `<rect x="${pattern.spacing / 2 - pattern.size / 2}" y="${pattern.spacing / 2 - pattern.size / 2
-        }" width="${pattern.size}" height="${pattern.size}" fill="${pattern.color}"/>`,
-      lines: `<line x1="0" y1="0" x2="${pattern.spacing}" y2="${pattern.spacing}" stroke="${pattern.color
-        }" stroke-width="${pattern.size}"/>`,
-      circles: `<circle cx="${pattern.spacing / 2}" cy="${pattern.spacing / 2}" r="${pattern.size
-        }" fill="none" stroke="${pattern.color}" stroke-width="${pattern.size / 4}"/>`,
-      triangles: `<polygon points="${pattern.spacing / 2},${pattern.spacing / 2 - pattern.size
-        } ${pattern.spacing / 2 + pattern.size},${pattern.spacing / 2 + pattern.size} ${pattern.spacing / 2 - pattern.size
-        },${pattern.spacing / 2 + pattern.size}" fill="${pattern.color}"/>`,
-      grid: `<path d="M ${pattern.spacing} 0 L 0 0 0 ${pattern.spacing}" fill="none" stroke="${pattern.color
-        }" stroke-width="${pattern.size}"/>`,
+      dots: `<circle cx="${pattern.spacing / 2}" cy="${pattern.spacing / 2}" r="${
+        pattern.size / 2
+      }" fill="${pattern.color}"/>`,
+      squares: `<rect x="${pattern.spacing / 2 - pattern.size / 2}" y="${
+        pattern.spacing / 2 - pattern.size / 2
+      }" width="${pattern.size}" height="${pattern.size}" fill="${pattern.color}"/>`,
+      lines: `<line x1="0" y1="0" x2="${pattern.spacing}" y2="${pattern.spacing}" stroke="${
+        pattern.color
+      }" stroke-width="${pattern.size}"/>`,
+      circles: `<circle cx="${pattern.spacing / 2}" cy="${pattern.spacing / 2}" r="${
+        pattern.size
+      }" fill="none" stroke="${pattern.color}" stroke-width="${pattern.size / 4}"/>`,
+      triangles: `<polygon points="${pattern.spacing / 2},${
+        pattern.spacing / 2 - pattern.size
+      } ${pattern.spacing / 2 + pattern.size},${pattern.spacing / 2 + pattern.size} ${
+        pattern.spacing / 2 - pattern.size
+      },${pattern.spacing / 2 + pattern.size}" fill="${pattern.color}"/>`,
+      grid: `<path d="M ${pattern.spacing} 0 L 0 0 0 ${pattern.spacing}" fill="none" stroke="${
+        pattern.color
+      }" stroke-width="${pattern.size}"/>`,
       diamonds: `<path d="M ${pattern.spacing / 2} ${pattern.spacing / 2 - pattern.size} 
         L ${pattern.spacing / 2 + pattern.size} ${pattern.spacing / 2} 
         L ${pattern.spacing / 2} ${pattern.spacing / 2 + pattern.size} 
         L ${pattern.spacing / 2 - pattern.size} ${pattern.spacing / 2} Z" fill="${pattern.color}"/>`,
     };
 
-    return `<svg width="${pattern.spacing}" height="${pattern.spacing}" viewBox="0 0 ${pattern.spacing
-      } ${pattern.spacing}" xmlns="http://www.w3.org/2000/svg">
+    return `<svg width="${pattern.spacing}" height="${pattern.spacing}" viewBox="0 0 ${
+      pattern.spacing
+    } ${pattern.spacing}" xmlns="http://www.w3.org/2000/svg">
       ${shapes[pattern.type]}
     </svg>`;
   };
 
   return (
-    <div
-      className={`flex w-full flex-col gap-8 p-4 md:flex-row`}
-    >
+    <div className={`flex w-full flex-col gap-8 p-4 md:flex-row`}>
       <div className="w-full max-w-sm space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-medium text-foreground/90 dark:text-white/90">

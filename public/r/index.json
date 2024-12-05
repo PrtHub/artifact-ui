@@ -358,5 +358,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "texture-browser",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/texture-browser.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

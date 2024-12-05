@@ -163,4 +163,10 @@ export const examples: Registry = [
     registryDependencies: ["pattern-library"],
     files: ["example/pattern-library-demo.tsx"],
   },
+  {
+    name: "texture-browser-demo",
+    type: "registry:example",
+    registryDependencies: ["texture-browser"],
+    files: ["example/texture-browser-demo.tsx"],
+  },
 ];

@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Texture Browser",
+          href: "/docs/components/texture-browser",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Sketch Input",
           href: "/docs/components/sketch-input",
           items: [],

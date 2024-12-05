@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const sketchInputVariants = cva(
-  "relative w-full rounded-lg border bg-transparent px-4 py-3 text-base ring-offset-background transition-all duration-200 ease-in-out placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+  "relative w-full rounded-lg border bg-transparent px-4 py-2 text-base ring-offset-background transition-all duration-200 ease-in-out placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {

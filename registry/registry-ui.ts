@@ -166,4 +166,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/pattern-library.tsx"],
   },
+  {
+    name: "texture-browser",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/texture-browser.tsx"],
+  },
 ];
