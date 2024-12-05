@@ -280,6 +280,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "brush-style-selector": {
+      name: "brush-style-selector",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/brush-style-selector.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/brush-style-selector.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -550,6 +561,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["layer-manager"],
       files: ["registry/default/example/layer-manager-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/layer-manager-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "brush-style-selector-demo": {
+      name: "brush-style-selector-demo",
+      type: "registry:example",
+      registryDependencies: ["brush-style-selector"],
+      files: ["registry/default/example/brush-style-selector-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/brush-style-selector-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -154,4 +154,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/layer-manager.tsx"],
   },
+  {
+    name: "brush-style-selector",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/brush-style-selector.tsx"],
+  },
 ];

@@ -151,4 +151,10 @@ export const examples: Registry = [
     registryDependencies: ["layer-manager"],
     files: ["example/layer-manager-demo.tsx"],
   },
+  {
+    name: "brush-style-selector-demo",
+    type: "registry:example",
+    registryDependencies: ["brush-style-selector"],
+    files: ["example/brush-style-selector-demo.tsx"],
+  },
 ];

@@ -57,7 +57,9 @@ export default function LayerManager({
     >
       <div className="flex items-center gap-2 border-b border-border/50 px-4 py-3 dark:border-white/10">
         <LayersIcon className="h-4 w-4 text-foreground/70 dark:text-white/70" />
-        <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Layers</span>
+        <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+          Layers
+        </span>
       </div>
       <div className="flex flex-col p-1">
         {layers.map((layer) => (
@@ -99,7 +101,8 @@ export default function LayerManager({
                 className={cn(
                   "rounded-md p-2 transition-colors",
                   "text-muted-foreground hover:text-foreground dark:text-white/50 dark:hover:text-white",
-                  !layer.visible && "text-muted-foreground/50 dark:text-white/25",
+                  !layer.visible &&
+                    "text-muted-foreground/50 dark:text-white/25",
                 )}
                 onClick={(e) => {
                   e.stopPropagation();

@@ -154,13 +154,17 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Annotations",
           href: "/docs/components/canvas-annotations",
           items: [],
-          label: "New"
         },
         {
           title: "Layer Manager",
           href: "/docs/components/layer-manager",
           items: [],
-          label: "New"
+        },
+        {
+          title: "Brush Style Selector",
+          href: "/docs/components/brush-style-selector",
+          items: [],
+          label: "New",
         },
       ],
     },
