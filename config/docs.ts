@@ -87,6 +87,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Color Scheme Generator",
+          href: "/docs/components/color-scheme-generator",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Brush Stroke Loader",
           href: "/docs/components/brush-stroke-loader",
           items: [],

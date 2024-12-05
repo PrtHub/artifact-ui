@@ -371,5 +371,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "color-scheme-generator",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/color-scheme-generator.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

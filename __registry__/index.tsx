@@ -313,6 +313,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "color-scheme-generator": {
+      name: "color-scheme-generator",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/color-scheme-generator.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/color-scheme-generator.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -616,6 +627,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["texture-browser"],
       files: ["registry/default/example/texture-browser-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/texture-browser-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "color-scheme-generator-demo": {
+      name: "color-scheme-generator-demo",
+      type: "registry:example",
+      registryDependencies: ["color-scheme-generator"],
+      files: ["registry/default/example/color-scheme-generator-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/color-scheme-generator-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

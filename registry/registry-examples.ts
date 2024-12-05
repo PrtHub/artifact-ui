@@ -169,4 +169,10 @@ export const examples: Registry = [
     registryDependencies: ["texture-browser"],
     files: ["example/texture-browser-demo.tsx"],
   },
+  {
+    name: "color-scheme-generator-demo",
+    type: "registry:example",
+    registryDependencies: ["color-scheme-generator"],
+    files: ["example/color-scheme-generator-demo.tsx"],
+  },
 ];

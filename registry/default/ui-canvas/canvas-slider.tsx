@@ -240,7 +240,7 @@ const CanvasSlider = React.forwardRef<
         onValueChange={handleValueChange}
         {...props}
       >
-        <SliderPrimitive.Track className="relative h-6 w-full grow overflow-hidden rounded-full">
+        <SliderPrimitive.Track className="relative h-3 w-full grow overflow-hidden rounded-full">
           <div
             className="absolute h-full w-full transition-all duration-300"
             style={getTrackStyles()}
@@ -248,7 +248,7 @@ const CanvasSlider = React.forwardRef<
           <SliderPrimitive.Range className="absolute h-full bg-transparent" />
         </SliderPrimitive.Track>
         <SliderPrimitive.Thumb
-          className="relative block h-8 w-8 rounded-full transition-all duration-300"
+          className="relative block h-6 w-6 rounded-full transition-all duration-300"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >

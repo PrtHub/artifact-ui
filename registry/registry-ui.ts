@@ -172,4 +172,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/texture-browser.tsx"],
   },
+  {
+    name: "color-scheme-generator",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/color-scheme-generator.tsx"],
+  },
 ];
