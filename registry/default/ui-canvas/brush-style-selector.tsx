@@ -144,8 +144,12 @@ export default function BrushStyleSelector({
         <div className="space-y-4 border-t pt-4 dark:border-white/10">
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Hardness</span>
-              <span className="text-sm text-muted-foreground dark:text-white/50">{hardness}%</span>
+              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+                Hardness
+              </span>
+              <span className="text-sm text-muted-foreground dark:text-white/50">
+                {hardness}%
+              </span>
             </div>
             <input
               type="range"
@@ -158,15 +162,19 @@ export default function BrushStyleSelector({
                 "range-slider:h-2 range-slider:rounded-full range-slider:bg-primary dark:range-slider:bg-white/90",
                 "range-thumb:h-4 range-thumb:w-4 range-thumb:rounded-full range-thumb:border-2 range-thumb:border-primary",
                 "range-thumb:bg-background dark:range-thumb:border-white dark:range-thumb:bg-black",
-                "transition-colors"
+                "transition-colors",
               )}
             />
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Angle</span>
-              <span className="text-sm text-muted-foreground dark:text-white/50">{angle}°</span>
+              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+                Angle
+              </span>
+              <span className="text-sm text-muted-foreground dark:text-white/50">
+                {angle}°
+              </span>
             </div>
             <input
               type="range"
@@ -179,15 +187,19 @@ export default function BrushStyleSelector({
                 "range-slider:h-2 range-slider:rounded-full range-slider:bg-primary dark:range-slider:bg-white/90",
                 "range-thumb:h-4 range-thumb:w-4 range-thumb:rounded-full range-thumb:border-2 range-thumb:border-primary",
                 "range-thumb:bg-background dark:range-thumb:border-white dark:range-thumb:bg-black",
-                "transition-colors"
+                "transition-colors",
               )}
             />
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Spacing</span>
-              <span className="text-sm text-muted-foreground dark:text-white/50">{spacing}x</span>
+              <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+                Spacing
+              </span>
+              <span className="text-sm text-muted-foreground dark:text-white/50">
+                {spacing}x
+              </span>
             </div>
             <input
               type="range"
@@ -201,7 +213,7 @@ export default function BrushStyleSelector({
                 "range-slider:h-2 range-slider:rounded-full range-slider:bg-primary dark:range-slider:bg-white/90",
                 "range-thumb:h-4 range-thumb:w-4 range-thumb:rounded-full range-thumb:border-2 range-thumb:border-primary",
                 "range-thumb:bg-background dark:range-thumb:border-white dark:range-thumb:bg-black",
-                "transition-colors"
+                "transition-colors",
               )}
             />
           </div>
@@ -212,7 +224,7 @@ export default function BrushStyleSelector({
               "flex w-full items-center justify-center gap-2 rounded-md p-2",
               "bg-muted hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/20",
               "text-sm font-medium text-foreground/90 dark:text-white/90",
-              "transition-colors"
+              "transition-colors",
             )}
           >
             <RefreshCw className="h-4 w-4" />
@@ -225,14 +237,18 @@ export default function BrushStyleSelector({
       <div className="space-y-4">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Size</span>
+            <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+              Size
+            </span>
             <div className="flex items-center gap-2">
               <button
-                onClick={() => handleSizeChange(Math.max(minSize, value.size - 1))}
+                onClick={() =>
+                  handleSizeChange(Math.max(minSize, value.size - 1))
+                }
                 className={cn(
                   "flex h-6 w-6 items-center justify-center rounded-md",
                   "bg-muted hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/20",
-                  "transition-colors"
+                  "transition-colors",
                 )}
                 disabled={value.size <= minSize}
               >
@@ -242,11 +258,13 @@ export default function BrushStyleSelector({
                 {value.size}px
               </span>
               <button
-                onClick={() => handleSizeChange(Math.min(maxSize, value.size + 1))}
+                onClick={() =>
+                  handleSizeChange(Math.min(maxSize, value.size + 1))
+                }
                 className={cn(
                   "flex h-6 w-6 items-center justify-center rounded-md",
                   "bg-muted hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/20",
-                  "transition-colors"
+                  "transition-colors",
                 )}
                 disabled={value.size >= maxSize}
               >
@@ -265,14 +283,16 @@ export default function BrushStyleSelector({
               "range-slider:h-2 range-slider:rounded-full range-slider:bg-primary dark:range-slider:bg-white/90",
               "range-thumb:h-4 range-thumb:w-4 range-thumb:rounded-full range-thumb:border-2 range-thumb:border-primary",
               "range-thumb:bg-background dark:range-thumb:border-white dark:range-thumb:bg-black",
-              "transition-colors"
+              "transition-colors",
             )}
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Opacity</span>
+            <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+              Opacity
+            </span>
             <span className="text-sm text-muted-foreground dark:text-white/50">
               {Math.round(value.opacity * 100)}%
             </span>
@@ -289,7 +309,7 @@ export default function BrushStyleSelector({
               "range-slider:h-2 range-slider:rounded-full range-slider:bg-primary dark:range-slider:bg-white/90",
               "range-thumb:h-4 range-thumb:w-4 range-thumb:rounded-full range-thumb:border-2 range-thumb:border-primary",
               "range-thumb:bg-background dark:range-thumb:border-white dark:range-thumb:bg-black",
-              "transition-colors"
+              "transition-colors",
             )}
           />
         </div>
@@ -298,7 +318,9 @@ export default function BrushStyleSelector({
       {/* Presets */}
       {presets.length > 0 && (
         <div className="space-y-2 border-t pt-4 dark:border-white/10">
-          <span className="text-sm font-medium text-foreground/90 dark:text-white/90">Presets</span>
+          <span className="text-sm font-medium text-foreground/90 dark:text-white/90">
+            Presets
+          </span>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
             {presets.map((preset) => (
               <button
@@ -308,7 +330,8 @@ export default function BrushStyleSelector({
                   "flex flex-col items-center gap-2 rounded-lg border p-3",
                   "hover:bg-muted/50 dark:hover:bg-white/5",
                   "transition-colors",
-                  value.id === preset.id && "border-primary bg-primary/10 dark:border-white/20 dark:bg-white/10"
+                  value.id === preset.id &&
+                    "border-primary bg-primary/10 dark:border-white/20 dark:bg-white/10",
                 )}
               >
                 <div className="relative">
@@ -316,7 +339,7 @@ export default function BrushStyleSelector({
                     size: Math.min(24, preset.size + 10),
                     className: cn(
                       "text-foreground transition-all duration-200 dark:text-white",
-                      preset.color && "fill-current"
+                      preset.color && "fill-current",
                     ),
                     style: preset.color ? { color: preset.color } : undefined,
                   })}
@@ -324,7 +347,9 @@ export default function BrushStyleSelector({
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent to-background/20 dark:to-white/20" />
                   )}
                 </div>
-                <span className="text-xs text-muted-foreground dark:text-white/50">{preset.name}</span>
+                <span className="text-xs text-muted-foreground dark:text-white/50">
+                  {preset.name}
+                </span>
               </button>
             ))}
           </div>

@@ -164,6 +164,11 @@ export const docsConfig: DocsConfig = {
           title: "Brush Style Selector",
           href: "/docs/components/brush-style-selector",
           items: [],
+        },
+        {
+          title: "Pattern Library",
+          href: "/docs/components/pattern-library",
+          items: [],
           label: "New",
         },
       ],

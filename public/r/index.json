@@ -345,5 +345,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "pattern-library",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/pattern-library.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

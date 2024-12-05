@@ -291,6 +291,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "pattern-library": {
+      name: "pattern-library",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/pattern-library.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/pattern-library.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -572,6 +583,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["brush-style-selector"],
       files: ["registry/default/example/brush-style-selector-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/brush-style-selector-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "pattern-library-demo": {
+      name: "pattern-library-demo",
+      type: "registry:example",
+      registryDependencies: ["pattern-library"],
+      files: ["registry/default/example/pattern-library-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/pattern-library-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -157,4 +157,10 @@ export const examples: Registry = [
     registryDependencies: ["brush-style-selector"],
     files: ["example/brush-style-selector-demo.tsx"],
   },
+  {
+    name: "pattern-library-demo",
+    type: "registry:example",
+    registryDependencies: ["pattern-library"],
+    files: ["example/pattern-library-demo.tsx"],
+  },
 ];

@@ -61,11 +61,15 @@ const defaultPresets: BrushPreset[] = [
 ];
 
 export default function BrushStyleSelectorDemo() {
-  const [currentBrush, setCurrentBrush] = useState<BrushPreset>(defaultPresets[0]);
+  const [currentBrush, setCurrentBrush] = useState<BrushPreset>(
+    defaultPresets[0],
+  );
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className={`flex w-full flex-col gap-8 p-4 md:flex-row ${isDarkMode ? 'dark' : ''}`}>
+    <div
+      className={`flex w-full flex-col gap-8 p-4 md:flex-row ${isDarkMode ? "dark" : ""}`}
+    >
       <div className="w-full max-w-sm space-y-4">
         <div className="z-20 flex items-center justify-between">
           <h3 className="text-lg font-medium text-foreground/90 dark:text-white/90">
@@ -108,14 +112,16 @@ export default function BrushStyleSelectorDemo() {
               }}
             >
               <div
-                className={`rounded-${currentBrush.style === 'square' ? 'none' : 'full'} bg-current`}
+                className={`rounded-${currentBrush.style === "square" ? "none" : "full"} bg-current`}
                 style={{
                   width: currentBrush.size,
                   height: currentBrush.size,
-                  backgroundColor: currentBrush.color || (isDarkMode ? 'white' : 'black'),
-                  filter: currentBrush.hardness && currentBrush.hardness < 100
-                    ? `blur(${(100 - currentBrush.hardness) / 8}px)`
-                    : undefined,
+                  backgroundColor:
+                    currentBrush.color || (isDarkMode ? "white" : "black"),
+                  filter:
+                    currentBrush.hardness && currentBrush.hardness < 100
+                      ? `blur(${(100 - currentBrush.hardness) / 8}px)`
+                      : undefined,
                   transform: currentBrush.angle
                     ? `rotate(${currentBrush.angle}deg)`
                     : undefined,
