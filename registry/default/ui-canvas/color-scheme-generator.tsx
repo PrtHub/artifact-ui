@@ -7,8 +7,7 @@ import { ChevronDown, Copy, Download, Palette, RefreshCw } from "lucide-react";
 import { CanvasButton } from "./canvas-button";
 import { SketchInput } from "./sketch-input";
 import { CanvasSlider } from "./canvas-slider";
-import { PaletteToast } from "./palette-toast";
-import InkAlert from "./ink-alert";
+import { useToast } from "@/hooks/use-toast";
 
 interface ColorSchemeGeneratorProps {
   className?: string;
@@ -115,6 +114,7 @@ function generateHarmony(
 }
 
 export function ColorSchemeGenerator({ className }: ColorSchemeGeneratorProps) {
+  const { toast } = useToast();
   const [baseColor, setBaseColor] = useState("#6366f1");
   const [harmony, setHarmony] = useState<HarmonyMode>("tetradic");
   const [hue, saturation, lightness] = hexToHsl(baseColor);
@@ -129,9 +129,13 @@ export function ColorSchemeGenerator({ className }: ColorSchemeGeneratorProps) {
     setBaseColor(hslToHex(newHue, newSat, newLight));
   }, []);
 
-  const copyToClipboard = useCallback((text: string) => {
-    navigator.clipboard.writeText(text);
-  }, []);
+  const copyToClipboard = useCallback(
+    (text: string) => {
+      navigator.clipboard.writeText(text);
+      toast.success("Copied to clipboard!");
+    },
+    [toast],
+  );
 
   const exportScheme = useCallback(() => {
     const data = {

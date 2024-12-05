@@ -18,49 +18,222 @@ published: true
 npm install framer-motion lucide-react
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>Copy and paste the following components into your project.</Step>
 
 `components/ui-canvas/palette-toast.tsx`
 
 <ComponentSource name="palette-toast" />
 
+`hooks/use-toast.tsx`
+
+```tsx
+"use client";
+
+import * as React from "react";
+import { PaletteToast } from "@/components/ui-canvas/palette-toast";
+
+type ToastType = "info" | "success" | "warning" | "error";
+
+interface ToastOptions {
+  duration?: number;
+}
+
+interface Toast {
+  id: number;
+  message: string;
+  type: ToastType;
+  duration?: number;
+}
+
+interface ToastContextType {
+  toasts: Toast[];
+  addToast: (message: string, type: ToastType, options?: ToastOptions) => void;
+  removeToast: (id: number) => void;
+}
+
+const ToastContext = React.createContext<ToastContextType | undefined>(
+  undefined
+);
+
+let toastCount = 0;
+
+interface ToastProviderProps {
+  children: React.ReactNode;
+}
+
+export function ToastProvider({ children }: ToastProviderProps) {
+  const [toasts, setToasts] = React.useState<Toast[]>([]);
+
+  const addToast = React.useCallback(
+    (message: string, type: ToastType, options?: ToastOptions) => {
+      const id = toastCount++;
+      setToasts((prev) => [
+        ...prev,
+        { id, message, type, duration: options?.duration },
+      ]);
+    },
+    []
+  );
+
+  const removeToast = React.useCallback((id: number) => {
+    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  }, []);
+
+  const contextValue = React.useMemo(
+    () => ({
+      toasts,
+      addToast,
+      removeToast,
+    }),
+    [toasts, addToast, removeToast]
+  );
+
+  return (
+    <ToastContext.Provider value={contextValue}>
+      {children}
+      <div className="fixed bottom-0 right-0 z-50 m-8 flex flex-col gap-4">
+        {toasts.map((toast) => (
+          <PaletteToast
+            key={toast.id}
+            message={toast.message}
+            type={toast.type}
+            duration={toast.duration}
+            onClose={() => removeToast(toast.id)}
+          />
+        ))}
+      </div>
+    </ToastContext.Provider>
+  );
+}
+
+export function useToast() {
+  const context = React.useContext(ToastContext);
+  if (!context) {
+    throw new Error("useToast must be used within a ToastProvider");
+  }
+
+  const toast = React.useMemo(
+    () => ({
+      success: (message: string, options?: ToastOptions) =>
+        context.addToast(message, "success", options),
+      error: (message: string, options?: ToastOptions) =>
+        context.addToast(message, "error", options),
+      warning: (message: string, options?: ToastOptions) =>
+        context.addToast(message, "warning", options),
+      info: (message: string, options?: ToastOptions) =>
+        context.addToast(message, "info", options),
+    }),
+    [context]
+  );
+
+  return { toast };
+}
+```
+
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { PaletteToast } from "@/components/ui-canvas/palette-toast";
+import { useToast, ToastProvider } from "@/hooks/use-toast";
+```
+
+<Step>Wrap your app with the ToastProvider.</Step>
+
+```tsx
+export default function App() {
+  return (
+    <ToastProvider>
+      <YourApp />
+    </ToastProvider>
+  );
+}
 ```
 
 </Steps>
 
 ## Examples
 
-### Basic Usage
+### Using Toast Hook (Recommended)
 
 ```tsx
-export function BasicToast() {
+import { useToast } from "@/hooks/use-toast";
+
+export function Example() {
+  const { toast } = useToast();
+
   return (
-    <PaletteToast message="A splash of information has arrived!" type="info" />
+    <div>
+      <button
+        onClick={() => toast.success("Your masterpiece has been created!")}
+      >
+        Show Success
+      </button>
+      <button onClick={() => toast.error("Oops! We spilled some paint...")}>
+        Show Error
+      </button>
+      <button
+        onClick={() => toast.warning("The canvas needs your attention...")}
+      >
+        Show Warning
+      </button>
+      <button
+        onClick={() => toast.info("A splash of information has arrived!")}
+      >
+        Show Info
+      </button>
+
+      {/* With custom duration */}
+      <button
+        onClick={() => toast.success("Quick message", { duration: 2000 })}
+      >
+        Quick Toast
+      </button>
+    </div>
   );
 }
 ```
 
-### Custom Duration
+### Using Provider in Pages
 
 ```tsx
-export function TimedToast() {
+import { ToastProvider } from "@/hooks/use-toast";
+
+export default function Page() {
   return (
-    <PaletteToast
-      message="Your masterpiece has been created!"
-      type="success"
-      duration={3000}
-    />
+    <ToastProvider>
+      <YourContent />
+    </ToastProvider>
   );
 }
 ```
 
-## Props
+## API Reference
 
-### PaletteToast
+### useToast Hook
+
+The `useToast` hook returns an object with a `toast` property that provides the following methods:
+
+```tsx
+const { toast } = useToast();
+
+toast.success(message: string, options?: ToastOptions)
+toast.error(message: string, options?: ToastOptions)
+toast.warning(message: string, options?: ToastOptions)
+toast.info(message: string, options?: ToastOptions)
+```
+
+#### Toast Options
+
+| Option   | Type   | Default | Description                                |
+| -------- | ------ | ------- | ------------------------------------------ |
+| duration | number | 5000    | Duration in milliseconds before auto-close |
+
+### ToastProvider Props
+
+| Prop     | Type            | Default | Description                                        |
+| -------- | --------------- | ------- | -------------------------------------------------- |
+| children | React.ReactNode | -       | The content to be wrapped with toast functionality |
+
+### PaletteToast Props
 
 | Prop      | Type                                        | Default | Description                                   |
 | --------- | ------------------------------------------- | ------- | --------------------------------------------- |
