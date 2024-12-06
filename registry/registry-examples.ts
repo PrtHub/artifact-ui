@@ -187,4 +187,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-timeline"],
     files: ["example/canvas-timeline-demo.tsx"],
   },
+  {
+    name: "artistic-data-viz-demo",
+    type: "registry:example",
+    registryDependencies: ["artistic-data-viz"],
+    files: ["example/artistic-data-viz-demo.tsx"],
+  },
 ];

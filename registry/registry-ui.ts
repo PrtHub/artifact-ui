@@ -190,4 +190,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/canvas-timeline.tsx"],
   },
+  {
+    name: "artistic-data-viz",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/artistic-data-viz.tsx"],
+  },
 ];

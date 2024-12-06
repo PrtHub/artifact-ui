@@ -410,5 +410,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "artistic-data-viz",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/artistic-data-viz.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

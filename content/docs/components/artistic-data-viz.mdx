@@ -1,0 +1,366 @@
+---
+title: Artistic Data Visualization
+description: A modern and sleek data visualization component with artistic animations.
+---
+
+<ComponentPreview name="artistic-data-viz-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm i framer-motion lucide-react sonner
+```
+
+<Step>Install the shadcn components:</Step>
+
+```bash
+npx shadcn@latest add slider switch input button tooltip
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/artistic-data-viz.tsx`
+
+<ComponentSource name="artistic-data-viz" />
+
+<Step>Update the import paths to match your project setup:</Step>
+
+```tsx
+import { ArtisticDataViz } from "@/components/ui-canvas/artistic-data-viz";
+```
+
+</Steps>
+
+## Usage
+
+The Artistic Data Visualization component can be used in various ways, from simple data displays to complex interactive visualizations.
+
+### Basic Usage
+
+```tsx
+import { ArtisticDataViz } from "@/components/ui-canvas/artistic-data-viz";
+
+export default function BasicExample() {
+  const data = [
+    { id: "1", value: 50, label: "Point 1" },
+    { id: "2", value: 75, label: "Point 2" },
+    { id: "3", value: 25, label: "Point 3" },
+  ];
+
+  return <ArtisticDataViz data={data} />;
+}
+```
+
+### Customizing Styles
+
+```tsx
+export default function StyledExample() {
+  const data = [
+    { id: "1", value: 50, label: "Sales" },
+    { id: "2", value: 75, label: "Revenue" },
+    { id: "3", value: 25, label: "Growth" },
+  ];
+
+  // Custom color palette
+  const colorPalette = [
+    "#FF6B6B", // coral
+    "#4ECDC4", // turquoise
+    "#45B7D1", // sky blue
+  ];
+
+  return (
+    <div className="space-y-8">
+      {/* Wave style with custom colors */}
+      <ArtisticDataViz
+        data={data}
+        style="wave"
+        colorPalette={colorPalette}
+        className="border rounded-lg shadow-lg"
+      />
+
+      {/* Area style with different dimensions */}
+      <ArtisticDataViz
+        data={data}
+        style="area"
+        width={800}
+        height={300}
+        className="border rounded-lg shadow-lg"
+      />
+    </div>
+  );
+}
+```
+
+### Interactive Features
+
+```tsx
+import { toast } from "sonner";
+
+export default function InteractiveExample() {
+  const data = [
+    {
+      id: "1",
+      value: 85,
+      label: "Q1 Sales",
+      category: "Sales",
+      metadata: {
+        growth: "+15%",
+        status: "Exceeding Target",
+        forecast: "Strong",
+      },
+    },
+    {
+      id: "2",
+      value: 65,
+      label: "Q1 Revenue",
+      category: "Revenue",
+      metadata: {
+        growth: "+8%",
+        status: "On Target",
+        forecast: "Stable",
+      },
+    },
+  ];
+
+  const handleDataPointClick = (point: DataPoint) => {
+    toast.info(`Selected: ${point.label}`, {
+      description: `Value: ${point.value}, Category: ${point.category}`,
+    });
+  };
+
+  const handleShare = async (imageData: string) => {
+    try {
+      await navigator.clipboard.writeText(imageData);
+      toast.success("Visualization copied to clipboard!");
+    } catch (error) {
+      toast.error("Failed to copy visualization");
+    }
+  };
+
+  const handleDownload = (imageData: string) => {
+    const link = document.createElement("a");
+    link.href = imageData;
+    link.download = "visualization.png";
+    link.click();
+    toast.success("Visualization downloaded!");
+  };
+
+  return (
+    <ArtisticDataViz
+      data={data}
+      style="scatter"
+      animated={true}
+      onDataPointClick={handleDataPointClick}
+      onShare={handleShare}
+      onDownload={handleDownload}
+    />
+  );
+}
+```
+
+### Real-time Data
+
+```tsx
+import { useEffect, useState } from "react";
+
+export default function RealTimeExample() {
+  const [data, setData] = useState<DataPoint[]>([]);
+
+  // Simulate real-time data updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newData = Array.from({ length: 5 }, (_, i) => ({
+        id: i.toString(),
+        value: Math.random() * 100,
+        label: `Point ${i + 1}`,
+        timestamp: new Date(),
+        category: i % 2 === 0 ? "Category A" : "Category B",
+      }));
+      setData(newData);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold">Real-time Data Visualization</h3>
+      <ArtisticDataViz
+        data={data}
+        style="line"
+        animated={true}
+        width={700}
+        height={400}
+      />
+    </div>
+  );
+}
+```
+
+### Multiple Visualizations
+
+```tsx
+export default function MultipleExample() {
+  const salesData = [
+    { id: "1", value: 85, label: "Q1", category: "Sales" },
+    { id: "2", value: 92, label: "Q2", category: "Sales" },
+    { id: "3", value: 78, label: "Q3", category: "Sales" },
+  ];
+
+  const revenueData = [
+    { id: "1", value: 65, label: "Q1", category: "Revenue" },
+    { id: "2", value: 75, label: "Q2", category: "Revenue" },
+    { id: "3", value: 82, label: "Q3", category: "Revenue" },
+  ];
+
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      <div className="p-4 border rounded-lg">
+        <h3 className="mb-4 text-lg font-semibold">Sales Performance</h3>
+        <ArtisticDataViz
+          data={salesData}
+          style="bar"
+          width={400}
+          height={300}
+          colorPalette={["#4CAF50", "#81C784", "#C8E6C9"]}
+        />
+      </div>
+      <div className="p-4 border rounded-lg">
+        <h3 className="mb-4 text-lg font-semibold">Revenue Growth</h3>
+        <ArtisticDataViz
+          data={revenueData}
+          style="area"
+          width={400}
+          height={300}
+          colorPalette={["#2196F3", "#64B5F6", "#BBDEFB"]}
+        />
+      </div>
+    </div>
+  );
+}
+```
+
+### Advanced Customization
+
+```tsx
+import { useCallback, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+
+export default function AdvancedExample() {
+  const [threshold, setThreshold] = useState(50);
+  const [showMetadata, setShowMetadata] = useState(true);
+  const [selectedStyle, setSelectedStyle] = useState<"bloom" | "spiral">("bloom");
+
+  const data = [
+    {
+      id: "1",
+      value: 85,
+      label: "Market Share",
+      category: "Performance",
+      metadata: { confidence: 0.9, impact: "high" },
+    },
+    {
+      id: "2",
+      value: 65,
+      label: "Customer Satisfaction",
+      category: "Metrics",
+      metadata: { confidence: 0.85, impact: "medium" },
+    },
+    {
+      id: "3",
+      value: 92,
+      label: "Team Productivity",
+      category: "Internal",
+      metadata: { confidence: 0.95, impact: "high" },
+    },
+  ];
+
+  const handleStyleToggle = useCallback(() => {
+    setSelectedStyle((prev) => (prev === "bloom" ? "spiral" : "bloom"));
+  }, []);
+
+  return (
+    <div className="space-y-6 p-6 border rounded-lg">
+      <div className="flex items-center gap-4">
+        <Input
+          type="number"
+          value={threshold}
+          onChange={(e) => setThreshold(Number(e.target.value))}
+          className="w-24"
+        />
+        <Switch
+          checked={showMetadata}
+          onCheckedChange={setShowMetadata}
+        />
+        <Button onClick={handleStyleToggle}>
+          Toggle Style
+        </Button>
+      </div>
+
+      <ArtisticDataViz
+        data={data}
+        style={selectedStyle}
+        animated={true}
+        width={800}
+        height={400}
+        colorPalette={[
+          "#FF6B6B",
+          "#4ECDC4",
+          "#45B7D1",
+          "#96CEB4",
+          "#FFEEAD",
+        ]}
+      />
+    </div>
+  );
+}
+```
+
+## Features
+
+- 🎨 Eight unique visualization styles:
+  - Wave: Flowing wave pattern
+  - Circle: Circular radar chart
+  - Spiral: Expanding spiral visualization
+  - Bloom: Animated flower-like pattern
+  - Bar: Animated bar chart with glow effects
+  - Line: Smooth curved line chart with animations
+  - Scatter: Dynamic scatter plot with pulsing points
+  - Area: Gradient-filled area chart with scanning line
+- ✨ Smooth animations and transitions
+- 🎯 Interactive data points with hover effects
+- 🎨 Customizable color palettes
+- 📱 Responsive and high-DPI canvas rendering
+- 🖱️ Click handling for data points
+- 🔄 Style switching with animations
+- 🎚️ Advanced controls:
+  - Animation speed adjustment
+  - Smoothing factor control
+  - Value threshold filtering
+  - Category filtering
+  - Grid overlay toggle
+  - Play/pause animation
+- 📤 Share and download capabilities
+- 🔍 High-DPI canvas support
+- 📊 Metadata display for data points
+
+## Props
+
+| Prop               | Type                                                                                  | Description                                |
+| ------------------ | ------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `data`             | `DataPoint[]`                                                                         | Array of data points to visualize          |
+| `width`            | `number`                                                                              | Width of the visualization (default: 600)  |
+| `height`           | `number`                                                                              | Height of the visualization (default: 400) |
+| `style`            | `"wave" \| "circle" \| "spiral" \| "bloom" \| "bar" \| "line" \| "scatter" \| "area"` | Visualization style (default: "wave")      |
+| `colorPalette`     | `string[]`                                                                            | Array of colors for the visualization      |
+| `animated`         | `boolean`                                                                             | Enable/disable animations (default: true)  |
+| `className`        | `string`                                                                              | Optional className for styling             |
+| `onDataPointClick` | `(point: DataPoint) => void`                                                          | Callback when a data point is clicked      |
+| `onShare`          | `(imageData: string) => void`                                                         | Callback when visualization is shared      |
+| `onDownload`       | `(imageData: string) => void`                                                         | Callback when visualization is downloaded  |

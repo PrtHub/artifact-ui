@@ -191,6 +191,11 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Timeline",
           href: "/docs/components/canvas-timeline",
           items: [],
+        },
+        {
+          title: "Artistic Data Viz",
+          href: "/docs/components/artistic-data-viz",
+          items: [],
           label: "New",
         },
       ],
