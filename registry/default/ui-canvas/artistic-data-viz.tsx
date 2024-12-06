@@ -296,7 +296,7 @@ export default function ArtisticDataViz({
   return (
     <div className={cn("relative rounded-lg bg-background p-4", className)}>
       <div className="flex flex-col gap-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between">
           <div className="flex items-center gap-2">
             <Select
               value={selectedStyle}

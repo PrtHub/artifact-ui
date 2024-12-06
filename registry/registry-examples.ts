@@ -193,4 +193,10 @@ export const examples: Registry = [
     registryDependencies: ["artistic-data-viz"],
     files: ["example/artistic-data-viz-demo.tsx"],
   },
+  {
+    name: "artistic-statistics-card-demo",
+    type: "registry:example",
+    registryDependencies: ["artistic-statistics-card"],
+    files: ["example/artistic-statistics-card-demo.tsx"],
+  },
 ];

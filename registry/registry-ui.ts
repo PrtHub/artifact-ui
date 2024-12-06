@@ -196,4 +196,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/artistic-data-viz.tsx"],
   },
+  {
+    name: "artistic-statistics-card",
+    type: "registry:ui",
+    files: ["ui-canvas/artistic-statistics-card.tsx"],
+    dependencies: [],
+  },
 ];

@@ -196,6 +196,11 @@ export const docsConfig: DocsConfig = {
           title: "Artistic Data Viz",
           href: "/docs/components/artistic-data-viz",
           items: [],
+        },
+        {
+          title: "Artistic Statistics Card",
+          href: "/docs/components/artistic-statistics-card",
+          items: [],
           label: "New",
         },
       ],
