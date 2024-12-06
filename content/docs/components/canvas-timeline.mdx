@@ -1,0 +1,121 @@
+---
+title: Canvas Timeline
+description: A timeline component for tracking and navigating through canvas painting history.
+component: true
+---
+
+<ComponentPreview name="canvas-timeline-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm i date-fns lucide-react
+```
+
+<Step>Install the shadcn components:</Step>
+
+```bash
+npx shadcn@latest add button input card scroll-area select tooltip dropdown-menu
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-timeline.tsx`
+
+<ComponentSource name="canvas-timeline" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CanvasTimeline } from "@/components/ui-canvas/canvas-timeline";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import CanvasTimeline from "@/components/ui-canvas/canvas-timeline";
+
+interface TimelineStep {
+  id: string;
+  thumbnail: string;
+  timestamp: Date;
+  label: string;
+  type: "brush" | "eraser" | "shape" | "text" | "layer" | "filter" | "snapshot";
+  description?: string;
+  duration?: number; // in seconds
+  markers?: Array<{
+    time: number; // position in seconds
+    label: string;
+    color?: string;
+  }>;
+}
+
+interface CanvasTimelineProps {
+  steps: TimelineStep[];
+  currentStepIndex: number;
+  onStepChange?: (index: number) => void;
+  onSnapshot?: () => void;
+  onUndo?: () => void;
+  onRedo?: () => void;
+  onSave?: () => void;
+  className?: string;
+  canUndo?: boolean;
+  canRedo?: boolean;
+}
+
+export default function YourComponent() {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  return (
+    <CanvasTimeline
+      steps={steps}
+      currentStepIndex={currentStep}
+      onStepChange={setCurrentStep}
+      canUndo={true}
+      canRedo={true}
+    />
+  );
+}
+```
+
+## Keyboard Shortcuts
+
+- Space: Play/Pause
+- Left Arrow: Previous step
+- Right Arrow: Next step
+- Ctrl/Cmd + Z: Undo
+- Ctrl/Cmd + Y: Redo
+
+## Props
+
+| Prop               | Type                      | Description                                          |
+| ------------------ | ------------------------- | ---------------------------------------------------- |
+| `steps`            | `TimelineStep[]`          | Array of timeline steps with thumbnails and metadata |
+| `currentStepIndex` | `number`                  | Current active step index                            |
+| `onStepChange`     | `(index: number) => void` | Callback function when step changes                  |
+| `onSnapshot`       | `() => void`              | Callback function to handle snapshot creation        |
+| `onUndo`           | `() => void`              | Callback function to handle undo action              |
+| `onRedo`           | `() => void`              | Callback function to handle redo action              |
+| `onSave`           | `() => void`              | Callback function to handle save action              |
+| `className`        | `string?`                 | Optional className for styling                       |
+| `canUndo`          | `boolean?`                | Optional boolean to indicate if undo is available    |
+| `canRedo`          | `boolean?`                | Optional boolean to indicate if redo is available    |
+
+## Features
+
+- 🎨 Interactive timeline with thumbnails
+- ⌨️ Keyboard shortcuts for navigation
+- 🔍 Zoom controls for detailed view
+- 🏷️ Timeline markers and annotations
+- ⏯️ Playback controls with adjustable speed
+- 🔄 Undo/Redo support
+- 📸 Snapshot functionality
+- 💾 Save state support
+- 🎯 Type filtering
+- 🕒 Timestamp display toggle

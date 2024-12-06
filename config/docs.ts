@@ -181,11 +181,15 @@ export const docsConfig: DocsConfig = {
           title: "Pattern Library",
           href: "/docs/components/pattern-library",
           items: [],
-          label: "New",
         },
         {
           title: "Art Board Presets",
           href: "/docs/components/art-board-presets",
+          items: [],
+        },
+        {
+          title: "Canvas Timeline",
+          href: "/docs/components/canvas-timeline",
           items: [],
           label: "New",
         },

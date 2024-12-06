@@ -184,4 +184,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react"],
     files: ["ui-canvas/art-board-presets.tsx"],
   },
+  {
+    name: "canvas-timeline",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/canvas-timeline.tsx"],
+  },
 ];

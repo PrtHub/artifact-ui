@@ -397,5 +397,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-timeline",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-timeline.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -181,4 +181,10 @@ export const examples: Registry = [
     registryDependencies: ["art-board-presets"],
     files: ["example/art-board-presets-demo.tsx"],
   },
+  {
+    name: "canvas-timeline-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-timeline"],
+    files: ["example/canvas-timeline-demo.tsx"],
+  },
 ];
