@@ -1,0 +1,52 @@
+---
+title: Art Board Presets
+description: A powerful component that provides common canvas size presets with advanced filtering and customization options.
+component: true
+---
+
+<ComponentPreview name="art-board-presets-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npx shadcn@latest add button input card scroll-area select
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/art-board-presets.tsx`
+
+<ComponentSource name="art-board-presets" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { ArtBoardPresets } from "@/components/ui-canvas/art-board-presets";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import ArtBoardPresets from "@/components/ui-canvas/art-board-presets";
+
+export default function YourComponent() {
+  return (
+    <ArtBoardPresets
+      onSelectPreset={(width, height) => {
+        // Handle the selected size
+        console.log(`Selected size: ${width}×${height}`);
+      }}
+    />
+  );
+}
+```
+
+## Props
+
+- `onSelectPreset` - Optional callback function that receives the selected width and height when a preset is clicked

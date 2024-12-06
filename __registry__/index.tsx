@@ -324,6 +324,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "art-board-presets": {
+      name: "art-board-presets",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/art-board-presets.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/art-board-presets.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -638,6 +649,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["color-scheme-generator"],
       files: ["registry/default/example/color-scheme-generator-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/color-scheme-generator-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "art-board-presets-demo": {
+      name: "art-board-presets-demo",
+      type: "registry:example",
+      registryDependencies: ["art-board-presets"],
+      files: ["registry/default/example/art-board-presets-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/art-board-presets-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

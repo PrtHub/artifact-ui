@@ -175,4 +175,10 @@ export const examples: Registry = [
     registryDependencies: ["color-scheme-generator"],
     files: ["example/color-scheme-generator-demo.tsx"],
   },
+  {
+    name: "art-board-presets-demo",
+    type: "registry:example",
+    registryDependencies: ["art-board-presets"],
+    files: ["example/art-board-presets-demo.tsx"],
+  },
 ];

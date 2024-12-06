@@ -183,6 +183,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Art Board Presets",
+          href: "/docs/components/art-board-presets",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

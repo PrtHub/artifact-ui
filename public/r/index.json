@@ -384,5 +384,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "art-board-presets",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/art-board-presets.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
