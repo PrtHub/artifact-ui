@@ -2,16 +2,16 @@
 
 Thank you for your interest in contributing to UI Canvas! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to UI Canvas.
 
-Read the [example PR](https://github.com/ui-canvasdesign/ui-canvas/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
+Read the [example PR](https://github.com/PrtHub/ui-canvas/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
 
-Once done, open a pull request from your forked repo to the main repo [here](https://github.com/ui-canvasdesign/ui-canvas/compare).
+Once done, open a pull request from your forked repo to the main repo [here](https://github.com/PrtHub/ui-canvas/compare).
 
 ## Getting Started
 
 ### Fork and Clone the Repository
 
 1. **Fork this repository**
-   Click [here](https://github.com/ui-canvasdesign/ui-canvas/fork) to fork the repository.
+   Click [here](https://github.com/PrtHub/ui-canvas/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
 
@@ -101,7 +101,7 @@ Add your component to the sidebar in `config/docs.ts`
 
 Create an MDX file for documenting your component in `content/docs/components/example-component.mdx`
 
-````md
+```md
 ---
 title: Example Component
 date: 2024-06-01
@@ -114,22 +114,6 @@ published: true
 
 ## Installation
 
-<Tabs defaultValue="cli">
-
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
-
-```bash
-npx ui-canvas-cli add example-component
-```
-
-</TabsContent>
-
-<TabsContent value="manual">
-
 <Steps>
 
 <Step>Copy and paste the following code into your project.</Step>
@@ -140,10 +124,6 @@ npx ui-canvas-cli add example-component
 
 </Steps>
 
-</TabsContent>
-
-</Tabs>
-
 <ComponentSource name="example-component" />
 
 ## Props
@@ -151,7 +131,7 @@ npx ui-canvas-cli add example-component
 | Prop  | Type   | Description                | Default |
 | ----- | ------ | -------------------------- | ------- |
 | color | String | The color of the component | "blue"  |
-````
+```
 
 ### 5. Update Registry
 
@@ -207,28 +187,6 @@ affiliation: YC S25, raised $10M
 ### 2. Create an image
 
 Upload an image of your site to `public/showcase/website-name.png`
-
-## How to use CLI
-
-1. Run CLI script from project `root` folder
-
-```bash
-pnpm run install:cli
-```
-
-```bash
-pnpm run dev:cli
-```
-
-```bash
-pnpm run build:cli
-```
-
-```bash
-pnpm run release:cli
-```
-
-The CLI in development uses index.json from default `3000` port on localhost. Otherwise [https://ui-canvas.design](https://ui-canvas.design/registry/index.json)
 
 ## Ask for Help
 
