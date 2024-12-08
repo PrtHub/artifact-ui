@@ -202,4 +202,11 @@ export const ui: Registry = [
     files: ["ui-canvas/artistic-statistics-card.tsx"],
     dependencies: [],
   },
+  {
+    name: "stepper",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority"],
+    files: ["ui-canvas/stepper.tsx"],
+    registryDependencies: ["button"],
+  },
 ];

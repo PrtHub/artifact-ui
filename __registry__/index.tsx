@@ -368,6 +368,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "stepper": {
+      name: "stepper",
+      type: "registry:ui",
+      registryDependencies: ["button"],
+      files: ["registry/default/ui-canvas/stepper.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/stepper.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -726,6 +737,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["artistic-statistics-card"],
       files: ["registry/default/example/artistic-statistics-card-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/artistic-statistics-card-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "stepper-demo": {
+      name: "stepper-demo",
+      type: "registry:example",
+      registryDependencies: ["stepper"],
+      files: ["registry/default/example/stepper-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/stepper-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

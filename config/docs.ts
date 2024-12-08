@@ -198,6 +198,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Stepper",
+          href: "/docs/components/stepper",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

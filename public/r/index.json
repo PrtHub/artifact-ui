@@ -434,5 +434,21 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "stepper",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/stepper.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
