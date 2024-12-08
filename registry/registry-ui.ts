@@ -209,4 +209,10 @@ export const ui: Registry = [
     files: ["ui-canvas/stepper.tsx"],
     registryDependencies: ["button"],
   },
+  {
+    name: "studio-pagination",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: ["ui-canvas/studio-pagination.tsx"],
+  },
 ];

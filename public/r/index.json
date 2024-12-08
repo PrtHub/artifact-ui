@@ -450,5 +450,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "studio-pagination",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/studio-pagination.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

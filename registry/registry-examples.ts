@@ -205,4 +205,10 @@ export const examples: Registry = [
     registryDependencies: ["stepper"],
     files: ["example/stepper-demo.tsx"],
   },
+  {
+    name: "studio-pagination-demo",
+    type: "registry:example",
+    registryDependencies: ["studio-pagination"],
+    files: ["example/studio-pagination-demo.tsx"],
+  },
 ];

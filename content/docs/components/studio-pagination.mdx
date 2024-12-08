@@ -1,0 +1,206 @@
+---
+title: Studio Pagination
+description: A modern, interactive, and highly customizable pagination component with animations and advanced features.
+component: true
+date: 2024-12-08
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="studio-pagination-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install react-hotkeys-hook react-swipeable
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/studio-pagination.tsx`
+
+<ComponentSource name="studio-pagination" />
+
+<Step>Update the import paths to match your project setup:</Step>
+
+```tsx
+import { StudioPagination } from "@/components/ui-canvas/studio-pagination";
+```
+
+</Steps>
+
+## Basic Usage
+
+```tsx
+"use client";
+
+import { StudioPagination } from "@/components/ui-canvas/studio-pagination";
+
+export default function PaginationExample() {
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  return (
+    <StudioPagination
+      totalPages={10}
+      currentPage={currentPage}
+      onPageChange={setCurrentPage}
+      variant="default"
+      animation="fade"
+      showProgress
+    />
+  );
+}
+```
+
+## Props
+
+| Prop             | Type                   | Default   | Description                           |
+| ---------------- | ---------------------- | --------- | ------------------------------------- |
+| totalPages       | number                 | Required  | Total number of pages                 |
+| currentPage      | number                 | Required  | Current active page                   |
+| onPageChange     | (page: number) => void | Required  | Callback when page changes            |
+| variant          | PaginationVariant      | "default" | Visual style variant                  |
+| shape            | PaginationShape        | "rounded" | Button shape style                    |
+| size             | PaginationSize         | "md"      | Component size                        |
+| animation        | PaginationAnimation    | "fade"    | Animation style for transitions       |
+| showProgress     | boolean                | false     | Show progress bar                     |
+| enableKeyboard   | boolean                | true      | Enable keyboard navigation            |
+| enableSwipe      | boolean                | true      | Enable touch swipe navigation         |
+| enableMouseWheel | boolean                | true      | Enable mouse wheel navigation         |
+| showFirstLast    | boolean                | true      | Show/hide first and last page buttons |
+| isLoading        | boolean                | false     | Loading state                         |
+| className        | string                 | -         | Additional CSS classes                |
+| customColors     | CustomColors           | -         | Custom color overrides                |
+
+## Available Options
+
+### Variants
+
+```tsx
+type PaginationVariant =
+  | "default"
+  | "outline"
+  | "ghost"
+  | "minimal"
+  | "gradient";
+```
+
+### Shapes
+
+```tsx
+type PaginationShape = "rounded" | "square" | "pill";
+```
+
+### Sizes
+
+```tsx
+type PaginationSize = "sm" | "md" | "lg";
+```
+
+### Animations
+
+```tsx
+type PaginationAnimation = "fade" | "slide" | "scale" | "none";
+```
+
+### Custom Colors
+
+```tsx
+interface CustomColors {
+  active?: string; // Active button style
+  hover?: string; // Hover state style
+  text?: string; // Text color
+}
+```
+
+## Examples
+
+### With Animations
+
+```tsx
+<StudioPagination
+  totalPages={10}
+  currentPage={1}
+  animation="slide"
+  showProgress
+/>
+```
+
+### Interactive Features
+
+```tsx
+<StudioPagination
+  totalPages={10}
+  currentPage={1}
+  enableKeyboard
+  enableSwipe
+  enableMouseWheel
+  showProgress
+/>
+```
+
+### Custom Colors
+
+```tsx
+<StudioPagination
+  totalPages={10}
+  currentPage={1}
+  customColors={{
+    active: "bg-blue-500 hover:bg-blue-600",
+    hover: "hover:bg-blue-100",
+    text: "text-blue-600",
+  }}
+/>
+```
+
+### Advanced Combination
+
+```tsx
+<StudioPagination
+  totalPages={10}
+  currentPage={1}
+  variant="gradient"
+  shape="pill"
+  size="lg"
+  animation="scale"
+  showProgress
+  enableKeyboard
+  enableSwipe
+  enableMouseWheel
+  customColors={{
+    active: "bg-purple-500 hover:bg-purple-600",
+    hover: "hover:bg-purple-100",
+    text: "text-purple-600",
+  }}
+/>
+```
+
+## Accessibility
+
+The component includes full keyboard navigation support and proper ARIA labels:
+
+- Left/Right arrow keys for navigation
+- Touch swipe support for mobile devices
+- Mouse wheel navigation
+- Loading state announcements
+- Proper focus management
+- ARIA labels for all interactive elements
+
+## Styling
+
+The component uses Tailwind CSS for styling and supports both light and dark modes out of the box. All styles can be customized using the `className` prop or the `customColors` prop for specific color overrides.
+
+### Dark Mode Support
+
+The component automatically adapts to dark mode when the `dark` class is present in the parent tree. It includes proper color adjustments for background, text, and hover states.
+
+## Notes
+
+- The component requires the `"use client"` directive as it uses client-side interactivity
+- Animations are powered by Framer Motion
+- Touch interactions use react-swipeable
+- Keyboard navigation uses react-hotkeys-hook

@@ -379,6 +379,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "studio-pagination": {
+      name: "studio-pagination",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/studio-pagination.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/studio-pagination.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -748,6 +759,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["stepper"],
       files: ["registry/default/example/stepper-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/stepper-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "studio-pagination-demo": {
+      name: "studio-pagination-demo",
+      type: "registry:example",
+      registryDependencies: ["studio-pagination"],
+      files: ["registry/default/example/studio-pagination-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/studio-pagination-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

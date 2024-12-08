@@ -204,6 +204,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Studio Pagination",
+          href: "/docs/components/studio-pagination",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
