@@ -390,6 +390,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "collapsible-card": {
+      name: "collapsible-card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/collapsible-card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/collapsible-card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -770,6 +781,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["studio-pagination"],
       files: ["registry/default/example/studio-pagination-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/studio-pagination-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "collapsible-card-demo": {
+      name: "collapsible-card-demo",
+      type: "registry:example",
+      registryDependencies: ["collapsible-card"],
+      files: ["registry/default/example/collapsible-card-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/collapsible-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -463,5 +463,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "collapsible-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/collapsible-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

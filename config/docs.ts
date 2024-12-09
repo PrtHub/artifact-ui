@@ -52,6 +52,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Collapsible Card",
+          href: "/docs/components/collapsible-card",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Sketch Input",
           href: "/docs/components/sketch-input",
           items: [],

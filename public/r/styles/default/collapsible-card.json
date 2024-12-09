@@ -1,0 +1,15 @@
+{
+  "name": "collapsible-card",
+  "type": "registry:ui",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "ui-canvas/collapsible-card.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\nimport { ChevronDown } from \"lucide-react\"\n\ninterface CollapsibleCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  title: string\n  defaultOpen?: boolean\n  children: React.ReactNode\n}\n\nexport default function CollapsibleCard({\n  title,\n  defaultOpen = false,\n  children,\n  className,\n  ...props\n}: CollapsibleCardProps) {\n  const [isOpen, setIsOpen] = React.useState(defaultOpen)\n\n  return (\n    <div\n      className={cn(\n        \"rounded-lg border border-border bg-background shadow-sm\",\n        className\n      )}\n      {...props}\n    >\n      <button\n        onClick={() => setIsOpen(!isOpen)}\n        className=\"flex w-full items-center justify-between px-4 py-3 text-left\"\n      >\n        <h3 className=\"text-lg font-semibold\">{title}</h3>\n        <ChevronDown\n          className={cn(\n            \"h-5 w-5 transition-transform duration-200\",\n            isOpen && \"rotate-180\"\n          )}\n        />\n      </button>\n      <div\n        className={cn(\n          \"overflow-hidden transition-all duration-200\",\n          isOpen ? \"max-h-[1000px] px-4 pb-4\" : \"max-h-0\"\n        )}\n      >\n        {children}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

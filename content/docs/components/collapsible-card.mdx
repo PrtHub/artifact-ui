@@ -1,0 +1,155 @@
+---
+title: Collapsible Card
+description: An interactive, animated card component with various visual styles and effects.
+component: true
+date: 2024-12-09
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="collapsible-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="collapsible-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import CollapsibleCard from "@/components/ui-canvas/collapsible-card";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import CollapsibleCard from "@/components/ui-canvas/collapsible-card";
+
+export default function Demo() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  return (
+    <CollapsibleCard
+      title="Interactive Universe"
+      variant="neon"
+      interactive
+      glowColor="#8b5cf6"
+      particleCount={100}
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+    >
+      {/* Your content here */}
+    </CollapsibleCard>
+  );
+}
+```
+
+## Props
+
+| Prop            | Type                                                                   | Default     | Description                                    |
+| --------------- | ---------------------------------------------------------------------- | ----------- | ---------------------------------------------- |
+| `title`         | `string`                                                               | Required    | The title displayed in the card header         |
+| `icon`          | `LucideIcon`                                                           | -           | Optional icon component from Lucide Icons      |
+| `expanded`      | `boolean`                                                              | `false`     | Controls the expanded state of the card        |
+| `onToggle`      | `() => void`                                                           | -           | Callback function when the card is toggled     |
+| `preview`       | `ReactNode`                                                            | -           | Content to display in the preview section      |
+| `variant`       | `"canvas" \| "polaroid" \| "sketch" \| "glass" \| "neon" \| "kinetic"` | `"canvas"`  | Visual style variant of the card               |
+| `interactive`   | `boolean`                                                              | `false`     | Enables 3D hover effects and interactions      |
+| `glowColor`     | `string`                                                               | `"#10b981"` | Color of the glow effect for neon variant      |
+| `particleCount` | `number`                                                               | `20`        | Number of particles for neon variant animation |
+
+## Variants
+
+`Canvas`: The default style with a clean, minimal design and subtle shadows.
+
+`Polaroid`: Mimics a polaroid photo with a slight rotation and characteristic frame.
+
+`Sketch`: Features a hand-drawn appearance with dashed borders and sketch-like shadows.
+
+`Glass`: Creates a frosted glass effect with backdrop blur and translucent background.
+
+`Neon`: Adds dynamic particle animations and customizable glow effects.
+
+- Supports up to 100 animated particles
+- Customizable glow color
+- Smooth particle movement and opacity transitions
+
+`Kinetic`: Includes animated background gradients and continuous motion effects.
+
+- Fluid rotation animations
+- Dynamic scaling effects
+- Interactive gradient transitions
+
+## Animation Features
+
+### 3D Interactions
+
+When `interactive` is enabled:
+
+- Smooth perspective transformations on hover
+- Spring-based motion for natural feel
+- Depth-aware shadows and lighting
+
+### Expand/Collapse
+
+- Spring physics for natural motion
+- Smooth height transitions
+- Fade effects for content
+
+### Particle System
+
+For the neon variant:
+
+- Physics-based particle movement
+- Variable particle sizes and speeds
+- Organic opacity transitions
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<ArtCanvasCard title="Basic Card">
+  <p>Basic content here</p>
+</ArtCanvasCard>
+```
+
+### Interactive Neon Card
+
+```tsx
+<ArtCanvasCard
+  title="Neon Effects"
+  variant="neon"
+  interactive
+  glowColor="#8b5cf6"
+  particleCount={100}
+>
+  <p>Content with neon effects</p>
+</ArtCanvasCard>
+```
+
+### Kinetic Animation
+
+```tsx
+<ArtCanvasCard title="Kinetic Motion" variant="kinetic" interactive>
+  <p>Content with kinetic animations</p>
+</ArtCanvasCard>
+```
+
+## Accessibility
+
+- Maintains ARIA attributes for expanded/collapsed states
+- Supports keyboard navigation
+- High contrast ratios for text visibility
+- Animation reduced motion support (coming soon)
+
+## Notes
+
+- Higher particle counts (>50) may impact performance on lower-end devices
+- Interactive 3D effects are automatically disabled on touch devices
+- Dark mode support is available for all variants

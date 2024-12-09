@@ -211,4 +211,10 @@ export const examples: Registry = [
     registryDependencies: ["studio-pagination"],
     files: ["example/studio-pagination-demo.tsx"],
   },
+  {
+    name: "collapsible-card-demo",
+    type: "registry:example",
+    registryDependencies: ["collapsible-card"],
+    files: ["example/collapsible-card-demo.tsx"],
+  },
 ];
