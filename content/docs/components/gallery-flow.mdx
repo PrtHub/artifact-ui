@@ -1,0 +1,159 @@
+---
+title: Gallery Flow
+description: An elegant image carousel with thumbnail navigation, smooth transitions, and multiple display variants.
+component: true
+date: 2024-12-09
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="gallery-flow-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="gallery-flow" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import GalleryFlow from "@/components/ui-canvas/gallery-flow";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import GalleryFlow from "@/components/ui-canvas/gallery-flow";
+
+const images = [
+  {
+    src: "/path/to/image1.jpg",
+    alt: "Image 1",
+    caption: "Optional caption for image 1",
+  },
+  {
+    src: "/path/to/image2.jpg",
+    alt: "Image 2",
+    caption: "Optional caption for image 2",
+  },
+];
+
+export default function Demo() {
+  return (
+    <GalleryFlow
+      images={images}
+      variant="flow"
+      autoPlay
+      interval={5000}
+      aspectRatio="video"
+      thumbnailPosition="bottom"
+    />
+  );
+}
+```
+
+## Props
+
+| Prop                | Type                                                 | Default    | Description                              |
+| ------------------- | ---------------------------------------------------- | ---------- | ---------------------------------------- |
+| `images`            | `{ src: string; alt?: string; caption?: string; }[]` | Required   | Array of image objects to display        |
+| `variant`           | `"flow" \| "fade" \| "slide" \| "stack"`             | `"flow"`   | Animation style for transitions          |
+| `thumbnailPosition` | `"bottom" \| "left" \| "right"`                      | `"bottom"` | Position of thumbnail navigation         |
+| `autoPlay`          | `boolean`                                            | `false`    | Enable automatic slideshow               |
+| `interval`          | `number`                                             | `3000`     | Time between slides in milliseconds      |
+| `showArrows`        | `boolean`                                            | `true`     | Show navigation arrows                   |
+| `showThumbnails`    | `boolean`                                            | `true`     | Show thumbnail navigation                |
+| `showDots`          | `boolean`                                            | `false`    | Show dot indicators                      |
+| `aspectRatio`       | `"square" \| "video" \| "portrait" \| "auto"`        | `"video"`  | Aspect ratio of the main image container |
+| `fillMode`          | `"cover" \| "contain"`                               | `"cover"`  | Image scaling behavior                   |
+| `thumbnailSize`     | `"sm" \| "md" \| "lg"`                               | `"md"`     | Size of thumbnail images                 |
+| `loop`              | `boolean`                                            | `true`     | Enable infinite looping                  |
+
+## Variants
+
+### Flow
+
+Interactive drag-based transitions with spring physics.
+
+- Smooth gesture-based navigation
+- Elastic drag constraints
+- Natural spring animations
+
+### Fade
+
+Simple cross-fade transitions between images.
+
+- Clean and minimal
+- Smooth opacity transitions
+- Great for showcasing photography
+
+### Slide
+
+Horizontal slide transitions with momentum.
+
+- Dynamic sliding animations
+- Direction-aware transitions
+- Smooth acceleration/deceleration
+
+### Stack
+
+Cards stack and shuffle effect.
+
+- Depth-based transitions
+- Z-axis animations
+- Modern card-stack feel
+
+## Examples
+
+### Basic Gallery
+
+```tsx
+<GalleryFlow images={images} variant="flow" aspectRatio="video" />
+```
+
+### Auto-playing Slideshow
+
+```tsx
+<GalleryFlow
+  images={images}
+  variant="fade"
+  autoPlay
+  interval={3000}
+  showDots
+  showThumbnails={false}
+/>
+```
+
+### Custom Layout
+
+```tsx
+<GalleryFlow
+  images={images}
+  variant="stack"
+  thumbnailPosition="right"
+  thumbnailSize="sm"
+  aspectRatio="square"
+  fillMode="contain"
+/>
+```
+
+## Accessibility
+
+- Full keyboard navigation support
+- ARIA labels for controls
+- Pause auto-play on hover/focus
+- Screen reader friendly image descriptions
+- High contrast navigation controls
+
+## Notes
+
+- Auto-play automatically pauses on hover
+- Drag gestures are only available in "flow" variant
+- Thumbnail position affects overall layout flow
+- Consider using appropriate image sizes for performance
+- Supports touch interactions on mobile devices

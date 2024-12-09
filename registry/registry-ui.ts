@@ -221,4 +221,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react", "framer-motion"],
     files: ["ui-canvas/collapsible-card.tsx"],
   },
+  {
+    name: "gallery-flow",
+    type: "registry:ui",
+    dependencies: ["lucide-react", "framer-motion"],
+    files: ["ui-canvas/gallery-flow.tsx"],
+  },
 ];

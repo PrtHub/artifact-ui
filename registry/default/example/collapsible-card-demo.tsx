@@ -84,10 +84,10 @@ export default function ArtCanvasCardDemo() {
       >
         <div className="space-y-6">
           <p className="text-base/relaxed">
-            Experience an interactive cosmic journey where particles dance through
-            space, stars twinkle in the distance, and celestial bodies orbit in
-            perfect harmony. This showcase demonstrates the Art Canvas Card's
-            ability to create immersive, animated experiences.
+            Experience an interactive cosmic journey where particles dance
+            through space, stars twinkle in the distance, and celestial bodies
+            orbit in perfect harmony. This showcase demonstrates the Art Canvas
+            Card's ability to create immersive, animated experiences.
           </p>
 
           {/* Feature Grid */}
@@ -123,10 +123,7 @@ export default function ArtCanvasCardDemo() {
           {/* Interactive Elements */}
           <div className="flex items-center justify-center gap-4">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div
-                key={i}
-                className="group relative h-3 w-3"
-              >
+              <div key={i} className="group relative h-3 w-3">
                 <div className="absolute -inset-3 animate-ping rounded-full bg-white/30 [animation-duration:3s] [animation-iteration-count:infinite]" />
                 <div className="absolute -inset-2 rounded-full bg-white/20 blur-sm transition-all duration-500 group-hover:bg-white/40" />
                 <div className="relative h-full w-full rounded-full bg-white transition-transform duration-500 group-hover:scale-150" />

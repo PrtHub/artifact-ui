@@ -1,11 +1,19 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence, useSpring, useTransform, useMotionValue, useAnimationFrame } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useAnimationFrame,
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 
-export interface ArtCanvasCardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ArtCanvasCardProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   icon?: LucideIcon;
   expanded?: boolean;
@@ -33,7 +41,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -92,13 +100,15 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
       canvas: "bg-card dark:bg-card-dark border shadow-lg hover:shadow-xl",
       polaroid: "bg-white dark:bg-gray-900 p-2 rotate-2 shadow-polaroid",
       sketch: "bg-white dark:bg-gray-900 border-2 border-dashed shadow-sketch",
-      glass: "bg-white/10 dark:bg-gray-900/10 backdrop-blur-lg border border-white/20 dark:border-gray-800/20",
+      glass:
+        "bg-white/10 dark:bg-gray-900/10 backdrop-blur-lg border border-white/20 dark:border-gray-800/20",
       neon: cn(
         "border border-white/10 bg-black/80 dark:border-gray-800/20 dark:bg-black",
         "shadow-[0_0_15px_rgba(0,0,0,0.2)]",
-        "dark:shadow-[0_0_15px_rgba(0,0,0,0.4)]"
+        "dark:shadow-[0_0_15px_rgba(0,0,0,0.4)]",
       ),
-      kinetic: "bg-white/5 dark:bg-gray-900/5 backdrop-blur border border-white/10 dark:border-gray-800/10",
+      kinetic:
+        "bg-white/5 dark:bg-gray-900/5 backdrop-blur border border-white/10 dark:border-gray-800/10",
     };
 
     const contentStyles = {
@@ -117,7 +127,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
           "relative overflow-hidden rounded-lg transition-colors duration-300",
           variantStyles[variant],
           interactive && "cursor-pointer",
-          className
+          className,
         )}
         style={{
           scale: hoverScale,
@@ -203,7 +213,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
           className={cn(
             "relative space-y-2 p-4",
             contentStyles[variant],
-            expanded && "pb-6"
+            expanded && "pb-6",
           )}
           layout
         >
@@ -219,7 +229,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
                     "h-5 w-5",
                     variant === "neon"
                       ? "text-white"
-                      : "dark:text-foreground-dark text-foreground"
+                      : "dark:text-foreground-dark text-foreground",
                   )}
                 />
               )}
@@ -228,7 +238,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
                   "font-semibold",
                   variant === "neon"
                     ? "text-white"
-                    : "dark:text-foreground-dark text-foreground"
+                    : "dark:text-foreground-dark text-foreground",
                 )}
               >
                 {title}
@@ -243,7 +253,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
                   "h-4 w-4 rounded-full",
                   variant === "neon"
                     ? "text-white"
-                    : "dark:text-foreground-dark text-foreground"
+                    : "dark:text-foreground-dark text-foreground",
                 )}
               >
                 ↓
@@ -265,7 +275,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
                 className={cn(
                   variant === "neon"
                     ? "text-white/90"
-                    : "dark:text-muted-foreground-dark text-muted-foreground"
+                    : "dark:text-muted-foreground-dark text-muted-foreground",
                 )}
               >
                 {children}
@@ -275,7 +285,7 @@ const ArtCanvasCard = React.forwardRef<HTMLDivElement, ArtCanvasCardProps>(
         </motion.div>
       </motion.div>
     );
-  }
+  },
 );
 
 ArtCanvasCard.displayName = "ArtCanvasCard";

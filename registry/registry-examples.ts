@@ -217,4 +217,10 @@ export const examples: Registry = [
     registryDependencies: ["collapsible-card"],
     files: ["example/collapsible-card-demo.tsx"],
   },
+  {
+    name: "gallery-flow-demo",
+    type: "registry:example",
+    registryDependencies: ["gallery-flow"],
+    files: ["example/gallery-flow-demo.tsx"],
+  },
 ];

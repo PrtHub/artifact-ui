@@ -216,6 +216,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Gallery Flow",
+          href: "/docs/components/gallery-flow",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

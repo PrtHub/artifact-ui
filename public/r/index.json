@@ -468,11 +468,26 @@
     "name": "collapsible-card",
     "type": "registry:ui",
     "dependencies": [
-      "lucide-react"
+      "lucide-react",
+      "framer-motion"
     ],
     "files": [
       {
         "path": "ui-canvas/collapsible-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "gallery-flow",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react",
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/gallery-flow.tsx",
         "type": "registry:ui"
       }
     ]
