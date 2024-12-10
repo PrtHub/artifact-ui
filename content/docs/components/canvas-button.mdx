@@ -15,7 +15,7 @@ published: true
 <Step>Install the following dependencies in your project:</Step>
 
 ```bash
-npm install @radix-ui/react-slot
+npm install @radix-ui/react-slot class-variance-authority framer-motion
 ```
 
 <Step>Copy and paste the following code into your project.</Step>
@@ -26,57 +26,29 @@ npm install @radix-ui/react-slot
 
 <Step>Update the import paths to match your project setup.</Step>
 
-```bash
+```tsx
 import { CanvasButton } from "@/components/ui-canvas/canvas-button";
 ```
 
 </Steps>
 
-### Example Implementation
-
-```bash
-import { CanvasButton } from "@/components/ui-canvas/canvas-button";
-
-// Portfolio contact button
-export function ContactSection() {
-  return (
-    <div className="space-y-4">
-      <h3>Get in Touch</h3>
-      <CanvasButton variant="watercolor" onClick={() => openContactForm()}>
-        Start a Project
-      </CanvasButton>
-    </div>
-  );
-}
-
-// Art gallery navigation
-export function GalleryNav() {
-  return (
-    <div className="flex gap-4">
-      <CanvasButton variant="oil">Previous Artwork</CanvasButton>
-      <CanvasButton variant="oil">Next Artwork</CanvasButton>
-    </div>
-  );
-}
-```
-
 ## Props
 
 ### CanvasButton
 
-| Prop name | Type                                             | Default   | Description                 |
-| --------- | ------------------------------------------------ | --------- | --------------------------- |
-| variant   | "default" \| "watercolor" \| "oil" \| "charcoal" | "default" | The button's artistic style |
-| size      | "sm" \| "default" \| "lg"                        | "default" | The button's size           |
-| effect    | "none" \| "splash" \| "brush"                    | "none"    | The interactive effect      |
-| asChild   | boolean                                          | false     | Merge with child element    |
-| className | string                                           | -         | Additional CSS classes      |
+| Prop name | Type                                                                                                                  | Default   | Description                 |
+| --------- | --------------------------------------------------------------------------------------------------------------------- | --------- | --------------------------- |
+| variant   | "default" \| "watercolor" \| "oil" \| "charcoal" \| "pastel" \| "neon" \| "sketch" \| "acrylic" \| "vintage" \| "ink" | "default" | The button's artistic style |
+| size      | "sm" \| "default" \| "lg" \| "xl" \| "icon"                                                                           | "default" | The button's size           |
+| effect    | "none" \| "splash" \| "brush" \| "ripple" \| "glow" \| "shake"                                                        | "none"    | The interactive effect      |
+| asChild   | boolean                                                                                                               | false     | Merge with child element    |
+| className | string                                                                                                                | -         | Additional CSS classes      |
 
 ## Examples
 
-### Basic Button
+### Basic Usage
 
-```bash
+```tsx
 import { CanvasButton } from "@/components/ui-canvas/canvas-button";
 
 export default function Example() {
@@ -84,17 +56,121 @@ export default function Example() {
 }
 ```
 
+### Classic Art Styles
+
+```tsx
+<CanvasButton variant="watercolor" effect="splash">
+  Watercolor Splash
+</CanvasButton>
+
+<CanvasButton variant="oil" effect="ripple">
+  Oil Paint
+</CanvasButton>
+
+<CanvasButton variant="charcoal" effect="shake">
+  Charcoal Sketch
+</CanvasButton>
+```
+
+### Modern Styles
+
+```tsx
+<CanvasButton variant="neon" effect="glow">
+  Neon Glow
+</CanvasButton>
+
+<CanvasButton variant="pastel" effect="ripple">
+  Soft Pastel
+</CanvasButton>
+
+<div className="bg-gradient-to-r from-purple-500 to-pink-500 p-8">
+  <CanvasButton variant="acrylic" effect="splash">
+    Glass Effect
+  </CanvasButton>
+</div>
+```
+
 ### Artistic Styles
 
-```bash
-<CanvasButton variant="watercolor">Watercolor</CanvasButton>
-<CanvasButton variant="oil">Oil Paint</CanvasButton>
-<CanvasButton variant="charcoal">Charcoal</CanvasButton>
+```tsx
+<CanvasButton variant="sketch" effect="shake">
+  Hand Drawn
+</CanvasButton>
+
+<CanvasButton variant="vintage" effect="ripple">
+  Classic Feel
+</CanvasButton>
+
+<CanvasButton variant="ink" effect="brush">
+  Ink Stroke
+</CanvasButton>
+```
+
+### Size Variations
+
+```tsx
+<CanvasButton size="sm">Small</CanvasButton>
+<CanvasButton size="default">Default</CanvasButton>
+<CanvasButton size="lg">Large</CanvasButton>
+<CanvasButton size="xl">Extra Large</CanvasButton>
+
+{/* Icon Button */}
+<CanvasButton size="icon">
+  <PlusIcon className="h-4 w-4" />
+</CanvasButton>
 ```
 
 ### Interactive Effects
 
-```bash
-<CanvasButton effect="splash">Click for Splash</CanvasButton>
-<CanvasButton effect="brush">Hover for Brush</CanvasButton>
+```tsx
+<CanvasButton effect="splash">
+  Click for paint splatter
+</CanvasButton>
+
+<CanvasButton effect="brush">
+  Hover for brush stroke
+</CanvasButton>
+
+<CanvasButton effect="ripple">
+  Click for ripple effect
+</CanvasButton>
+
+<CanvasButton effect="glow">
+  Hover for glow effect
+</CanvasButton>
+
+<CanvasButton effect="shake">
+  Hover for wiggle animation
+</CanvasButton>
+```
+
+### With Icons
+
+```tsx
+import { ArrowRight } from "lucide-react";
+
+<CanvasButton className="group">
+  Next Step
+  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+</CanvasButton>;
+```
+
+### Dark Mode Support
+
+All button variants automatically adapt to dark mode. Enable dark mode in your application to see the dark variants.
+
+```tsx
+<div className="dark">
+  <CanvasButton variant="neon">Dark Mode Button</CanvasButton>
+</div>
+```
+
+### Custom Styling
+
+Buttons can be customized using the `className` prop and Tailwind CSS:
+
+```tsx
+<CanvasButton variant="watercolor" className="w-full shadow-lg hover:shadow-xl">
+  Full Width Button
+</CanvasButton>
 ```
