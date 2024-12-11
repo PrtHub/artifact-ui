@@ -34,22 +34,6 @@ const DEFAULT_SHORTCUTS: ShortcutCategory = {
     { keys: ["P"], description: "Pen tool" },
     { keys: ["I"], description: "Eyedropper tool" },
   ],
-  canvas: [
-    { keys: ["Space"], description: "Pan canvas" },
-    { keys: ["Ctrl", "+"], description: "Zoom in" },
-    { keys: ["Ctrl", "-"], description: "Zoom out" },
-    { keys: ["Ctrl", "0"], description: "Reset zoom" },
-    { keys: ["R"], description: "Rotate canvas" },
-    { keys: ["F"], description: "Toggle fullscreen" },
-  ],
-  layers: [
-    { keys: ["Ctrl", "J"], description: "Duplicate layer" },
-    { keys: ["Ctrl", "G"], description: "Group layers" },
-    { keys: ["["], description: "Lower layer opacity" },
-    { keys: ["]"], description: "Increase layer opacity" },
-    { keys: ["Ctrl", "Shift", "N"], description: "New layer" },
-    { keys: ["Ctrl", "Shift", "E"], description: "Merge layers" },
-  ],
 };
 
 interface StudioShortcutsGuideProps {
