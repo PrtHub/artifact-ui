@@ -491,5 +491,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "studio-shortcuts-guide",
+    "type": "registry:ui",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/studio-shortcuts-guide.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

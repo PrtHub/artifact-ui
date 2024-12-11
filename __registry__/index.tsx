@@ -412,6 +412,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "studio-shortcuts-guide": {
+      name: "studio-shortcuts-guide",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/studio-shortcuts-guide.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/studio-shortcuts-guide.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -814,6 +825,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["gallery-flow"],
       files: ["registry/default/example/gallery-flow-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/gallery-flow-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "studio-shortcuts-guide-demo": {
+      name: "studio-shortcuts-guide-demo",
+      type: "registry:example",
+      registryDependencies: ["studio-shortcuts-guide"],
+      files: ["registry/default/example/studio-shortcuts-guide-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/studio-shortcuts-guide-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

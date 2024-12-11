@@ -1,0 +1,136 @@
+---
+title: Studio Shortcuts Guide
+date: 2024-12-11
+description: A customizable keyboard shortcuts guide component with search and filtering capabilities.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="studio-shortcuts-guide-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies in your project:</Step>
+
+```bash
+npm install framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/studio-shortcuts-guide.tsx`
+
+<ComponentSource name="studio-shortcuts-guide" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { StudioShortcutsGuide } from "@/components/ui-canvas/studio-shortcuts-guide";
+```
+
+</Steps>
+
+## Props
+
+### StudioShortcutsGuide
+
+| Prop name  | Type                                | Default | Description                                                  |
+| ---------- | ----------------------------------- | ------- | ------------------------------------------------------------ |
+| shortcuts  | `Partial<ShortcutCategory>`         | -       | Custom shortcuts to merge with or override default shortcuts |
+| customOnly | `boolean`                           | false   | Whether to use only custom shortcuts or merge with defaults  |
+| className  | `string`                           | -       | Additional CSS classes                                       |
+
+## Examples
+
+### Default Usage
+
+```tsx
+import { StudioShortcutsGuide } from "@/components/ui-canvas/studio-shortcuts-guide";
+
+export default function ShortcutsExample() {
+  return <StudioShortcutsGuide className="w-[500px]" />;
+}
+```
+
+### With Custom Shortcuts
+
+```tsx
+const customShortcuts = {
+  typescript: [
+    { keys: ["Ctrl", "Space"], description: "Trigger suggestions" },
+    { keys: ["F12"], description: "Go to definition" },
+  ],
+  tools: [
+    { keys: ["T"], description: "Text tool" },
+    { keys: ["G"], description: "Gradient tool" },
+  ],
+};
+
+export default function CustomShortcutsExample() {
+  return (
+    <StudioShortcutsGuide className="w-[500px]" shortcuts={customShortcuts} />
+  );
+}
+```
+
+### Custom Shortcuts Only
+
+```tsx
+export default function CustomOnlyExample() {
+  return (
+    <StudioShortcutsGuide
+      className="w-[500px]"
+      shortcuts={customShortcuts}
+      customOnly
+    />
+  );
+}
+```
+
+## Features
+
+### Search and Filter
+
+The component includes a built-in search functionality that filters shortcuts based on both key combinations and descriptions. Users can also filter shortcuts by category using the category buttons at the top.
+
+### Animations
+
+The component uses Framer Motion for smooth animations:
+
+- Fade and slide animations for shortcut items
+- Scale animations for keyboard keys on hover
+- Smooth transitions for filtering and search results
+
+### Keyboard Key Styling
+
+Keys are displayed in a keyboard-like style with:
+
+- Monospace font for consistent width
+- Border and background for key-like appearance
+- Hover effects for interactivity
+- Proper spacing and "+" symbols between multiple keys
+
+### Responsive Design
+
+The component is fully responsive and can be customized to any width using the `className` prop. It maintains its layout and functionality across different screen sizes.
+
+## Types
+
+### ShortcutCategory
+
+```tsx
+interface ShortcutCategory {
+  [key: string]: Array<{
+    keys: string[];
+    description: string;
+  }>;
+}
+```
+
+This type defines the structure of shortcuts, where:
+
+- Each category is a key in the object
+- Each category contains an array of shortcuts
+- Each shortcut has a `keys` array and a `description`

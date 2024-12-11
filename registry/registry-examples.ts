@@ -223,4 +223,10 @@ export const examples: Registry = [
     registryDependencies: ["gallery-flow"],
     files: ["example/gallery-flow-demo.tsx"],
   },
+  {
+    name: "studio-shortcuts-guide-demo",
+    type: "registry:example",
+    registryDependencies: ["studio-shortcuts-guide"],
+    files: ["example/studio-shortcuts-guide-demo.tsx"],
+  },
 ];

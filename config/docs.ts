@@ -222,6 +222,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Studio Shortcuts Guide",
+          href: "/docs/components/studio-shortcuts-guide",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

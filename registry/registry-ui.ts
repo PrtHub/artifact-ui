@@ -227,4 +227,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react", "framer-motion"],
     files: ["ui-canvas/gallery-flow.tsx"],
   },
+  {
+    name: "studio-shortcuts-guide",
+    type: "registry:ui",
+    dependencies: ["lucide-react", "framer-motion"],
+    files: ["ui-canvas/studio-shortcuts-guide.tsx"],
+  },
 ];
