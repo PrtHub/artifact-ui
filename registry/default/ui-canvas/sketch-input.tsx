@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const sketchInputVariants = cva(
@@ -38,95 +38,96 @@ export interface SketchInputProps
   inkFlow?: boolean;
 }
 
-const SketchInput = React.forwardRef<HTMLInputElement, SketchInputProps>(
-  ({ className, variant, state, inkFlow, ...props }, ref) => {
-    const [isFocused, setIsFocused] = React.useState(false);
-    const [value, setValue] = React.useState(props.value || "");
+const SketchInput = React.forwardRef<
+  HTMLInputElement,
+  SketchInputProps & MotionProps
+>(({ className, variant, state, inkFlow, ...props }, ref) => {
+  const [isFocused, setIsFocused] = React.useState(false);
+  const [value, setValue] = React.useState(props.value || "");
 
-    const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-      setIsFocused(true);
-      props.onFocus?.(e);
-    };
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    setIsFocused(true);
+    props.onFocus?.(e);
+  };
 
-    const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-      setIsFocused(false);
-      props.onBlur?.(e);
-    };
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    setIsFocused(false);
+    props.onBlur?.(e);
+  };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
-      props.onChange?.(e);
-    };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    props.onChange?.(e);
+  };
 
-    return (
-      <div className="group relative">
-        <motion.input
-          ref={ref}
-          className={cn(sketchInputVariants({ variant, state }), className)}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          {...props}
+  return (
+    <div className="group relative">
+      <motion.input
+        ref={ref}
+        className={cn(sketchInputVariants({ variant, state }), className)}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onChange={handleChange}
+        {...props}
+      />
+      {inkFlow && (
+        <motion.div
+          className="absolute bottom-0 left-0 h-1 bg-primary/50"
+          initial={{ width: "0%", opacity: 0 }}
+          animate={{
+            width: `${Math.min((value?.toString().length || 0) * 8, 100)}%`,
+            opacity: isFocused ? 0.5 : 0,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 25,
+            mass: 0.5,
+          }}
+          style={{
+            background:
+              "linear-gradient(90deg, var(--primary) 0%, transparent 100%)",
+            filter: "blur(2px)",
+          }}
         />
-        {inkFlow && (
-          <motion.div
-            className="absolute bottom-0 left-0 h-1 bg-primary/50"
-            initial={{ width: "0%", opacity: 0 }}
-            animate={{
-              width: `${Math.min((value?.toString().length || 0) * 8, 100)}%`,
-              opacity: isFocused ? 0.5 : 0,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 400,
-              damping: 25,
-              mass: 0.5,
-            }}
-            style={{
-              background:
-                "linear-gradient(90deg, var(--primary) 0%, transparent 100%)",
-              filter: "blur(2px)",
-            }}
-          />
-        )}
-        {state === "error" && (
-          <div className="absolute right-3 top-1/2 -translate-y-1/2">
-            <svg
-              className="size-5 text-destructive"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </div>
-        )}
-        {state === "success" && (
-          <div className="absolute right-3 top-1/2 -translate-y-1/2">
-            <svg
-              className="h-5 w-5 text-green-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          </div>
-        )}
-      </div>
-    );
-  },
-);
+      )}
+      {state === "error" && (
+        <div className="absolute right-3 top-1/2 -translate-y-1/2">
+          <svg
+            className="size-5 text-destructive"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+      )}
+      {state === "success" && (
+        <div className="absolute right-3 top-1/2 -translate-y-1/2">
+          <svg
+            className="h-5 w-5 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+      )}
+    </div>
+  );
+});
 SketchInput.displayName = "SketchInput";
 
 export { SketchInput, sketchInputVariants };

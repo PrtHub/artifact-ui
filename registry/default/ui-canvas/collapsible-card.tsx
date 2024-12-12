@@ -8,12 +8,14 @@ import {
   useTransform,
   useMotionValue,
   useAnimationFrame,
+  HTMLMotionProps,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 
-export interface ArtCanvasCardProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+type MotionDivProps = HTMLMotionProps<"div">;
+
+export interface ArtCanvasCardProps extends MotionDivProps {
   title: string;
   icon?: LucideIcon;
   expanded?: boolean;

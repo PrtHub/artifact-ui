@@ -34,7 +34,7 @@ export default function ArtCanvasCardDemo() {
               {Array.from({ length: 20 }).map((_, i) => (
                 <div
                   key={i}
-                  className="animate-twinkle absolute"
+                  className="absolute animate-twinkle"
                   style={{
                     top: `${Math.random() * 100}%`,
                     left: `${Math.random() * 100}%`,
@@ -56,7 +56,7 @@ export default function ArtCanvasCardDemo() {
                   <div className="relative h-40 w-40 rounded-full bg-gradient-to-br from-white via-violet-200 to-fuchsia-200 shadow-2xl">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent to-black/20" />
                     {/* Orbiting Elements */}
-                    {Array.from({ length: 3 }).map((_, i) => (
+                    {Array.from({ length: 2 }).map((_, i) => (
                       <div
                         key={i}
                         className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 animate-orbit"
@@ -87,7 +87,7 @@ export default function ArtCanvasCardDemo() {
             Experience an interactive cosmic journey where particles dance
             through space, stars twinkle in the distance, and celestial bodies
             orbit in perfect harmony. This showcase demonstrates the Art Canvas
-            Card's ability to create immersive, animated experiences.
+            Card&apos;s ability to create immersive, animated experiences.
           </p>
 
           {/* Feature Grid */}
@@ -135,17 +135,3 @@ export default function ArtCanvasCardDemo() {
     </div>
   );
 }
-
-// Add required keyframes
-const style = document.createElement("style");
-style.textContent = `
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
-  }
-  @keyframes orbit {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-`;
-document.head.appendChild(style);

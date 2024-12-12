@@ -1,17 +1,19 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export interface GalleryGridProps extends React.HTMLAttributes<HTMLDivElement> {
+type MotionDivProps = HTMLMotionProps<"div">;
+
+export interface GalleryGridProps extends MotionDivProps {
   columns?: number;
   gap?: number;
   children: React.ReactNode;
   hover?: "zoom" | "lift" | "tilt" | "none";
 }
 
-export interface GalleryItemProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GalleryItemProps extends MotionDivProps {
   aspectRatio?: "square" | "video" | "portrait" | "landscape";
   children: React.ReactNode;
   hover?: "zoom" | "lift" | "tilt" | "none";

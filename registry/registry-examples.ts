@@ -74,12 +74,6 @@ export const examples: Registry = [
     files: ["example/canvas-drawer-demo.tsx"],
   },
   {
-    name: "painterly-select-demo",
-    type: "registry:example",
-    registryDependencies: ["painterly-select", "button"],
-    files: ["example/painterly-select-demo.tsx"],
-  },
-  {
     name: "texture-overlay-demo",
     type: "registry:example",
     registryDependencies: ["texture-overlay"],

@@ -28,14 +28,18 @@ export default function StudioShortcutsGuideDemo() {
         <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 opacity-30 blur-2xl" />
         <div className="relative space-y-8">
           <div>
-            <h3 className="mb-4 text-center text-sm font-medium text-muted-foreground">With Custom Shortcuts</h3>
+            <h3 className="mb-4 text-center text-sm font-medium text-muted-foreground">
+              With Custom Shortcuts
+            </h3>
             <StudioShortcutsGuide
               className="w-full min-w-[500px] 2xl:min-w-[600px]"
               shortcuts={customShortcuts}
             />
           </div>
           <div>
-            <h3 className="mb-4 text-center text-sm font-medium text-muted-foreground">Custom Shortcuts Only</h3>
+            <h3 className="mb-4 text-center text-sm font-medium text-muted-foreground">
+              Custom Shortcuts Only
+            </h3>
             <StudioShortcutsGuide
               className="w-full min-w-[500px] 2xl:min-w-[600px]"
               shortcuts={customShortcuts}

@@ -164,21 +164,6 @@
     ]
   },
   {
-    "name": "painterly-select",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion",
-      "@radix-ui/react-select",
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui-canvas/painterly-select.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "texture-overlay",
     "type": "registry:ui",
     "dependencies": [],
@@ -496,7 +481,8 @@
     "name": "studio-shortcuts-guide",
     "type": "registry:ui",
     "dependencies": [
-      "lucide-react"
+      "lucide-react",
+      "framer-motion"
     ],
     "files": [
       {

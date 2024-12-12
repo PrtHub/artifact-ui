@@ -5,6 +5,7 @@ import ArtisticDataViz from "@/registry/default/ui-canvas/artistic-data-viz";
 import { Button } from "@/components/ui/button";
 import { Shuffle, Share2, Download } from "lucide-react";
 import { toast } from "sonner";
+import { useTheme } from "next-themes";
 
 const generateRandomData = (points: number) => {
   const categories = ["Sales", "Revenue", "Growth", "Engagement"];
@@ -26,10 +27,10 @@ const generateRandomData = (points: number) => {
 
 const generateTimeSeriesData = () => {
   const points = 24;
-  const categories = ["Sales", "Revenue"];
+  const categories = ["Sales", "Revenue"] as const;
   const now = new Date();
-  const baseValues = {
-    Sales: 50 + Math.random() * 20,
+  const baseValues: Record<(typeof categories)[number], number> = {
+    Sales: 100 + Math.random() * 50,
     Revenue: 70 + Math.random() * 30,
   };
 
@@ -45,9 +46,14 @@ const generateTimeSeriesData = () => {
         category,
         timestamp: new Date(now.getTime() - (points - i) * 60 * 60 * 1000),
         metadata: {
-          hourOfDay: i,
           trend: hourlyVariation > 0 ? "Peak" : "Valley",
-          variance: `±${Math.abs(randomNoise).toFixed(1)}`,
+          confidence: `${Math.min(100, Math.abs(hourlyVariation) * 5).toFixed(1)}%`,
+          impact:
+            Math.abs(randomNoise) > 7
+              ? "High"
+              : Math.abs(randomNoise) > 3
+                ? "Medium"
+                : "Low",
         },
       };
     }),
@@ -57,14 +63,22 @@ const generateTimeSeriesData = () => {
 export default function ArtisticDataVizDemo() {
   const [data, setData] = useState(() => generateRandomData(12));
   const [dataType, setDataType] = useState<"random" | "timeSeries">("random");
+  const [colorPalette, setColorPalette] = useState<string[]>([]);
+  const { theme } = useTheme();
 
-  const colorPalette = [
-    "#FF6B6B", // Coral Red
-    "#4ECDC4", // Medium Turquoise
-    "#45B7D1", // Sky Blue
-    "#96CEB4", // Sage Green
-    "#FFEEAD", // Pale Yellow
-  ];
+  useEffect(() => {
+    // Theme-aware color palettes
+    const lightPalette = [
+      "#FF6B6B",
+      "#4ECDC4",
+      "#45B7D1",
+      "#96CEB4",
+      "#FFEEAD",
+    ];
+    const darkPalette = ["#FF8585", "#6FFFE9", "#5CC9FF", "#B4EBC7", "#FFE5B4"];
+
+    setColorPalette(theme === "dark" ? darkPalette : lightPalette);
+  }, [theme]);
 
   const handleRefreshData = () => {
     if (dataType === "timeSeries") {

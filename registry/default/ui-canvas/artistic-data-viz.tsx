@@ -29,6 +29,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useTheme } from "next-themes";
 
 export interface DataPoint {
   id: string;
@@ -70,7 +71,7 @@ export default function ArtisticDataViz({
   data,
   width = 600,
   height = 400,
-  colorPalette = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEEAD"],
+  colorPalette = [],
   animated = true,
   style = "wave",
   className,
@@ -91,6 +92,30 @@ export default function ArtisticDataViz({
   const [valueThreshold, setValueThreshold] = useState<number>(0);
   const [showGrid, setShowGrid] = useState(false);
   const [smoothing, setSmoothing] = useState(0.5);
+  const { theme } = useTheme();
+
+  // Default theme-aware color palettes
+  const defaultLightPalette = [
+    "#FF6B6B",
+    "#4ECDC4",
+    "#45B7D1",
+    "#96CEB4",
+    "#FFEEAD",
+  ];
+  const defaultDarkPalette = [
+    "#FF8585",
+    "#6FFFE9",
+    "#5CC9FF",
+    "#B4EBC7",
+    "#FFE5B4",
+  ];
+
+  const effectiveColorPalette =
+    colorPalette.length > 0
+      ? colorPalette
+      : theme === "dark"
+        ? defaultDarkPalette
+        : defaultLightPalette;
 
   const filteredData = data.filter(
     (point) =>
@@ -125,11 +150,23 @@ export default function ArtisticDataViz({
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
 
+    // Theme-aware background and grid colors
+    const backgroundColor = theme === "dark" ? "#1a1a1a" : "#ffffff";
+    const gridColor =
+      theme === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)";
+
+    ctx.fillStyle = backgroundColor;
+    ctx.fillRect(0, 0, width, height);
+
+    if (showGrid) {
+      drawGrid(ctx, width, height, gridColor);
+    }
+
     const drawVisualization = () => {
       ctx.clearRect(0, 0, width, height);
 
       if (showGrid) {
-        drawGrid(ctx, width, height);
+        drawGrid(ctx, width, height, gridColor);
       }
 
       switch (selectedStyle) {
@@ -139,7 +176,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -150,7 +187,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -161,7 +198,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -172,7 +209,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -183,7 +220,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -194,7 +231,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -205,7 +242,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -216,7 +253,7 @@ export default function ArtisticDataViz({
             filteredData,
             width,
             height,
-            colorPalette,
+            effectiveColorPalette,
             animationSpeed,
             smoothing,
           );
@@ -241,7 +278,7 @@ export default function ArtisticDataViz({
     width,
     height,
     selectedStyle,
-    colorPalette,
+    effectiveColorPalette,
     animated,
     isPaused,
     zoomLevel,
@@ -912,20 +949,20 @@ function drawGrid(
   ctx: CanvasRenderingContext2D,
   width: number,
   height: number,
+  gridColor: string = "rgba(0, 0, 0, 0.1)",
 ) {
-  ctx.strokeStyle = "#e5e7eb33";
-  ctx.lineWidth = 1;
+  const step = 20;
+  ctx.strokeStyle = gridColor;
+  ctx.lineWidth = 0.5;
 
-  // Draw vertical lines
-  for (let x = 0; x <= width; x += 50) {
+  for (let x = 0; x <= width; x += step) {
     ctx.beginPath();
     ctx.moveTo(x, 0);
     ctx.lineTo(x, height);
     ctx.stroke();
   }
 
-  // Draw horizontal lines
-  for (let y = 0; y <= height; y += 50) {
+  for (let y = 0; y <= height; y += step) {
     ctx.beginPath();
     ctx.moveTo(0, y);
     ctx.lineTo(width, y);
@@ -934,8 +971,8 @@ function drawGrid(
 }
 
 function findClosestDataPoint(
-  x: number,
-  y: number,
+  mouseX: number,
+  mouseY: number,
   data: DataPoint[],
   width: number,
   height: number,
@@ -943,9 +980,20 @@ function findClosestDataPoint(
   let closest: DataPoint | null = null;
   let minDistance = Infinity;
 
-  data.forEach((point) => {
-    const dx = x - point.x;
-    const dy = y - point.y;
+  // Calculate the spacing between points
+  const spacing = width / (data.length + 1);
+
+  // Find the maximum value for scaling
+  const maxValue = Math.max(...data.map((point) => point.value));
+
+  data.forEach((point, index) => {
+    // Calculate x based on index
+    const pointX = spacing * (index + 1);
+    // Calculate y based on value (inverted since canvas y grows downward)
+    const pointY = height - (point.value / maxValue) * height;
+
+    const dx = mouseX - pointX;
+    const dy = mouseY - pointY;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
     if (distance < minDistance) {

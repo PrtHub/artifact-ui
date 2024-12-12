@@ -77,12 +77,6 @@ export const ui: Registry = [
     files: ["ui-canvas/canvas-drawer.tsx"],
   },
   {
-    name: "painterly-select",
-    type: "registry:ui",
-    dependencies: ["framer-motion", "@radix-ui/react-select", "lucide-react"],
-    files: ["ui-canvas/painterly-select.tsx"],
-  },
-  {
     name: "texture-overlay",
     type: "registry:ui",
     dependencies: [],

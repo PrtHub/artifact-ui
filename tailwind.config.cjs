@@ -79,7 +79,7 @@ module.exports = {
         rippling: "rippling var(--duration, 0.6s) ease-out",
         line: "line 2s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        orbit: "orbit 20s linear infinite",
         "background-position-spin":
           "background-position-spin 3000ms infinite alternate",
         shine: "shine var(--duration) infinite linear",
@@ -90,6 +90,7 @@ module.exports = {
         "ink-spread": "ink-spread 0.5s ease-out forwards",
         "ink-spread-fast": "ink-spread 0.3s ease-out forwards",
         "ink-dissolve": "ink-dissolve 1s ease-out forwards",
+        twinkle: "twinkle 3s ease-in-out infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -183,14 +184,22 @@ module.exports = {
           },
         },
         orbit: {
-          "0%": {
-            transform:
-              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          from: { 
+            transform: "translate(-50%, -50%) rotate(0deg)"
           },
-          "100%": {
-            transform:
-              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          to: { 
+            transform: "translate(-50%, -50%) rotate(360deg)"
+          }
+        },
+        twinkle: {
+          "0%, 100%": { 
+            opacity: "0.2",
+            transform: "scale(0.8)"
           },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1.2)"
+          }
         },
         shine: {
           "0%": {

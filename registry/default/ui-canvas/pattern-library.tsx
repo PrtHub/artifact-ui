@@ -10,10 +10,7 @@ import {
   Hash,
   Plus,
   Minus,
-  RotateCcw,
   Trash2,
-  Download,
-  Upload,
   RefreshCw,
   Diamond,
 } from "lucide-react";

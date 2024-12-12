@@ -162,7 +162,7 @@ export default function StudioPagination({
         handlePageChange(currentPage - 1);
       }
     },
-    preventDefaultTouchmoveEvent: true,
+    preventScrollOnSwipe: true,
     trackMouse: true,
   });
 
@@ -246,7 +246,6 @@ export default function StudioPagination({
   return (
     <div
       ref={containerRef}
-      {...swipeHandlers}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
