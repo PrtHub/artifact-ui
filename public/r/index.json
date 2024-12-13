@@ -490,5 +490,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "creative-otp-input",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/creative-otp-input.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -227,4 +227,10 @@ export const ui: Registry = [
     dependencies: ["lucide-react", "framer-motion"],
     files: ["ui-canvas/studio-shortcuts-guide.tsx"],
   },
+  {
+    name: "creative-otp-input",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/creative-otp-input.tsx"],
+  },
 ];

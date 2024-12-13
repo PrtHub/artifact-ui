@@ -167,7 +167,7 @@ export const examples: Registry = [
 
 Make sure to add any necessary dependencies, tailwind configurations, or other properties as needed for your specific component.
 
-## Adding to the showcase
+<!-- ## Adding to the showcase
 
 ### 1. Create your showcase as a MDX file
 
@@ -190,4 +190,4 @@ Upload an image of your site to `public/showcase/website-name.png`
 
 ## Ask for Help
 
-For any help or questions, please open a new GitHub issue.
+For any help or questions, please open a new GitHub issue. -->

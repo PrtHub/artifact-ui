@@ -1,0 +1,113 @@
+---
+title: Creative OTP Input
+date: 2024-03-19
+description: A modern and creative OTP input component with multiple variants and status states.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="creative-otp-input-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/creative-otp-input.tsx`
+
+<ComponentSource name="creative-otp-input" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```bash
+import { CreativeOTPInput } from "@/components/ui-canvas/creative-otp-input";
+```
+
+</Steps>
+
+## Examples
+
+### Default OTP Input
+
+```tsx
+<CreativeOTPInput length={6} onComplete={(otp) => console.log(otp)} />
+```
+
+### Neon Style
+
+The neon variant features glowing effects and dynamic shadows.
+
+```tsx
+<CreativeOTPInput
+  variant="neon"
+  length={6}
+  onComplete={(otp) => console.log(otp)}
+/>
+```
+
+### Minimal Style
+
+A clean, minimalist design with subtle animations.
+
+```tsx
+<CreativeOTPInput
+  variant="minimal"
+  length={6}
+  onComplete={(otp) => console.log(otp)}
+/>
+```
+
+### Dots Style
+
+Circular input fields with playful animations.
+
+```tsx
+<CreativeOTPInput
+  variant="dots"
+  length={6}
+  onComplete={(otp) => console.log(otp)}
+/>
+```
+
+### Underline Style
+
+Clean underline design with smooth transitions.
+
+```tsx
+<CreativeOTPInput
+  variant="underline"
+  length={6}
+  onComplete={(otp) => console.log(otp)}
+/>
+```
+
+### With Status States
+
+The component supports three states: idle, success, and error.
+
+```tsx
+<CreativeOTPInput
+  variant="default"
+  status="success" // or "error" or "idle"
+  length={6}
+  onComplete={(otp) => {
+    // Handle validation
+    if (isValid(otp)) {
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
+  }}
+/>
+```
+
+## Props
+
+| Prop         | Type                                                        | Default     | Description                          |
+| ------------ | ----------------------------------------------------------- | ----------- | ------------------------------------ |
+| `length`     | `number`                                                    | `6`         | Number of OTP input fields           |
+| `variant`    | `"default" \| "neon" \| "minimal" \| "dots" \| "underline"` | `"default"` | Visual style variant                 |
+| `status`     | `"idle" \| "success" \| "error"`                            | `"idle"`    | Current status state                 |
+| `onComplete` | `(otp: string) => void`                                     | -           | Callback when all digits are entered |
+| `className`  | `string`                                                    | -           | Additional CSS classes               |

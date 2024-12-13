@@ -223,4 +223,10 @@ export const examples: Registry = [
     registryDependencies: ["studio-shortcuts-guide"],
     files: ["example/studio-shortcuts-guide-demo.tsx"],
   },
+  {
+    name: "creative-otp-input-demo",
+    type: "registry:example",
+    registryDependencies: ["creative-otp-input"],
+    files: ["example/creative-otp-input-demo.tsx"],
+  },
 ];

@@ -412,6 +412,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "creative-otp-input": {
+      name: "creative-otp-input",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/creative-otp-input.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/creative-otp-input.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -814,6 +825,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["studio-shortcuts-guide"],
       files: ["registry/default/example/studio-shortcuts-guide-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/studio-shortcuts-guide-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "creative-otp-input-demo": {
+      name: "creative-otp-input-demo",
+      type: "registry:example",
+      registryDependencies: ["creative-otp-input"],
+      files: ["registry/default/example/creative-otp-input-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/creative-otp-input-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

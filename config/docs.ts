@@ -52,6 +52,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Creative OTP Input",
+          href: "/docs/components/creative-otp-input",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Collapsible Card",
           href: "/docs/components/collapsible-card",
           items: [],
