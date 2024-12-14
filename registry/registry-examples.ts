@@ -229,4 +229,10 @@ export const examples: Registry = [
     registryDependencies: ["creative-otp-input"],
     files: ["example/creative-otp-input-demo.tsx"],
   },
+  {
+    name: "creative-clipboard-actions-demo",
+    type: "registry:example",
+    registryDependencies: ["creative-clipboard-actions"],
+    files: ["example/creative-clipboard-actions-demo.tsx"],
+  },
 ];

@@ -423,6 +423,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "creative-clipboard-actions": {
+      name: "creative-clipboard-actions",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/creative-clipboard-actions.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/creative-clipboard-actions.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -836,6 +847,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["creative-otp-input"],
       files: ["registry/default/example/creative-otp-input-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/creative-otp-input-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "creative-clipboard-actions-demo": {
+      name: "creative-clipboard-actions-demo",
+      type: "registry:example",
+      registryDependencies: ["creative-clipboard-actions"],
+      files: ["registry/default/example/creative-clipboard-actions-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/creative-clipboard-actions-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -233,4 +233,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/creative-otp-input.tsx"],
   },
+  {
+    name: "creative-clipboard-actions",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react"],
+    files: ["ui-canvas/creative-clipboard-actions.tsx"],
+  },
 ];

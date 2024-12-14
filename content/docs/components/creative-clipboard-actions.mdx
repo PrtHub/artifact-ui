@@ -1,0 +1,77 @@
+---
+title: Creative Clipboard Actions
+date: 2024-12-14
+description: A modern and animated clipboard actions component with multiple variants and styles.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="creative-clipboard-actions-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/creative-clipboard-actions.tsx`
+
+<ComponentSource name="creative-clipboard-actions" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```bash
+import { CreativeClipboardActions } from "@/components/ui-canvas/creative-clipboard-actions";
+```
+
+</Steps>
+
+## Examples
+
+### Default Clipboard Action
+
+```tsx
+<CreativeClipboardActions text="Text to copy" />
+```
+
+### Link Variant
+
+```tsx
+<CreativeClipboardActions
+  text="https://example.com"
+  showLink
+  variant="minimal"
+/>
+```
+
+### Floating Style
+
+```tsx
+<CreativeClipboardActions text="Copy me!" variant="floating" size="lg" />
+```
+
+### Gradient Style
+
+```tsx
+<CreativeClipboardActions text="Gradient style" variant="gradient" />
+```
+
+### Inside Card
+
+```tsx
+<div className="flex items-center gap-2 rounded-lg border bg-card p-4">
+  <span className="text-sm">npm install ui-canvas</span>
+  <CreativeClipboardActions text="npm install ui-canvas" variant="minimal" />
+</div>
+```
+
+## Props
+
+| Prop        | Type                                                              | Default     | Description                         |
+| ----------- | ----------------------------------------------------------------- | ----------- | ----------------------------------- |
+| `text`      | `string`                                                          | -           | Text to copy to clipboard           |
+| `variant`   | `"default" \| "minimal" \| "floating" \| "gradient" \| "outline"` | `"default"` | Visual style variant                |
+| `size`      | `"sm" \| "md" \| "lg"`                                            | `"md"`      | Size of the button                  |
+| `showLink`  | `boolean`                                                         | `false`     | Show link icon instead of clipboard |
+| `className` | `string`                                                          | -           | Additional CSS classes              |
+| `onCopy`    | `() => void`                                                      | -           | Callback when text is copied        |

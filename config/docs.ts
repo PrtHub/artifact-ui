@@ -49,7 +49,6 @@ export const docsConfig: DocsConfig = {
           title: "Texture Browser",
           href: "/docs/components/texture-browser",
           items: [],
-          label: "New",
         },
         {
           title: "Creative OTP Input",
@@ -61,7 +60,6 @@ export const docsConfig: DocsConfig = {
           title: "Collapsible Card",
           href: "/docs/components/collapsible-card",
           items: [],
-          label: "New",
         },
         {
           title: "Sketch Input",
@@ -97,7 +95,6 @@ export const docsConfig: DocsConfig = {
           title: "Color Scheme Generator",
           href: "/docs/components/color-scheme-generator",
           items: [],
-          label: "New",
         },
         {
           title: "Brush Stroke Loader",
@@ -208,31 +205,31 @@ export const docsConfig: DocsConfig = {
           title: "Artistic Statistics Card",
           href: "/docs/components/artistic-statistics-card",
           items: [],
-          label: "New",
         },
         {
           title: "Stepper",
           href: "/docs/components/stepper",
           items: [],
-          label: "New",
         },
         {
           title: "Studio Pagination",
           href: "/docs/components/studio-pagination",
           items: [],
-          label: "New",
         },
         {
           title: "Gallery Flow",
           href: "/docs/components/gallery-flow",
           items: [],
-          label: "New",
         },
         {
           title: "Studio Shortcuts Guide",
           href: "/docs/components/studio-shortcuts-guide",
           items: [],
-          label: "New",
+        },
+        {
+          title: "Creative Clipboard Actions",
+          href: "/docs/components/creative-clipboard-actions",
+          items: [],
         },
       ],
     },

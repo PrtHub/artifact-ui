@@ -503,5 +503,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "creative-clipboard-actions",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/creative-clipboard-actions.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
