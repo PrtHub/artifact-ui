@@ -517,5 +517,20 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "studio-share-module",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react",
+      "qrcode.react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/studio-share-module.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

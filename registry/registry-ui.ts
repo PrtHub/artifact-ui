@@ -239,4 +239,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui-canvas/creative-clipboard-actions.tsx"],
   },
+  {
+    name: "studio-share-module",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react", "qrcode.react"],
+    files: ["ui-canvas/studio-share-module.tsx"],
+  },
 ];

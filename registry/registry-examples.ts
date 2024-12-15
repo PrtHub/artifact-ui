@@ -235,4 +235,10 @@ export const examples: Registry = [
     registryDependencies: ["creative-clipboard-actions"],
     files: ["example/creative-clipboard-actions-demo.tsx"],
   },
+  {
+    name: "studio-share-module-demo",
+    type: "registry:example",
+    registryDependencies: ["studio-share-module"],
+    files: ["example/studio-share-module-demo.tsx"],
+  },
 ];

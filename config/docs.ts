@@ -231,6 +231,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/creative-clipboard-actions",
           items: [],
         },
+        {
+          title: "Studio Share Module",
+          href: "/docs/components/studio-share-module",
+          items: [],
+        },
       ],
     },
   ],

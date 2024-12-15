@@ -1,0 +1,104 @@
+---
+title: Studio Share Module
+date: 2024-12-14
+description: A modern and animated share module with social sharing, link copying, and QR code functionality.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="studio-share-module-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+```bash
+npm install qrcode.react framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/studio-share-module.tsx`
+
+<ComponentSource name="studio-share-module" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```bash
+import { StudioShareModule } from "@/components/ui-canvas/studio-share-module";
+```
+
+</Steps>
+
+## Examples
+
+### Neon Theme
+
+```tsx
+<StudioShareModule
+  url="https://example.com"
+  title="Check this out!"
+  description="Share this amazing content"
+  theme="neon"
+  position="center"
+/>
+```
+
+### Glassmorphism Theme
+
+```tsx
+<StudioShareModule
+  url="https://example.com"
+  theme="glassmorphism"
+  position="bottom-right"
+/>
+```
+
+### Gradient Theme
+
+```tsx
+<StudioShareModule
+  url="https://example.com"
+  theme="gradient"
+  title="Share Now"
+/>
+```
+
+### Minimal Theme
+
+```tsx
+<StudioShareModule
+  url="https://example.com"
+  theme="minimal"
+  position="center"
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `url` | `string` | - | URL to be shared |
+| `title` | `string` | `"Check this out!"` | Title for sharing |
+| `description` | `string` | `"I thought you might find this interesting."` | Description text |
+| `theme` | `"neon" \| "glassmorphism" \| "gradient" \| "minimal"` | `"neon"` | Visual theme |
+| `position` | `"center" \| "bottom-right"` | `"center"` | Module position |
+| `className` | `string` | - | Additional CSS classes |
+| `onShare` | `() => void` | - | Callback when content is shared |
+
+## Features
+
+- 🎨 Four stunning visual themes
+- 🌐 Social media integrations
+- 📋 One-click link copying
+- 📱 QR code generation
+- 🌓 Dark mode support
+- ✨ Smooth animations
+- 💫 Interactive hover effects
+- 🎯 Customizable positioning
+- 🔥 Modern glassmorphism effects
+- 🌈 Beautiful gradients
+- 🚀 Optimized performance
+- 📱 Responsive design

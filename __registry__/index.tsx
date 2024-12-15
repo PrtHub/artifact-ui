@@ -434,6 +434,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "studio-share-module": {
+      name: "studio-share-module",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/studio-share-module.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/studio-share-module.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -858,6 +869,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["creative-clipboard-actions"],
       files: ["registry/default/example/creative-clipboard-actions-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/creative-clipboard-actions-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "studio-share-module-demo": {
+      name: "studio-share-module-demo",
+      type: "registry:example",
+      registryDependencies: ["studio-share-module"],
+      files: ["registry/default/example/studio-share-module-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/studio-share-module-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
