@@ -110,7 +110,7 @@ export default function PatternLibraryDemo() {
   };
 
   return (
-    <div className={`flex w-full flex-col gap-8 p-4 md:flex-row`}>
+    <div className={`flex w-full flex-col gap-8 p-4`}>
       <div className="w-full max-w-sm space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-medium text-foreground/90 dark:text-white/90">
@@ -126,15 +126,6 @@ export default function PatternLibraryDemo() {
       </div>
 
       <div className="z-50 flex flex-1 flex-col gap-4 bg-white shadow-md dark:bg-black">
-        <div className="rounded-lg border bg-card p-4 dark:border-white/10 dark:bg-black/40">
-          <h3 className="mb-2 font-medium text-foreground/90 dark:text-white/90">
-            Current Pattern Settings
-          </h3>
-          <pre className="text-sm text-muted-foreground dark:text-white/50">
-            {JSON.stringify(currentPattern, null, 2)}
-          </pre>
-        </div>
-
         <div className="z-50 rounded-lg border bg-white p-4 shadow-md dark:border-white/10 dark:bg-black">
           <h3 className="mb-2 font-medium text-foreground/90 dark:text-white/90">
             Preview

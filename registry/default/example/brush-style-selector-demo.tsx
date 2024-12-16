@@ -68,7 +68,7 @@ export default function BrushStyleSelectorDemo() {
 
   return (
     <div
-      className={`flex w-full flex-col gap-8 p-4 md:flex-row ${isDarkMode ? "dark" : ""}`}
+      className={`flex w-full flex-col gap-8 p-4 ${isDarkMode ? "dark" : ""}`}
     >
       <div className="w-full max-w-sm space-y-4">
         <div className="z-20 flex items-center justify-between">
@@ -86,15 +86,6 @@ export default function BrushStyleSelectorDemo() {
       </div>
 
       <div className="flex flex-1 flex-col gap-4">
-        <div className="rounded-lg border bg-card p-4 dark:border-white/10 dark:bg-black/40">
-          <h3 className="mb-2 font-medium text-foreground/90 dark:text-white/90">
-            Current Brush Settings
-          </h3>
-          <pre className="text-sm text-muted-foreground dark:text-white/50">
-            {JSON.stringify(currentBrush, null, 2)}
-          </pre>
-        </div>
-
         <div className="rounded-lg border bg-card p-4 dark:border-white/10 dark:bg-black/40">
           <h3 className="mb-2 font-medium text-foreground/90 dark:text-white/90">
             Preview

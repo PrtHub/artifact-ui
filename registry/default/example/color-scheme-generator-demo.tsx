@@ -6,7 +6,7 @@ import { ColorSchemeGenerator } from "@/registry/default/ui-canvas/color-scheme-
 export default function ColorSchemeGeneratorDemo() {
   return (
     <ToastProvider>
-      <div className="w-full max-w-3xl">
+      <div className="w-full">
         <ColorSchemeGenerator />
       </div>
     </ToastProvider>

@@ -157,11 +157,13 @@ export function ColorSchemeGenerator({ className }: ColorSchemeGeneratorProps) {
   }, [baseColor, harmony, colorScheme]);
 
   return (
-    <div className={cn("flex flex-col gap-6 p-6", className)}>
+    <div className={cn("flex flex-col gap-6 p-4 xl:p-0 2xl:p-6", className)}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Palette className="h-5 w-5" />
-          <h2 className="text-lg font-semibold">Color Scheme Generator</h2>
+          <h2 className="whitespace-nowrap text-lg font-semibold">
+            Color Scheme Generator
+          </h2>
         </div>
         <div className="flex items-center gap-2">
           <CanvasButton

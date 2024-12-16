@@ -24,7 +24,8 @@ export default function StudioShareModuleDemo() {
 
   const demoUrl = `${process.env.NEXT_PUBLIC_APP_URL}/components/studio-share-module`;
   const demoTitle = "UI Canvas Components";
-  const demoDescription = "Experience the future of UI components with our stunning collection!";
+  const demoDescription =
+    "Experience the future of UI components with our stunning collection!";
 
   const themes = [
     { name: "neon", emoji: "💫", label: "Neon" },
@@ -55,10 +56,11 @@ export default function StudioShareModuleDemo() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setTheme(t.name as any)}
-                className={`flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition-all ${theme === t.name
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted hover:bg-muted/80"
-                  }`}
+                className={`flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition-all ${
+                  theme === t.name
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted hover:bg-muted/80"
+                }`}
               >
                 <span>{t.emoji}</span>
                 <span>{t.label}</span>
@@ -72,10 +74,11 @@ export default function StudioShareModuleDemo() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setPosition(p.name as any)}
-                className={`rounded-xl px-4 py-2 text-sm transition-all ${position === p.name
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted hover:bg-muted/80"
-                  }`}
+                className={`rounded-xl px-4 py-2 text-sm transition-all ${
+                  position === p.name
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted hover:bg-muted/80"
+                }`}
               >
                 {p.label}
               </motion.button>

@@ -75,9 +75,11 @@ const socialPlatforms: Platform[] = [
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
       </svg>
     ),
-    color: "bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] dark:from-[#833AB4]/80 dark:via-[#FD1D1D]/80 dark:to-[#FCAF45]/80",
+    color:
+      "bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] dark:from-[#833AB4]/80 dark:via-[#FD1D1D]/80 dark:to-[#FCAF45]/80",
     hoverEffect: "hover:shadow-[#FD1D1D]/50 hover:shadow-xl",
-    getUrl: (url: string) => `https://instagram.com/share?url=${encodeURIComponent(url)}`,
+    getUrl: (url: string) =>
+      `https://instagram.com/share?url=${encodeURIComponent(url)}`,
   },
   {
     name: "linkedin",
@@ -116,22 +118,27 @@ const socialPlatforms: Platform[] = [
 const themes = {
   neon: {
     container: "bg-black/90 border-primary/50 shadow-primary/20 shadow-lg",
-    button: "bg-black/60 hover:bg-black/80 dark:bg-primary/20 hover:dark:bg-primary/30 text-white dark:text-primary border border-primary/50",
+    button:
+      "bg-black/60 hover:bg-black/80 dark:bg-primary/20 hover:dark:bg-primary/30 text-white dark:text-primary border border-primary/50",
     socialButton: "backdrop-blur-xl shadow-lg",
     text: "text-white dark:text-foreground",
     highlight: "text-white dark:text-primary",
     glow: "animate-glow",
   },
   glassmorphism: {
-    container: "bg-black/20 dark:bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg",
-    button: "bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 text-white border border-white/30",
-    socialButton: "backdrop-blur-xl bg-black/20 dark:bg-white/10 border border-white/20",
+    container:
+      "bg-black/20 dark:bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg",
+    button:
+      "bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 text-white border border-white/30",
+    socialButton:
+      "backdrop-blur-xl bg-black/20 dark:bg-white/10 border border-white/20",
     text: "text-white",
     highlight: "text-white",
     glow: "",
   },
   gradient: {
-    container: "bg-gradient-to-br from-purple-500/90 to-pink-500/90 dark:from-purple-600/90 dark:to-pink-600/90 border-white/10",
+    container:
+      "bg-gradient-to-br from-purple-500/90 to-pink-500/90 dark:from-purple-600/90 dark:to-pink-600/90 border-white/10",
     button: "bg-white/20 hover:bg-white/30 text-white border border-white/20",
     socialButton: "bg-white/20 hover:bg-white/30",
     text: "text-white",
@@ -140,60 +147,80 @@ const themes = {
   },
   minimal: {
     container: "bg-white dark:bg-background border shadow-sm",
-    button: "bg-gray-100 hover:bg-gray-200 dark:bg-muted hover:dark:bg-muted/80 border text-gray-800 dark:text-white",
-    socialButton: "bg-gray-100 hover:bg-gray-200 dark:bg-muted hover:dark:bg-muted/80 text-gray-800 dark:text-white",
+    button:
+      "bg-gray-100 hover:bg-gray-200 dark:bg-muted hover:dark:bg-muted/80 border text-gray-800 dark:text-white",
+    socialButton:
+      "bg-gray-100 hover:bg-gray-200 dark:bg-muted hover:dark:bg-muted/80 text-gray-800 dark:text-white",
     text: "text-gray-800 dark:text-foreground",
     highlight: "text-gray-900 dark:text-foreground font-bold",
     glow: "",
   },
   cyberpunk: {
-    container: "bg-yellow-950/90 dark:bg-yellow-900/90 border-yellow-400/50 shadow-yellow-400/20",
-    button: "bg-yellow-400/20 hover:bg-yellow-400/30 text-yellow-500 dark:text-yellow-400 border border-yellow-400/50",
-    socialButton: "backdrop-blur-xl shadow-lg from-yellow-400 to-red-500 text-yellow-900 dark:text-white",
+    container:
+      "bg-yellow-950/90 dark:bg-yellow-900/90 border-yellow-400/50 shadow-yellow-400/20",
+    button:
+      "bg-yellow-400/20 hover:bg-yellow-400/30 text-yellow-500 dark:text-yellow-400 border border-yellow-400/50",
+    socialButton:
+      "backdrop-blur-xl shadow-lg from-yellow-400 to-red-500 text-yellow-900 dark:text-white",
     text: "text-yellow-500 dark:text-yellow-400",
     highlight: "text-yellow-600 dark:text-yellow-300 font-bold",
     glow: "animate-pulse",
   },
   aurora: {
-    container: "bg-gradient-to-br from-emerald-400/30 to-blue-400/30 dark:from-green-500/20 dark:to-blue-500/20 backdrop-blur-xl border-white/10",
-    button: "bg-emerald-950/20 hover:bg-emerald-950/30 dark:bg-white/10 hover:dark:bg-white/20 text-emerald-950 dark:text-white border border-emerald-400/30 dark:border-white/20",
-    socialButton: "backdrop-blur-xl bg-emerald-950/20 hover:bg-emerald-950/30 dark:bg-white/10 hover:dark:bg-white/20 text-emerald-950 dark:text-white",
+    container:
+      "bg-gradient-to-br from-emerald-400/30 to-blue-400/30 dark:from-green-500/20 dark:to-blue-500/20 backdrop-blur-xl border-white/10",
+    button:
+      "bg-emerald-950/20 hover:bg-emerald-950/30 dark:bg-white/10 hover:dark:bg-white/20 text-emerald-950 dark:text-white border border-emerald-400/30 dark:border-white/20",
+    socialButton:
+      "backdrop-blur-xl bg-emerald-950/20 hover:bg-emerald-950/30 dark:bg-white/10 hover:dark:bg-white/20 text-emerald-950 dark:text-white",
     text: "text-emerald-950 dark:text-white",
     highlight: "text-emerald-600 dark:text-emerald-300",
     glow: "animate-aurora",
   },
   retro: {
-    container: "bg-indigo-950/90 dark:bg-indigo-900/90 border-orange-500/50 shadow-orange-500/20",
-    button: "bg-orange-500/20 hover:bg-orange-500/30 text-orange-600 dark:text-orange-500 border border-orange-500/50",
-    socialButton: "bg-gradient-to-r from-orange-400/80 to-pink-400/80 dark:from-orange-500/80 dark:to-pink-500/80 text-white",
+    container:
+      "bg-indigo-950/90 dark:bg-indigo-900/90 border-orange-500/50 shadow-orange-500/20",
+    button:
+      "bg-orange-500/20 hover:bg-orange-500/30 text-orange-600 dark:text-orange-500 border border-orange-500/50",
+    socialButton:
+      "bg-gradient-to-r from-orange-400/80 to-pink-400/80 dark:from-orange-500/80 dark:to-pink-500/80 text-white",
     text: "text-orange-600 dark:text-orange-500",
     highlight: "text-orange-500 dark:text-orange-400 font-bold",
     glow: "animate-retro",
   },
   synthwave: {
-    container: "bg-gradient-to-br from-purple-800/90 via-pink-800/90 to-indigo-800/90 dark:from-purple-900/90 dark:via-pink-900/90 dark:to-indigo-900/90 border-pink-500/30",
-    button: "bg-gradient-to-r from-pink-400/20 to-purple-400/20 hover:from-pink-400/30 hover:to-purple-400/30 dark:from-pink-500/20 dark:to-purple-500/20 hover:dark:from-pink-500/30 hover:dark:to-purple-500/30 text-white border border-pink-500/30",
-    socialButton: "bg-gradient-to-r from-pink-400/80 to-purple-400/80 dark:from-pink-500/80 dark:to-purple-500/80 text-white",
+    container:
+      "bg-gradient-to-br from-purple-800/90 via-pink-800/90 to-indigo-800/90 dark:from-purple-900/90 dark:via-pink-900/90 dark:to-indigo-900/90 border-pink-500/30",
+    button:
+      "bg-gradient-to-r from-pink-400/20 to-purple-400/20 hover:from-pink-400/30 hover:to-purple-400/30 dark:from-pink-500/20 dark:to-purple-500/20 hover:dark:from-pink-500/30 hover:dark:to-purple-500/30 text-white border border-pink-500/30",
+    socialButton:
+      "bg-gradient-to-r from-pink-400/80 to-purple-400/80 dark:from-pink-500/80 dark:to-purple-500/80 text-white",
     text: "text-white",
     highlight: "text-pink-200 dark:text-pink-300 font-bold",
     glow: "animate-synthwave",
   },
   nature: {
-    container: "bg-gradient-to-br from-green-700/90 to-emerald-800/90 dark:from-green-800/90 dark:to-emerald-900/90 border-emerald-400/30",
-    button: "bg-emerald-400/20 hover:bg-emerald-400/30 dark:bg-emerald-500/20 hover:dark:bg-emerald-500/30 text-white border border-emerald-400/30",
-    socialButton: "bg-gradient-to-r from-green-400/80 to-emerald-400/80 dark:from-green-500/80 dark:to-emerald-500/80 text-white",
+    container:
+      "bg-gradient-to-br from-green-700/90 to-emerald-800/90 dark:from-green-800/90 dark:to-emerald-900/90 border-emerald-400/30",
+    button:
+      "bg-emerald-400/20 hover:bg-emerald-400/30 dark:bg-emerald-500/20 hover:dark:bg-emerald-500/30 text-white border border-emerald-400/30",
+    socialButton:
+      "bg-gradient-to-r from-green-400/80 to-emerald-400/80 dark:from-green-500/80 dark:to-emerald-500/80 text-white",
     text: "text-white",
     highlight: "text-emerald-200 dark:text-emerald-300 font-bold",
     glow: "animate-nature",
   },
   ocean: {
-    container: "bg-gradient-to-br from-blue-800/90 to-cyan-800/90 dark:from-blue-900/90 dark:to-cyan-900/90 border-cyan-400/30",
-    button: "bg-cyan-400/20 hover:bg-cyan-400/30 dark:bg-cyan-500/20 hover:dark:bg-cyan-500/30 text-white border border-cyan-400/30",
-    socialButton: "bg-gradient-to-r from-blue-400/80 to-cyan-400/80 dark:from-blue-500/80 dark:to-cyan-500/80 text-white",
+    container:
+      "bg-gradient-to-br from-blue-800/90 to-cyan-800/90 dark:from-blue-900/90 dark:to-cyan-900/90 border-cyan-400/30",
+    button:
+      "bg-cyan-400/20 hover:bg-cyan-400/30 dark:bg-cyan-500/20 hover:dark:bg-cyan-500/30 text-white border border-cyan-400/30",
+    socialButton:
+      "bg-gradient-to-r from-blue-400/80 to-cyan-400/80 dark:from-blue-500/80 dark:to-cyan-500/80 text-white",
     text: "text-white",
     highlight: "text-cyan-200 dark:text-cyan-300 font-bold",
     glow: "animate-ocean",
-  }
+  },
 } as const;
 
 const globalStyles = `
@@ -279,7 +306,7 @@ const ShareButton = ({
       hoverEffect,
       themes[theme].socialButton,
       darkMode ? "dark" : "",
-      className
+      className,
     )}
   >
     <motion.div
@@ -288,13 +315,18 @@ const ShareButton = ({
       animate={{ scale: [1, 1.2, 1] }}
       transition={{ duration: 1.5, repeat: Infinity }}
     />
-    <Icon className={cn("text-white transition-all duration-300 group-hover:scale-110", iconClassName)} />
+    <Icon
+      className={cn(
+        "text-white transition-all duration-300 group-hover:scale-110",
+        iconClassName,
+      )}
+    />
     <motion.span
       initial={{ opacity: 0, y: 10 }}
       whileHover={{ opacity: 1, y: 0 }}
       className={cn(
         "absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs",
-        darkMode ? "text-gray-300" : "text-muted-foreground"
+        darkMode ? "text-gray-300" : "text-muted-foreground",
       )}
     >
       {label}
@@ -302,7 +334,7 @@ const ShareButton = ({
     <motion.div
       className={cn(
         "absolute -right-1 -top-1 h-2 w-2 rounded-full",
-        darkMode ? "bg-white/30" : "bg-white/50"
+        darkMode ? "bg-white/30" : "bg-white/50",
       )}
       animate={{
         scale: [1, 1.2, 1],
@@ -347,7 +379,10 @@ export default function StudioShareModule({
     window.open(platform.getUrl(url, title), "_blank");
   };
 
-  const containerPosition = position === "center" ? "fixed inset-0 flex items-center justify-center" : "fixed bottom-4 right-4";
+  const containerPosition =
+    position === "center"
+      ? "fixed inset-0 flex items-center justify-center"
+      : "fixed bottom-4 right-4";
 
   if (!isOpen) {
     return (
@@ -358,7 +393,7 @@ export default function StudioShareModule({
         className={cn(
           "fixed bottom-4 right-4 flex h-14 w-14 items-center justify-center rounded-full",
           themes[theme].button,
-          themes[theme].glow
+          themes[theme].glow,
         )}
       >
         <Share2 className="h-6 w-6" />
@@ -391,7 +426,7 @@ export default function StudioShareModule({
             className={cn(
               "relative w-full max-w-md rounded-3xl border p-6",
               themes[theme].container,
-              className
+              className,
             )}
           >
             <motion.button
@@ -410,7 +445,9 @@ export default function StudioShareModule({
                 className="flex items-center gap-2"
               >
                 <Share2 className={cn("h-5 w-5", themes[theme].highlight)} />
-                <h3 className={cn("text-xl font-bold", themes[theme].highlight)}>
+                <h3
+                  className={cn("text-xl font-bold", themes[theme].highlight)}
+                >
                   Share {title}
                 </h3>
               </motion.div>
@@ -423,7 +460,9 @@ export default function StudioShareModule({
               className="grid grid-cols-4 gap-4"
             >
               {[
-                ...socialPlatforms.filter((platform: any) => platforms.includes(platform.name)),
+                ...socialPlatforms.filter((platform: any) =>
+                  platforms.includes(platform.name),
+                ),
                 ...customPlatforms,
               ].map((platform) => (
                 <ShareButton
@@ -475,7 +514,7 @@ export default function StudioShareModule({
                   onClick={() => setShowQR(!showQR)}
                   className={cn(
                     "flex h-12 w-12 items-center justify-center rounded-xl",
-                    themes[theme].button
+                    themes[theme].button,
                   )}
                 >
                   <QrCode className="h-5 w-5" />
