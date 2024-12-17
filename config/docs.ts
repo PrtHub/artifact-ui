@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Artistic Settings Panel",
+          href: "/docs/components/artistic-settings-panel",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Creative OTP Input",
           href: "/docs/components/creative-otp-input",
           items: [],

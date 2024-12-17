@@ -532,5 +532,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "artistic-settings-panel",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/artistic-settings-panel.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

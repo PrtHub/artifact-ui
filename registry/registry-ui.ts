@@ -245,4 +245,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "lucide-react", "qrcode.react"],
     files: ["ui-canvas/studio-share-module.tsx"],
   },
+  {
+    name: "artistic-settings-panel",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react"],
+    files: ["ui-canvas/artistic-settings-panel.tsx"],
+  },
 ];

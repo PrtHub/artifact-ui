@@ -241,4 +241,10 @@ export const examples: Registry = [
     registryDependencies: ["studio-share-module"],
     files: ["example/studio-share-module-demo.tsx"],
   },
+  {
+    name: "artistic-settings-panel-demo",
+    type: "registry:example",
+    registryDependencies: ["artistic-settings-panel"],
+    files: ["example/artistic-settings-panel-demo.tsx"],
+  },
 ];

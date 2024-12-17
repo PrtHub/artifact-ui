@@ -445,6 +445,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "artistic-settings-panel": {
+      name: "artistic-settings-panel",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/artistic-settings-panel.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/artistic-settings-panel.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -880,6 +891,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["studio-share-module"],
       files: ["registry/default/example/studio-share-module-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/studio-share-module-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "artistic-settings-panel-demo": {
+      name: "artistic-settings-panel-demo",
+      type: "registry:example",
+      registryDependencies: ["artistic-settings-panel"],
+      files: ["registry/default/example/artistic-settings-panel-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/artistic-settings-panel-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
