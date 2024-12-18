@@ -1,0 +1,100 @@
+---
+title: Creative Code Display
+description: A modern, animated code display component with syntax highlighting and multiple variants.
+component: true
+date: 2024-12-09
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="creative-code-display-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install prismjs
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/creative-code-display.tsx`
+
+<ComponentSource name="creative-code-display" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CreativeCodeDisplay } from "@/components/ui-canvas/creative-code-display";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { CreativeCodeDisplay } from "@/components/ui-canvas/creative-code-display";
+
+export default function MyComponent() {
+  return (
+    <CreativeCodeDisplay
+      code="console.log('Hello, World!');"
+      language="javascript"
+      variant="default"
+      showLineNumbers
+    />
+  );
+}
+```
+
+## Examples
+
+### Default Variant
+
+```tsx
+<CreativeCodeDisplay code={code} language="typescript" title="Example Code" />
+```
+
+### Glass Effect
+
+```tsx
+<CreativeCodeDisplay code={code} language="jsx" variant="glass" size="lg" />
+```
+
+### Terminal Style
+
+```tsx
+<CreativeCodeDisplay
+  code={code}
+  language="bash"
+  variant="terminal"
+  showLineNumbers={false}
+/>
+```
+
+### Minimal UI
+
+```tsx
+<CreativeCodeDisplay
+  code={code}
+  variant="solid"
+  showControls={false}
+  showLineNumbers={false}
+/>
+```
+
+## Props
+
+| Prop              | Type                                            | Default        | Description                                  |
+| ----------------- | ----------------------------------------------- | -------------- | -------------------------------------------- |
+| `code`            | `string`                                        | Required       | The code to display                          |
+| `language`        | `string`                                        | `"javascript"` | Programming language for syntax highlighting |
+| `showLineNumbers` | `boolean`                                       | `true`         | Show line numbers                            |
+| `className`       | `string`                                        | -              | Additional CSS classes                       |
+| `variant`         | `"default" \| "glass" \| "solid" \| "terminal"` | `"default"`    | Visual style variant                         |
+| `size`            | `"sm" \| "default" \| "lg"`                     | `"default"`    | Text size                                    |
+| `showControls`    | `boolean`                                       | `true`         | Show copy/download controls                  |
+| `title`           | `string`                                        | -              | Optional title for the code block            |

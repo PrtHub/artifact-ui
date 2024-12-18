@@ -247,4 +247,16 @@ export const examples: Registry = [
     registryDependencies: ["artistic-settings-panel"],
     files: ["example/artistic-settings-panel-demo.tsx"],
   },
+  {
+    name: "creative-code-display-demo",
+    type: "registry:example",
+    registryDependencies: ["creative-code-display"],
+    files: ["example/creative-code-display-demo.tsx"],
+  },
+  {
+    name: "sketch-calendar-picker-demo",
+    type: "registry:example",
+    registryDependencies: ["sketch-calendar-picker"],
+    files: ["example/sketch-calendar-picker-demo.tsx"],
+  },
 ];

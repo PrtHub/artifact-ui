@@ -546,5 +546,35 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "creative-code-display",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "next-themes",
+      "prismjs"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/creative-code-display.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "sketch-calendar-picker",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "date-fns",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/sketch-calendar-picker.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

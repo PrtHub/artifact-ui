@@ -238,9 +238,21 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Creative Code Display",
+          href: "/docs/components/creative-code-display",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Studio Share Module",
           href: "/docs/components/studio-share-module",
           items: [],
+        },
+        {
+          title: "Sketch Calendar Picker",
+          href: "/docs/components/sketch-calendar-picker",
+          items: [],
+          label: "New",
         },
       ],
     },

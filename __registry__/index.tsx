@@ -456,6 +456,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "creative-code-display": {
+      name: "creative-code-display",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/creative-code-display.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/creative-code-display.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sketch-calendar-picker": {
+      name: "sketch-calendar-picker",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/sketch-calendar-picker.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/sketch-calendar-picker.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -902,6 +924,28 @@ export const Index: Record<string, any> = {
       registryDependencies: ["artistic-settings-panel"],
       files: ["registry/default/example/artistic-settings-panel-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/artistic-settings-panel-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "creative-code-display-demo": {
+      name: "creative-code-display-demo",
+      type: "registry:example",
+      registryDependencies: ["creative-code-display"],
+      files: ["registry/default/example/creative-code-display-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/creative-code-display-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sketch-calendar-picker-demo": {
+      name: "sketch-calendar-picker-demo",
+      type: "registry:example",
+      registryDependencies: ["sketch-calendar-picker"],
+      files: ["registry/default/example/sketch-calendar-picker-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/sketch-calendar-picker-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

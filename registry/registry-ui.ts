@@ -251,4 +251,16 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui-canvas/artistic-settings-panel.tsx"],
   },
+  {
+    name: "creative-code-display",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "next-themes", "prismjs"],
+    files: ["ui-canvas/creative-code-display.tsx"],
+  },
+  {
+    name: "sketch-calendar-picker",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "date-fns", "lucide-react"],
+    files: ["ui-canvas/sketch-calendar-picker.tsx"],
+  },
 ];

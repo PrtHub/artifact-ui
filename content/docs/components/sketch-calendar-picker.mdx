@@ -1,0 +1,93 @@
+---
+title: Sketch Calendar Picker
+description: A modern and artistic calendar picker component with multiple visual variants.
+component: true
+---
+
+<ComponentPreview name="sketch-calendar-picker-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install date-fns framer-motion lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/sketch-calendar-picker.tsx`
+
+<ComponentSource name="sketch-calendar-picker" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { SketchCalendarPicker } from "@/components/ui-canvas/sketch-calendar-picker";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { useState } from "react";
+import { SketchCalendarPicker } from "@/components/ui-canvas/sketch-calendar-picker";
+
+export default function Calendar() {
+  const [date, setDate] = useState<Date>(new Date());
+
+  return (
+    <SketchCalendarPicker value={date} onChange={setDate} variant="default" />
+  );
+}
+```
+
+## Examples
+
+### Default Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="default" />
+```
+
+### Minimal Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="minimal" />
+```
+
+### Gradient Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="gradient" />
+```
+
+### Neon Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="neon" />
+```
+
+### Candy Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="candy" />
+```
+
+### Artistic Style
+
+```tsx
+<SketchCalendarPicker value={date} onChange={setDate} variant="artistic" />
+```
+
+## Props
+
+| Prop        | Type                                                                      | Default     | Description                |
+| ----------- | ------------------------------------------------------------------------- | ----------- | -------------------------- |
+| `value`     | `Date`                                                                    | -           | Selected date              |
+| `onChange`  | `(date: Date) => void`                                                    | -           | Callback when date changes |
+| `className` | `string`                                                                  | -           | Additional CSS classes     |
+| `variant`   | `"default" \| "minimal" \| "artistic" \| "gradient" \| "neon" \| "candy"` | `"default"` | Visual style variant       |
