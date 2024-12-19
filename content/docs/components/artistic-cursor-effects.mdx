@@ -1,0 +1,158 @@
+---
+title: Artistic Cursor Effects
+date: 2024-12-19
+description: Beautiful and interactive cursor effects with smooth animations and transitions
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="artistic-cursor-effects-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies in your project:</Step>
+
+```bash
+npm install framer-motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/artistic-cursor-effects.tsx`
+
+<ComponentSource name="artistic-cursor-effects" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { ArtisticCursorEffects } from "@/components/ui-canvas/artistic-cursor-effects";
+```
+
+</Steps>
+
+## Props
+
+### ArtisticCursorEffects
+
+| Prop             | Type                              | Default   | Description                                  |
+| ---------------- | --------------------------------- | --------- | -------------------------------------------- |
+| variant          | `'glow' \| 'trail' \| 'magnetic'` | 'glow'    | The type of cursor effect to display         |
+| color            | `string`                          | '#6366f1' | Color of the cursor effect                   |
+| size             | `number`                          | 20        | Size of the cursor in pixels                 |
+| trailLength      | `number`                          | 8         | Number of trail elements (for trail variant) |
+| magneticStrength | `number`                          | 0.5       | Strength of magnetic effect                  |
+| glowIntensity    | `number`                          | 1         | Intensity of the glow effect                 |
+| children         | `React.ReactNode`                 | -         | Content to apply the cursor effect to        |
+
+## Examples
+
+### Basic Glow Effect
+
+```tsx
+import { ArtisticCursorEffects } from "@/components/ui-canvas/artistic-cursor-effects";
+
+export default function GlowExample() {
+  return (
+    <ArtisticCursorEffects
+      variant="glow"
+      color="#f43f5e"
+      size={25}
+      glowIntensity={1.5}
+    >
+      <div className="min-h-[400px] flex items-center justify-center">
+        <h1 className="text-3xl font-bold">Hover over me!</h1>
+      </div>
+    </ArtisticCursorEffects>
+  );
+}
+```
+
+### Interactive Trail Effect
+
+```tsx
+export default function TrailExample() {
+  const [intensity, setIntensity] = useState(1);
+
+  return (
+    <ArtisticCursorEffects
+      variant="trail"
+      color="#10b981"
+      size={20}
+      trailLength={Math.floor(intensity * 8)}
+    >
+      <div className="space-y-4">
+        <Slider
+          value={[intensity]}
+          onValueChange={([value]) => setIntensity(value)}
+          min={0.5}
+          max={2}
+          step={0.1}
+        />
+        <div className="text-center">
+          Trail Length: {Math.floor(intensity * 8)}
+        </div>
+      </div>
+    </ArtisticCursorEffects>
+  );
+}
+```
+
+### Magnetic Effect with Dark Mode
+
+```tsx
+export default function MagneticExample() {
+  return (
+    <ArtisticCursorEffects
+      variant="magnetic"
+      color="#f59e0b"
+      size={30}
+      magneticStrength={0.8}
+    >
+      <div className="grid gap-4 p-8">
+        <div className="rounded-lg bg-white p-6 dark:bg-gray-800">
+          <h2 className="text-2xl font-bold">Light Mode Content</h2>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-6 dark:bg-white">
+          <h2 className="text-2xl font-bold text-white dark:text-gray-800">
+            Dark Mode Content
+          </h2>
+        </div>
+      </div>
+    </ArtisticCursorEffects>
+  );
+}
+```
+
+### Custom Color Transitions
+
+```tsx
+export default function ColorTransitionExample() {
+  const colors = ["#6366f1", "#f43f5e", "#10b981", "#f59e0b"];
+  const [colorIndex, setColorIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setColorIndex((prev) => (prev + 1) % colors.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <ArtisticCursorEffects
+      variant="glow"
+      color={colors[colorIndex]}
+      size={25}
+      glowIntensity={1.2}
+    >
+      <div className="flex h-[300px] items-center justify-center">
+        <div
+          className="h-32 w-32 rounded-full transition-colors duration-1000"
+          style={{ backgroundColor: colors[colorIndex] }}
+        />
+      </div>
+    </ArtisticCursorEffects>
+  );
+}
+```

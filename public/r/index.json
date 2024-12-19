@@ -589,5 +589,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "artistic-cursor-effects",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/artistic-cursor-effects.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

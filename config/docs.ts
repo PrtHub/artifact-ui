@@ -260,6 +260,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Artistic Cursor Effects",
+          href: "/docs/components/artistic-cursor-effects",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

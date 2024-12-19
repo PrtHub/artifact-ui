@@ -489,6 +489,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "artistic-cursor-effects": {
+      name: "artistic-cursor-effects",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/artistic-cursor-effects.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/artistic-cursor-effects.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -968,6 +979,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["texture-blend-transitions"],
       files: ["registry/default/example/texture-blend-transitions-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/texture-blend-transitions-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "artistic-cursor-effects-demo": {
+      name: "artistic-cursor-effects-demo",
+      type: "registry:example",
+      registryDependencies: ["artistic-cursor-effects"],
+      files: ["registry/default/example/artistic-cursor-effects-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/artistic-cursor-effects-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

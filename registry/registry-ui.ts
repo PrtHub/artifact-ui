@@ -269,4 +269,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/texture-blend-transitions.tsx"],
   },
+  {
+    name: "artistic-cursor-effects",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/artistic-cursor-effects.tsx"],
+  },
 ];

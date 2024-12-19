@@ -265,4 +265,10 @@ export const examples: Registry = [
     registryDependencies: ["texture-blend-transitions"],
     files: ["example/texture-blend-transitions-demo.tsx"],
   },
+  {
+    name: "artistic-cursor-effects-demo",
+    type: "registry:example",
+    registryDependencies: ["artistic-cursor-effects"],
+    files: ["example/artistic-cursor-effects-demo.tsx"],
+  },
 ];
