@@ -576,5 +576,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "texture-blend-transitions",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/texture-blend-transitions.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

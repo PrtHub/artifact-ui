@@ -259,4 +259,10 @@ export const examples: Registry = [
     registryDependencies: ["sketch-calendar-picker"],
     files: ["example/sketch-calendar-picker-demo.tsx"],
   },
+  {
+    name: "texture-blend-transitions-demo",
+    type: "registry:example",
+    registryDependencies: ["texture-blend-transitions"],
+    files: ["example/texture-blend-transitions-demo.tsx"],
+  },
 ];

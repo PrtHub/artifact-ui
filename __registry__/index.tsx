@@ -478,6 +478,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "texture-blend-transitions": {
+      name: "texture-blend-transitions",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/texture-blend-transitions.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/texture-blend-transitions.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -946,6 +957,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["sketch-calendar-picker"],
       files: ["registry/default/example/sketch-calendar-picker-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/sketch-calendar-picker-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "texture-blend-transitions-demo": {
+      name: "texture-blend-transitions-demo",
+      type: "registry:example",
+      registryDependencies: ["texture-blend-transitions"],
+      files: ["registry/default/example/texture-blend-transitions-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/texture-blend-transitions-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

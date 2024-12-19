@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Texture Blend Transitions",
+          href: "/docs/components/texture-blend-transitions",
+          items: [],
+          label: "New"
+        },
+        {
           title: "Artistic Settings Panel",
           href: "/docs/components/artistic-settings-panel",
           items: [],

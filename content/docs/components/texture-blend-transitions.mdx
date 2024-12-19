@@ -1,0 +1,112 @@
+---
+title: Texture Blend Transitions
+date: 2024-12-09
+description: Smooth transitions between pages/states using artistic textures like watercolor, paint, and paper tears.
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="texture-blend-transitions-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies in your project:</Step>
+
+```bash
+npm install framer-motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/texture-blend-transitions.tsx`
+
+<ComponentSource name="texture-blend-transitions" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { TextureBlendTransitions } from "@/components/ui-canvas/texture-blend-transitions";
+```
+
+</Steps>
+
+## Props
+
+### TextureBlendTransitions
+
+| Prop                 | Type                                              | Default      | Description                                 |
+| -------------------- | ------------------------------------------------- | ------------ | ------------------------------------------- |
+| isActive             | `boolean`                                         | false        | Controls the transition state               |
+| texture              | `'watercolor' \| 'paint' \| 'paper'`              | 'watercolor' | The type of texture effect to use           |
+| duration             | `number`                                          | 1            | Duration of the transition in seconds       |
+| intensity            | `number`                                          | 1            | Intensity of the texture effect (0.1 to 2)  |
+| blendMode            | `'normal' \| 'multiply' \| 'screen' \| 'overlay'` | 'normal'     | CSS blend mode for the effect               |
+| colorScheme          | `{ light: string, dark: string }`                 | -            | Colors for light/dark mode transitions      |
+| customFilter         | `string`                                          | -            | Custom SVG filter for advanced effects      |
+| children             | `React.ReactNode`                                 | -            | Content to be wrapped in the transition     |
+| onTransitionComplete | `() => void`                                      | -            | Callback function when transition completes |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import { TextureBlendTransitions } from "@/components/ui-canvas/texture-blend-transitions";
+
+export default function BasicExample() {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <TextureBlendTransitions isActive={isActive}>
+      <div>Content to transition</div>
+    </TextureBlendTransitions>
+  );
+}
+```
+
+### With Custom Effects
+
+```tsx
+export default function CustomExample() {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <TextureBlendTransitions
+      isActive={isActive}
+      texture="paint"
+      intensity={1.5}
+      blendMode="overlay"
+      colorScheme={{
+        light: "rgba(0, 0, 0, 0.1)",
+        dark: "rgba(255, 255, 255, 0.1)",
+      }}
+      duration={1.2}
+    >
+      <div>Enhanced paint effect</div>
+    </TextureBlendTransitions>
+  );
+}
+```
+
+## Types
+
+### TextureBlendTransitionsProps
+
+```tsx
+interface TextureBlendTransitionsProps {
+  isActive?: boolean;
+  texture?: "watercolor" | "paint" | "paper";
+  duration?: number;
+  children: React.ReactNode;
+  onTransitionComplete?: () => void;
+  intensity?: number;
+  colorScheme?: {
+    light: string;
+    dark: string;
+  };
+  blendMode?: "normal" | "multiply" | "screen" | "overlay";
+  customFilter?: string;
+}
+```

@@ -263,4 +263,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "date-fns", "lucide-react"],
     files: ["ui-canvas/sketch-calendar-picker.tsx"],
   },
+  {
+    name: "texture-blend-transitions",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/texture-blend-transitions.tsx"],
+  },
 ];
