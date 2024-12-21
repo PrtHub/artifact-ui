@@ -500,6 +500,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "canvas-voice-commander": {
+      name: "canvas-voice-commander",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/canvas-voice-commander.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/canvas-voice-commander.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -990,6 +1001,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["artistic-cursor-effects"],
       files: ["registry/default/example/artistic-cursor-effects-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/artistic-cursor-effects-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "canvas-voice-commander-demo": {
+      name: "canvas-voice-commander-demo",
+      type: "registry:example",
+      registryDependencies: ["canvas-voice-commander"],
+      files: ["registry/default/example/canvas-voice-commander-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/canvas-voice-commander-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

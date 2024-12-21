@@ -1,0 +1,195 @@
+---
+title: Canvas Voice Commander
+description: A voice-controlled interface component with advanced visualization and audio feedback.
+component: true
+date: 2023-08-01
+published: true
+author: ui-canvas
+---
+
+<ComponentPreview name="canvas-voice-commander-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install framer-motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/canvas-voice-commander.tsx`
+
+<ComponentSource name="canvas-voice-commander" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CanvasVoiceCommander } from "@ui-canvas/canvas-voice-commander";
+```
+
+</Steps>
+
+## Features
+
+The Canvas Voice Commander is a sophisticated voice control interface that combines speech recognition with visual and audio feedback:
+
+- **Multiple Visualization Styles**
+
+  - Bars: Classic frequency visualization
+  - Ink: Organic ink drop effect
+  - Wave: Smooth wave pattern
+  - Pencil: Artistic pencil stroke effect
+
+- **Theme-Based Sound Feedback**
+
+  - Artist theme: Brush stroke sounds
+  - Minimal theme: Subtle click feedback
+  - Futuristic theme: Digital beep effects
+
+- **Advanced Audio Processing**
+
+  - Real-time frequency analysis
+  - Dynamic noise reduction
+  - Configurable audio visualization
+
+- **Accessibility Features**
+  - ARIA labels and roles
+  - Keyboard navigation support
+  - Visual and audio feedback
+  - Fallback text input mode
+
+## Usage
+
+```tsx
+import { CanvasVoiceCommander } from "@ui-canvas/canvas-voice-commander";
+
+export default function VoiceCommanderExample() {
+  const customCommands = {
+    "switch theme": () => console.log("Switching theme"),
+    "increase size": () => console.log("Increasing size"),
+  };
+
+  return (
+    <CanvasVoiceCommander
+      onCommand={(command) => console.log(`Received: ${command}`)}
+      customCommands={customCommands}
+      theme="minimal"
+      visualizerStyle="bars"
+      noiseReductionEnabled={true}
+      soundFeedback={true}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop                  | Type                                    | Default     | Description                             |
+| --------------------- | --------------------------------------- | ----------- | --------------------------------------- |
+| onCommand             | `(command: string) => void`             | -           | Callback when a command is recognized   |
+| customCommands        | `Record<string, () => void>`            | `{}`        | Map of voice commands to their handlers |
+| theme                 | `"artist" \| "minimal" \| "futuristic"` | `"minimal"` | Visual and audio theme                  |
+| visualizerStyle       | `"bars" \| "ink" \| "wave" \| "pencil"` | `"bars"`    | Style of audio visualization            |
+| noiseReductionEnabled | `boolean`                               | `true`      | Enable/disable noise reduction          |
+| soundFeedback         | `boolean`                               | `true`      | Enable/disable sound feedback           |
+| className             | `string`                                | -           | Additional CSS classes                  |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<CanvasVoiceCommander onCommand={(command) => console.log(command)} />
+```
+
+### Custom Commands
+
+```tsx
+<CanvasVoiceCommander
+  customCommands={{
+    "change color": () => setColor("blue"),
+    "increase size": () => setSize((prev) => prev + 10),
+    "decrease size": () => setSize((prev) => prev - 10),
+  }}
+/>
+```
+
+### Theme Customization
+
+```tsx
+<CanvasVoiceCommander
+  theme="artist"
+  visualizerStyle="ink"
+  soundFeedback={true}
+/>
+```
+
+### With Noise Reduction
+
+```tsx
+<CanvasVoiceCommander noiseReductionEnabled={true} visualizerStyle="bars" />
+```
+
+## Browser Support
+
+The component requires the following Web APIs:
+
+- Web Speech API
+- Web Audio API
+- MediaDevices API
+
+For browsers that don't support speech recognition, the component automatically falls back to a text input mode.
+
+## Accessibility
+
+The Canvas Voice Commander is built with accessibility in mind:
+
+- Proper ARIA labels and roles
+- Keyboard navigation support
+- Visual feedback for all actions
+- Text fallback for speech recognition
+- High contrast color schemes
+- Screen reader announcements
+
+## API Reference
+
+### Commands
+
+The component comes with built-in commands for common actions:
+
+- Theme commands: "switch to minimal/artist/futuristic"
+- Brush commands: "increase/decrease brush size", "set color red/blue/green"
+- Visualizer commands: "show bars/ink/wave/pencil"
+- Settings commands: "toggle noise reduction", "toggle sound"
+
+### Events
+
+The component emits the following events:
+
+- `onCommand`: Fired when a voice command is recognized
+- `onError`: Fired when a speech recognition error occurs
+- `onStateChange`: Fired when the listening state changes
+
+## Customization
+
+### Themes
+
+Each theme includes:
+
+- Visual styles (gradients, colors)
+- Sound effects
+- Visualizer appearance
+- Text and border colors
+
+### Visualization Styles
+
+Each style offers unique visual feedback:
+
+- **Bars**: Traditional frequency bars
+- **Ink**: Organic ink drop effects
+- **Wave**: Smooth wave animations
+- **Pencil**: Artistic pencil strokes

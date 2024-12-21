@@ -271,4 +271,10 @@ export const examples: Registry = [
     registryDependencies: ["artistic-cursor-effects"],
     files: ["example/artistic-cursor-effects-demo.tsx"],
   },
+  {
+    name: "canvas-voice-commander-demo",
+    type: "registry:example",
+    registryDependencies: ["canvas-voice-commander"],
+    files: ["example/canvas-voice-commander-demo.tsx"],
+  },
 ];

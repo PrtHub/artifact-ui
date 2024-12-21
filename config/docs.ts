@@ -266,6 +266,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Canvas Voice Commander",
+          href: "/docs/components/canvas-voice-commander",
+          items: [],
+          label: "New"
+        },
       ],
     },
   ],

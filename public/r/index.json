@@ -602,5 +602,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "canvas-voice-commander",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/canvas-voice-commander.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

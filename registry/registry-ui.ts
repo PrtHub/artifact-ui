@@ -275,4 +275,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/artistic-cursor-effects.tsx"],
   },
+  {
+    name: "canvas-voice-commander",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/canvas-voice-commander.tsx"],
+  },
 ];
