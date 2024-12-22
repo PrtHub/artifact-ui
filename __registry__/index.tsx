@@ -511,6 +511,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "creative-error-boundaries": {
+      name: "creative-error-boundaries",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/creative-error-boundaries.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/creative-error-boundaries.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -1012,6 +1023,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-voice-commander"],
       files: ["registry/default/example/canvas-voice-commander-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-voice-commander-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "creative-error-boundaries-demo": {
+      name: "creative-error-boundaries-demo",
+      type: "registry:example",
+      registryDependencies: ["creative-error-boundaries"],
+      files: ["registry/default/example/creative-error-boundaries-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/creative-error-boundaries-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

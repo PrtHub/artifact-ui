@@ -272,6 +272,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New"
         },
+        {
+          title: "Creative Error Boundaries",
+          href: "/docs/components/creative-error-boundaries",
+          items: [],
+          label: "New"
+        },
       ],
     },
   ],

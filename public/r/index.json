@@ -615,5 +615,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "creative-error-boundaries",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/creative-error-boundaries.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

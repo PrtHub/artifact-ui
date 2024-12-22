@@ -277,4 +277,10 @@ export const examples: Registry = [
     registryDependencies: ["canvas-voice-commander"],
     files: ["example/canvas-voice-commander-demo.tsx"],
   },
+  {
+    name: "creative-error-boundaries-demo",
+    type: "registry:example",
+    registryDependencies: ["creative-error-boundaries"],
+    files: ["example/creative-error-boundaries-demo.tsx"],
+  },
 ];

@@ -281,4 +281,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/canvas-voice-commander.tsx"],
   },
+  {
+    name: "creative-error-boundaries",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react"],
+    files: ["ui-canvas/creative-error-boundaries.tsx"],
+  },
 ];

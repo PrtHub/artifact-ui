@@ -1,0 +1,119 @@
+---
+title: Creative Error Boundaries
+description: A creative way to handle and display errors in your application with an artistic touch.
+component: true
+---
+
+<ComponentPreview name="creative-error-boundaries-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/creative-error-boundaries.tsx`
+
+<ComponentSource name="creative-error-boundaries" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+```
+
+</Steps>
+
+## Usage
+
+### Basic Implementation
+
+```tsx
+import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+
+export default function YourComponent() {
+  return (
+    <CreativeErrorBoundaries>
+      {/* Your component content */}
+    </CreativeErrorBoundaries>
+  );
+}
+```
+
+### With Theme and Error Capture
+
+```tsx
+import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+
+export default function ThemedErrorHandler() {
+  const handleErrorCapture = (error: Error, errorInfo: ErrorInfo) => {
+    // Log error to your analytics or monitoring service
+    console.log("Error captured:", error);
+    console.log("Error Info:", errorInfo);
+  };
+
+  return (
+    <CreativeErrorBoundaries
+      theme="watercolor"
+      onErrorCapture={handleErrorCapture}
+    >
+      {/* Your component content */}
+    </CreativeErrorBoundaries>
+  );
+}
+```
+
+## Props
+
+### CreativeErrorBoundaries
+
+| Prop           | Type                                           | Default      | Description                                                  |
+| -------------- | ---------------------------------------------- | ------------ | ------------------------------------------------------------ |
+| children       | `React.ReactNode`                              | -            | The content to be wrapped by the error boundary              |
+| theme          | `"watercolor" \| "sketch" \| "oil-painting"`   | "watercolor" | The visual theme to apply to the error display               |
+| onErrorCapture | `(error: Error, errorInfo: ErrorInfo) => void` | -            | Optional callback function triggered when an error is caught |
+
+## Examples
+
+### Different Themes
+
+```tsx
+// Watercolor theme
+<CreativeErrorBoundaries theme="watercolor">
+  <YourComponent />
+</CreativeErrorBoundaries>
+
+// Sketch theme
+<CreativeErrorBoundaries theme="sketch">
+  <YourComponent />
+</CreativeErrorBoundaries>
+
+// Oil painting theme
+<CreativeErrorBoundaries theme="oil-painting">
+  <YourComponent />
+</CreativeErrorBoundaries>
+```
+
+### Error Tracking Integration
+
+```tsx
+import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+import { trackError } from "@/lib/analytics";
+
+export default function TrackedComponent() {
+  const handleError = (error: Error, errorInfo: ErrorInfo) => {
+    // Track error in your analytics system
+    trackError({
+      error: error.message,
+      stack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+    });
+  };
+
+  return (
+    <CreativeErrorBoundaries onErrorCapture={handleError}>
+      <YourComponent />
+    </CreativeErrorBoundaries>
+  );
+}
+```
