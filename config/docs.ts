@@ -51,10 +51,16 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Billing History Timeline",
+          href: "/docs/components/billing-history-timeline",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Texture Blend Transitions",
           href: "/docs/components/texture-blend-transitions",
           items: [],
-          label: "New"
+          label: "New",
         },
         {
           title: "Artistic Settings Panel",
@@ -270,13 +276,13 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Voice Commander",
           href: "/docs/components/canvas-voice-commander",
           items: [],
-          label: "New"
+          label: "New",
         },
         {
           title: "Creative Error Boundaries",
           href: "/docs/components/creative-error-boundaries",
           items: [],
-          label: "New"
+          label: "New",
         },
       ],
     },

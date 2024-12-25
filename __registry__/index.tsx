@@ -522,6 +522,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "billing-history-timeline": {
+      name: "billing-history-timeline",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/billing-history-timeline.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/billing-history-timeline.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -1034,6 +1045,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["creative-error-boundaries"],
       files: ["registry/default/example/creative-error-boundaries-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/creative-error-boundaries-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "billing-history-timeline-demo": {
+      name: "billing-history-timeline-demo",
+      type: "registry:example",
+      registryDependencies: ["billing-history-timeline"],
+      files: ["registry/default/example/billing-history-timeline-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/billing-history-timeline-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

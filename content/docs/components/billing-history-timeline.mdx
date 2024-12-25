@@ -1,0 +1,127 @@
+---
+title: Billing History Timeline
+description: An artistic timeline component for displaying billing and payment history with various visual styles.
+component: true
+date: 2024-12-09
+author: ui-canvas
+published: true
+---
+
+<ComponentPreview name="billing-history-timeline-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/billing-history-timeline.tsx`
+
+<ComponentSource name="billing-history-timeline" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { BillingHistoryTimeline } from "@/components/ui-canvas/billing-history-timeline";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import {
+  BillingHistoryTimeline,
+  BillingEvent,
+} from "@/components/ui-canvas/billing-history-timeline";
+
+const events: BillingEvent[] = [
+  {
+    date: "2024-01-20",
+    type: "payment",
+    status: "completed",
+    amount: 199.99,
+    description: "Premium Plan Payment",
+    details: "Successfully processed monthly subscription payment",
+  },
+  {
+    date: "2024-01-15",
+    type: "usage",
+    description: "Usage Spike Detected",
+    details: "API calls increased by 250%",
+  },
+];
+
+export default function MyComponent() {
+  return <BillingHistoryTimeline events={events} variant="gradient" />;
+}
+```
+
+## Props
+
+### BillingHistoryTimeline
+
+| Prop      | Type                                                                         | Default     | Description                        |
+| --------- | ---------------------------------------------------------------------------- | ----------- | ---------------------------------- |
+| events    | `BillingEvent[]`                                                             | -           | An array of billing events         |
+| variant   | `"default" \| "minimal" \| "gradient" \| "neon" \| "watercolor" \| "sketch"` | `"default"` | Visual style variant               |
+| className | `string`                                                                     | -           | Additional CSS classes for styling |
+
+### BillingEvent
+
+| Prop        | Type                                                  | Default     | Description                          |
+| ----------- | ----------------------------------------------------- | ----------- | ------------------------------------ |
+| date        | `string`                                              | -           | The date of the billing event        |
+| type        | `"payment" \| "invoice" \| "usage" \| "subscription"` | `"default"` | The type of billing event            |
+| status      | `"pending" \| "completed"`                            | `"default"` | The status of the billing event      |
+| amount      | `number`                                              | -           | The amount of the billing event      |
+| description | `string`                                              | -           | The description of the billing event |
+| details     | `string`                                              | -           | Additional details about the event   |
+
+## Examples
+
+### Default Variant
+
+```tsx
+<BillingHistoryTimeline events={events} />
+```
+
+### Minimal Variant
+
+```tsx
+<BillingHistoryTimeline events={events} variant="minimal" />
+```
+
+### Gradient Variant
+
+```tsx
+<BillingHistoryTimeline events={events} variant="gradient" />
+```
+
+### Neon Variant
+
+```tsx
+<BillingHistoryTimeline events={events} variant="neon" />
+```
+
+### Watercolor Variant
+
+```tsx
+<BillingHistoryTimeline events={events} variant="watercolor" />
+```
+
+### Sketch Variant
+
+```tsx
+<BillingHistoryTimeline events={events} variant="sketch" />
+```
+
+### Custom Styling
+
+```tsx
+<BillingHistoryTimeline
+  events={events}
+  variant="gradient"
+  className="max-w-4xl mx-auto shadow-xl"
+/>
+```

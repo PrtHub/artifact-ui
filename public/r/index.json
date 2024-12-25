@@ -629,5 +629,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "billing-history-timeline",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui-canvas/billing-history-timeline.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

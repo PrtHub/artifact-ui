@@ -287,4 +287,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui-canvas/creative-error-boundaries.tsx"],
   },
+  {
+    name: "billing-history-timeline",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui-canvas/billing-history-timeline.tsx"],
+  },
 ];

@@ -283,4 +283,10 @@ export const examples: Registry = [
     registryDependencies: ["creative-error-boundaries"],
     files: ["example/creative-error-boundaries-demo.tsx"],
   },
+  {
+    name: "billing-history-timeline-demo",
+    type: "registry:example",
+    registryDependencies: ["billing-history-timeline"],
+    files: ["example/billing-history-timeline-demo.tsx"],
+  },
 ];
