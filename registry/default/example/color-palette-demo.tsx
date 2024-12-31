@@ -5,7 +5,7 @@ import { ColorPalette } from "@/registry/default/ui-canvas/color-palette";
 
 export default function ColorPaletteDemo() {
   return (
-    <div className="space-y-8">
+    <div className="grid grid-cols-2 gap-20">
       <div>
         <h3 className="mb-4 text-lg font-semibold">Watercolor Palette</h3>
         <ColorPalette variant="watercolor" />

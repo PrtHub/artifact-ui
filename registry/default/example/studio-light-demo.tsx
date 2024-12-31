@@ -91,7 +91,7 @@ export default function StudioLightDemo() {
         </div>
       </div>
 
-      <div className="grid h-full gap-8 md:grid-cols-2">
+      <div className="grid h-full grid-cols-1 gap-8 2xl:grid-cols-2">
         <StudioLight
           intensity={intensity}
           variant={variant}
