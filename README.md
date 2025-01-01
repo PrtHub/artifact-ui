@@ -6,7 +6,7 @@ UI Canvas is a component library that provides a modern and accessible design sy
 
 ## Documentation
 
-Visit https://ui-canvas.vercel.app/docs to view the documentation.
+Visit https://uicanvas.vercel.app/docs to view the documentation.
 
 ## Contributing
 
