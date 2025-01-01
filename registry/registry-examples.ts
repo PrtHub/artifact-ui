@@ -289,4 +289,10 @@ export const examples: Registry = [
     registryDependencies: ["grid-pattern-background"],
     files: ["example/grid-pattern-background-demo.tsx"],
   },
+  {
+    name: "particle-background-demo",
+    type: "registry:example",
+    registryDependencies: ["particle-background"],
+    files: ["example/particle-background-demo.tsx"],
+  },
 ];

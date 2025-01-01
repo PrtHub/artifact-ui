@@ -638,5 +638,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "particle-background",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/particle-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

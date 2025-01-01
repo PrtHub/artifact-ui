@@ -18,6 +18,47 @@ author: ui-canvas
 
 <ComponentSource name="grid-pattern-background" />
 
+<Step>Add the following code to your `tailwind.config.cjs` file:</Step>
+
+```tsx
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // your existing code
+  ],
+  theme: {
+    extend: {
+      // your existing code
+      animation: {
+        "dots-shift": "dots-shift 20s linear infinite",
+        "lines-shift": "lines-shift 20s linear infinite",
+      },
+      keyframes: {
+        "dots-shift": {
+          "0%, 100%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(180deg)",
+          },
+        },
+        "lines-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0)",
+          },
+          "50%": {
+            transform: "translateX(5px) translateY(5px)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0)",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx

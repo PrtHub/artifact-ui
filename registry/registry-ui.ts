@@ -293,4 +293,10 @@ export const ui: Registry = [
     dependencies: [],
     files: ["ui-canvas/grid-pattern-background.tsx"],
   },
+  {
+    name: "particle-background",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/particle-background.tsx"],
+  },
 ];

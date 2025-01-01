@@ -533,6 +533,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "particle-background": {
+      name: "particle-background",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/particle-background.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/particle-background.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -1056,6 +1067,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["grid-pattern-background"],
       files: ["registry/default/example/grid-pattern-background-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/grid-pattern-background-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "particle-background-demo": {
+      name: "particle-background-demo",
+      type: "registry:example",
+      registryDependencies: ["particle-background"],
+      files: ["registry/default/example/particle-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/particle-background-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

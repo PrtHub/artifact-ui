@@ -1,0 +1,60 @@
+---
+title: Particle Background
+description: An interactive particle system background that responds to mouse movement, creating an engaging tech-focused aesthetic.
+component: true
+---
+
+<ComponentPreview name="particle-background-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/particle-background.tsx`
+
+<ComponentSource name="particle-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import ParticleBackground from "@/components/ui-canvas/particle-background";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import ParticleBackground from "@/components/ui-canvas/particle-background";
+
+export default function Page() {
+  return (
+    <div className="relative min-h-screen">
+      <ParticleBackground
+        particleCount={50}
+        particleSize={2}
+        particleColor="#4a90e2"
+        lineColor="rgba(74, 144, 226, 0.2)"
+        maxDistance={100}
+        speed={1}
+        interactive={false}
+      />
+      <div className="relative z-10">{/* Your content here */}</div>
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop          | Type    | Default                   | Description                                                 |
+| ------------- | ------- | ------------------------- | ----------------------------------------------------------- |
+| particleCount | number  | 50                        | The number of particles to display.                         |
+| particleSize  | number  | 2                         | The size of each particle in pixels.                        |
+| particleColor | string  | "#4a90e2"                 | The color of each particle.                                 |
+| lineColor     | string  | "rgba(74, 144, 226, 0.2)" | The color of the lines connecting the particles.            |
+| maxDistance   | number  | 100                       | The maximum distance between particles for them to connect. |
+| speed         | number  | 1                         | The speed of the particle movement.                         |
+| interactive   | boolean | false                     | Whether to enable mouse interaction with particles.         |

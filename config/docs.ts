@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Particle Background",
+          href: "/docs/components/particle-background",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Billing History Timeline",
           href: "/docs/components/billing-history-timeline",
           items: [],
