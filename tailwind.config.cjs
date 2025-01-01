@@ -91,6 +91,8 @@ module.exports = {
         "ink-spread-fast": "ink-spread 0.3s ease-out forwards",
         "ink-dissolve": "ink-dissolve 1s ease-out forwards",
         twinkle: "twinkle 3s ease-in-out infinite",
+        "dots-shift": "dots-shift 20s linear infinite",
+        "lines-shift": "lines-shift 20s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -254,6 +256,25 @@ module.exports = {
             opacity: "0",
             filter: "blur(4px)",
           },
+        },
+        "dots-shift": {
+          "0%, 100%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(180deg)",
+          }
+        },
+        "lines-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0)",
+          },
+          "50%": {
+            transform: "translateX(5px) translateY(5px)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0)",
+          }
         },
       },
       backgroundImage: {

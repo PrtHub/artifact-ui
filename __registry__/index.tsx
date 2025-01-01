@@ -522,6 +522,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "grid-pattern-background": {
+      name: "grid-pattern-background",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/grid-pattern-background.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/grid-pattern-background.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -1034,6 +1045,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["gradient-mesh-background"],
       files: ["registry/default/example/gradient-mesh-background-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/gradient-mesh-background-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "grid-pattern-background-demo": {
+      name: "grid-pattern-background-demo",
+      type: "registry:example",
+      registryDependencies: ["grid-pattern-background"],
+      files: ["registry/default/example/grid-pattern-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/grid-pattern-background-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

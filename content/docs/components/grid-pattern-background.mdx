@@ -1,0 +1,59 @@
+---
+title: Grid Pattern Background
+description: A customizable grid pattern background component with support for dots and lines, perfect for minimal and professional designs.
+component: true
+date: 2025-01-01
+author: ui-canvas
+---
+
+<ComponentPreview name="grid-pattern-background-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/grid-pattern-background.tsx`
+
+<ComponentSource name="grid-pattern-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import GridPatternBackground from "@/components/ui-canvas/grid-pattern-background";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import GridPatternBackground from "@/components/ui-canvas/grid-pattern-background";
+
+export default function Example() {
+  return (
+    <div className="relative h-[200px]">
+      <GridPatternBackground
+        gridType="dots"
+        gridSize={24}
+        opacity={0.3}
+        color="#6d28d9"
+        animate={true}
+      />
+      <div className="absolute inset-0">Your content here</div>
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop      | Type              | Default        | Description                      |
+| --------- | ----------------- | -------------- | -------------------------------- |
+| gridType  | 'dots' \| 'lines' | 'dots'         | Type of grid pattern to display  |
+| gridSize  | number            | 20             | Size of the grid cells in pixels |
+| opacity   | number            | 0.2            | Opacity of the grid pattern      |
+| color     | string            | 'currentColor' | Color of the grid pattern        |
+| animate   | boolean           | false          | Enable subtle animation          |
+| className | string            | ""             | Additional CSS classes           |

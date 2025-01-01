@@ -287,4 +287,10 @@ export const ui: Registry = [
     dependencies: [],
     files: ["ui-canvas/gradient-mesh-background.tsx"],
   },
+  {
+    name: "grid-pattern-background",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/grid-pattern-background.tsx"],
+  },
 ];

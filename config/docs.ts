@@ -269,6 +269,11 @@ export const docsConfig: DocsConfig = {
           title: "Gradient Mesh Background",
           href: "/docs/components/gradient-mesh-background",
           items: [],
+        },
+        {
+          title: "Grid Pattern Background",
+          href: "/docs/components/grid-pattern-background",
+          items: [],
           label: "New",
         },
       ],

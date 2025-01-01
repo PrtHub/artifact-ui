@@ -627,5 +627,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "grid-pattern-background",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/grid-pattern-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

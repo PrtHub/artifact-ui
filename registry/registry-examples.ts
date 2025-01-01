@@ -283,4 +283,10 @@ export const examples: Registry = [
     registryDependencies: ["gradient-mesh-background"],
     files: ["example/gradient-mesh-background-demo.tsx"],
   },
+  {
+    name: "grid-pattern-background-demo",
+    type: "registry:example",
+    registryDependencies: ["grid-pattern-background"],
+    files: ["example/grid-pattern-background-demo.tsx"],
+  },
 ];
