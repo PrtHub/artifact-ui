@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "UI Canvas",
+  name: "Xanthic UI",
   url: "https://github.com/PrtHub/ui-canvas",
   description:
     "UI Canvas is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion.",
