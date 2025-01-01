@@ -319,32 +319,6 @@
     ]
   },
   {
-    "name": "brush-style-selector",
-    "type": "registry:ui",
-    "dependencies": [
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui-canvas/brush-style-selector.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "pattern-library",
-    "type": "registry:ui",
-    "dependencies": [
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui-canvas/pattern-library.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "texture-browser",
     "type": "registry:ui",
     "dependencies": [

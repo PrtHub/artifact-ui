@@ -146,18 +146,6 @@ export const examples: Registry = [
     files: ["example/layer-manager-demo.tsx"],
   },
   {
-    name: "brush-style-selector-demo",
-    type: "registry:example",
-    registryDependencies: ["brush-style-selector"],
-    files: ["example/brush-style-selector-demo.tsx"],
-  },
-  {
-    name: "pattern-library-demo",
-    type: "registry:example",
-    registryDependencies: ["pattern-library"],
-    files: ["example/pattern-library-demo.tsx"],
-  },
-  {
     name: "texture-browser-demo",
     type: "registry:example",
     registryDependencies: ["texture-browser"],

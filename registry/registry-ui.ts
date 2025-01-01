@@ -149,18 +149,6 @@ export const ui: Registry = [
     files: ["ui-canvas/layer-manager.tsx"],
   },
   {
-    name: "brush-style-selector",
-    type: "registry:ui",
-    dependencies: ["lucide-react"],
-    files: ["ui-canvas/brush-style-selector.tsx"],
-  },
-  {
-    name: "pattern-library",
-    type: "registry:ui",
-    dependencies: ["lucide-react"],
-    files: ["ui-canvas/pattern-library.tsx"],
-  },
-  {
     name: "texture-browser",
     type: "registry:ui",
     dependencies: ["lucide-react"],
