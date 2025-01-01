@@ -616,5 +616,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "gradient-mesh-background",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui-canvas/gradient-mesh-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

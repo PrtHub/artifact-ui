@@ -1,0 +1,58 @@
+---
+title: Gradient Mesh Background
+description: A beautiful, animated gradient mesh background component perfect for hero sections and dynamic backgrounds.
+component: true
+author: ui-canvas
+date: 2025-01-01
+---
+
+<ComponentPreview name="gradient-mesh-background-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui-canvas/gradient-mesh-background.tsx`
+
+<ComponentSource name="gradient-mesh-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { GradientMeshBackground } from "@ui-canvas/gradient-mesh-background";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { GradientMeshBackground } from "@ui-canvas/gradient-mesh-background";
+
+export default function HeroSection() {
+  return (
+    <div className="relative h-[500px]">
+      <GradientMeshBackground
+        primaryColor="#4f46e5"
+        secondaryColor="#9333ea"
+        accentColor="#ec4899"
+        className="absolute inset-0"
+      />
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="relative z-10">{/* Your content here */}</div>
+    </div>
+  );
+}
+```
+
+## Props
+
+| Name           | Type   | Default   | Description                       |
+| -------------- | ------ | --------- | --------------------------------- |
+| primaryColor   | string | "#4f46e5" | Primary color for the gradient    |
+| secondaryColor | string | "#9333ea" | Secondary color for the gradient  |
+| accentColor    | string | "#ec4899" | Accent color for additional depth |
+| animationSpeed | number | 20        | Animation speed in seconds        |
+| blurIntensity  | number | 100       | Blur intensity for the gradient   |

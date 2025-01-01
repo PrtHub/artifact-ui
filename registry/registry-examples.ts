@@ -277,4 +277,10 @@ export const examples: Registry = [
     registryDependencies: ["billing-history-timeline"],
     files: ["example/billing-history-timeline-demo.tsx"],
   },
+  {
+    name: "gradient-mesh-background-demo",
+    type: "registry:example",
+    registryDependencies: ["gradient-mesh-background"],
+    files: ["example/gradient-mesh-background-demo.tsx"],
+  },
 ];

@@ -281,4 +281,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui-canvas/billing-history-timeline.tsx"],
   },
+  {
+    name: "gradient-mesh-background",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui-canvas/gradient-mesh-background.tsx"],
+  },
 ];

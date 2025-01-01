@@ -265,6 +265,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/creative-error-boundaries",
           items: [],
         },
+        {
+          title: "Gradient Mesh Background",
+          href: "/docs/components/gradient-mesh-background",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

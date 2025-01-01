@@ -511,6 +511,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "gradient-mesh-background": {
+      name: "gradient-mesh-background",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui-canvas/gradient-mesh-background.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui-canvas/gradient-mesh-background.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "color-palette-demo": {
       name: "color-palette-demo",
       type: "registry:example",
@@ -1012,6 +1023,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["billing-history-timeline"],
       files: ["registry/default/example/billing-history-timeline-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/billing-history-timeline-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "gradient-mesh-background-demo": {
+      name: "gradient-mesh-background-demo",
+      type: "registry:example",
+      registryDependencies: ["gradient-mesh-background"],
+      files: ["registry/default/example/gradient-mesh-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/gradient-mesh-background-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
