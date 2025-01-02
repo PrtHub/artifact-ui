@@ -41,11 +41,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Color Palette",
-          href: "/docs/components/color-palette",
-          items: [],
-        },
-        {
           title: "Texture Browser",
           href: "/docs/components/texture-browser",
           items: [],
@@ -279,6 +274,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Grid Pattern Background",
           href: "/docs/components/grid-pattern-background",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Prism Hero",
+          href: "/docs/components/prism-hero",
           items: [],
           label: "New",
         },

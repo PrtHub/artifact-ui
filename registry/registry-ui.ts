@@ -9,12 +9,6 @@ export const ui: Registry = [
     registryDependencies: [],
   },
   {
-    name: "color-palette",
-    type: "registry:ui",
-    dependencies: ["class-variance-authority"],
-    files: ["xanthic/color-palette.tsx"],
-  },
-  {
     name: "sketch-input",
     type: "registry:ui",
     dependencies: ["framer-motion", "class-variance-authority"],
@@ -298,5 +292,11 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: [],
     files: ["xanthic/particle-background.tsx"],
+  },
+  {
+    name: "prism-hero",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["xanthic/prism-hero.tsx"],
   },
 ];

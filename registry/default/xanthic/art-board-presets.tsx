@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Search, Star, RotateCw, Plus } from "lucide-react";
 import {
@@ -108,7 +107,7 @@ export default function ArtBoardPresets({
   };
 
   return (
-    <Card className="w-full max-w-sm p-4">
+    <Card className="h-fit w-full max-w-sm p-4">
       <h3 className="mb-4 text-lg font-semibold">Art Board Presets</h3>
 
       <div className="space-y-4">
@@ -163,8 +162,7 @@ export default function ArtBoardPresets({
           </Button>
         </div>
 
-        {/* Presets List */}
-        <ScrollArea className="h-[400px] pr-4">
+        <div className="scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 max-h-[400px] min-h-[200px] overflow-y-auto pr-4">
           <div className="space-y-2">
             {filteredPresets.map((preset) => (
               <div key={preset.name} className="flex gap-2">
@@ -201,7 +199,7 @@ export default function ArtBoardPresets({
               </div>
             ))}
           </div>
-        </ScrollArea>
+        </div>
       </div>
     </Card>
   );

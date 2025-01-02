@@ -2,12 +2,6 @@ import { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
   {
-    name: "color-palette-demo",
-    type: "registry:example",
-    registryDependencies: ["color-palette"],
-    files: ["example/color-palette-demo.tsx"],
-  },
-  {
     name: "canvas-button-demo",
     type: "registry:example",
     registryDependencies: ["canvas-button"],
@@ -294,5 +288,11 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["particle-background"],
     files: ["example/particle-background-demo.tsx"],
+  },
+  {
+    name: "prism-hero-demo",
+    type: "registry:example",
+    registryDependencies: ["prism-hero"],
+    files: ["example/prism-hero-demo.tsx"],
   },
 ];

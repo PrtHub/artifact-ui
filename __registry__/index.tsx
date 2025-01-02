@@ -16,17 +16,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "color-palette": {
-      name: "color-palette",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/xanthic/color-palette.tsx"],
-      component: React.lazy(() => import("@/registry/default/xanthic/color-palette.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "sketch-input": {
       name: "sketch-input",
       type: "registry:ui",
@@ -544,12 +533,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "color-palette-demo": {
-      name: "color-palette-demo",
-      type: "registry:example",
-      registryDependencies: ["color-palette"],
-      files: ["registry/default/example/color-palette-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/color-palette-demo.tsx")),
+    "prism-hero": {
+      name: "prism-hero",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/xanthic/prism-hero.tsx"],
+      component: React.lazy(() => import("@/registry/default/xanthic/prism-hero.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -1078,6 +1067,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["particle-background"],
       files: ["registry/default/example/particle-background-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/particle-background-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "prism-hero-demo": {
+      name: "prism-hero-demo",
+      type: "registry:example",
+      registryDependencies: ["prism-hero"],
+      files: ["registry/default/example/prism-hero-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/prism-hero-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

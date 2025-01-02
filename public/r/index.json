@@ -15,19 +15,6 @@
     ]
   },
   {
-    "name": "color-palette",
-    "type": "registry:ui",
-    "dependencies": [
-      "class-variance-authority"
-    ],
-    "files": [
-      {
-        "path": "xanthic/color-palette.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "sketch-input",
     "type": "registry:ui",
     "dependencies": [
@@ -646,6 +633,19 @@
     "files": [
       {
         "path": "xanthic/particle-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "prism-hero",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "xanthic/prism-hero.tsx",
         "type": "registry:ui"
       }
     ]

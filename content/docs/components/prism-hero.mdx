@@ -1,0 +1,103 @@
+---
+title: Prism Hero
+description: A dynamic text reveal hero component with multiple animation styles and color customization options.
+component: true
+---
+
+<ComponentPreview name="prism-hero-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy the following code to your project.</Step>
+
+`components/ui/prism-hero.tsx`
+
+<ComponentSource name="prism-hero" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import PrismHero from "@/components/ui/prism-hero";
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import PrismHero from "@/components/ui/prism-hero";
+
+export default function Example() {
+  return (
+    <PrismHero
+      texts={["Design with Purpose", "Create with Passion", "Build the Future"]}
+    />
+  );
+}
+```
+
+### Different Animation Styles
+
+```tsx
+// Fade Animation
+<PrismHero
+  texts={["Fade In", "Fade Out", "Smooth Transitions"]}
+  animationStyle="fade"
+/>
+
+// Slide Animation
+<PrismHero
+  texts={["Slide Left", "Slide Right", "Dynamic Movement"]}
+  animationStyle="slide"
+/>
+
+// Morphing Animation
+<PrismHero
+  texts={["Transform", "Evolve", "Adapt"]}
+  animationStyle="morph"
+/>
+```
+
+### Custom Styling
+
+```tsx
+<PrismHero
+  texts={["Design with Purpose", "Create with Passion", "Build the Future"]}
+  animationStyle="flip"
+/>
+```
+
+### Custom Colors
+
+```tsx
+<PrismHero
+  texts={["Design with Purpose", "Create with Passion", "Build the Future"]}
+  backgroundColors={[
+    "rgba(17, 24, 39, 0.8)", // Dark background
+    "rgba(31, 41, 55, 0.85)", // Slightly lighter
+    "rgba(55, 65, 81, 0.9)", // Medium
+    "rgba(75, 85, 99, 0.95)", // Lightest
+  ]}
+  overlayColor="rgba(129, 140, 248, 0.3)"
+  textGradient={{
+    from: "#ffffff",
+    to: "#e2e8f0",
+  }}
+/>
+```
+
+## Props
+
+| Name             | Type                                                                                                          | Default                              | Description                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------- |
+| texts            | `string[]`                                                                                                    | `[]`                                 | An array of text strings to be displayed                 |
+| animationStyle   | `"typing" \| "fade" \| "slide" \| "morph" \| "bounce" \| "flip" \| "zoom" \| "rotate" \| "elastic" \| "wave"` | `"fade"`                             | The animation style to use for text transitions          |
+| typingSpeed      | `number`                                                                                                      | `40`                                 | Speed of typing animation (only for typing style)        |
+| backgroundColors | `[string, string, string, string]`                                                                            | `[rgba colors]`                      | Array of 4 colors for scroll-based background transition |
+| overlayColor     | `string`                                                                                                      | `"rgba(120,119,198,0.3)"`            | Color for the radial gradient overlay                    |
+| textGradient     | `{ from: string; to: string }`                                                                                | `{ from: "#ffffff", to: "#e2e8f0" }` | Gradient colors for the text                             |
+| className        | `string`                                                                                                      | `""`                                 | Additional CSS classes to apply to the component         |
