@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import CreativeOTPInput from "@/registry/default/ui-canvas/creative-otp-input";
+import CreativeOTPInput from "@/registry/default/xanthic/creative-otp-input";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function CreativeOTPInputDemo() {

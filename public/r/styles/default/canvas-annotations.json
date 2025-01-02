@@ -4,7 +4,7 @@
   "dependencies": [],
   "files": [
     {
-      "path": "ui-canvas/canvas-annotations.tsx",
+      "path": "xanthic/canvas-annotations.tsx",
       "content": "import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CanvasAnnotationsProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  annotations?: Array<{\n    id: string;\n    x: number;\n    y: number;\n    content: React.ReactNode;\n  }>;\n  onAnnotationClick?: (id: string) => void;\n}\n\nexport default function CanvasAnnotations({\n  annotations = [],\n  onAnnotationClick,\n  className,\n  ...props\n}: CanvasAnnotationsProps) {\n  return (\n    <div className={cn(\"relative h-full w-full\", className)} {...props}>\n      {annotations.map(({ id, x, y, content }) => (\n        <div\n          key={id}\n          className=\"absolute inline-flex cursor-pointer items-center justify-center\"\n          style={{\n            left: `${x}%`,\n            top: `${y}%`,\n            transform: \"translate(-50%, -50%)\",\n          }}\n          onClick={() => onAnnotationClick?.(id)}\n        >\n          <div className=\"relative\">\n            <div className=\"absolute -inset-1 animate-ping rounded-full bg-primary/50 opacity-75\" />\n            <div className=\"relative rounded-full bg-primary p-1\" />\n          </div>\n          <div className=\"ml-2 rounded-md bg-background/95 px-2 py-1 text-sm shadow-md\">\n            {content}\n          </div>\n        </div>\n      ))}\n    </div>\n  );\n}\n",
       "type": "registry:ui",
       "target": ""

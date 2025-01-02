@@ -2,7 +2,7 @@
 title: Canvas Slider
 description: A versatile slider component with multiple artistic styles and interactive animations
 date: 2024-01-10
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -25,7 +25,7 @@ npm install framer-motion @radix-ui/react-slider
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { CanvasSlider } from "@/components/ui-canvas/canvas-slider";
+import { CanvasSlider } from "@/components/ui/canvas-slider";
 ```
 
 </Steps>
@@ -49,12 +49,10 @@ import { CanvasSlider } from "@/components/ui-canvas/canvas-slider";
 ### Basic Usage
 
 ```tsx
-import { CanvasSlider } from "@/components/ui-canvas/canvas-slider";
+import { CanvasSlider } from "@/components/ui/canvas-slider";
 
 export default function BasicSlider() {
-  return (
-    <CanvasSlider defaultValue={[50]} max={100} step={1} />
-  );
+  return <CanvasSlider defaultValue={[50]} max={100} step={1} />;
 }
 ```
 
@@ -189,10 +187,7 @@ export default function ThemeAwareSlider() {
   return (
     <div className="space-y-4">
       {/* Colors will automatically adapt to theme */}
-      <CanvasSlider
-        variant="neon"
-        defaultValue={[50]}
-      />
+      <CanvasSlider variant="neon" defaultValue={[50]} />
 
       {/* Custom colors based on theme */}
       <CanvasSlider
@@ -209,22 +204,14 @@ export default function ThemeAwareSlider() {
 ### Disabled State
 
 ```tsx
-<CanvasSlider
-  defaultValue={[50]}
-  disabled
-  variant="watercolor"
-/>
+<CanvasSlider defaultValue={[50]} disabled variant="watercolor" />
 ```
 
 ### Vertical Orientation
 
 ```tsx
 <div className="h-48">
-  <CanvasSlider
-    defaultValue={[50]}
-    orientation="vertical"
-    variant="gradient"
-  />
+  <CanvasSlider defaultValue={[50]} orientation="vertical" variant="gradient" />
 </div>
 ```
 
@@ -234,24 +221,14 @@ export default function ThemeAwareSlider() {
 export default function StyleShowcase() {
   return (
     <div className="space-y-8">
-      {[
-        "default",
-        "neon",
-        "glass",
-        "metallic",
-        "gradient",
-        "watercolor",
-      ].map((variant) => (
-        <div key={variant} className="space-y-2">
-          <h3 className="text-sm font-medium capitalize">
-            {variant} Style
-          </h3>
-          <CanvasSlider
-            defaultValue={[50]}
-            variant={variant as any}
-          />
-        </div>
-      ))}
+      {["default", "neon", "glass", "metallic", "gradient", "watercolor"].map(
+        (variant) => (
+          <div key={variant} className="space-y-2">
+            <h3 className="text-sm font-medium capitalize">{variant} Style</h3>
+            <CanvasSlider defaultValue={[50]} variant={variant as any} />
+          </div>
+        )
+      )}
     </div>
   );
 }

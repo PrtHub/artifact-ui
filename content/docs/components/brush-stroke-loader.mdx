@@ -2,7 +2,7 @@
 title: Brush Stroke Loader
 date: 2024-03-19
 description: An artistic loading indicator with paint-like animations and customizable stroke styles.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -14,14 +14,14 @@ published: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/brush-stroke-loader.tsx`
+`components/ui/brush-stroke-loader.tsx`
 
 <ComponentSource name="brush-stroke-loader" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { BrushStrokeLoader } from "@/components/ui-canvas/brush-stroke-loader";
+import { BrushStrokeLoader } from "@/components/ui/brush-stroke-loader";
 ```
 
 </Steps>
@@ -31,7 +31,7 @@ import { BrushStrokeLoader } from "@/components/ui-canvas/brush-stroke-loader";
 ### Basic Usage
 
 ```tsx
-import { BrushStrokeLoader } from "@/components/ui-canvas/brush-stroke-loader";
+import { BrushStrokeLoader } from "@/components/ui/brush-stroke-loader";
 
 export function BasicLoader() {
   return <BrushStrokeLoader progress={75} strokeStyle="paint" size="md" />;
@@ -80,13 +80,13 @@ export function AnimatedLoader() {
 
 ### BrushStrokeLoader
 
-| Prop        | Type                                    | Default  | Description                                           |
-| ----------- | --------------------------------------- | -------- | ----------------------------------------------------- |
-| progress    | number                                  | 0        | Number between 0 and 100 representing loading progress |
-| strokeStyle | "paint" \| "ink" \| "watercolor"       | "paint"  | The style of the brush stroke animation               |
-| size        | "sm" \| "md" \| "lg"                   | "md"     | Size of the loader                                    |
-| colorFlow   | boolean                                 | true     | Enable gradient color animation                        |
-| className   | string                                 | -        | Additional CSS classes                                |
+| Prop        | Type                             | Default | Description                                            |
+| ----------- | -------------------------------- | ------- | ------------------------------------------------------ |
+| progress    | number                           | 0       | Number between 0 and 100 representing loading progress |
+| strokeStyle | "paint" \| "ink" \| "watercolor" | "paint" | The style of the brush stroke animation                |
+| size        | "sm" \| "md" \| "lg"             | "md"    | Size of the loader                                     |
+| colorFlow   | boolean                          | true    | Enable gradient color animation                        |
+| className   | string                           | -       | Additional CSS classes                                 |
 
 The BrushStrokeLoader uses HTML Canvas for smooth animations and supports three distinct stroke styles:
 

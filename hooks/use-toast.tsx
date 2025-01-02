@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   PaletteToast
-} from "@/registry/default/ui-canvas/palette-toast";
+} from "@/registry/default/xanthic/palette-toast";
 
 type ToastType = "info" | "success" | "warning" | "error";
 

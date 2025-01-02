@@ -2,7 +2,7 @@
 title: Canvas Dock
 description: A customizable dock component styled as an artist's tool tray with interactive animations and effects.
 date: 2024-01-10
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -25,7 +25,7 @@ npm install framer-motion @radix-ui/react-slider
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { CanvasDock, CanvasDockItem } from "@/components/ui-canvas/canvas-dock";
+import { CanvasDock, CanvasDockItem } from "@/components/ui/canvas-dock";
 ```
 
 </Steps>
@@ -52,33 +52,33 @@ import { CanvasDock, CanvasDockItem } from "@/components/ui-canvas/canvas-dock";
 
 ### CanvasDock
 
-| Prop             | Type                              | Description                                  | Default    |
-| ---------------- | --------------------------------- | -------------------------------------------- | ---------- |
-| position         | "bottom" \| "left" \| "right"     | Position of the dock                         | "bottom"   |
-| collapsed        | boolean                           | Whether the dock is collapsed                | false      |
-| onCollapsedChange| (collapsed: boolean) => void      | Callback when collapsed state changes        | -          |
-| variant          | "wooden" \| "metallic" \| "modern" \| "glass" \| "neon" \| "watercolor" \| "chalk" \| "paper" \| "canvas" | Visual style of the dock                    | "wooden"   |
-| className        | string                            | Additional CSS classes                       | -          |
-| children         | React.ReactNode                   | Dock items                                  | -          |
+| Prop              | Type                                                                                                      | Description                           | Default  |
+| ----------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------- | -------- |
+| position          | "bottom" \| "left" \| "right"                                                                             | Position of the dock                  | "bottom" |
+| collapsed         | boolean                                                                                                   | Whether the dock is collapsed         | false    |
+| onCollapsedChange | (collapsed: boolean) => void                                                                              | Callback when collapsed state changes | -        |
+| variant           | "wooden" \| "metallic" \| "modern" \| "glass" \| "neon" \| "watercolor" \| "chalk" \| "paper" \| "canvas" | Visual style of the dock              | "wooden" |
+| className         | string                                                                                                    | Additional CSS classes                | -        |
+| children          | React.ReactNode                                                                                           | Dock items                            | -        |
 
 ### CanvasDockItem
 
-| Prop     | Type                                        | Description                           | Default |
-| -------- | ------------------------------------------- | ------------------------------------- | ------- |
-| icon     | React.ReactNode                             | Icon element                          | -       |
-| label    | string                                      | Tooltip label                         | -       |
-| selected | boolean                                     | Whether the item is selected          | false   |
-| onClick  | () => void                                  | Click handler                         | -       |
-| variant  | "brush" \| "pencil" \| "palette" \| "tool"  | Animation style                       | "tool"  |
-| className| string                                      | Additional CSS classes                | -       |
-| children | React.ReactNode                             | Alternative to icon prop              | -       |
+| Prop      | Type                                       | Description                  | Default |
+| --------- | ------------------------------------------ | ---------------------------- | ------- |
+| icon      | React.ReactNode                            | Icon element                 | -       |
+| label     | string                                     | Tooltip label                | -       |
+| selected  | boolean                                    | Whether the item is selected | false   |
+| onClick   | () => void                                 | Click handler                | -       |
+| variant   | "brush" \| "pencil" \| "palette" \| "tool" | Animation style              | "tool"  |
+| className | string                                     | Additional CSS classes       | -       |
+| children  | React.ReactNode                            | Alternative to icon prop     | -       |
 
 ## Examples
 
 ### Basic Usage
 
 ```tsx
-import { CanvasDock, CanvasDockItem } from "@/components/ui-canvas/canvas-dock";
+import { CanvasDock, CanvasDockItem } from "@/components/ui/canvas-dock";
 
 export default function BasicDock() {
   const [selectedTool, setSelectedTool] = React.useState<string | null>(null);
@@ -181,10 +181,7 @@ export default function CollapsibleDock() {
   const [collapsed, setCollapsed] = React.useState(false);
 
   return (
-    <CanvasDock
-      collapsed={collapsed}
-      onCollapsedChange={setCollapsed}
-    >
+    <CanvasDock collapsed={collapsed} onCollapsedChange={setCollapsed}>
       {/* Items */}
     </CanvasDock>
   );
@@ -212,8 +209,8 @@ The dock items automatically show paint splatter effects when selected. The colo
 
 ```tsx
 const paintSplatterColors = [
-  "rgb(239 68 68)",  // red
-  "rgb(34 197 94)",  // green
+  "rgb(239 68 68)", // red
+  "rgb(34 197 94)", // green
   "rgb(59 130 246)", // blue
   "rgb(168 85 247)", // purple
   "rgb(249 115 22)", // orange

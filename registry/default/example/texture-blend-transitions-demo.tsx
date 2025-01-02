@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import TextureBlendTransitions from "@/registry/default/ui-canvas/texture-blend-transitions";
+import TextureBlendTransitions from "@/registry/default/xanthic/texture-blend-transitions";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import {

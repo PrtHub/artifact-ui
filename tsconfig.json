@@ -28,8 +28,8 @@
       "@/*": [
         "./*"
       ],
-      "@/components/ui-canvas/*": [
-        "registry/default/ui-canvas/*"
+      "@/components/xanthic/*": [
+        "registry/default/xanthic/*"
       ],
       "@/components/example/*": [
         "./registry/default/example/*"

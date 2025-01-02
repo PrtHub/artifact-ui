@@ -2,7 +2,7 @@
 title: Color Palette
 date: 2024-03-19
 description: A collection of artistic color palettes inspired by different mediums.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -14,14 +14,14 @@ published: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/color-palette.tsx`
+`components/ui/color-palette.tsx`
 
 <ComponentSource name="color-palette" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```bash
-import { ColorPalette } from "@/components/ui-canvas/color-palette";
+import { ColorPalette } from "@/components/ui/color-palette";
 ```
 
 </Steps>
@@ -29,7 +29,7 @@ import { ColorPalette } from "@/components/ui-canvas/color-palette";
 ### Example Implementation
 
 ```bash
-import { ColorPalette } from "@/components/ui-canvas/color-palette";
+import { ColorPalette } from "@/components/ui/color-palette";
 
 // Theme switcher example
 export function ThemeCustomizer() {
@@ -60,7 +60,7 @@ export function ThemeCustomizer() {
 ### Basic Palette
 
 ```tsx
-import { ColorPalette } from "@/registry/default/ui-canvas/color-palette";
+import { ColorPalette } from "@/registry/default/ui/color-palette";
 
 export default function Example() {
   return <ColorPalette variant="watercolor" />;

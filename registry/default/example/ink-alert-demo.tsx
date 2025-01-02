@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import InkAlert from "@/registry/default/ui-canvas/ink-alert";
+import InkAlert from "@/registry/default/xanthic/ink-alert";
 import { useState } from "react";
 
 type Alert = {

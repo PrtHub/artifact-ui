@@ -13,7 +13,7 @@ import type { Viewport } from "next";
 import { Metadata } from "next";
 
 export const metadata: Metadata = constructMetadata({
-  title: "UI Canvas",
+  title: "Xanthic UI",
   description:
     "Beautiful UI components and templates to make your landing page look stunning.",
   icons: {
@@ -21,13 +21,13 @@ export const metadata: Metadata = constructMetadata({
   },
   openGraph: {
     type: "website",
-    title: "UI Canvas",
+    title: "Xanthic UI",
     description: "Beautiful UI components and templates to make your landing page look stunning.",
-    images: [{ url: "/logo.svg", width: 1200, height: 630, alt: "UI Canvas Logo" }],
+    images: [{ url: "/logo.svg", width: 1200, height: 630, alt: "Xanthic UI Logo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "UI Canvas",
+    title: "Xanthic UI",
     description: "Beautiful UI components and templates to make your landing page look stunning.",
     images: ["/logo.svg"],
   },

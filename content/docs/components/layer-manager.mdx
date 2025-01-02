@@ -2,7 +2,7 @@
 title: Layer Manager
 date: 2024-03-19
 description: A powerful layer management component for canvas applications with support for visibility, locking, reordering, and renaming layers.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -20,14 +20,14 @@ npm install lucide-react
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/layer-manager.tsx`
+`components/ui/layer-manager.tsx`
 
 <ComponentSource name="layer-manager" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```bash
-import { LayerManager } from "@/components/ui-canvas/layer-manager";
+import { LayerManager } from "@/components/ui/layer-manager";
 ```
 
 </Steps>
@@ -40,7 +40,7 @@ import { LayerManager } from "@/components/ui-canvas/layer-manager";
 "use client";
 
 import { useState } from "react";
-import { LayerManager } from "@/components/ui-canvas/layer-manager";
+import { LayerManager } from "@/components/ui/layer-manager";
 
 export function SimpleLayerManager() {
   const [layers, setLayers] = useState([
@@ -79,7 +79,7 @@ export function SimpleLayerManager() {
 "use client";
 
 import { useState } from "react";
-import { LayerManager } from "@/components/ui-canvas/layer-manager";
+import { LayerManager } from "@/components/ui/layer-manager";
 
 export function AdvancedLayerManager() {
   const [layers, setLayers] = useState([

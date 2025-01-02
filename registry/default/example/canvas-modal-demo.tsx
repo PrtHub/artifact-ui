@@ -9,7 +9,7 @@ import {
   CanvasModalTitle,
   CanvasModalTrigger,
   CanvasModalFooter,
-} from "@/registry/default/ui-canvas/canvas-modal";
+} from "@/registry/default/xanthic/canvas-modal";
 import { Paintbrush, Palette } from "lucide-react";
 
 export default function CanvasModalDemo() {

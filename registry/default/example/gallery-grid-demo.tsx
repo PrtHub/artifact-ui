@@ -6,7 +6,7 @@ import { useState } from "react";
 import {
   GalleryGrid,
   GalleryItem,
-} from "@/registry/default/ui-canvas/gallery-grid";
+} from "@/registry/default/xanthic/gallery-grid";
 import { cn } from "@/lib/utils";
 
 const images = [

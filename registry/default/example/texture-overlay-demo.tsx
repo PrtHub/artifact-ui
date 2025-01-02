@@ -1,4 +1,4 @@
-import TextureOverlay from "@/registry/default/ui-canvas/texture-overlay";
+import TextureOverlay from "@/registry/default/xanthic/texture-overlay";
 
 export default function TextureOverlayDemo() {
   return (

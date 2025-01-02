@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SketchInput } from "@/registry/default/ui-canvas/sketch-input";
+import { SketchInput } from "@/registry/default/xanthic/sketch-input";
 
 export default function SketchInputDemo() {
   const [value1, setValue1] = useState("");

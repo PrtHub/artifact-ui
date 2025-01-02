@@ -16,7 +16,7 @@ import {
   CanvasMenuGroup,
   CanvasMenuPortal,
   PaintEffects,
-} from "@/registry/default/ui-canvas/canvas-menu";
+} from "@/registry/default/xanthic/canvas-menu";
 import { Button } from "@/components/ui/button";
 
 export default function CanvasMenuDemo() {

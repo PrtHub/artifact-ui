@@ -6,7 +6,7 @@ import {
   MagicTweet,
   TweetNotFound,
   TweetSkeleton,
-} from "@/registry/default/ui-canvas/tweet-card";
+} from "@/registry/default/xanthic/tweet-card";
 
 const ClientTweetCard = ({
   id,

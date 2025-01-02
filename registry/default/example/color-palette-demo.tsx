@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ColorPalette } from "@/registry/default/ui-canvas/color-palette";
+import { ColorPalette } from "@/registry/default/xanthic/color-palette";
 
 export default function ColorPaletteDemo() {
   return (

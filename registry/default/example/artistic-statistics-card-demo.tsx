@@ -6,7 +6,7 @@ import {
   Zap,
   Target,
 } from "lucide-react";
-import ArtisticStatisticsCard from "@/registry/default/ui-canvas/artistic-statistics-card";
+import ArtisticStatisticsCard from "@/registry/default/xanthic/artistic-statistics-card";
 
 export default function ArtisticStatisticsCardDemo() {
   return (

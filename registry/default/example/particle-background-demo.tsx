@@ -1,4 +1,4 @@
-import ParticleBackground from "@/registry/default/ui-canvas/particle-background";
+import ParticleBackground from "@/registry/default/xanthic/particle-background";
 
 export default function ParticleNetworkBackgroundDemo() {
   return (

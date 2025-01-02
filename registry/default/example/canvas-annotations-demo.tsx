@@ -1,4 +1,4 @@
-import CanvasAnnotations from "@/registry/default/ui-canvas/canvas-annotations";
+import CanvasAnnotations from "@/registry/default/xanthic/canvas-annotations";
 
 export default function CanvasAnnotationsDemo() {
   const annotations = [

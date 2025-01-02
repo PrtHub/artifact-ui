@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import ArtisticDataViz from "@/registry/default/ui-canvas/artistic-data-viz";
+import ArtisticDataViz from "@/registry/default/xanthic/artistic-data-viz";
 import { Button } from "@/components/ui/button";
 import { Shuffle, Share2, Download } from "lucide-react";
 import { toast } from "sonner";

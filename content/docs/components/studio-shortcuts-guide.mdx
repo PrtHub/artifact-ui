@@ -2,7 +2,7 @@
 title: Studio Shortcuts Guide
 date: 2024-12-11
 description: A customizable keyboard shortcuts guide component with search and filtering capabilities.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -20,14 +20,14 @@ npm install framer-motion lucide-react
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/studio-shortcuts-guide.tsx`
+`components/ui/studio-shortcuts-guide.tsx`
 
 <ComponentSource name="studio-shortcuts-guide" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { StudioShortcutsGuide } from "@/components/ui-canvas/studio-shortcuts-guide";
+import { StudioShortcutsGuide } from "@/components/ui/studio-shortcuts-guide";
 ```
 
 </Steps>
@@ -36,18 +36,18 @@ import { StudioShortcutsGuide } from "@/components/ui-canvas/studio-shortcuts-gu
 
 ### StudioShortcutsGuide
 
-| Prop name  | Type                                | Default | Description                                                  |
-| ---------- | ----------------------------------- | ------- | ------------------------------------------------------------ |
-| shortcuts  | `Partial<ShortcutCategory>`         | -       | Custom shortcuts to merge with or override default shortcuts |
-| customOnly | `boolean`                           | false   | Whether to use only custom shortcuts or merge with defaults  |
-| className  | `string`                           | -       | Additional CSS classes                                       |
+| Prop name  | Type                        | Default | Description                                                  |
+| ---------- | --------------------------- | ------- | ------------------------------------------------------------ |
+| shortcuts  | `Partial<ShortcutCategory>` | -       | Custom shortcuts to merge with or override default shortcuts |
+| customOnly | `boolean`                   | false   | Whether to use only custom shortcuts or merge with defaults  |
+| className  | `string`                    | -       | Additional CSS classes                                       |
 
 ## Examples
 
 ### Default Usage
 
 ```tsx
-import { StudioShortcutsGuide } from "@/components/ui-canvas/studio-shortcuts-guide";
+import { StudioShortcutsGuide } from "@/components/ui/studio-shortcuts-guide";
 
 export default function ShortcutsExample() {
   return <StudioShortcutsGuide className="w-[500px]" />;

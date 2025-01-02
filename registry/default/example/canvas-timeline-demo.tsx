@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CanvasTimeline, {
   TimelineStep,
-} from "@/registry/default/ui-canvas/canvas-timeline";
+} from "@/registry/default/xanthic/canvas-timeline";
 import Image from "next/image";
 
 const demoSteps: TimelineStep[] = [

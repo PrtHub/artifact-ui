@@ -2,7 +2,7 @@
 title: Studio Share Module
 date: 2024-12-14
 description: A modern and animated share module with social sharing, link copying, and QR code functionality.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -20,14 +20,14 @@ npm install qrcode.react framer-motion lucide-react
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/studio-share-module.tsx`
+`components/ui/studio-share-module.tsx`
 
 <ComponentSource name="studio-share-module" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```bash
-import { StudioShareModule } from "@/components/ui-canvas/studio-share-module";
+import { StudioShareModule } from "@/components/ui/studio-share-module";
 ```
 
 </Steps>
@@ -78,15 +78,15 @@ import { StudioShareModule } from "@/components/ui-canvas/studio-share-module";
 
 ## Props
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `url` | `string` | - | URL to be shared |
-| `title` | `string` | `"Check this out!"` | Title for sharing |
-| `description` | `string` | `"I thought you might find this interesting."` | Description text |
-| `theme` | `"neon" \| "glassmorphism" \| "gradient" \| "minimal"` | `"neon"` | Visual theme |
-| `position` | `"center" \| "bottom-right"` | `"center"` | Module position |
-| `className` | `string` | - | Additional CSS classes |
-| `onShare` | `() => void` | - | Callback when content is shared |
+| Prop          | Type                                                   | Default                                        | Description                     |
+| ------------- | ------------------------------------------------------ | ---------------------------------------------- | ------------------------------- |
+| `url`         | `string`                                               | -                                              | URL to be shared                |
+| `title`       | `string`                                               | `"Check this out!"`                            | Title for sharing               |
+| `description` | `string`                                               | `"I thought you might find this interesting."` | Description text                |
+| `theme`       | `"neon" \| "glassmorphism" \| "gradient" \| "minimal"` | `"neon"`                                       | Visual theme                    |
+| `position`    | `"center" \| "bottom-right"`                           | `"center"`                                     | Module position                 |
+| `className`   | `string`                                               | -                                              | Additional CSS classes          |
+| `onShare`     | `() => void`                                           | -                                              | Callback when content is shared |
 
 ## Features
 

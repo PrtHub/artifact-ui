@@ -17,7 +17,7 @@ component: true
 <Step>Update the import paths to match your project setup:</Step>
 
 ```tsx
-import { ArtisticTooltip } from "@/components/ui-canvas/artistic-tooltip";
+import { ArtisticTooltip } from "@/components/ui/artistic-tooltip";
 ```
 
 </Steps>
@@ -26,7 +26,7 @@ import { ArtisticTooltip } from "@/components/ui-canvas/artistic-tooltip";
 
 ```tsx
 import { useState } from "react";
-import { ArtisticTooltip } from "@/components/ui-canvas/artistic-tooltip";
+import { ArtisticTooltip } from "@/components/ui/artistic-tooltip";
 
 export default function MyComponent() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -50,13 +50,13 @@ export default function MyComponent() {
 
 ## Props
 
-| Prop      | Type                                    | Default      | Description                               |
-| --------- | --------------------------------------- | ------------ | ----------------------------------------- |
-| content   | `string`                                | -            | The content to display inside the tooltip |
-| show      | `boolean`                               | `false`      | Controls the visibility of the tooltip    |
-| style     | `"watercolor"` \| `"oil"` \| `"pencil"` | `"watercolor"` | The artistic style of the tooltip        |
-| className | `string`                                | -            | Additional CSS classes to apply           |
-| children  | `ReactNode`                             | -            | The element that triggers the tooltip     |
+| Prop      | Type                                    | Default        | Description                               |
+| --------- | --------------------------------------- | -------------- | ----------------------------------------- |
+| content   | `string`                                | -              | The content to display inside the tooltip |
+| show      | `boolean`                               | `false`        | Controls the visibility of the tooltip    |
+| style     | `"watercolor"` \| `"oil"` \| `"pencil"` | `"watercolor"` | The artistic style of the tooltip         |
+| className | `string`                                | -              | Additional CSS classes to apply           |
+| children  | `ReactNode`                             | -              | The element that triggers the tooltip     |
 
 ## Examples
 
@@ -94,3 +94,4 @@ export default function MyComponent() {
 >
   <Button>Hover me</Button>
 </ArtisticTooltip>
+```

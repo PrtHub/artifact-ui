@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Search, Grid2x2, List } from "lucide-react";
 import { useTheme } from "next-themes";
-import { SketchInput } from "@/registry/default/ui-canvas/sketch-input";
+import { SketchInput } from "@/registry/default/xanthic/sketch-input";
 import {
   CanvasModal,
   CanvasModalContent,
   CanvasModalDescription,
   CanvasModalHeader,
   CanvasModalTitle,
-} from "@/registry/default/ui-canvas/canvas-modal";
+} from "@/registry/default/xanthic/canvas-modal";
 
 export interface TextureItem {
   id: string;

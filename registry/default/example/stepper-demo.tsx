@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Stepper } from "@/registry/default/ui-canvas/stepper";
+import { Stepper } from "@/registry/default/xanthic/stepper";
 
 const steps = [
   {

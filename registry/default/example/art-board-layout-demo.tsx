@@ -1,6 +1,6 @@
 "use client";
 
-import { ArtBoardLayout } from "@/registry/default/ui-canvas/art-board-layout";
+import { ArtBoardLayout } from "@/registry/default/xanthic/art-board-layout";
 
 export default function ArtBoardLayoutDemo() {
   return (

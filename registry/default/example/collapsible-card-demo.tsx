@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ArtCanvasCard from "@/registry/default/ui-canvas/collapsible-card";
+import ArtCanvasCard from "@/registry/default/xanthic/collapsible-card";
 import { Sparkles, Star } from "lucide-react";
 
 export default function ArtCanvasCardDemo() {

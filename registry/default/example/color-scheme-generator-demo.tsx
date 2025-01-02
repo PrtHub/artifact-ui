@@ -1,7 +1,7 @@
 "use client";
 
 import { ToastProvider } from "@/hooks/use-toast";
-import { ColorSchemeGenerator } from "@/registry/default/ui-canvas/color-scheme-generator";
+import { ColorSchemeGenerator } from "@/registry/default/xanthic/color-scheme-generator";
 
 export default function ColorSchemeGeneratorDemo() {
   return (

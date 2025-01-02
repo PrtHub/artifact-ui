@@ -18,14 +18,14 @@ npm install date-fns framer-motion lucide-react
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/sketch-calendar-picker.tsx`
+`components/ui/sketch-calendar-picker.tsx`
 
 <ComponentSource name="sketch-calendar-picker" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { SketchCalendarPicker } from "@/components/ui-canvas/sketch-calendar-picker";
+import { SketchCalendarPicker } from "@/components/ui/sketch-calendar-picker";
 ```
 
 </Steps>
@@ -34,7 +34,7 @@ import { SketchCalendarPicker } from "@/components/ui-canvas/sketch-calendar-pic
 
 ```tsx
 import { useState } from "react";
-import { SketchCalendarPicker } from "@/components/ui-canvas/sketch-calendar-picker";
+import { SketchCalendarPicker } from "@/components/ui/sketch-calendar-picker";
 
 export default function Calendar() {
   const [date, setDate] = useState<Date>(new Date());

@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   CanvasDock,
   CanvasDockItem,
-} from "@/registry/default/ui-canvas/canvas-dock";
+} from "@/registry/default/xanthic/canvas-dock";
 import { Button } from "@/components/ui/button";
 
 export default function CanvasDockDemo() {

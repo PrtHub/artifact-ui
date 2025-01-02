@@ -3,7 +3,7 @@ title: Stepper
 description: A multi-step navigation component that guides users through a sequence of steps or stages.
 component: true
 date: 2024-03-19
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -15,14 +15,14 @@ published: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/stepper.tsx`
+`components/ui/stepper.tsx`
 
 <ComponentSource name="stepper" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { Stepper } from "@/components/ui-canvas/stepper"
+import { Stepper } from "@/components/ui/stepper";
 ```
 
 </Steps>
@@ -47,18 +47,18 @@ const steps = [
     label: "Step 3",
     description: "Final step description",
   },
-]
+];
 
 export function BasicStepper() {
-  const [currentStep, setCurrentStep] = useState(0)
-  
+  const [currentStep, setCurrentStep] = useState(0);
+
   return (
     <Stepper
       currentStep={currentStep}
       steps={steps}
       onStepChange={setCurrentStep}
     />
-  )
+  );
 }
 ```
 
@@ -117,7 +117,7 @@ const steps = [
     description: "This step can be skipped",
     optional: true,
   },
-]
+];
 ```
 
 ### With Error States
@@ -135,7 +135,7 @@ const steps = [
     label: "Next Step",
     disabled: true, // Disabled due to previous error
   },
-]
+];
 ```
 
 ## API Reference
@@ -146,27 +146,27 @@ The main stepper component that renders a sequence of steps.
 
 #### Props
 
-| Prop                | Type                           | Default      | Description                                      |
-| ------------------- | ------------------------------ | ------------ | ------------------------------------------------ |
-| currentStep         | `number`                       | -            | Current active step (zero-based index)           |
-| steps               | `Step[]`                       | -            | Array of step objects defining stepper content   |
-| orientation         | `"horizontal" \| "vertical"`   | "horizontal" | The orientation of the stepper                   |
-| size               | `"default" \| "sm" \| "lg"`    | "default"    | The size of the stepper component               |
-| onStepChange       | `(step: number) => void`       | -            | Callback function when a step is changed         |
-| allowClickNavigation| `boolean`                      | true         | Whether to allow clicking on steps for navigation|
-| showStepNumbers    | `boolean`                      | true         | Whether to show step numbers                     |
-| showConnectors     | `boolean`                      | true         | Whether to show connecting lines between steps   |
-| className          | `string`                       | -            | Additional CSS classes                           |
+| Prop                 | Type                         | Default      | Description                                       |
+| -------------------- | ---------------------------- | ------------ | ------------------------------------------------- |
+| currentStep          | `number`                     | -            | Current active step (zero-based index)            |
+| steps                | `Step[]`                     | -            | Array of step objects defining stepper content    |
+| orientation          | `"horizontal" \| "vertical"` | "horizontal" | The orientation of the stepper                    |
+| size                 | `"default" \| "sm" \| "lg"`  | "default"    | The size of the stepper component                 |
+| onStepChange         | `(step: number) => void`     | -            | Callback function when a step is changed          |
+| allowClickNavigation | `boolean`                    | true         | Whether to allow clicking on steps for navigation |
+| showStepNumbers      | `boolean`                    | true         | Whether to show step numbers                      |
+| showConnectors       | `boolean`                    | true         | Whether to show connecting lines between steps    |
+| className            | `string`                     | -            | Additional CSS classes                            |
 
 ### Step Interface
 
-| Property     | Type                              | Description                                |
-| ------------ | --------------------------------- | ------------------------------------------ |
-| label        | `string`                          | The label text for the step               |
-| description  | `string`                          | Optional description text                  |
-| optional     | `boolean`                         | Whether the step is optional              |
-| error        | `boolean`                         | Whether the step is in an error state     |
-| completed    | `boolean`                         | Whether the step is completed             |
-| disabled     | `boolean`                         | Whether the step is disabled              |
-| onClick      | `() => void`                      | Optional click handler                    |
-| validate     | `() => Promise<boolean> \| boolean`| Optional validation function             |
+| Property    | Type                                | Description                           |
+| ----------- | ----------------------------------- | ------------------------------------- |
+| label       | `string`                            | The label text for the step           |
+| description | `string`                            | Optional description text             |
+| optional    | `boolean`                           | Whether the step is optional          |
+| error       | `boolean`                           | Whether the step is in an error state |
+| completed   | `boolean`                           | Whether the step is completed         |
+| disabled    | `boolean`                           | Whether the step is disabled          |
+| onClick     | `() => void`                        | Optional click handler                |
+| validate    | `() => Promise<boolean> \| boolean` | Optional validation function          |

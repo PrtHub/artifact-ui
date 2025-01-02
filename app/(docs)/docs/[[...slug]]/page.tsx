@@ -44,7 +44,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} | UI Canvas`,
+    title: `${doc.title} | Xanthic UI`,
     description: doc.description,
     openGraph: {
       title: doc.title,

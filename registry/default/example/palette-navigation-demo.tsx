@@ -7,7 +7,7 @@ import {
   Layout,
   Settings,
 } from "lucide-react";
-import { PaletteNavigation } from "@/registry/default/ui-canvas/palette-navigation";
+import { PaletteNavigation } from "@/registry/default/xanthic/palette-navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 

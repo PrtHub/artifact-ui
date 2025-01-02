@@ -2,7 +2,7 @@
 title: Color Scheme Generator
 date: 2024-03-19
 description: An interactive tool for generating harmonious color schemes with various color harmony rules.
-author: ui-canvas
+author: ui
 published: true
 ---
 
@@ -14,7 +14,7 @@ published: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/color-scheme-generator.tsx`
+`components/ui/color-scheme-generator.tsx`
 
 <ComponentSource name="color-scheme-generator" />
 
@@ -25,7 +25,7 @@ published: true
 ## Usage
 
 ```tsx
-import { ColorSchemeGenerator } from "@/components/ui-canvas/color-scheme-generator";
+import { ColorSchemeGenerator } from "@/components/ui/color-scheme-generator";
 
 export default function Example() {
   return <ColorSchemeGenerator />;
@@ -37,11 +37,13 @@ export default function Example() {
 The Color Scheme Generator is a versatile tool that helps you create harmonious color combinations:
 
 ### Color Selection
+
 - Interactive color picker with real-time preview
 - HSL sliders for precise color adjustments
 - Direct hex code input support
 
 ### Harmony Modes
+
 - **Complementary**: Two colors opposite each other on the color wheel
 - **Analogous**: Three colors next to each other on the color wheel
 - **Triadic**: Three colors evenly spaced around the color wheel
@@ -49,6 +51,7 @@ The Color Scheme Generator is a versatile tool that helps you create harmonious 
 - **Monochromatic**: Different shades and tints of the same color
 
 ### Export Options
+
 - One-click color copying to clipboard
 - Export complete color schemes as JSON
 - Randomize feature for inspiration
@@ -58,7 +61,7 @@ The Color Scheme Generator is a versatile tool that helps you create harmonious 
 ### Basic Color Scheme Generator
 
 ```tsx
-import { ColorSchemeGenerator } from "@/components/ui-canvas/color-scheme-generator";
+import { ColorSchemeGenerator } from "@/components/ui/color-scheme-generator";
 
 export default function ColorSchemeGeneratorDemo() {
   return (
@@ -81,3 +84,4 @@ export default function ColorSchemeGeneratorDemo() {
 interface ColorSchemeGeneratorProps {
   className?: string;
 }
+```

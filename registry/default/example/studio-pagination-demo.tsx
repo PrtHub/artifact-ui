@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import StudioPagination from "@/registry/default/ui-canvas/studio-pagination";
+import StudioPagination from "@/registry/default/xanthic/studio-pagination";
 
 export default function StudioPaginationDemo() {
   const [currentPage, setCurrentPage] = useState(1);

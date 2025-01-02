@@ -12,14 +12,14 @@ component: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/creative-error-boundaries.tsx`
+`components/ui/creative-error-boundaries.tsx`
 
 <ComponentSource name="creative-error-boundaries" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 ```tsx
-import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+import { CreativeErrorBoundaries } from "@/components/ui/creative-error-boundaries";
 ```
 
 </Steps>
@@ -29,7 +29,7 @@ import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-b
 ### Basic Implementation
 
 ```tsx
-import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+import { CreativeErrorBoundaries } from "@/components/ui/creative-error-boundaries";
 
 export default function YourComponent() {
   return (
@@ -43,7 +43,7 @@ export default function YourComponent() {
 ### With Theme and Error Capture
 
 ```tsx
-import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+import { CreativeErrorBoundaries } from "@/components/ui/creative-error-boundaries";
 
 export default function ThemedErrorHandler() {
   const handleErrorCapture = (error: Error, errorInfo: ErrorInfo) => {
@@ -97,7 +97,7 @@ export default function ThemedErrorHandler() {
 ### Error Tracking Integration
 
 ```tsx
-import { CreativeErrorBoundaries } from "@/components/ui-canvas/creative-error-boundaries";
+import { CreativeErrorBoundaries } from "@/components/ui/creative-error-boundaries";
 import { trackError } from "@/lib/analytics";
 
 export default function TrackedComponent() {

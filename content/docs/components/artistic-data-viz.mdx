@@ -23,14 +23,14 @@ npx shadcn@latest add slider switch input button tooltip
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui-canvas/artistic-data-viz.tsx`
+`components/ui/artistic-data-viz.tsx`
 
 <ComponentSource name="artistic-data-viz" />
 
 <Step>Update the import paths to match your project setup:</Step>
 
 ```tsx
-import { ArtisticDataViz } from "@/components/ui-canvas/artistic-data-viz";
+import { ArtisticDataViz } from "@/components/ui/artistic-data-viz";
 ```
 
 </Steps>
@@ -42,7 +42,7 @@ The Artistic Data Visualization component can be used in various ways, from simp
 ### Basic Usage
 
 ```tsx
-import { ArtisticDataViz } from "@/components/ui-canvas/artistic-data-viz";
+import { ArtisticDataViz } from "@/components/ui/artistic-data-viz";
 
 export default function BasicExample() {
   const data = [
@@ -255,7 +255,9 @@ import { Switch } from "@/components/ui/switch";
 export default function AdvancedExample() {
   const [threshold, setThreshold] = useState(50);
   const [showMetadata, setShowMetadata] = useState(true);
-  const [selectedStyle, setSelectedStyle] = useState<"bloom" | "spiral">("bloom");
+  const [selectedStyle, setSelectedStyle] = useState<"bloom" | "spiral">(
+    "bloom"
+  );
 
   const data = [
     {
@@ -294,13 +296,8 @@ export default function AdvancedExample() {
           onChange={(e) => setThreshold(Number(e.target.value))}
           className="w-24"
         />
-        <Switch
-          checked={showMetadata}
-          onCheckedChange={setShowMetadata}
-        />
-        <Button onClick={handleStyleToggle}>
-          Toggle Style
-        </Button>
+        <Switch checked={showMetadata} onCheckedChange={setShowMetadata} />
+        <Button onClick={handleStyleToggle}>Toggle Style</Button>
       </div>
 
       <ArtisticDataViz
@@ -309,13 +306,7 @@ export default function AdvancedExample() {
         animated={true}
         width={800}
         height={400}
-        colorPalette={[
-          "#FF6B6B",
-          "#4ECDC4",
-          "#45B7D1",
-          "#96CEB4",
-          "#FFEEAD",
-        ]}
+        colorPalette={["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEEAD"]}
       />
     </div>
   );
