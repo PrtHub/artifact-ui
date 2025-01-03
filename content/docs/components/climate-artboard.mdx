@@ -1,0 +1,59 @@
+---
+title: Climate Artboard
+description: An artistic canvas that adapts its appearance based on weather conditions.
+component: true
+---
+
+<ComponentPreview name="climate-artboard-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>{" "}
+
+`components/ui/climate-artboard.tsx`
+
+<ComponentSource name="climate-artboard" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import ClimateArtboard from "@/components/ui/climate-artboard";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import ClimateArtboard from "@/components/ui/climate-artboard";
+
+export default function WeatherApp() {
+  return (
+    <ClimateArtboard
+      title="Welcome to Weather App"
+      subtitle="Your local weather forecast"
+      theme="glass"
+      autoAnimate={true}
+      showDetails={true}
+      apiKey={process.env.NEXT_PUBLIC_WEATHER_API_KEY}
+      onWeatherChange={(weather) => {
+        console.log("Weather changed:", weather);
+      }}
+    />
+  );
+}
+```
+
+## Props
+
+| Name              | Type                     | Description                                                       |
+| ----------------- | ------------------------ | ----------------------------------------------------------------- |
+| `title`           | `string`                 | The title of the weather app.                                     |
+| `subtitle`        | `string`                 | The subtitle of the weather app.                                  |
+| `theme`           | `string`                 | The theme of the weather app.                                     |
+| `apiKey`          | `string`                 | The API key for the weather data.                                 |
+| `onWeatherChange` | `(weather: any) => void` | A callback function that is called when the weather data changes. |
+| `autoAnimate`     | `boolean`                | Whether to automatically animate the weather app.                 |
+| `showDetails`     | `boolean`                | Whether to show the detailed weather information.                 |

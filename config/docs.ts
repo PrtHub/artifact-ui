@@ -283,6 +283,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Climate Artboard",
+          href: "/docs/components/climate-artboard",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

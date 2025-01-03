@@ -295,4 +295,10 @@ export const examples: Registry = [
     registryDependencies: ["prism-hero"],
     files: ["example/prism-hero-demo.tsx"],
   },
+  {
+    name: "climate-artboard-demo",
+    type: "registry:example",
+    registryDependencies: ["climate-artboard"],
+    files: ["example/climate-artboard-demo.tsx"],
+  },
 ];

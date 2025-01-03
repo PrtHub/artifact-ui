@@ -544,6 +544,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "climate-artboard": {
+      name: "climate-artboard",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/xanthic/climate-artboard.tsx"],
+      component: React.lazy(() => import("@/registry/default/xanthic/climate-artboard.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
@@ -1078,6 +1089,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["prism-hero"],
       files: ["registry/default/example/prism-hero-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/prism-hero-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "climate-artboard-demo": {
+      name: "climate-artboard-demo",
+      type: "registry:example",
+      registryDependencies: ["climate-artboard"],
+      files: ["registry/default/example/climate-artboard-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/climate-artboard-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

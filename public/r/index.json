@@ -649,5 +649,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "climate-artboard",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "xanthic/climate-artboard.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

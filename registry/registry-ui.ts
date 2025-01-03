@@ -299,4 +299,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["xanthic/prism-hero.tsx"],
   },
+  {
+    name: "climate-artboard",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["xanthic/climate-artboard.tsx"],
+  },
 ];
