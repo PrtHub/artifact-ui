@@ -49,19 +49,16 @@ export const docsConfig: DocsConfig = {
           title: "Particle Background",
           href: "/docs/components/particle-background",
           items: [],
-          label: "New",
         },
         {
           title: "Expand Image",
           href: "/docs/components/expand-image",
           items: [],
-          label: "New",
         },
         {
           title: "Stacked Carousel",
           href: "/docs/components/stacked-carousel",
           items: [],
-          label: "New",
         },
         {
           title: "Billing History Timeline",
@@ -287,17 +284,20 @@ export const docsConfig: DocsConfig = {
           title: "Grid Pattern Background",
           href: "/docs/components/grid-pattern-background",
           items: [],
-          label: "New",
         },
         {
           title: "Prism Hero",
           href: "/docs/components/prism-hero",
           items: [],
-          label: "New",
         },
         {
           title: "Climate Artboard",
           href: "/docs/components/climate-artboard",
+          items: [],
+        },
+        {
+          title: "Neumorphism Loader",
+          href: "/docs/components/neumorphism-loader",
           items: [],
           label: "New",
         },

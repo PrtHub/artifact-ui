@@ -1,4 +1,4 @@
-import GridPatternBackground from "@/registry/default/xanthic/grid-pattern-background";
+import GridPatternBackground from "@/registry/default/ui/grid-pattern-background";
 
 export default function GridPatternBackgroundDemo() {
   return (

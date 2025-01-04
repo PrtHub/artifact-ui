@@ -1,4 +1,4 @@
-import ClimateArtboard from "@/registry/default/xanthic/climate-artboard";
+import ClimateArtboard from "@/registry/default/ui/climate-artboard";
 
 export default function ClimateArtboardDemo() {
   return (

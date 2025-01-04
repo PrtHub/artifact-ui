@@ -5,7 +5,7 @@ import {
   SketchAccordionItem,
   SketchAccordionTrigger,
   PencilFilter,
-} from "@/registry/default/xanthic/sketch-accordion";
+} from "@/registry/default/ui/sketch-accordion";
 
 export default function SketchAccordionDemo() {
   return (

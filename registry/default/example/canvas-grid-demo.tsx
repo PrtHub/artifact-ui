@@ -1,6 +1,6 @@
 "use client";
 
-import CanvasGrid from "@/registry/default/xanthic/canvas-grid";
+import CanvasGrid from "@/registry/default/ui/canvas-grid";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import {

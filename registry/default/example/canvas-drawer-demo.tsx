@@ -1,12 +1,12 @@
 import * as React from "react";
-import { CanvasDrawer } from "@/registry/default/xanthic/canvas-drawer";
+import { CanvasDrawer } from "@/registry/default/ui/canvas-drawer";
 import { Button } from "@/components/ui/button";
 import {
   EaselTabs,
   EaselTabsContent,
   EaselTabsList,
   EaselTabsTrigger,
-} from "@/registry/default/xanthic/easel-tabs";
+} from "@/registry/default/ui/easel-tabs";
 
 export default function CanvasDrawerDemo() {
   const [leftOpen, setLeftOpen] = React.useState(false);

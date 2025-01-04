@@ -1,6 +1,6 @@
 "use client";
 
-import CreativeCodeDisplay from "@/registry/default/xanthic/creative-code-display";
+import CreativeCodeDisplay from "@/registry/default/ui/creative-code-display";
 
 const sampleCode = `function fibonacci(n: number): number {
   if (n <= 1) return n;

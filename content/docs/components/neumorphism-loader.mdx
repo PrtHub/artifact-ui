@@ -1,0 +1,49 @@
+---
+title: Neumorphism Loader
+description: A sleek circular progress loader with neumorphic design, supporting both light and dark themes.
+component: true
+---
+
+<ComponentPreview name="neumorphism-loader-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/neumorphism-loader.tsx`
+
+<ComponentSource name="neumorphism-loader" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import NeumorphismLoader from "@/components/ui/neumorphism-loader";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import NeumorphismLoader from "@/components/ui/neumorphism-loader";
+
+export default function YourComponent() {
+  return (
+    <div className="flex items-center justify-center">
+      <NeumorphismLoader
+        progress={75}
+        color="#00ff87" // Optional: customize the accent color
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop     | Type   | Default   | Description                 |
+| -------- | ------ | --------- | --------------------------- |
+| progress | number | 51        | Progress value (0-100)      |
+| color    | string | "#00ff87" | Accent color for the loader |

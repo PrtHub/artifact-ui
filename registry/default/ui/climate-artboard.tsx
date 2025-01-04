@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -220,7 +222,6 @@ export default function ClimateArtboard({
   const mouseSpeedRef = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Mouse movement handler with speed calculation
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
       if (!containerRef.current) return;
@@ -228,7 +229,6 @@ export default function ClimateArtboard({
       const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-      // Calculate mouse speed
       const dx = x - lastMousePosition.x;
       const dy = y - lastMousePosition.y;
       mouseSpeedRef.current = Math.sqrt(dx * dx + dy * dy);
@@ -245,7 +245,7 @@ export default function ClimateArtboard({
       if (!apiKey) {
         // Fallback to mock data if no API key
         return {
-          condition: "snowy" as const,
+          condition: "sunny" as const,
           temperature: 25,
           humidity: 65,
           windSpeed: 12,
@@ -542,7 +542,6 @@ export default function ClimateArtboard({
         }}
       />
 
-      {/* Rainy overlay effects */}
       {weather.condition === "rainy" && (
         <>
           <motion.div
@@ -562,7 +561,7 @@ export default function ClimateArtboard({
               ease: "easeInOut",
             }}
           />
-          {/* Lightning effect - more random and natural */}
+
           <motion.div
             className="absolute inset-0 bg-white/5"
             initial={{ opacity: 0 }}
@@ -577,7 +576,6 @@ export default function ClimateArtboard({
         </>
       )}
 
-      {/* Cloudy overlay effects */}
       {weather.condition === "cloudy" && (
         <>
           <motion.div
@@ -606,7 +604,6 @@ export default function ClimateArtboard({
         </>
       )}
 
-      {/* Sunny overlay effects */}
       {weather.condition === "sunny" && (
         <>
           <motion.div
@@ -848,10 +845,8 @@ export default function ClimateArtboard({
             </motion.div>
           )}
 
-          {/* Weather-specific cursor effects */}
           {isHovering && (
             <>
-              {/* Sunny cursor effect */}
               {weather.condition === "sunny" && (
                 <motion.div
                   className="pointer-events-none absolute z-50"
@@ -872,7 +867,6 @@ export default function ClimateArtboard({
                 </motion.div>
               )}
 
-              {/* Rainy cursor effect */}
               {weather.condition === "rainy" && (
                 <motion.div
                   className="pointer-events-none absolute z-50"
@@ -912,7 +906,6 @@ export default function ClimateArtboard({
                 </motion.div>
               )}
 
-              {/* Snowy cursor effect */}
               {weather.condition === "snowy" && (
                 <motion.div
                   className="pointer-events-none absolute z-50"
@@ -952,7 +945,6 @@ export default function ClimateArtboard({
                 </motion.div>
               )}
 
-              {/* Cloudy cursor effect */}
               {weather.condition === "cloudy" && (
                 <motion.div
                   className="pointer-events-none absolute z-50"

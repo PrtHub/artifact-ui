@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import GalleryFlow from "@/registry/default/xanthic/gallery-flow";
+import GalleryFlow from "@/registry/default/ui/gallery-flow";
 
 const images = [
   {

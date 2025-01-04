@@ -1,10 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  CanvasDock,
-  CanvasDockItem,
-} from "@/registry/default/xanthic/canvas-dock";
+import { CanvasDock, CanvasDockItem } from "@/registry/default/ui/canvas-dock";
 import { Button } from "@/components/ui/button";
 
 export default function CanvasDockDemo() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import LayerManager, { Layer } from "@/registry/default/xanthic/layer-manager";
+import LayerManager, { Layer } from "@/registry/default/ui/layer-manager";
 
 export default function LayerManagerDemo() {
   const [layers, setLayers] = useState<Layer[]>([

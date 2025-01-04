@@ -1,0 +1,12 @@
+{
+  "name": "dark-neumorphism-loader",
+  "type": "registry:ui",
+  "files": [
+    {
+      "path": "xanthic/dark-neumorphism-loader.tsx",
+      "content": "import React from 'react'\n\nexport default function DarkNeumorphismLoader() {\n  return (\n    <div className=\"relative h-20 w-20 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 shadow-[inset_-5px_-5px_10px_rgba(255,255,255,0.05),inset_5px_5px_15px_rgba(0,0,0,0.5)]\">\n      <div className=\"absolute inset-2 animate-spin rounded-full bg-gradient-to-br from-blue-500 to-purple-600\">\n        <div className=\"absolute inset-1 rounded-full bg-gray-900\"></div>\n      </div>\n      <div className=\"absolute inset-0 rounded-full shadow-[-5px_-5px_10px_rgba(255,255,255,0.05),5px_5px_15px_rgba(0,0,0,0.5)]\"></div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

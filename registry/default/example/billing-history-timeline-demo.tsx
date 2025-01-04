@@ -1,6 +1,6 @@
 import BillingHistoryTimeline, {
   BillingEvent,
-} from "@/registry/default/xanthic/billing-history-timeline";
+} from "@/registry/default/ui/billing-history-timeline";
 
 const demoEvents: BillingEvent[] = [
   {

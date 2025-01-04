@@ -1,4 +1,4 @@
-import ClientTweetCard from "@/registry/default/xanthic/tweet-card";
+import ClientTweetCard from "@/registry/default/ui/tweet-card";
 
 /**
  * <TweetCard /> (Server Side Only)

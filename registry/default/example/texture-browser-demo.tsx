@@ -1,4 +1,4 @@
-import TextureBrowser from "@/registry/default/xanthic/texture-browser";
+import TextureBrowser from "@/registry/default/ui/texture-browser";
 
 const demoTextures = [
   {

@@ -1,4 +1,4 @@
-import PrismHero from "@/registry/default/xanthic/prism-hero";
+import PrismHero from "@/registry/default/ui/prism-hero";
 
 export default function PrismHeroDemo() {
   return (

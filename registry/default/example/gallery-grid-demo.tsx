@@ -3,10 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import {
-  GalleryGrid,
-  GalleryItem,
-} from "@/registry/default/xanthic/gallery-grid";
+import { GalleryGrid, GalleryItem } from "@/registry/default/ui/gallery-grid";
 import { cn } from "@/lib/utils";
 
 const images = [

@@ -1,4 +1,4 @@
-import StackedCarousel from "@/registry/default/xanthic/stacked-carousel";
+import StackedCarousel from "@/registry/default/ui/stacked-carousel";
 
 const imageSlides = [
   {

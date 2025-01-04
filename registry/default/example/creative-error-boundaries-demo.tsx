@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ErrorInfo } from "react";
-import CreativeErrorBoundaries from "@/registry/default/xanthic/creative-error-boundaries";
+import CreativeErrorBoundaries from "@/registry/default/ui/creative-error-boundaries";
 import { Button } from "@/components/ui/button";
 import { Palette, Brush, Eraser, RefreshCw, AlertTriangle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";

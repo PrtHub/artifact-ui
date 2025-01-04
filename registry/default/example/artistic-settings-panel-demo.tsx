@@ -1,5 +1,5 @@
 import React from "react";
-import ArtisticSettingsPanel from "@/registry/default/xanthic/artistic-settings-panel";
+import ArtisticSettingsPanel from "@/registry/default/ui/artistic-settings-panel";
 
 export default function ArtisticSettingsPanelDemo() {
   const handleSettingsChange = (settings: any) => {

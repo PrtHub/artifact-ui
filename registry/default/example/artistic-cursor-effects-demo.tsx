@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ArtisticCursorEffects from "@/registry/default/xanthic/artistic-cursor-effects";
+import ArtisticCursorEffects from "@/registry/default/ui/artistic-cursor-effects";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";

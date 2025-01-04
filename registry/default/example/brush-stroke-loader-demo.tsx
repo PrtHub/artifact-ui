@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BrushStrokeLoader from "@/registry/default/xanthic/brush-stroke-loader";
+import BrushStrokeLoader from "@/registry/default/ui/brush-stroke-loader";
 
 export default function BrushStrokeLoaderDemo() {
   const [progress, setProgress] = useState(0);

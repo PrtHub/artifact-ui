@@ -1,4 +1,4 @@
-import { CanvasSlider } from "@/registry/default/xanthic/canvas-slider";
+import { CanvasSlider } from "@/registry/default/ui/canvas-slider";
 
 export default function CanvasSliderDemo() {
   return (

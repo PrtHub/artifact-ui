@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import CanvasVoiceCommander from "@/registry/default/xanthic/canvas-voice-commander";
+import CanvasVoiceCommander from "@/registry/default/ui/canvas-voice-commander";
 
 export default function CanvasVoiceCommanderDemo() {
   const [lastCommand, setLastCommand] = useState("");

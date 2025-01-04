@@ -313,4 +313,10 @@ export const examples: Registry = [
     registryDependencies: ["expand-image"],
     files: ["example/expand-image-demo.tsx"],
   },
+  {
+    name: "neumorphism-loader-demo",
+    type: "registry:example",
+    registryDependencies: ["neumorphism-loader"],
+    files: ["example/neumorphism-loader-demo.tsx"],
+  },
 ];

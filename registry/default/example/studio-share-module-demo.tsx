@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import StudioShareModule from "@/registry/default/xanthic/studio-share-module";
+import StudioShareModule from "@/registry/default/ui/studio-share-module";
 import { motion } from "framer-motion";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";

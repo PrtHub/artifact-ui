@@ -1,4 +1,4 @@
-import { CanvasColorPicker } from "../xanthic/canvas-color-picker";
+import { CanvasColorPicker } from "../ui/canvas-color-picker";
 
 export default function CanvasColorPickerDemo() {
   return (

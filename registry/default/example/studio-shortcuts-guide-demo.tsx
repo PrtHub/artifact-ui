@@ -1,6 +1,6 @@
 "use client";
 
-import StudioShortcutsGuide from "@/registry/default/xanthic/studio-shortcuts-guide";
+import StudioShortcutsGuide from "@/registry/default/ui/studio-shortcuts-guide";
 
 const customShortcuts = {
   canvas: [

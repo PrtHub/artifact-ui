@@ -29,7 +29,7 @@
         "./*"
       ],
       "@/components/xanthic/*": [
-        "registry/default/xanthic/*"
+        "registry/default/ui/*"
       ],
       "@/components/example/*": [
         "./registry/default/example/*"

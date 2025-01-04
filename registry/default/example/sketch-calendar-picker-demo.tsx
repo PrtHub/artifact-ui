@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import SketchCalendarPicker from "@/registry/default/xanthic/sketch-calendar-picker";
+import SketchCalendarPicker from "@/registry/default/ui/sketch-calendar-picker";
 
 export default function SketchCalendarPickerDemo() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());

@@ -5,7 +5,7 @@ import {
   EaselTabsList,
   EaselTabsTrigger,
   EaselTabsContent,
-} from "@/registry/default/xanthic/easel-tabs";
+} from "@/registry/default/ui/easel-tabs";
 
 export default function EaselTabsDemo() {
   return (

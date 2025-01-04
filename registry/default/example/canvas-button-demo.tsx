@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CanvasButton } from "@/registry/default/xanthic/canvas-button";
+import { CanvasButton } from "@/registry/default/ui/canvas-button";
 import { Heart, ArrowRight, Plus, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 

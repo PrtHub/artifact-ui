@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import CreativeClipboardActions from "../xanthic/creative-clipboard-actions";
+import CreativeClipboardActions from "../ui/creative-clipboard-actions";
 
 export default function CreativeClipboardActionsDemo() {
   const variants = ["default", "minimal", "floating", "gradient", "outline"];

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { StudioLight } from "@/registry/default/xanthic/studio-light";
+import { StudioLight } from "@/registry/default/ui/studio-light";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import {

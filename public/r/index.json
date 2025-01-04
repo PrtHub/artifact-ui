@@ -9,7 +9,7 @@
     "registryDependencies": [],
     "files": [
       {
-        "path": "xanthic/canvas-button.tsx",
+        "path": "ui/canvas-button.tsx",
         "type": "registry:ui"
       }
     ]
@@ -24,7 +24,7 @@
     "registryDependencies": [],
     "files": [
       {
-        "path": "xanthic/sketch-input.tsx",
+        "path": "ui/sketch-input.tsx",
         "type": "registry:ui"
       }
     ]
@@ -37,7 +37,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/gallery-grid.tsx",
+        "path": "ui/gallery-grid.tsx",
         "type": "registry:ui"
       }
     ]
@@ -51,7 +51,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/easel-tabs.tsx",
+        "path": "ui/easel-tabs.tsx",
         "type": "registry:ui"
       }
     ]
@@ -65,7 +65,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/palette-navigation.tsx",
+        "path": "ui/palette-navigation.tsx",
         "type": "registry:ui"
       }
     ]
@@ -80,7 +80,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-modal.tsx",
+        "path": "ui/canvas-modal.tsx",
         "type": "registry:ui"
       }
     ]
@@ -93,7 +93,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/brush-stroke-loader.tsx",
+        "path": "ui/brush-stroke-loader.tsx",
         "type": "registry:ui"
       }
     ]
@@ -107,7 +107,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-slider.tsx",
+        "path": "ui/canvas-slider.tsx",
         "type": "registry:ui"
       }
     ]
@@ -120,7 +120,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/art-board-layout.tsx",
+        "path": "ui/art-board-layout.tsx",
         "type": "registry:ui"
       }
     ]
@@ -132,7 +132,7 @@
     "registryDependencies": [],
     "files": [
       {
-        "path": "xanthic/palette-toast.tsx",
+        "path": "ui/palette-toast.tsx",
         "type": "registry:ui"
       }
     ]
@@ -145,7 +145,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-drawer.tsx",
+        "path": "ui/canvas-drawer.tsx",
         "type": "registry:ui"
       }
     ]
@@ -156,7 +156,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/texture-overlay.tsx",
+        "path": "ui/texture-overlay.tsx",
         "type": "registry:ui"
       }
     ]
@@ -169,7 +169,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-color-picker.tsx",
+        "path": "ui/canvas-color-picker.tsx",
         "type": "registry:ui"
       }
     ]
@@ -182,7 +182,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-grid.tsx",
+        "path": "ui/canvas-grid.tsx",
         "type": "registry:ui"
       }
     ]
@@ -195,7 +195,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/artistic-navigation.tsx",
+        "path": "ui/artistic-navigation.tsx",
         "type": "registry:ui"
       }
     ]
@@ -209,7 +209,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-dock.tsx",
+        "path": "ui/canvas-dock.tsx",
         "type": "registry:ui"
       }
     ]
@@ -223,7 +223,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/studio-light.tsx",
+        "path": "ui/studio-light.tsx",
         "type": "registry:ui"
       }
     ]
@@ -236,7 +236,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/sketch-accordion.tsx",
+        "path": "ui/sketch-accordion.tsx",
         "type": "registry:ui"
       }
     ]
@@ -249,7 +249,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-menu.tsx",
+        "path": "ui/canvas-menu.tsx",
         "type": "registry:ui"
       }
     ]
@@ -263,7 +263,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/ink-alert.tsx",
+        "path": "ui/ink-alert.tsx",
         "type": "registry:ui"
       }
     ]
@@ -276,7 +276,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/artistic-tooltip.tsx",
+        "path": "ui/artistic-tooltip.tsx",
         "type": "registry:ui"
       }
     ]
@@ -287,7 +287,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/canvas-annotations.tsx",
+        "path": "ui/canvas-annotations.tsx",
         "type": "registry:ui"
       }
     ]
@@ -300,7 +300,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/layer-manager.tsx",
+        "path": "ui/layer-manager.tsx",
         "type": "registry:ui"
       }
     ]
@@ -313,7 +313,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/texture-browser.tsx",
+        "path": "ui/texture-browser.tsx",
         "type": "registry:ui"
       }
     ]
@@ -326,7 +326,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/color-scheme-generator.tsx",
+        "path": "ui/color-scheme-generator.tsx",
         "type": "registry:ui"
       }
     ]
@@ -339,7 +339,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/art-board-presets.tsx",
+        "path": "ui/art-board-presets.tsx",
         "type": "registry:ui"
       }
     ]
@@ -352,7 +352,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-timeline.tsx",
+        "path": "ui/canvas-timeline.tsx",
         "type": "registry:ui"
       }
     ]
@@ -365,7 +365,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/artistic-data-viz.tsx",
+        "path": "ui/artistic-data-viz.tsx",
         "type": "registry:ui"
       }
     ]
@@ -376,7 +376,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/artistic-statistics-card.tsx",
+        "path": "ui/artistic-statistics-card.tsx",
         "type": "registry:ui"
       }
     ]
@@ -392,7 +392,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/stepper.tsx",
+        "path": "ui/stepper.tsx",
         "type": "registry:ui"
       }
     ]
@@ -405,7 +405,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/studio-pagination.tsx",
+        "path": "ui/studio-pagination.tsx",
         "type": "registry:ui"
       }
     ]
@@ -419,7 +419,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/collapsible-card.tsx",
+        "path": "ui/collapsible-card.tsx",
         "type": "registry:ui"
       }
     ]
@@ -433,7 +433,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/gallery-flow.tsx",
+        "path": "ui/gallery-flow.tsx",
         "type": "registry:ui"
       }
     ]
@@ -447,7 +447,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/studio-shortcuts-guide.tsx",
+        "path": "ui/studio-shortcuts-guide.tsx",
         "type": "registry:ui"
       }
     ]
@@ -460,7 +460,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/creative-otp-input.tsx",
+        "path": "ui/creative-otp-input.tsx",
         "type": "registry:ui"
       }
     ]
@@ -474,7 +474,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/creative-clipboard-actions.tsx",
+        "path": "ui/creative-clipboard-actions.tsx",
         "type": "registry:ui"
       }
     ]
@@ -489,7 +489,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/studio-share-module.tsx",
+        "path": "ui/studio-share-module.tsx",
         "type": "registry:ui"
       }
     ]
@@ -503,7 +503,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/artistic-settings-panel.tsx",
+        "path": "ui/artistic-settings-panel.tsx",
         "type": "registry:ui"
       }
     ]
@@ -518,7 +518,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/creative-code-display.tsx",
+        "path": "ui/creative-code-display.tsx",
         "type": "registry:ui"
       }
     ]
@@ -533,7 +533,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/sketch-calendar-picker.tsx",
+        "path": "ui/sketch-calendar-picker.tsx",
         "type": "registry:ui"
       }
     ]
@@ -546,7 +546,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/texture-blend-transitions.tsx",
+        "path": "ui/texture-blend-transitions.tsx",
         "type": "registry:ui"
       }
     ]
@@ -559,7 +559,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/artistic-cursor-effects.tsx",
+        "path": "ui/artistic-cursor-effects.tsx",
         "type": "registry:ui"
       }
     ]
@@ -572,7 +572,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/canvas-voice-commander.tsx",
+        "path": "ui/canvas-voice-commander.tsx",
         "type": "registry:ui"
       }
     ]
@@ -586,7 +586,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/creative-error-boundaries.tsx",
+        "path": "ui/creative-error-boundaries.tsx",
         "type": "registry:ui"
       }
     ]
@@ -599,7 +599,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/billing-history-timeline.tsx",
+        "path": "ui/billing-history-timeline.tsx",
         "type": "registry:ui"
       }
     ]
@@ -610,7 +610,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/gradient-mesh-background.tsx",
+        "path": "ui/gradient-mesh-background.tsx",
         "type": "registry:ui"
       }
     ]
@@ -621,7 +621,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/grid-pattern-background.tsx",
+        "path": "ui/grid-pattern-background.tsx",
         "type": "registry:ui"
       }
     ]
@@ -632,7 +632,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/particle-background.tsx",
+        "path": "ui/particle-background.tsx",
         "type": "registry:ui"
       }
     ]
@@ -645,7 +645,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/prism-hero.tsx",
+        "path": "ui/prism-hero.tsx",
         "type": "registry:ui"
       }
     ]
@@ -658,7 +658,7 @@
     ],
     "files": [
       {
-        "path": "xanthic/climate-artboard.tsx",
+        "path": "ui/climate-artboard.tsx",
         "type": "registry:ui"
       }
     ]
@@ -669,7 +669,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "xanthic/stacked-carousel.tsx",
+        "path": "ui/stacked-carousel.tsx",
         "type": "registry:ui"
       }
     ]
@@ -682,7 +682,17 @@
     ],
     "files": [
       {
-        "path": "xanthic/expand-image.tsx",
+        "path": "ui/expand-image.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "neumorphism-loader",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/neumorphism-loader.tsx",
         "type": "registry:ui"
       }
     ]

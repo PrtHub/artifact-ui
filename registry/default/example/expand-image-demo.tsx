@@ -1,4 +1,4 @@
-import ExpandImage from "@/registry/default/xanthic/expand-image";
+import ExpandImage from "@/registry/default/ui/expand-image";
 
 export default function ExpandImageDemo() {
   return (

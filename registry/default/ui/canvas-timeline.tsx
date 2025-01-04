@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { CanvasSlider } from "@/registry/default/xanthic/canvas-slider";
+import { CanvasSlider } from "@/registry/default/ui/canvas-slider";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Home, User, Settings, Mail } from "lucide-react";
 
-import ArtisticNavigation from "@/registry/default/xanthic/artistic-navigation";
+import ArtisticNavigation from "@/registry/default/ui/artistic-navigation";
 
 export default function ArtisticNavigationDemo() {
   const navItems = [

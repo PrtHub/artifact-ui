@@ -1,4 +1,4 @@
-import { GradientMeshBackground } from "@/registry/default/xanthic/gradient-mesh-background";
+import { GradientMeshBackground } from "@/registry/default/ui/gradient-mesh-background";
 
 export default function GradientMeshBackgroundDemo() {
   return (

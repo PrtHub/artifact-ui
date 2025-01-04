@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ArtisticTooltip from "@/registry/default/xanthic/artistic-tooltip";
+import ArtisticTooltip from "@/registry/default/ui/artistic-tooltip";
 import { Button } from "@/components/ui/button";
 import { Paintbrush, Droplets, Pencil } from "lucide-react";
 

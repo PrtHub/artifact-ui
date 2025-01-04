@@ -1,4 +1,4 @@
-import ArtBoardPresets from "@/registry/default/xanthic/art-board-presets";
+import ArtBoardPresets from "@/registry/default/ui/art-board-presets";
 
 export default function ArtBoardPresetsDemo() {
   return (
