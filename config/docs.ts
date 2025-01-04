@@ -52,6 +52,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Expand Image",
+          href: "/docs/components/expand-image",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Stacked Carousel",
           href: "/docs/components/stacked-carousel",
           items: [],

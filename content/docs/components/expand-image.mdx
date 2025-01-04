@@ -1,0 +1,62 @@
+---
+title: Expand Image
+description: A beautiful and interactive image showcase component with smooth hover animations and text overlay effects.
+component: true
+---
+
+<ComponentPreview name="expand-image-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/expand-image.tsx`
+
+<ComponentSource name="expand-image" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import ExpandImage from "@/components/ui/expand-image";
+```
+
+</Steps>
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<ExpandImage />
+```
+
+### Custom Shadow Colors
+
+```tsx
+<ExpandImage
+  shadowColor="#0f172a"
+  hoverShadowColor="#3b82f6"
+  shadowIntensity="medium"
+/>
+```
+
+### Different Shadow Intensities
+
+```tsx
+// Light shadow
+<ExpandImage shadowIntensity="light" />
+
+// Heavy shadow
+<ExpandImage shadowIntensity="heavy" />
+```
+
+## Props
+
+| Prop               | Type                             | Default          | Description                                      |
+| ------------------ | -------------------------------- | ---------------- | ------------------------------------------------ |
+| `members`          | `TeamMember[]`                   | `defaultMembers` | Array of team members with name, role, and image |
+| `shadowColor`      | `string`                         | `#1e0e3e`        | Base shadow color for cards                      |
+| `hoverShadowColor` | `string`                         | `#7645d8`        | Shadow color when card is hovered                |
+| `shadowIntensity`  | `'light' \| 'medium' \| 'heavy'` | `medium`         | Controls the intensity of shadow effects         |

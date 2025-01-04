@@ -311,4 +311,10 @@ export const ui: Registry = [
     dependencies: [],
     files: ["xanthic/stacked-carousel.tsx"],
   },
+  {
+    name: "expand-image",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["xanthic/expand-image.tsx"],
+  },
 ];

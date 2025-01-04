@@ -34,7 +34,6 @@ const imageSlides = [
     image:
       "https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&w=800&q=80",
   },
-
 ];
 
 export default function StackedCarouselDemo() {

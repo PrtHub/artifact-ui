@@ -673,5 +673,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "expand-image",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "xanthic/expand-image.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -307,4 +307,10 @@ export const examples: Registry = [
     registryDependencies: ["stacked-carousel"],
     files: ["example/stacked-carousel-demo.tsx"],
   },
+  {
+    name: "expand-image-demo",
+    type: "registry:example",
+    registryDependencies: ["expand-image"],
+    files: ["example/expand-image-demo.tsx"],
+  },
 ];
