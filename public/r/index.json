@@ -662,5 +662,16 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "stacked-carousel",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "xanthic/stacked-carousel.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

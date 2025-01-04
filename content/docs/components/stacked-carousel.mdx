@@ -1,0 +1,70 @@
+---
+title: Stacked Carousel
+description: A modern image carousel with a stacked card effect, smooth transitions, and intuitive navigation.
+component: true
+---
+
+<ComponentPreview name="stacked-carousel-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/stacked-carousel.tsx`
+
+<ComponentSource name="stacked-carousel" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import StackedCarousel from "@/components/ui/stacked-carousel";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import StackedCarousel from "@/components/ui/stacked-carousel";
+
+const images = [
+  {
+    image: "https://images.unsplash.com/photo-1604871000636-074fa5117945",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1618172193763-c511deb635ca",
+  },
+  // ... more images
+];
+
+export default function Gallery() {
+  return <StackedCarousel slides={images} />;
+}
+```
+
+## Examples
+
+### Basic Usage
+
+A simple image carousel with the stacked card effect.
+
+```tsx
+<StackedCarousel slides={images} />
+```
+
+### Custom Styling
+
+You can customize the appearance using className.
+
+```tsx
+<StackedCarousel slides={images} className="w-full max-w-3xl mx-auto" />
+```
+
+## Props
+
+| Name        | Type      | Default | Description                                                  |
+| ----------- | --------- | ------- | ------------------------------------------------------------ |
+| `slides`    | `Image[]` | `[]`    | An array of image objects with `image` and `alt` properties. |
+| `className` | `string`  | `""`    | Additional CSS classes for styling.                          |

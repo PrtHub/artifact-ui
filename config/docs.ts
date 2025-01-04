@@ -52,6 +52,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Stacked Carousel",
+          href: "/docs/components/stacked-carousel",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Billing History Timeline",
           href: "/docs/components/billing-history-timeline",
           items: [],

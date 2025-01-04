@@ -555,6 +555,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "stacked-carousel": {
+      name: "stacked-carousel",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/xanthic/stacked-carousel.tsx"],
+      component: React.lazy(() => import("@/registry/default/xanthic/stacked-carousel.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
@@ -1100,6 +1111,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["climate-artboard"],
       files: ["registry/default/example/climate-artboard-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/climate-artboard-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "stacked-carousel-demo": {
+      name: "stacked-carousel-demo",
+      type: "registry:example",
+      registryDependencies: ["stacked-carousel"],
+      files: ["registry/default/example/stacked-carousel-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/stacked-carousel-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

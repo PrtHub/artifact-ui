@@ -305,4 +305,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["xanthic/climate-artboard.tsx"],
   },
+  {
+    name: "stacked-carousel",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["xanthic/stacked-carousel.tsx"],
+  },
 ];
