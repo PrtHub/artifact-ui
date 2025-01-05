@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Components",
-      href: "/docs/components/sketch-input",
+      href: "/docs/components/canvas-button",
     },
   ],
   sidebarNav: [

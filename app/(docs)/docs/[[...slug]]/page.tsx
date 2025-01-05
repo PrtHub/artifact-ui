@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { Contribute } from "@/components/contribute";
+// import { Contribute } from "@/components/contribute";
 import { TableOfContents } from "@/components/toc";
 
 interface DocPageProps {
@@ -44,7 +44,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} | Xanthic UI`,
+    title: `${doc.title} | Artifact UI`,
     description: doc.description,
     openGraph: {
       title: doc.title,
@@ -146,7 +146,7 @@ export default async function DocPage({ params }: DocPageProps) {
             <ScrollArea className="pb-10">
               <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] space-y-4 py-12">
                 <TableOfContents toc={toc} />
-                <Contribute doc={doc} />
+                {/* <Contribute doc={doc} /> */}
               </div>
             </ScrollArea>
           </div>

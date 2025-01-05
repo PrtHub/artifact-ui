@@ -191,7 +191,7 @@ const backgroundVariants: Variants = {
 };
 
 export default function PrismHero({
-  texts = ["Welcome", "to", "Xanthic UI"],
+  texts = ["Welcome", "to", "Artifact UI"],
   animationStyle = "fade",
   typingSpeed = 40,
   backgroundColor = "#1a1a1a",

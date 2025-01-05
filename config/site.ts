@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Xanthic UI",
-  url: "https://github.com/PrtHub/ui-canvas",
+  name: "Artifact UI",
+  url: "https://github.com/PrtHub",
   description:
-    "Xanthic UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion.",
+    "Artifact UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion.",
   links: {
-    twitter: "https://x.com/PritamGhosh010",
-    github: "https://github.com/PrtHub/ui-canvas",
+    twitter: "https://x.com/PrtHub",
+    github: "https://github.com/PrtHub",
   },
   keywords: [
     "React",

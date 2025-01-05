@@ -1,28 +1,28 @@
-# Contributing to Xanthic UI
+# Contributing to artifact UI
 
-Thank you for your interest in contributing to Xanthic UI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to Xanthic UI.
+Thank you for your interest in contributing to artifact UI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to artifact UI.
 
-Read the [example PR](https://github.com/PrtHub/xanthic-ui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
+Read the [example PR](https://github.com/PrtHub/artifact-ui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
 
-Once done, open a pull request from your forked repo to the main repo [here](https://github.com/PrtHub/xanthic-ui/compare).
+Once done, open a pull request from your forked repo to the main repo [here](https://github.com/PrtHub/artifact-ui/compare).
 
 ## Getting Started
 
 ### Fork and Clone the Repository
 
 1. **Fork this repository**
-   Click [here](https://github.com/PrtHub/xanthic-ui/fork) to fork the repository.
+   Click [here](https://github.com/PrtHub/artifact-ui/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
 
    ```bash
-   git clone https://github.com/<YOUR_USERNAME>/xanthic-ui.git
+   git clone https://github.com/<YOUR_USERNAME>/artifact-ui.git
    ```
 
 3. **Navigate to the project directory**
 
    ```bash
-   cd xanthic-ui
+   cd artifact-ui
    ```
 
 4. **Create a new branch for your changes**
@@ -50,11 +50,11 @@ Once done, open a pull request from your forked repo to the main repo [here](htt
 
 ## Adding a New Component
 
-To add a new component to xanthic, you will need to modify several files. Follow these steps:
+To add a new component to artifact, you will need to modify several files. Follow these steps:
 
 ### 1. Create Component
 
-Create the main component in `registry/default/xanthic/example-component.tsx`
+Create the main component in `registry/default/artifact/example-component.tsx`
 
 ```typescript
 import React from 'react'
@@ -73,7 +73,7 @@ export default function ExampleComponent() {
 Provide a basic example to showcase your component in `registry/default/example/example-component-demo.tsx`
 
 ```typescript
-import ExampleComponent from '@/registry/default/xanthic/example-component'
+import ExampleComponent from '@/registry/default/artifact/example-component'
 
 export default function ExampleComponentDemo() {
   return (
@@ -106,7 +106,7 @@ Create an MDX file for documenting your component in `content/docs/components/ex
 title: Example Component
 date: 2024-06-01
 description: Example component for Magic UI
-author: xanthic
+author: artifact
 published: true
 ---
 
@@ -145,7 +145,7 @@ export const ui: Registry = [
   {
     name: "example-component",
     type: "registry:ui",
-    files: ["xanthic/example-component.tsx"],
+    files: ["artifact/example-component.tsx"],
     // Add any dependencies or tailwind configurations if needed
   },
 ];

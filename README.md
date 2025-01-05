@@ -1,12 +1,12 @@
-## UI Canvas
+## Artifact UI
 
-UI Canvas is a component library that provides a modern and accessible design system for building beautiful and performant web applications.
+Artifact UI is a component library that provides a modern and accessible design system for building beautiful and performant web applications.
 
 ![Hero Image](image.png)
 
 ## Documentation
 
-Visit https://uicanvas.vercel.app/docs to view the documentation.
+Visit https://artifact-ui.vercel.app/docs to view the documentation.
 
 ## Contributing
 

@@ -8,7 +8,7 @@ export default function PrismHeroDemo() {
           "Design with Purpose",
           "Create with Passion",
           "Build the Future",
-          "Xanthic UI",
+          "Artifact UI",
         ]}
         animationStyle="typing"
         backgroundColors={[

@@ -28,7 +28,7 @@
       "@/*": [
         "./*"
       ],
-      "@/components/xanthic/*": [
+      "@/components/artifact/*": [
         "registry/default/ui/*"
       ],
       "@/components/example/*": [
