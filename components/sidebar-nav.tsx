@@ -60,7 +60,7 @@ export function DocsSidebarNavItems({
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
                 ? "font-medium text-foreground"
-                : "text-muted-foreground",
+                : "text-muted-foreground"
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
@@ -68,14 +68,14 @@ export function DocsSidebarNavItems({
             {pathname === item.href && (
               <motion.div
                 layoutId={groupId}
-                className="absolute inset-0 rounded-r-md border-l-2 border-neutral-300 bg-neutral-100 dark:border-neutral-600 dark:bg-neutral-800"
+                className="absolute inset-0 rounded-r-md border-l-2 border-primary/50 bg-gradient-to-r from-primary/10 to-transparent"
                 initial={false}
                 transition={{
                   type: "spring",
-                  stiffness: 350,
-                  damping: 30,
-                  mass: 1,
-                  velocity: 200,
+                  stiffness: 300,
+                  damping: 25,
+                  mass: 0.8,
+                  velocity: 150,
                 }}
               />
             )}
@@ -99,7 +99,7 @@ export function DocsSidebarNavItems({
             key={index}
             className={cn(
               "flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground",
-              item.disabled && "cursor-not-allowed opacity-60",
+              item.disabled && "cursor-not-allowed opacity-60"
             )}
           >
             {item.title}
@@ -114,7 +114,7 @@ export function DocsSidebarNavItems({
               </span>
             )}
           </span>
-        ),
+        )
       )}
     </div>
   ) : null;

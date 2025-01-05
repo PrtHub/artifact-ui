@@ -96,11 +96,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Canvas Color Picker",
-          href: "/docs/components/canvas-color-picker",
-          items: [],
-        },
-        {
           title: "Easel Tabs",
           href: "/docs/components/easel-tabs",
           items: [],
@@ -113,11 +108,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Canvas Modal",
           href: "/docs/components/canvas-modal",
-          items: [],
-        },
-        {
-          title: "Color Scheme Generator",
-          href: "/docs/components/color-scheme-generator",
           items: [],
         },
         {

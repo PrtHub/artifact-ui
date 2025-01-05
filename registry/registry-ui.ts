@@ -77,12 +77,6 @@ export const ui: Registry = [
     files: ["ui/texture-overlay.tsx"],
   },
   {
-    name: "canvas-color-picker",
-    type: "registry:ui",
-    dependencies: ["lucide-react"],
-    files: ["ui/canvas-color-picker.tsx"],
-  },
-  {
     name: "canvas-grid",
     type: "registry:ui",
     dependencies: ["lucide-react"],
@@ -147,12 +141,6 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: ["lucide-react"],
     files: ["ui/texture-browser.tsx"],
-  },
-  {
-    name: "color-scheme-generator",
-    type: "registry:ui",
-    dependencies: ["lucide-react"],
-    files: ["ui/color-scheme-generator.tsx"],
   },
   {
     name: "art-board-presets",

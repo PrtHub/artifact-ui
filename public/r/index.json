@@ -162,19 +162,6 @@
     ]
   },
   {
-    "name": "canvas-color-picker",
-    "type": "registry:ui",
-    "dependencies": [
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui/canvas-color-picker.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "canvas-grid",
     "type": "registry:ui",
     "dependencies": [
@@ -314,19 +301,6 @@
     "files": [
       {
         "path": "ui/texture-browser.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "color-scheme-generator",
-    "type": "registry:ui",
-    "dependencies": [
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui/color-scheme-generator.tsx",
         "type": "registry:ui"
       }
     ]

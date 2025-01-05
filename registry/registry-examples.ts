@@ -74,12 +74,6 @@ export const examples: Registry = [
     files: ["example/texture-overlay-demo.tsx"],
   },
   {
-    name: "canvas-color-picker-demo",
-    type: "registry:example",
-    registryDependencies: ["canvas-color-picker"],
-    files: ["example/canvas-color-picker-demo.tsx"],
-  },
-  {
     name: "canvas-grid-demo",
     type: "registry:example",
     registryDependencies: ["canvas-grid"],
@@ -144,12 +138,6 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["texture-browser"],
     files: ["example/texture-browser-demo.tsx"],
-  },
-  {
-    name: "color-scheme-generator-demo",
-    type: "registry:example",
-    registryDependencies: ["color-scheme-generator"],
-    files: ["example/color-scheme-generator-demo.tsx"],
   },
   {
     name: "art-board-presets-demo",

@@ -137,17 +137,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "canvas-color-picker": {
-      name: "canvas-color-picker",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/canvas-color-picker.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/canvas-color-picker.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "canvas-grid": {
       name: "canvas-grid",
       type: "registry:ui",
@@ -264,17 +253,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/ui/texture-browser.tsx"],
       component: React.lazy(() => import("@/registry/default/ui/texture-browser.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "color-scheme-generator": {
-      name: "color-scheme-generator",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/color-scheme-generator.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/color-scheme-generator.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -720,17 +698,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "canvas-color-picker-demo": {
-      name: "canvas-color-picker-demo",
-      type: "registry:example",
-      registryDependencies: ["canvas-color-picker"],
-      files: ["registry/default/example/canvas-color-picker-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/canvas-color-picker-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "canvas-grid-demo": {
       name: "canvas-grid-demo",
       type: "registry:example",
@@ -847,17 +814,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["texture-browser"],
       files: ["registry/default/example/texture-browser-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/texture-browser-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "color-scheme-generator-demo": {
-      name: "color-scheme-generator-demo",
-      type: "registry:example",
-      registryDependencies: ["color-scheme-generator"],
-      files: ["registry/default/example/color-scheme-generator-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/color-scheme-generator-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
