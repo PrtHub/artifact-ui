@@ -307,4 +307,10 @@ export const examples: Registry = [
     registryDependencies: ["neumorphism-loader"],
     files: ["example/neumorphism-loader-demo.tsx"],
   },
+  {
+    name: "swarm-effect-demo",
+    type: "registry:example",
+    registryDependencies: ["swarm-effect"],
+    files: ["example/swarm-effect-demo.tsx"],
+  },
 ];

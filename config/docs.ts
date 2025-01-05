@@ -289,6 +289,11 @@ export const docsConfig: DocsConfig = {
           title: "Neumorphism Loader",
           href: "/docs/components/neumorphism-loader",
           items: [],
+        },
+        {
+          title: "Swarm Effect",
+          href: "/docs/components/swarm-effect",
+          items: [],
           label: "New",
         },
       ],

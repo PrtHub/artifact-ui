@@ -1,0 +1,87 @@
+---
+title: Swarm Effect
+date: 2024-01-05
+description: An artistic swarm effect component with customizable particle styles and hover interactions.
+author: artifact
+published: true
+---
+
+<ComponentPreview name="swarm-effect-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="swarm-effect" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import SwarmEffect from "@/components/ui/swarm-effect";
+
+export default function Demo() {
+  return (
+    <SwarmEffect
+      src="/your-image.jpg"
+      particleSize={2}
+      particleSpacing={4}
+      particleColor="#000000"
+      displacementRadius={50}
+      hoverEffect="scatter"
+    />
+  );
+}
+```
+
+## Props
+
+| Prop               | Type                            | Description                       | Default   |
+| ------------------ | ------------------------------- | --------------------------------- | --------- |
+| src                | string                          | The source URL of the image       | Required  |
+| particleSize       | number                          | Size of individual particles      | 2         |
+| particleSpacing    | number                          | Space between particles           | 4         |
+| particleColor      | string                          | Color of the particles            | "#000000" |
+| displacementRadius | number                          | Radius of the hover effect        | 50        |
+| hoverEffect        | "scatter" \| "gather" \| "none" | Type of interaction when hovering | "scatter" |
+| className          | string                          | Additional CSS classes            | undefined |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<SwarmEffect src="/image.jpg" className="w-[300px]" />
+```
+
+### Custom Particle Style
+
+```tsx
+<SwarmEffect
+  src="/placeholder.svg"
+  particleSize={2}
+  particleSpacing={4}
+  particleColor="hsl(280, 100%, 60%)"
+  displacementRadius={50}
+  hoverEffect="scatter"
+/>
+```
+
+### Gather Effect
+
+```tsx
+<SwarmEffect
+  src="/image.jpg"
+  particleSize={2}
+  particleSpacing={4}
+  particleColor="#000000"
+  hoverEffect="gather"
+  displacementRadius={60}
+  className="w-[300px]"
+/>
+```

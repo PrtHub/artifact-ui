@@ -310,4 +310,9 @@ export const ui: Registry = [
     type: "registry:ui",
     files: ["ui/neumorphism-loader.tsx"],
   },
+  {
+    name: "swarm-effect",
+    type: "registry:ui",
+    files: ["ui/swarm-effect.tsx"],
+  },
 ];

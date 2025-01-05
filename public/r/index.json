@@ -670,5 +670,15 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "swarm-effect",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/swarm-effect.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

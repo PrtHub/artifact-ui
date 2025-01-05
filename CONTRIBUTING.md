@@ -54,7 +54,7 @@ To add a new component to artifact, you will need to modify several files. Follo
 
 ### 1. Create Component
 
-Create the main component in `registry/default/artifact/example-component.tsx`
+Create the main component in `registry/default/ui/example-component.tsx`
 
 ```typescript
 import React from 'react'
@@ -73,7 +73,7 @@ export default function ExampleComponent() {
 Provide a basic example to showcase your component in `registry/default/example/example-component-demo.tsx`
 
 ```typescript
-import ExampleComponent from '@/registry/default/artifact/example-component'
+import ExampleComponent from '@/registry/default/ui/example-component'
 
 export default function ExampleComponentDemo() {
   return (
@@ -145,7 +145,7 @@ export const ui: Registry = [
   {
     name: "example-component",
     type: "registry:ui",
-    files: ["artifact/example-component.tsx"],
+    files: ["ui/example-component.tsx"],
     // Add any dependencies or tailwind configurations if needed
   },
 ];

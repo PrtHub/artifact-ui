@@ -566,6 +566,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "swarm-effect": {
+      name: "swarm-effect",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/swarm-effect.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/swarm-effect.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
@@ -1122,6 +1133,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["neumorphism-loader"],
       files: ["registry/default/example/neumorphism-loader-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/neumorphism-loader-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "swarm-effect-demo": {
+      name: "swarm-effect-demo",
+      type: "registry:example",
+      registryDependencies: ["swarm-effect"],
+      files: ["registry/default/example/swarm-effect-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/swarm-effect-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
