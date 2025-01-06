@@ -203,17 +203,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "ink-alert": {
-      name: "ink-alert",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/ink-alert.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/ink-alert.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "artistic-tooltip": {
       name: "artistic-tooltip",
       type: "registry:ui",
@@ -770,17 +759,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["canvas-menu"],
       files: ["registry/default/example/canvas-menu-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/canvas-menu-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "ink-alert-demo": {
-      name: "ink-alert-demo",
-      type: "registry:example",
-      registryDependencies: ["ink-alert"],
-      files: ["registry/default/example/ink-alert-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/ink-alert-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

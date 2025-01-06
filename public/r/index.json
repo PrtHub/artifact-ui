@@ -242,20 +242,6 @@
     ]
   },
   {
-    "name": "ink-alert",
-    "type": "registry:ui",
-    "dependencies": [
-      "class-variance-authority",
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui/ink-alert.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "artistic-tooltip",
     "type": "registry:ui",
     "dependencies": [

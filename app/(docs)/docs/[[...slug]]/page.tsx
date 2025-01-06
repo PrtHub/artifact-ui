@@ -89,9 +89,11 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <main
-      className={cn("relative py-6 lg:gap-10 lg:py-8 xl:grid ", {
-        "xl:grid-cols-[1fr_300px]": doc.toc,
-      })}
+      className={cn("relative py-6 lg:gap-10 lg:py-8 xl:grid ",
+        //   {
+        //   "xl:grid-cols-[1fr_300px]": doc.toc,
+        // }
+      )}
     >
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
@@ -140,18 +142,18 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
         <DocPager doc={doc} />
       </div>
-      {doc.toc && (
+      {/* {doc.toc && (
         <div className="hidden text-sm xl:block">
           <div className="sticky top-16 -mt-10 pt-4">
             <ScrollArea className="pb-10">
               <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] space-y-4 py-12">
                 <TableOfContents toc={toc} />
-                {/* <Contribute doc={doc} /> */}
+                <Contribute doc={doc} />
               </div>
             </ScrollArea>
           </div>
         </div>
-      )}
+      )} */}
     </main>
   );
 }

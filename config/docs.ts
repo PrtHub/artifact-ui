@@ -171,11 +171,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Ink Alert",
-          href: "/docs/components/ink-alert",
-          items: [],
-        },
-        {
           title: "Artistic Tooltip",
           href: "/docs/components/artistic-tooltip",
           items: [],

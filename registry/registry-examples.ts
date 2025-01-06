@@ -110,12 +110,6 @@ export const examples: Registry = [
     files: ["example/canvas-menu-demo.tsx"],
   },
   {
-    name: "ink-alert-demo",
-    type: "registry:example",
-    registryDependencies: ["ink-alert"],
-    files: ["example/ink-alert-demo.tsx"],
-  },
-  {
     name: "artistic-tooltip-demo",
     type: "registry:example",
     registryDependencies: ["artistic-tooltip"],
