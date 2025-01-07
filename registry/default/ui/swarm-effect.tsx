@@ -129,13 +129,16 @@ export default function SwarmEffect({
           );
 
           if (distance < displacementRadius) {
-            const force = (displacementRadius - distance) / displacementRadius;
+            const force = Math.pow(
+              (displacementRadius - distance) / displacementRadius,
+              1.5,
+            );
             if (hoverEffect === "scatter") {
-              dx = (particle.x - mousePosition.x) * force;
-              dy = (particle.y - mousePosition.y) * force;
+              dx = (particle.x - mousePosition.x) * force * 1.2;
+              dy = (particle.y - mousePosition.y) * force * 1.2;
             } else {
-              dx = (mousePosition.x - particle.x) * force;
-              dy = (mousePosition.y - particle.y) * force;
+              dx = (mousePosition.x - particle.x) * force * 1.2;
+              dy = (mousePosition.y - particle.y) * force * 1.2;
             }
           }
         }
@@ -143,8 +146,8 @@ export default function SwarmEffect({
         const targetX = particle.originX + dx;
         const targetY = particle.originY + dy;
 
-        particle.x += (targetX - particle.x) * 0.1;
-        particle.y += (targetY - particle.y) * 0.1;
+        particle.x += (targetX - particle.x) * 0.25;
+        particle.y += (targetY - particle.y) * 0.25;
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particleSize, 0, Math.PI * 2);

@@ -86,10 +86,10 @@ export const examples: Registry = [
     files: ["example/artistic-navigation-demo.tsx"],
   },
   {
-    name: "canvas-dock-demo",
+    name: "smart-dock-demo",
     type: "registry:example",
-    registryDependencies: ["canvas-dock"],
-    files: ["example/canvas-dock-demo.tsx"],
+    registryDependencies: ["smart-dock"],
+    files: ["example/smart-dock-demo.tsx"],
   },
   {
     name: "studio-light-demo",

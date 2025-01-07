@@ -188,15 +188,14 @@
     ]
   },
   {
-    "name": "canvas-dock",
+    "name": "smart-dock",
     "type": "registry:ui",
     "dependencies": [
-      "framer-motion",
-      "next-themes"
+      "framer-motion"
     ],
     "files": [
       {
-        "path": "ui/canvas-dock.tsx",
+        "path": "ui/smart-dock.tsx",
         "type": "registry:ui"
       }
     ]

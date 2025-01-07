@@ -159,12 +159,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "canvas-dock": {
-      name: "canvas-dock",
+    "smart-dock": {
+      name: "smart-dock",
       type: "registry:ui",
       registryDependencies: undefined,
-      files: ["registry/default/ui/canvas-dock.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/canvas-dock.tsx")),
+      files: ["registry/default/ui/smart-dock.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/smart-dock.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -720,12 +720,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "canvas-dock-demo": {
-      name: "canvas-dock-demo",
+    "smart-dock-demo": {
+      name: "smart-dock-demo",
       type: "registry:example",
-      registryDependencies: ["canvas-dock"],
-      files: ["registry/default/example/canvas-dock-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/canvas-dock-demo.tsx")),
+      registryDependencies: ["smart-dock"],
+      files: ["registry/default/example/smart-dock-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/smart-dock-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

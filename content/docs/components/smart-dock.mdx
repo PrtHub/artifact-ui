@@ -1,0 +1,123 @@
+---
+title: Smart Dock
+description: A macOS-style dock with smooth animations and multiple variants.
+component: true
+---
+
+<ComponentPreview name="smart-dock-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npx shadcn@latest add tooltip
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/smart-dock.tsx`
+
+<ComponentSource name="smart-dock" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { SmartDock } from "@/components/ui/smart-dock";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { SmartDock } from "@/components/ui/smart-dock";
+
+export function SmartDockDemo() {
+  return (
+    <SmartDock
+      items={[
+        {
+          icon: <GlobeIcon className="size-6" />,
+          label: "Browser",
+        },
+        {
+          icon: <SparklesIcon className="size-6" />,
+          label: "AI Assistant",
+        },
+      ]}
+      variant="modern"
+      hoverStyle="default"
+    />
+  );
+}
+```
+
+## Examples
+
+### Default Dock
+
+```tsx
+<SmartDock
+  items={[
+    {
+      icon: <GlobeIcon className="size-6" />,
+      label: "Browser",
+    },
+    {
+      icon: <SparklesIcon className="size-6" />,
+      label: "AI Assistant",
+    },
+  ]}
+/>
+```
+
+### Custom Variant
+
+```tsx
+<SmartDock items={dockItems} variant="glass" hoverStyle="elastic" />
+```
+
+### Custom Items
+
+```tsx
+const dockItems = [
+  {
+    icon: <GlobeIcon className="size-6" />,
+    label: "Browser",
+    onClick: () => console.log("Browser clicked"),
+  },
+  {
+    icon: <SparklesIcon className="size-6" />,
+    label: "AI Assistant",
+    onClick: () => console.log("AI Assistant clicked"),
+  },
+];
+
+<SmartDock items={dockItems} variant="canvas" hoverStyle="wave" />;
+```
+
+## Props
+
+### Smart Dock Props
+
+| Prop         | Type              | Default     | Description                           |
+| ------------ | ----------------- | ----------- | ------------------------------------- |
+| `items`      | `DockItemProps[]` | `[]`        | Array of items to display in the dock |
+| `variant`    | `"glass"          | `"modern"`  | Dock variant to use                   |
+| `hoverStyle` | `"default"        | `"default"` | Hover animation style                 |
+| `className`  | `string`          | `-`         | Additional CSS classes                |
+
+### DockItemProps
+
+| Prop    | Type         | Default | Description                                           |
+| ------- | ------------ | ------- | ----------------------------------------------------- |
+| icon    | `ReactNode`  | -       | Icon to display in the item                           |
+| label   | `string`     | -       | Label text to display in the item                     |
+| onClick | `() => void` | -       | Callback function to execute when the item is clicked |
+
+## Credits
+
+This component was inspired by [Build UI's Magnified Dock](https://buildui.com/recipes/magnified-dock/), which demonstrates how to create smooth dock animations using Framer Motion.

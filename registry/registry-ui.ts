@@ -89,10 +89,10 @@ export const ui: Registry = [
     files: ["ui/artistic-navigation.tsx"],
   },
   {
-    name: "canvas-dock",
+    name: "smart-dock",
     type: "registry:ui",
-    dependencies: ["framer-motion", "next-themes"],
-    files: ["ui/canvas-dock.tsx"],
+    dependencies: ["framer-motion"],
+    files: ["ui/smart-dock.tsx"],
   },
   {
     name: "studio-light",

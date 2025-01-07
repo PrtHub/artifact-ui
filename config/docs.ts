@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Smart Dock",
+          href: "/docs/components/smart-dock",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Expand Image",
           href: "/docs/components/expand-image",
           items: [],
@@ -138,11 +144,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Canvas Grid",
           href: "/docs/components/canvas-grid",
-          items: [],
-        },
-        {
-          title: "Canvas Dock",
-          href: "/docs/components/canvas-dock",
           items: [],
         },
         {
