@@ -1,59 +1,90 @@
 ---
 title: Blob Background
-description: A dynamic background component featuring organic, morphing blob shapes with customizable colors and animations.
-component: true
+description: A beautiful animated background component with organic, morphing blob shapes.
 ---
 
 <ComponentPreview name="blob-background-demo" />
 
-## Features
-
-- Organic, morphing blob shapes using Framer Motion
-- Customizable colors, sizes, and animation speeds
-- Support for multiple blobs with different z-indices
-- Blur effects for a modern, glassmorphic look
-- Perfect for creative and modern designs
-
 ## Installation
 
-```bash
-npm install framer-motion
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/blob-background.tsx`
+
+<ComponentSource name="blob-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { BlobBackground } from "@/components/ui/blob-background";
 ```
+
+</Steps>
 
 ## Usage
 
 ```tsx
-import BlobBackground from "@/components/ui/blob-background";
-
-const customBlobs = [
-  {
-    id: "blob1",
-    color: "#7C3AED",
-    size: 450,
-    blur: 70,
-    speed: 25,
-    opacity: 0.3,
-    zIndex: 1,
-    initialPosition: { x: 30, y: 30 },
-  },
-  {
-    id: "blob2",
-    color: "#EC4899",
-    size: 350,
-    blur: 60,
-    speed: 30,
-    opacity: 0.25,
-    zIndex: 2,
-    initialPosition: { x: 70, y: 50 },
-  },
-];
+import { BlobBackground } from "@/components/ui/blob-background";
 
 export default function Example() {
+  const blobs = [
+    {
+      id: "blob1",
+      gradientColors: ["#7C3AED", "#EC4899"],
+      size: 450,
+      blur: 70,
+      speed: 12,
+      opacity: 0.3,
+      zIndex: 1,
+      initialPosition: { x: 30, y: 30 },
+      pulseScale: 1.2,
+      rotationSpeed: 8,
+    },
+    {
+      id: "blob2",
+      gradientColors: ["#EC4899", "#3B82F6"],
+      size: 350,
+      blur: 60,
+      speed: 15,
+      opacity: 0.25,
+      zIndex: 2,
+      initialPosition: { x: 70, y: 50 },
+      pulseScale: 1.15,
+      rotationSpeed: 12,
+    },
+  ];
+
   return (
-    <div className="relative h-[400px]">
-      <BlobBackground blobs={customBlobs} />
-      <div className="relative z-10">Your content here</div>
+    <div className="relative h-[400px] w-full">
+      <BlobBackground blobs={blobs} />
     </div>
   );
 }
 ```
+
+## Props
+
+### BlobBackground
+
+| Name      | Type     | Default | Description                                      |
+| --------- | -------- | ------- | ------------------------------------------------ |
+| blobs     | `Blob[]` | `[]`    | Array of blob configurations                     |
+| className | `string` | `""`    | Additional CSS classes to apply to the container |
+
+### Blob Configuration
+
+| Name            | Type       | Default       | Description                                           |
+| --------------- | ---------- | ------------- | ----------------------------------------------------- |
+| id              | `string`   | Required      | Unique identifier for the blob                        |
+| gradientColors  | `string[]` | `undefined`   | Array of colors for gradient background               |
+| color           | `string`   | `undefined`   | Single color for blob (used if gradientColors absent) |
+| size            | `number`   | `400`         | Size of the blob in pixels                            |
+| blur            | `number`   | `60`          | Blur effect intensity                                 |
+| speed           | `number`   | `20`          | Animation speed (lower is faster)                     |
+| opacity         | `number`   | `0.5`         | Blob opacity                                          |
+| zIndex          | `number`   | `0`           | Z-index for layering blobs                            |
+| initialPosition | `object`   | `{x:50,y:50}` | Starting position in percentage                       |
+| pulseScale      | `number`   | `1.1`         | Maximum scale during pulse animation                  |
+| rotationSpeed   | `number`   | `10`          | Rotation animation speed (lower is faster)            |
