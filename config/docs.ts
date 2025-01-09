@@ -57,6 +57,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Blob Background",
+          href: "/docs/components/blob-background",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Smart Dock",
           href: "/docs/components/smart-dock",
           items: [],

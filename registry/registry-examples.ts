@@ -313,4 +313,10 @@ export const examples: Registry = [
     registryDependencies: ["mesh-matrix"],
     files: ["example/mesh-matrix-demo.tsx"],
   },
+  {
+    name: "blob-background-demo",
+    type: "registry:example",
+    registryDependencies: ["blob-background"],
+    files: ["example/blob-background-demo.tsx"],
+  },
 ];

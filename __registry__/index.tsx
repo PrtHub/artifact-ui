@@ -577,6 +577,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "blob-background": {
+      name: "blob-background",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/blob-background.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/blob-background.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
@@ -1144,6 +1155,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["mesh-matrix"],
       files: ["registry/default/example/mesh-matrix-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/mesh-matrix-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "blob-background-demo": {
+      name: "blob-background-demo",
+      type: "registry:example",
+      registryDependencies: ["blob-background"],
+      files: ["registry/default/example/blob-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/blob-background-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

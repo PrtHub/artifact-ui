@@ -680,5 +680,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "blob-background",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/blob-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

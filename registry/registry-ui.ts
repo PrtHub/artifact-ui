@@ -315,4 +315,10 @@ export const ui: Registry = [
     dependencies: ["@react-three/fiber", "@react-three/drei", "three"],
     files: ["ui/mesh-matrix.tsx"],
   },
+  {
+    name: "blob-background",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/blob-background.tsx"],
+  },
 ];

@@ -1,0 +1,59 @@
+---
+title: Blob Background
+description: A dynamic background component featuring organic, morphing blob shapes with customizable colors and animations.
+component: true
+---
+
+<ComponentPreview name="blob-background-demo" />
+
+## Features
+
+- Organic, morphing blob shapes using Framer Motion
+- Customizable colors, sizes, and animation speeds
+- Support for multiple blobs with different z-indices
+- Blur effects for a modern, glassmorphic look
+- Perfect for creative and modern designs
+
+## Installation
+
+```bash
+npm install framer-motion
+```
+
+## Usage
+
+```tsx
+import BlobBackground from "@/components/ui/blob-background";
+
+const customBlobs = [
+  {
+    id: "blob1",
+    color: "#7C3AED",
+    size: 450,
+    blur: 70,
+    speed: 25,
+    opacity: 0.3,
+    zIndex: 1,
+    initialPosition: { x: 30, y: 30 },
+  },
+  {
+    id: "blob2",
+    color: "#EC4899",
+    size: 350,
+    blur: 60,
+    speed: 30,
+    opacity: 0.25,
+    zIndex: 2,
+    initialPosition: { x: 70, y: 50 },
+  },
+];
+
+export default function Example() {
+  return (
+    <div className="relative h-[400px]">
+      <BlobBackground blobs={customBlobs} />
+      <div className="relative z-10">Your content here</div>
+    </div>
+  );
+}
+```

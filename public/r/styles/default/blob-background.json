@@ -1,0 +1,15 @@
+{
+  "name": "blob-background",
+  "type": "registry:ui",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "ui/blob-background.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useEffect } from \"react\";\nimport { motion } from \"framer-motion\";\n\ninterface BlobProps {\n  color: string;\n  size?: number;\n  blur?: number;\n  speed?: number;\n  opacity?: number;\n  zIndex?: number;\n  initialPosition?: { x: number; y: number };\n}\n\nconst Blob = ({\n  color,\n  size = 400,\n  blur = 60,\n  speed = 20,\n  opacity = 0.5,\n  zIndex = 0,\n  initialPosition = { x: 50, y: 50 },\n}: BlobProps) => {\n  const getRandomPoint = () => ({\n    x: Math.random() * 100,\n    y: Math.random() * 100,\n  });\n\n  return (\n    <motion.div\n      style={{\n        position: \"absolute\",\n        width: size,\n        height: size,\n        filter: `blur(${blur}px)`,\n        background: color,\n        borderRadius: \"50%\",\n        opacity,\n        zIndex,\n      }}\n      initial={{ x: `${initialPosition.x}%`, y: `${initialPosition.y}%` }}\n      animate={{\n        x: [\n          `${initialPosition.x}%`,\n          `${getRandomPoint().x}%`,\n          `${getRandomPoint().x}%`,\n          `${initialPosition.x}%`,\n        ],\n        y: [\n          `${initialPosition.y}%`,\n          `${getRandomPoint().y}%`,\n          `${getRandomPoint().y}%`,\n          `${initialPosition.y}%`,\n        ],\n      }}\n      transition={{\n        duration: speed,\n        ease: \"easeInOut\",\n        repeat: Infinity,\n        repeatType: \"reverse\",\n      }}\n    />\n  );\n};\n\ninterface BlobConfig extends BlobProps {\n  id: string;\n}\n\ninterface BlobBackgroundProps {\n  blobs?: BlobConfig[];\n  className?: string;\n}\n\nconst defaultBlobs: BlobConfig[] = [\n  {\n    id: \"blob1\",\n    color: \"#FF0080\",\n    size: 400,\n    blur: 60,\n    speed: 20,\n    opacity: 0.3,\n    zIndex: 1,\n    initialPosition: { x: 20, y: 20 },\n  },\n  {\n    id: \"blob2\",\n    color: \"#0070F3\",\n    size: 300,\n    blur: 50,\n    speed: 25,\n    opacity: 0.2,\n    zIndex: 2,\n    initialPosition: { x: 60, y: 60 },\n  },\n  {\n    id: \"blob3\",\n    color: \"#00FF00\",\n    size: 350,\n    blur: 55,\n    speed: 30,\n    opacity: 0.25,\n    zIndex: 3,\n    initialPosition: { x: 80, y: 30 },\n  },\n];\n\nexport default function BlobBackground({\n  blobs = defaultBlobs,\n  className = \"\",\n}: BlobBackgroundProps) {\n  return (\n    <div\n      className={`relative h-full w-full overflow-hidden ${className}`}\n      style={{ background: \"transparent\" }}\n    >\n      {blobs.map((blob) => (\n        <Blob key={blob.id} {...blob} />\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
