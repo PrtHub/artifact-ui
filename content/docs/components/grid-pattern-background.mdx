@@ -20,7 +20,7 @@ author: ui
 
 <Step>Add the following code to your `tailwind.config.cjs` file:</Step>
 
-```tsx {9-33}
+```tsx {9-68}
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -32,6 +32,9 @@ module.exports = {
       animation: {
         "dots-shift": "dots-shift 20s linear infinite",
         "lines-shift": "lines-shift 20s linear infinite",
+        "squares-shift": "squares-shift 20s linear infinite",
+        "crosshatch-shift": "crosshatch-shift 20s linear infinite",
+        "diamonds-shift": "diamonds-shift 20s linear infinite",
       },
       keyframes: {
         "dots-shift": {
@@ -51,6 +54,39 @@ module.exports = {
           },
           "100%": {
             transform: "translateX(0) translateY(0)",
+          },
+        },
+        "squares-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0) rotate(0deg)",
+          },
+          "50%": {
+            transform: "translateX(25%) translateY(25%) rotate(180deg)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0) rotate(360deg)",
+          },
+        },
+        "crosshatch-shift": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(45deg)",
+          },
+          "100%": {
+            transform: "rotate(0deg)",
+          },
+        },
+        "diamonds-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0) scale(1)",
+          },
+          "50%": {
+            transform: "translateX(25%) translateY(25%) scale(0.8)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0) scale(1)",
           },
         },
       },
@@ -76,11 +112,11 @@ export default function Example() {
   return (
     <div className="relative h-[200px]">
       <GridPatternBackground
-        gridType="dots"
-        gridSize={24}
-        opacity={0.3}
-        color="#6d28d9"
-        animate={true}
+        gridType="dots" // choose from 'dots', 'lines', 'squares', 'crosshatch', 'diamonds'
+        gridSize={24} // Adjust grid size
+        opacity={0.3} // Adjust opacity
+        color="#6d28d9" // Use a hex color
+        animate={true} // Enable animation
       />
       <div className="absolute inset-0">Your content here</div>
     </div>
@@ -90,11 +126,11 @@ export default function Example() {
 
 ## Props
 
-| Prop      | Type              | Default        | Description                      |
-| --------- | ----------------- | -------------- | -------------------------------- |
-| gridType  | 'dots' \| 'lines' | 'dots'         | Type of grid pattern to display  |
-| gridSize  | number            | 20             | Size of the grid cells in pixels |
-| opacity   | number            | 0.2            | Opacity of the grid pattern      |
-| color     | string            | 'currentColor' | Color of the grid pattern        |
-| animate   | boolean           | false          | Enable subtle animation          |
-| className | string            | ""             | Additional CSS classes           |
+| Prop      | Type                                                         | Default        | Description                      |
+| --------- | ------------------------------------------------------------ | -------------- | -------------------------------- |
+| gridType  | 'dots' \| 'lines' \| 'squares' \| 'crosshatch' \| 'diamonds' | 'dots'         | Type of grid pattern to display  |
+| gridSize  | number                                                       | 20             | Size of the grid cells in pixels |
+| opacity   | number                                                       | 0.2            | Opacity of the grid pattern      |
+| color     | string                                                       | 'currentColor' | Color of the grid pattern        |
+| animate   | boolean                                                      | false          | Enable subtle animation          |
+| className | string                                                       | ""             | Additional CSS classes           |

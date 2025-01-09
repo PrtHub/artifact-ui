@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export interface GridPatternBackgroundProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  gridType?: "dots" | "lines";
+  gridType?: "dots" | "lines" | "squares" | "crosshatch" | "diamonds";
   gridSize?: number;
   opacity?: number;
   color?: string;
@@ -38,7 +38,13 @@ export default function GridPatternBackground({
               animate && [
                 gridType === "dots"
                   ? "animate-[dots-shift_20s_linear_infinite]"
-                  : "animate-[lines-shift_20s_linear_infinite]",
+                  : gridType === "lines"
+                  ? "animate-[lines-shift_20s_linear_infinite]"
+                  : gridType === "squares"
+                  ? "animate-[squares-shift_20s_linear_infinite]"
+                  : gridType === "crosshatch"
+                  ? "animate-[crosshatch-shift_20s_linear_infinite]"
+                  : "animate-[diamonds-shift_20s_linear_infinite]",
                 "origin-center",
               ],
             )}
@@ -49,31 +55,49 @@ export default function GridPatternBackground({
                 cy={gridSize / 2}
                 r={1}
                 fill={color}
-                fillOpacity={opacity}
+                style={{ opacity }}
               />
-            ) : (
+            ) : gridType === "lines" ? (
+              <path
+                d={`M ${gridSize} 0 L 0 0 L 0 ${gridSize}`}
+                fill="none"
+                stroke={color}
+                strokeWidth="0.5"
+                style={{ opacity }}
+              />
+            ) : gridType === "squares" ? (
+              <rect
+                x={gridSize / 4}
+                y={gridSize / 4}
+                width={gridSize / 2}
+                height={gridSize / 2}
+                fill={color}
+                style={{ opacity }}
+              />
+            ) : gridType === "crosshatch" ? (
               <>
-                <line
-                  x1="0"
-                  y1={gridSize / 2}
-                  x2={gridSize}
-                  y2={gridSize / 2}
+                <path
+                  d={`M ${gridSize} 0 L 0 ${gridSize}`}
+                  fill="none"
                   stroke={color}
-                  strokeOpacity={opacity}
                   strokeWidth="0.5"
-                  className="origin-center"
+                  style={{ opacity }}
                 />
-                <line
-                  x1={gridSize / 2}
-                  y1="0"
-                  x2={gridSize / 2}
-                  y2={gridSize}
+                <path
+                  d={`M 0 0 L ${gridSize} ${gridSize}`}
+                  fill="none"
                   stroke={color}
-                  strokeOpacity={opacity}
                   strokeWidth="0.5"
-                  className="origin-center"
+                  style={{ opacity }}
                 />
               </>
+            ) : (
+              // diamonds
+              <path
+                d={`M ${gridSize / 2} ${gridSize / 4} L ${gridSize * 3/4} ${gridSize / 2} L ${gridSize / 2} ${gridSize * 3/4} L ${gridSize / 4} ${gridSize / 2} Z`}
+                fill={color}
+                style={{ opacity }}
+              />
             )}
           </pattern>
         </defs>

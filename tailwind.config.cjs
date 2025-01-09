@@ -93,6 +93,9 @@ module.exports = {
         twinkle: "twinkle 3s ease-in-out infinite",
         "dots-shift": "dots-shift 20s linear infinite",
         "lines-shift": "lines-shift 20s linear infinite",
+        "squares-shift": "squares-shift 20s linear infinite",
+        "crosshatch-shift": "crosshatch-shift 20s linear infinite",
+        "diamonds-shift": "diamonds-shift 20s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -102,6 +105,58 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
+        },
+        "dots-shift": {
+          "0%, 100%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(180deg)",
+          },
+        },
+        "lines-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0)",
+          },
+          "50%": {
+            transform: "translateX(50%) translateY(50%)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0)",
+          },
+        },
+        "squares-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0) rotate(0deg)",
+          },
+          "50%": {
+            transform: "translateX(25%) translateY(25%) rotate(180deg)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0) rotate(360deg)",
+          },
+        },
+        "crosshatch-shift": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(45deg)",
+          },
+          "100%": {
+            transform: "rotate(0deg)",
+          },
+        },
+        "diamonds-shift": {
+          "0%": {
+            transform: "translateX(0) translateY(0) scale(1)",
+          },
+          "50%": {
+            transform: "translateX(25%) translateY(25%) scale(0.8)",
+          },
+          "100%": {
+            transform: "translateX(0) translateY(0) scale(1)",
+          },
         },
         "background-position-spin": {
           "0%": { backgroundPosition: "top center" },
@@ -161,7 +216,7 @@ module.exports = {
           "100%": {
             transform: "scale(2)",
             opacity: "0",
-          }
+          },
         },
         "shimmer-slide": {
           to: {
@@ -186,22 +241,22 @@ module.exports = {
           },
         },
         orbit: {
-          from: { 
-            transform: "translate(-50%, -50%) rotate(0deg)"
+          from: {
+            transform: "translate(-50%, -50%) rotate(0deg)",
           },
-          to: { 
-            transform: "translate(-50%, -50%) rotate(360deg)"
-          }
+          to: {
+            transform: "translate(-50%, -50%) rotate(360deg)",
+          },
         },
         twinkle: {
-          "0%, 100%": { 
+          "0%, 100%": {
             opacity: "0.2",
-            transform: "scale(0.8)"
+            transform: "scale(0.8)",
           },
           "50%": {
             opacity: "1",
-            transform: "scale(1.2)"
-          }
+            transform: "scale(1.2)",
+          },
         },
         shine: {
           "0%": {
@@ -234,53 +289,37 @@ module.exports = {
           "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
         "ink-spread": {
-          "0%": { 
+          "0%": {
             transform: "scale(0.95)",
             opacity: "0",
             filter: "blur(4px)",
           },
-          "100%": { 
+          "100%": {
             transform: "scale(1)",
             opacity: "1",
             filter: "blur(0px)",
           },
         },
         "ink-dissolve": {
-          "0%": { 
+          "0%": {
             transform: "scale(1)",
             opacity: "1",
             filter: "blur(0px)",
           },
-          "100%": { 
+          "100%": {
             transform: "scale(0.95)",
             opacity: "0",
             filter: "blur(4px)",
           },
         },
-        "dots-shift": {
-          "0%, 100%": {
-            transform: "rotate(0deg)",
-          },
-          "50%": {
-            transform: "rotate(180deg)",
-          }
-        },
-        "lines-shift": {
-          "0%": {
-            transform: "translateX(0) translateY(0)",
-          },
-          "50%": {
-            transform: "translateX(5px) translateY(5px)",
-          },
-          "100%": {
-            transform: "translateX(0) translateY(0)",
-          }
-        },
       },
       backgroundImage: {
-        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E\")",
-        "ink-texture": "radial-gradient(circle at center, var(--ink-color) 0%, transparent 70%)",
-        "ink-splatter": "radial-gradient(ellipse at center, var(--ink-color) 0%, transparent 70%), radial-gradient(circle at 30% 50%, var(--ink-color) 0%, transparent 60%), radial-gradient(circle at 70% 50%, var(--ink-color) 0%, transparent 60%)",
+        noise:
+          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        "ink-texture":
+          "radial-gradient(circle at center, var(--ink-color) 0%, transparent 70%)",
+        "ink-splatter":
+          "radial-gradient(ellipse at center, var(--ink-color) 0%, transparent 70%), radial-gradient(circle at 30% 50%, var(--ink-color) 0%, transparent 60%), radial-gradient(circle at 70% 50%, var(--ink-color) 0%, transparent 60%)",
       },
     },
   },
