@@ -1,0 +1,17 @@
+{
+  "name": "mesh-matrix",
+  "type": "registry:ui",
+  "dependencies": [
+    "@react-three/fiber",
+    "@react-three/drei",
+    "three"
+  ],
+  "files": [
+    {
+      "path": "ui/mesh-matrix.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef } from \"react\";\nimport { Canvas, useFrame, useThree } from \"@react-three/fiber\";\nimport { useVideoTexture } from \"@react-three/drei\";\nimport type { Mesh, BufferGeometry } from \"three\";\nimport * as THREE from \"three\";\n\ninterface MeshProps {\n  videoSrc: string;\n  meshColor: string;\n  meshDensity: number;\n  distortionIntensity: number;\n}\n\nfunction VideoMesh({\n  videoSrc,\n  meshColor,\n  meshDensity,\n  distortionIntensity,\n}: MeshProps) {\n  const meshRef = useRef<Mesh>(null);\n  const { viewport, mouse } = useThree();\n  const texture = useVideoTexture(videoSrc);\n\n  const geometry = new THREE.PlaneGeometry(\n    viewport.width,\n    viewport.height,\n    meshDensity,\n    meshDensity\n  );\n\n  useFrame(({ clock }) => {\n    if (!meshRef.current) return;\n\n    const positions = (meshRef.current.geometry as BufferGeometry).attributes\n      .position.array as Float32Array;\n\n    const scaledMouseX = (mouse.x * viewport.width) / 2;\n    const scaledMouseY = (mouse.y * viewport.height) / 2;\n    const time = clock.getElapsedTime();\n\n    for (let i = 0; i < positions.length; i += 3) {\n      const x = positions[i];\n      const y = positions[i + 1];\n\n      const distance = Math.sqrt(\n        Math.pow(x - scaledMouseX, 2) + Math.pow(y - scaledMouseY, 2)\n      );\n\n      const baseWave = Math.sin(distance * 0.3 + time) * 0.1;\n      const mouseInfluence = Math.max(0, 1 - distance / 2);\n      const distortion = mouseInfluence * distortionIntensity;\n\n      positions[i + 2] = baseWave + distortion * Math.sin(distance - time);\n    }\n\n    (\n      meshRef.current.geometry as BufferGeometry\n    ).attributes.position.needsUpdate = true;\n  });\n\n  return (\n    <mesh ref={meshRef} scale={[1, 1, 1]}>\n      <primitive attach=\"geometry\" object={geometry} />\n      <meshBasicMaterial\n        map={texture}\n        wireframe\n        color={meshColor}\n        transparent\n        opacity={0.3}\n        side={THREE.DoubleSide}\n      />\n    </mesh>\n  );\n}\n\ninterface MeshMatrixProps {\n  videoSrc: string;\n  meshColor?: string;\n  meshDensity?: number;\n  distortionIntensity?: number;\n  className?: string;\n}\n\nexport default function MeshMatrix({\n  videoSrc,\n  meshColor = \"#ffffff\",\n  meshDensity = 30,\n  distortionIntensity = 0.5,\n  className = \"\",\n}: MeshMatrixProps) {\n  return (\n    <div className={`relative h-full w-full ${className}`}>\n      <Canvas\n        camera={{ position: [0, 0, 5], fov: 75 }}\n        style={{ position: \"absolute\", zIndex: 10 }}\n      >\n        <VideoMesh\n          videoSrc={videoSrc}\n          meshColor={meshColor}\n          meshDensity={meshDensity}\n          distortionIntensity={distortionIntensity}\n        />\n      </Canvas>\n      <video\n        src={videoSrc}\n        className=\"absolute inset-0 h-full w-full object-cover dark:opacity-80\"\n        autoPlay\n        loop\n        muted\n        playsInline\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

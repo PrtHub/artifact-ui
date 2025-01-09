@@ -309,4 +309,10 @@ export const ui: Registry = [
     type: "registry:ui",
     files: ["ui/swarm-effect.tsx"],
   },
+  {
+    name: "mesh-matrix",
+    type: "registry:ui",
+    dependencies: ["@react-three/fiber", "@react-three/drei", "three"],
+    files: ["ui/mesh-matrix.tsx"],
+  },
 ];

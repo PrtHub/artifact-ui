@@ -1,0 +1,17 @@
+{
+  "name": "kinetic-mesh-hero",
+  "type": "registry:ui",
+  "dependencies": [
+    "@react-three/fiber",
+    "@react-three/drei",
+    "three"
+  ],
+  "files": [
+    {
+      "path": "ui/kinetic-mesh-hero.tsx",
+      "content": "'use client'\n\nimport React, { useRef } from 'react'\nimport { Canvas, useFrame, useThree } from '@react-three/fiber'\nimport { useVideoTexture, PerspectiveCamera } from '@react-three/drei'\nimport type { Mesh, BufferGeometry, PlaneGeometry } from 'three'\nimport * as THREE from 'three'\n\ninterface MeshProps {\n  videoSrc: string\n  meshColor: string\n  meshDensity: number\n  distortionIntensity: number\n}\n\nfunction VideoMesh({ videoSrc, meshColor, meshDensity, distortionIntensity }: MeshProps) {\n  const meshRef = useRef<Mesh>(null)\n  const { viewport, mouse } = useThree()\n  const texture = useVideoTexture(videoSrc)\n\n  // Create geometry with specified density\n  const geometry = new THREE.PlaneGeometry(\n    viewport.width,\n    viewport.height,\n    meshDensity,\n    meshDensity\n  )\n\n  useFrame(() => {\n    if (!meshRef.current) return\n\n    const positions = (meshRef.current.geometry as BufferGeometry)\n      .attributes.position.array as Float32Array\n\n    for (let i = 0; i < positions.length; i += 3) {\n      const x = positions[i] / viewport.width\n      const y = positions[i + 1] / viewport.height\n\n      const distance = Math.sqrt(\n        Math.pow(x - mouse.x, 2) +\n        Math.pow(y - mouse.y, 2)\n      )\n\n      const distortion = (1 / (1 + distance)) * distortionIntensity\n      positions[i + 2] = Math.sin(distance * 5) * distortion\n    }\n\n    (meshRef.current.geometry as BufferGeometry).attributes.position.needsUpdate = true\n  })\n\n  return (\n    <mesh ref={meshRef}>\n      <primitive attach=\"geometry\" object={geometry} />\n      <meshBasicMaterial\n        map={texture}\n        wireframe\n        color={meshColor}\n        transparent\n        opacity={0.5}\n      />\n    </mesh>\n  )\n}\n\ninterface KineticMeshHeroProps {\n  videoSrc: string\n  meshColor?: string\n  meshDensity?: number\n  distortionIntensity?: number\n  className?: string\n}\n\nexport default function KineticMeshHero({\n  videoSrc,\n  meshColor = '#ffffff',\n  meshDensity = 20,\n  distortionIntensity = 1,\n  className = '',\n}: KineticMeshHeroProps) {\n  return (\n    <div className={`relative h-screen w-full ${className}`}>\n      <Canvas>\n        <PerspectiveCamera makeDefault position={[0, 0, 10]} />\n        <VideoMesh\n          videoSrc={videoSrc}\n          meshColor={meshColor}\n          meshDensity={meshDensity}\n          distortionIntensity={distortionIntensity}\n        />\n      </Canvas>\n      <video\n        src={videoSrc}\n        className=\"absolute inset-0 h-full w-full object-cover opacity-50\"\n        autoPlay\n        loop\n        muted\n        playsInline\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Mesh Matrix",
+          href: "/docs/components/mesh-matrix",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Smart Dock",
           href: "/docs/components/smart-dock",
           items: [],

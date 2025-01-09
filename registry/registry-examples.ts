@@ -307,4 +307,10 @@ export const examples: Registry = [
     registryDependencies: ["swarm-effect"],
     files: ["example/swarm-effect-demo.tsx"],
   },
+  {
+    name: "mesh-matrix-demo",
+    type: "registry:example",
+    registryDependencies: ["mesh-matrix"],
+    files: ["example/mesh-matrix-demo.tsx"],
+  },
 ];

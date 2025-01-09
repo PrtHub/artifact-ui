@@ -39,12 +39,12 @@ export default function GridPatternBackground({
                 gridType === "dots"
                   ? "animate-[dots-shift_20s_linear_infinite]"
                   : gridType === "lines"
-                  ? "animate-[lines-shift_20s_linear_infinite]"
-                  : gridType === "squares"
-                  ? "animate-[squares-shift_20s_linear_infinite]"
-                  : gridType === "crosshatch"
-                  ? "animate-[crosshatch-shift_20s_linear_infinite]"
-                  : "animate-[diamonds-shift_20s_linear_infinite]",
+                    ? "animate-[lines-shift_20s_linear_infinite]"
+                    : gridType === "squares"
+                      ? "animate-[squares-shift_20s_linear_infinite]"
+                      : gridType === "crosshatch"
+                        ? "animate-[crosshatch-shift_20s_linear_infinite]"
+                        : "animate-[diamonds-shift_20s_linear_infinite]",
                 "origin-center",
               ],
             )}
@@ -94,7 +94,7 @@ export default function GridPatternBackground({
             ) : (
               // diamonds
               <path
-                d={`M ${gridSize / 2} ${gridSize / 4} L ${gridSize * 3/4} ${gridSize / 2} L ${gridSize / 2} ${gridSize * 3/4} L ${gridSize / 4} ${gridSize / 2} Z`}
+                d={`M ${gridSize / 2} ${gridSize / 4} L ${(gridSize * 3) / 4} ${gridSize / 2} L ${gridSize / 2} ${(gridSize * 3) / 4} L ${gridSize / 4} ${gridSize / 2} Z`}
                 fill={color}
                 style={{ opacity }}
               />

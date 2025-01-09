@@ -665,5 +665,20 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "mesh-matrix",
+    "type": "registry:ui",
+    "dependencies": [
+      "@react-three/fiber",
+      "@react-three/drei",
+      "three"
+    ],
+    "files": [
+      {
+        "path": "ui/mesh-matrix.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

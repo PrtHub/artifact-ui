@@ -566,6 +566,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "mesh-matrix": {
+      name: "mesh-matrix",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/mesh-matrix.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/mesh-matrix.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "canvas-button-demo": {
       name: "canvas-button-demo",
       type: "registry:example",
@@ -1122,6 +1133,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["swarm-effect"],
       files: ["registry/default/example/swarm-effect-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/swarm-effect-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "mesh-matrix-demo": {
+      name: "mesh-matrix-demo",
+      type: "registry:example",
+      registryDependencies: ["mesh-matrix"],
+      files: ["registry/default/example/mesh-matrix-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/mesh-matrix-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -1,0 +1,94 @@
+---
+title: Mesh Matrix
+description: A dynamic hero section featuring a background video with an interactive WebGL mesh overlay that responds to mouse movement.
+component: true
+---
+
+<ComponentPreview name="mesh-matrix-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @react-three/fiber @react-three/drei three @types/three
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/mesh-matrix.tsx`
+
+<ComponentSource name="mesh-matrix" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { MeshMatrix } from "@/components/ui/mesh-matrix";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import MeshMatrix from "@/components/ui/mesh-matrix";
+
+export default function HeroSection() {
+  return (
+    <MeshMatrix
+      videoSrc="/path-to-video.mp4"
+      meshColor="#4a90e2"
+      meshDensity={25}
+      distortionIntensity={1.5}
+    />
+  );
+}
+```
+
+## Props
+
+| Name                | Type   | Default   | Description                                                               |
+| ------------------- | ------ | --------- | ------------------------------------------------------------------------- |
+| videoSrc            | string | -         | The source URL of the video to be played in the background.               |
+| meshColor           | string | "#4a90e2" | The color of the WebGL mesh overlay.                                      |
+| meshDensity         | number | 25        | The density of the WebGL mesh overlay.                                    |
+| distortionIntensity | number | 1.5       | The intensity of the distortion effect applied to the WebGL mesh overlay. |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+import MeshMatrix from "@/components/ui/mesh-matrix";
+
+export default function HeroSection() {
+  return <MeshMatrix videoSrc="/path-to-video.mp4" />;
+}
+```
+
+### Customization
+
+```tsx
+import MeshMatrix from "@/components/ui/mesh-matrix";
+
+export default function HeroSection() {
+  return (
+    <div className="relative h-[600px] w-full">
+      <MeshMatrix
+        videoSrc="/path-to-video.mp4"
+        meshColor="#4a90e2"
+        meshDensity={25}
+        distortionIntensity={1.5}
+      />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="z-10 text-center text-white">
+          <h1 className="mb-4 text-5xl font-bold">Creative Studio</h1>
+          <p className="text-xl">Where imagination meets technology</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
