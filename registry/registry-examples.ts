@@ -2,6 +2,12 @@ import { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
   {
+    name: "perlin-noise-backdrop-demo",
+    type: "registry:example",
+    files: ["example/perlin-noise-backdrop-demo.tsx"],
+    registryDependencies: ["perlin-noise-backdrop"],
+  },
+  {
     name: "canvas-button-demo",
     type: "registry:example",
     registryDependencies: ["canvas-button"],

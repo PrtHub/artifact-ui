@@ -35,7 +35,7 @@ export interface Step {
 
 export interface StepperProps
   extends React.HTMLAttributes<HTMLDivElement>,
-  VariantProps<typeof stepperVariants> {
+    VariantProps<typeof stepperVariants> {
   currentStep: number;
   steps: Step[];
   onStepChange?: (step: number) => void;
@@ -189,8 +189,8 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                         // Hover effect
                         "hover:before:animate-[shimmer_1.5s_ease-in-out_infinite]",
                         "hover:after:animate-[shimmer-reverse_1s_linear_infinite]",
-                        "hover:glow:animate-[pulse_1s_ease-in-out_infinite]"
-                      ]
+                        "hover:glow:animate-[pulse_1s_ease-in-out_infinite]",
+                      ],
                     )}
                     aria-hidden="true"
                   >

@@ -1,5 +1,16 @@
 [
   {
+    "name": "perlin-noise-backdrop",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui/perlin-noise-backdrop.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "canvas-button",
     "type": "registry:ui",
     "dependencies": [

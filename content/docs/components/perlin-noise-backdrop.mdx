@@ -1,0 +1,46 @@
+---
+title: Perlin Noise Backdrop
+description: A mesmerizing animated backdrop with perlin noise and composite masking effects.
+component: true
+date: 2024-12-14
+author: ui
+published: true
+---
+
+<ComponentPreview name="perlin-noise-backdrop-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/perlin-noise-backdrop.tsx`
+
+<ComponentSource name="perlin-noise-backdrop" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { PerlinNoiseBackdrop } from "@/components/ui/perlin-noise-backdrop";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import PerlinNoiseBackdrop from "@/registry/default/ui/perlin-noise-backdrop";
+
+export default function Example() {
+  return <PerlinNoiseBackdrop variant="vibrant" text="Your Text" size="16px" />;
+}
+```
+
+## Props
+
+| Name        | Type     | Default   | Description                               |
+| ----------- | -------- | --------- | ----------------------------------------- |
+| `className` | `string` | `""`      | Custom class name for styling.            |
+| `size`      | `string` | `"20px"`  | The size of the noise mask.               |
+| `text`      | `string` | `"Noise"` | The text to be displayed on the backdrop. |

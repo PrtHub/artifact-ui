@@ -2,6 +2,12 @@ import { Registry } from "@/registry/schema";
 
 export const ui: Registry = [
   {
+    name: "perlin-noise-backdrop",
+    type: "registry:ui",
+    dependencies: [],
+    files: ["ui/perlin-noise-backdrop.tsx"],
+  },
+  {
     name: "canvas-button",
     type: "registry:ui",
     dependencies: ["framer-motion", "class-variance-authority"],

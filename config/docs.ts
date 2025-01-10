@@ -304,6 +304,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Perlin Noise Backdrop",
+          href: "/docs/components/perlin-noise-backdrop",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

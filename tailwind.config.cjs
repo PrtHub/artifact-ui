@@ -64,6 +64,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
+        flicker: "flicker 15s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         gradient: "gradient 8s linear infinite",
@@ -101,6 +102,16 @@ module.exports = {
         sparkle: "sparkle 1.5s linear infinite",
       },
       keyframes: {
+        flicker: {
+          "0%": {
+            maskPosition: "50% 50%, 256px 50%",
+            "-webkit-mask-position": "50% 50%, 256px 50%",
+          },
+          "100%": {
+            maskPosition: "50% 50%, -256px 50%",
+            "-webkit-mask-position": "50% 50%, -256px 50%",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -288,16 +299,16 @@ module.exports = {
           "100%": { backgroundPosition: "0% 50%" },
         },
         pulse: {
-          '0%, 100%': { opacity: '0.4' },
-          '50%': { opacity: '0.8' }
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
         },
         shimmer: {
-          '0%': { 'background-position': '200% 50%' },
-          '100%': { 'background-position': '-200% 50%' }
+          "0%": { "background-position": "200% 50%" },
+          "100%": { "background-position": "-200% 50%" },
         },
         sparkle: {
-          '0%': { 'background-position': '0% 50%, 100% 50%' },
-          '100%': { 'background-position': '100% 50%, 0% 50%' }
+          "0%": { "background-position": "0% 50%, 100% 50%" },
+          "100%": { "background-position": "100% 50%, 0% 50%" },
         },
         "ink-spread": {
           "0%": {
