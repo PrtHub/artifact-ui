@@ -35,7 +35,7 @@ export interface Step {
 
 export interface StepperProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof stepperVariants> {
+  VariantProps<typeof stepperVariants> {
   currentStep: number;
   steps: Step[];
   onStepChange?: (step: number) => void;
@@ -158,19 +158,49 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                 {showConnectors && index < steps.length - 1 && (
                   <div
                     className={cn(
-                      "absolute",
+                      "absolute overflow-hidden",
                       orientation === "vertical"
                         ? "left-6 top-12 h-full w-0.5"
                         : "left-[calc(50%-1px)] top-6 h-0.5 w-full",
                       index < currentStep
-                        ? "bg-primary dark:bg-primary"
+                        ? "bg-primary/20 dark:bg-primary/10"
                         : hasError
                           ? "bg-destructive/30 dark:bg-destructive/40"
                           : "bg-muted-foreground/25 dark:bg-muted-foreground/20",
-                      "transition-colors duration-200",
+                      "group transition-colors duration-200",
+                      index < currentStep && [
+                        // Primary rainbow gradient
+                        "before:absolute before:inset-0 before:animate-[shimmer_3s_ease-in-out_infinite] before:bg-[length:200%_100%]",
+                        "before:bg-gradient-to-r before:from-violet-600 before:via-fuchsia-600 before:to-violet-600",
+
+                        // Secondary flowing gradient
+                        "after:absolute after:inset-0 after:animate-[shimmer-reverse_2s_linear_infinite] after:bg-[length:200%_100%] after:opacity-70",
+                        "after:bg-gradient-to-r after:from-cyan-500 after:via-blue-500 after:to-cyan-500",
+
+                        // Glowing effect
+                        "glow:absolute glow:inset-0 glow:animate-[pulse_2s_ease-in-out_infinite]",
+                        "glow:bg-gradient-to-r glow:from-transparent glow:via-white/30 glow:to-transparent glow:blur-sm",
+
+                        // Sparkle effect
+                        "sparkle:absolute sparkle:inset-0 sparkle:animate-[sparkle_1.5s_linear_infinite]",
+                        "sparkle:bg-[radial-gradient(circle_2px_at_33%_50%,white,transparent),radial-gradient(circle_2px_at_66%_50%,white,transparent)]",
+                        "sparkle:opacity-30",
+
+                        // Hover effect
+                        "hover:before:animate-[shimmer_1.5s_ease-in-out_infinite]",
+                        "hover:after:animate-[shimmer-reverse_1s_linear_infinite]",
+                        "hover:glow:animate-[pulse_1s_ease-in-out_infinite]"
+                      ]
                     )}
                     aria-hidden="true"
-                  />
+                  >
+                    {index < currentStep && (
+                      <>
+                        <div className="glow absolute inset-0" />
+                        <div className="sparkle absolute inset-0" />
+                      </>
+                    )}
+                  </div>
                 )}
               </div>
 

@@ -83,7 +83,7 @@ module.exports = {
         "background-position-spin":
           "background-position-spin 3000ms infinite alternate",
         shine: "shine var(--duration) infinite linear",
-        pulse: "pulse var(--duration) ease-out infinite",
+        pulse: "pulse 2s ease-in-out infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
         "texture-float": "texture-float 8s ease-in-out infinite",
         "hue-rotate": "hue-rotate 10s linear infinite",
@@ -96,6 +96,9 @@ module.exports = {
         "squares-shift": "squares-shift 20s linear infinite",
         "crosshatch-shift": "crosshatch-shift 20s linear infinite",
         "diamonds-shift": "diamonds-shift 20s linear infinite",
+        shimmer: "shimmer 3s ease-in-out infinite",
+        "shimmer-reverse": "shimmer 2s linear infinite reverse",
+        sparkle: "sparkle 1.5s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -285,8 +288,16 @@ module.exports = {
           "100%": { backgroundPosition: "0% 50%" },
         },
         pulse: {
-          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
-          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.8' }
+        },
+        shimmer: {
+          '0%': { 'background-position': '200% 50%' },
+          '100%': { 'background-position': '-200% 50%' }
+        },
+        sparkle: {
+          '0%': { 'background-position': '0% 50%, 100% 50%' },
+          '100%': { 'background-position': '100% 50%, 0% 50%' }
         },
         "ink-spread": {
           "0%": {
