@@ -2,10 +2,10 @@ import { Registry } from "@/registry/schema";
 
 export const ui: Registry = [
   {
-    name: "perlin-noise-backdrop",
+    name: "cosmic-scene",
     type: "registry:ui",
     dependencies: [],
-    files: ["ui/perlin-noise-backdrop.tsx"],
+    files: ["ui/cosmic-scene.tsx"],
   },
   {
     name: "canvas-button",

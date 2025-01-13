@@ -64,7 +64,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        flicker: "flicker 15s linear infinite",
+        flicker: "flicker 30s cubic-bezier(0.45, 0, 0.55, 1) infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         gradient: "gradient 8s linear infinite",
@@ -100,16 +100,29 @@ module.exports = {
         shimmer: "shimmer 3s ease-in-out infinite",
         "shimmer-reverse": "shimmer 2s linear infinite reverse",
         sparkle: "sparkle 1.5s linear infinite",
+        "pulse-subtle": "pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
         flicker: {
           "0%": {
-            maskPosition: "50% 50%, 256px 50%",
-            "-webkit-mask-position": "50% 50%, 256px 50%",
+            maskPosition: "50% 50%, 4px 50%",
+            "-webkit-mask-position": "50% 50%, 4px 50%",
+          },
+          "25%": {
+            maskPosition: "50% 50%, 2.75px 50%",
+            "-webkit-mask-position": "50% 50%, 2.75px 50%",
+          },
+          "50%": {
+            maskPosition: "50% 50%, 1.5px 50%",
+            "-webkit-mask-position": "50% 50%, 1.5px 50%",
+          },
+          "75%": {
+            maskPosition: "50% 50%, 0.75px 50%",
+            "-webkit-mask-position": "50% 50%, 0.75px 50%",
           },
           "100%": {
-            maskPosition: "50% 50%, -256px 50%",
-            "-webkit-mask-position": "50% 50%, -256px 50%",
+            maskPosition: "50% 50%, 0 50%",
+            "-webkit-mask-position": "50% 50%, 0 50%",
           },
         },
         "accordion-down": {
@@ -333,6 +346,10 @@ module.exports = {
             opacity: "0",
             filter: "blur(4px)",
           },
+        },
+        "pulse-subtle": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.95", transform: "scale(0.98)" },
         },
       },
       backgroundImage: {

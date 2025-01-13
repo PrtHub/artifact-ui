@@ -1,0 +1,152 @@
+---
+title: Cosmic Scene
+description: A dynamic, interactive background component with animated noise patterns and gradient effects.
+component: true
+date: 2024-12-14
+author: ui
+published: true
+---
+
+<ComponentPreview name="cosmic-scene-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/cosmic-scene.tsx`
+
+<ComponentSource name="cosmic-scene" />
+
+<Step>Update your tailwind.config</Step>
+
+Add the following animations to your tailwind.config:
+
+```tsx
+{
+  theme: {
+    extend: {
+      animation: {
+        flicker: "flicker 30s cubic-bezier(0.45, 0, 0.55, 1) infinite",
+      },
+      keyframes: {
+        flicker: {
+          "0%": {
+            maskPosition: "50% 50%, 4px 50%",
+            "-webkit-mask-position": "50% 50%, 4px 50%",
+          },
+          "25%": {
+            maskPosition: "50% 50%, 2.75px 50%",
+            "-webkit-mask-position": "50% 50%, 2.75px 50%",
+          },
+          "50%": {
+            maskPosition: "50% 50%, 1.5px 50%",
+            "-webkit-mask-position": "50% 50%, 1.5px 50%",
+          },
+          "75%": {
+            maskPosition: "50% 50%, 0.75px 50%",
+            "-webkit-mask-position": "50% 50%, 0.75px 50%",
+          },
+          "100%": {
+            maskPosition: "50% 50%, 0 50%",
+            "-webkit-mask-position": "50% 50%, 0 50%",
+          },
+        },
+      },
+    },
+  },
+}
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import CosmicScene from "@/components/ui/cosmic-scene";
+```
+
+</Steps>
+
+## Usage
+
+### Basic Usage
+
+```tsx
+import { CosmicScene } from "@/components/ui/cosmic-scene";
+
+export default function HeroSection() {
+  return (
+    <CosmicScene>
+      <div className="relative z-10 text-white">
+        <h1>Your Content Here</h1>
+      </div>
+    </CosmicScene>
+  );
+}
+```
+
+### As Hero Section
+
+```tsx
+<CosmicScene colorScheme="sunset" overlayOpacity={0.2}>
+  <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
+    <h1 className="text-5xl font-bold">Transform Your Ideas</h1>
+    <p className="mt-4 max-w-2xl text-lg">Your hero content here</p>
+  </div>
+</CosmicScene>
+```
+
+### As Card Background
+
+```tsx
+<CosmicScene colorScheme="ocean" size="15px">
+  <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white">
+    <h3 className="text-2xl font-semibold">Card Title</h3>
+    <p className="mt-2">Card content here</p>
+  </div>
+</CosmicScene>
+```
+
+## Props
+
+| Prop           | Type                                       | Default   | Description                                          |
+| -------------- | ------------------------------------------ | --------- | ---------------------------------------------------- |
+| size           | string                                     | "20px"    | Size of the noise pattern dots                       |
+| colorScheme    | "default" \| "neon" \| "sunset" \| "ocean" | "default" | Predefined color schemes for the gradient background |
+| interactive    | boolean                                    | true      | Enable/disable mouse interaction effects             |
+| overlayOpacity | number                                     | 0         | Opacity of the dark overlay (0-1)                    |
+| children       | React.ReactNode                            | -         | Content to render inside the scene                   |
+| className      | string                                     | -         | Additional CSS classes                               |
+
+## Examples
+
+### Different Color Schemes
+
+```tsx
+<CosmicScene colorScheme="neon" />
+<CosmicScene colorScheme="sunset" />
+<CosmicScene colorScheme="ocean" />
+```
+
+### Custom Size
+
+```tsx
+<CosmicScene size="30px" />
+<CosmicScene size="10px" />
+```
+
+### With Overlay
+
+```tsx
+<CosmicScene overlayOpacity={0.4}>
+  <div className="relative z-10 text-white">Content with better contrast</div>
+</CosmicScene>
+```
+
+### Non-interactive
+
+```tsx
+<CosmicScene interactive={false}>
+  Static background without mouse effects
+</CosmicScene>
+```

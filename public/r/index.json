@@ -1,11 +1,11 @@
 [
   {
-    "name": "perlin-noise-backdrop",
+    "name": "cosmic-scene",
     "type": "registry:ui",
     "dependencies": [],
     "files": [
       {
-        "path": "ui/perlin-noise-backdrop.tsx",
+        "path": "ui/cosmic-scene.tsx",
         "type": "registry:ui"
       }
     ]

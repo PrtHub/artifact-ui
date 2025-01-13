@@ -5,12 +5,12 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
-    "perlin-noise-backdrop": {
-      name: "perlin-noise-backdrop",
+    "cosmic-scene": {
+      name: "cosmic-scene",
       type: "registry:ui",
       registryDependencies: undefined,
-      files: ["registry/default/ui/perlin-noise-backdrop.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/perlin-noise-backdrop.tsx")),
+      files: ["registry/default/ui/cosmic-scene.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/cosmic-scene.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -599,12 +599,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "perlin-noise-backdrop-demo": {
-      name: "perlin-noise-backdrop-demo",
+    "cosmic-scene-demo": {
+      name: "cosmic-scene-demo",
       type: "registry:example",
-      registryDependencies: ["perlin-noise-backdrop"],
-      files: ["registry/default/example/perlin-noise-backdrop-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/perlin-noise-backdrop-demo.tsx")),
+      registryDependencies: ["cosmic-scene"],
+      files: ["registry/default/example/cosmic-scene-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/cosmic-scene-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
