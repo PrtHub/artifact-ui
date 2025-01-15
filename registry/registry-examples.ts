@@ -74,12 +74,6 @@ export const examples: Registry = [
     files: ["example/canvas-drawer-demo.tsx"],
   },
   {
-    name: "texture-overlay-demo",
-    type: "registry:example",
-    registryDependencies: ["texture-overlay"],
-    files: ["example/texture-overlay-demo.tsx"],
-  },
-  {
     name: "canvas-grid-demo",
     type: "registry:example",
     registryDependencies: ["canvas-grid"],
@@ -156,12 +150,6 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["artistic-data-viz"],
     files: ["example/artistic-data-viz-demo.tsx"],
-  },
-  {
-    name: "artistic-statistics-card-demo",
-    type: "registry:example",
-    registryDependencies: ["artistic-statistics-card"],
-    files: ["example/artistic-statistics-card-demo.tsx"],
   },
   {
     name: "stepper-demo",
@@ -252,12 +240,6 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["creative-error-boundaries"],
     files: ["example/creative-error-boundaries-demo.tsx"],
-  },
-  {
-    name: "billing-history-timeline-demo",
-    type: "registry:example",
-    registryDependencies: ["billing-history-timeline"],
-    files: ["example/billing-history-timeline-demo.tsx"],
   },
   {
     name: "gradient-mesh-background-demo",

@@ -162,17 +162,6 @@
     ]
   },
   {
-    "name": "texture-overlay",
-    "type": "registry:ui",
-    "dependencies": [],
-    "files": [
-      {
-        "path": "ui/texture-overlay.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "canvas-grid",
     "type": "registry:ui",
     "dependencies": [
@@ -336,17 +325,6 @@
     "files": [
       {
         "path": "ui/artistic-data-viz.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "artistic-statistics-card",
-    "type": "registry:ui",
-    "dependencies": [],
-    "files": [
-      {
-        "path": "ui/artistic-statistics-card.tsx",
         "type": "registry:ui"
       }
     ]
@@ -557,19 +535,6 @@
     "files": [
       {
         "path": "ui/creative-error-boundaries.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "billing-history-timeline",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion"
-    ],
-    "files": [
-      {
-        "path": "ui/billing-history-timeline.tsx",
         "type": "registry:ui"
       }
     ]

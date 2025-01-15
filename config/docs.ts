@@ -76,11 +76,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Billing History Timeline",
-          href: "/docs/components/billing-history-timeline",
-          items: [],
-        },
-        {
           title: "Texture Blend Transitions",
           href: "/docs/components/texture-blend-transitions",
           items: [],
@@ -146,11 +141,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Texture Overlay",
-          href: "/docs/components/texture-overlay",
-          items: [],
-        },
-        {
           title: "Canvas Grid",
           href: "/docs/components/canvas-grid",
           items: [],
@@ -208,11 +198,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Artistic Data Viz",
           href: "/docs/components/artistic-data-viz",
-          items: [],
-        },
-        {
-          title: "Artistic Statistics Card",
-          href: "/docs/components/artistic-statistics-card",
           items: [],
         },
         {

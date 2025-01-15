@@ -77,12 +77,6 @@ export const ui: Registry = [
     files: ["ui/canvas-drawer.tsx"],
   },
   {
-    name: "texture-overlay",
-    type: "registry:ui",
-    dependencies: [],
-    files: ["ui/texture-overlay.tsx"],
-  },
-  {
     name: "canvas-grid",
     type: "registry:ui",
     dependencies: ["lucide-react"],
@@ -159,12 +153,6 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/artistic-data-viz.tsx"],
-  },
-  {
-    name: "artistic-statistics-card",
-    type: "registry:ui",
-    files: ["ui/artistic-statistics-card.tsx"],
-    dependencies: [],
   },
   {
     name: "stepper",
@@ -256,12 +244,6 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui/creative-error-boundaries.tsx"],
-  },
-  {
-    name: "billing-history-timeline",
-    type: "registry:ui",
-    dependencies: ["framer-motion"],
-    files: ["ui/billing-history-timeline.tsx"],
   },
   {
     name: "gradient-mesh-background",

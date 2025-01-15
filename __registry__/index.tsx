@@ -137,17 +137,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "texture-overlay": {
-      name: "texture-overlay",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/texture-overlay.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/texture-overlay.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "canvas-grid": {
       name: "canvas-grid",
       type: "registry:ui",
@@ -286,17 +275,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/ui/artistic-data-viz.tsx"],
       component: React.lazy(() => import("@/registry/default/ui/artistic-data-viz.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "artistic-statistics-card": {
-      name: "artistic-statistics-card",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/artistic-statistics-card.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/artistic-statistics-card.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -462,17 +440,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/ui/creative-error-boundaries.tsx"],
       component: React.lazy(() => import("@/registry/default/ui/creative-error-boundaries.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "billing-history-timeline": {
-      name: "billing-history-timeline",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/billing-history-timeline.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/billing-history-timeline.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -731,17 +698,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "texture-overlay-demo": {
-      name: "texture-overlay-demo",
-      type: "registry:example",
-      registryDependencies: ["texture-overlay"],
-      files: ["registry/default/example/texture-overlay-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/texture-overlay-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "canvas-grid-demo": {
       name: "canvas-grid-demo",
       type: "registry:example",
@@ -880,17 +836,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["artistic-data-viz"],
       files: ["registry/default/example/artistic-data-viz-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/artistic-data-viz-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "artistic-statistics-card-demo": {
-      name: "artistic-statistics-card-demo",
-      type: "registry:example",
-      registryDependencies: ["artistic-statistics-card"],
-      files: ["registry/default/example/artistic-statistics-card-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/artistic-statistics-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -1056,17 +1001,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["creative-error-boundaries"],
       files: ["registry/default/example/creative-error-boundaries-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/creative-error-boundaries-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "billing-history-timeline-demo": {
-      name: "billing-history-timeline-demo",
-      type: "registry:example",
-      registryDependencies: ["billing-history-timeline"],
-      files: ["registry/default/example/billing-history-timeline-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/billing-history-timeline-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
