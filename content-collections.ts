@@ -12,7 +12,7 @@ import { rehypeComponent } from "./lib/rehype-component";
 import { rehypeNpmCommand } from "./lib/rehype-npm-command";
 
 const prettyCodeOptions: Options = {
-  theme: "github-dark",
+  theme: "tokyo-night",
   getHighlighter: (options) =>
     createHighlighter({
       ...options,
