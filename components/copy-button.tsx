@@ -57,12 +57,12 @@ export function CopyButton({
           value,
           event
             ? {
-                name: event,
-                properties: {
-                  name: src,
-                  code: value,
-                },
-              }
+              name: event,
+              properties: {
+                name: src,
+                code: value,
+              },
+            }
             : undefined,
         );
         setHasCopied(true);
