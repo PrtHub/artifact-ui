@@ -30,10 +30,10 @@ export default function CosmicSceneDemo() {
         </CosmicScene>
       </div>
 
-      {/* Card with Backdrop Example */}
-      <div className="grid gap-6 px-4 md:grid-cols-2">
+      {/* Card Grid Example */}
+      <div className="grid gap-6 px-0 md:grid-cols-2">
         <div className="relative h-[400px] overflow-hidden rounded-xl">
-          <CosmicScene colorScheme="ocean" size="15px">
+          <CosmicScene colorScheme="aurora" size="15px">
             <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white">
               <h3 className="mb-2 text-2xl font-semibold">Design Services</h3>
               <p className="mb-4 text-gray-200">
@@ -51,7 +51,7 @@ export default function CosmicSceneDemo() {
         </div>
 
         <div className="relative h-[400px] overflow-hidden rounded-xl">
-          <CosmicScene colorScheme="sunset" size="15px">
+          <CosmicScene colorScheme="nebula" size="15px">
             <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white">
               <h3 className="mb-2 text-2xl font-semibold">Development</h3>
               <p className="mb-4 text-gray-200">

@@ -54,19 +54,16 @@ export const docsConfig: DocsConfig = {
           title: "Mesh Matrix",
           href: "/docs/components/mesh-matrix",
           items: [],
-          label: "New",
         },
         {
           title: "Blob Background",
           href: "/docs/components/blob-background",
           items: [],
-          label: "New",
         },
         {
           title: "Smart Dock",
           href: "/docs/components/smart-dock",
           items: [],
-          label: "New",
         },
         {
           title: "Expand Image",
@@ -302,13 +299,11 @@ export const docsConfig: DocsConfig = {
           title: "Swarm Effect",
           href: "/docs/components/swarm-effect",
           items: [],
-          label: "New",
         },
         {
           title: "Cosmic Scene",
           href: "/docs/components/cosmic-scene",
           items: [],
-          label: "New",
         },
       ],
     },
