@@ -7,7 +7,7 @@ export default function SwarmEffectDemo() {
         src="/placeholder.svg"
         particleSize={2}
         particleSpacing={4}
-        particleColor="hsl(280, 100%, 60%)"
+        particleColor="hsl(210, 100%, 60%)"
         displacementRadius={50}
         hoverEffect="scatter"
         className="h-[400px] w-full"
@@ -17,7 +17,7 @@ export default function SwarmEffectDemo() {
         src="/placeholder-dark.svg"
         particleSize={1.5}
         particleSpacing={3}
-        particleColor="hsl(170, 100%, 45%)"
+        particleColor="hsl(330, 100%, 50%)"
         displacementRadius={40}
         hoverEffect="gather"
         className="h-[400px] w-full"
@@ -27,7 +27,7 @@ export default function SwarmEffectDemo() {
         src="/placeholder-dark.svg"
         particleSize={2.5}
         particleSpacing={5}
-        particleColor="hsl(45, 100%, 50%)"
+        particleColor="hsl(160, 100%, 45%)"
         displacementRadius={40}
         hoverEffect="scatter"
         className="h-[400px] w-full"
