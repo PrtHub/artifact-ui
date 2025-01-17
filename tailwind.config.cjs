@@ -74,15 +74,13 @@ module.exports = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         "shiny-text": "shiny-text 8s infinite",
-        "shimmer-slide":
-          "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         rippling: "rippling var(--duration, 0.6s) ease-out",
         line: "line 2s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         orbit: "orbit 20s linear infinite",
-        "background-position-spin":
-          "background-position-spin 3000ms infinite alternate",
+        "background-position-spin": "background-position-spin 3000ms infinite alternate",
         shine: "shine var(--duration) infinite linear",
         pulse: "pulse 2s ease-in-out infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
@@ -99,8 +97,18 @@ module.exports = {
         "diamonds-shift": "diamonds-shift 20s linear infinite",
         shimmer: "shimmer 3s ease-in-out infinite",
         "shimmer-reverse": "shimmer 2s linear infinite reverse",
-        sparkle: "sparkle 1.5s linear infinite",
-        "pulse-subtle": "pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        starfall: "starfall 5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        aurora: "aurora 15s ease-in-out infinite",
+        "aurora-reverse": "aurora-reverse 20s ease-in-out infinite",
+        "aurora-shift": "aurora-shift 15s ease-in-out infinite",
+        "aurora-shift-alt": "aurora-shift-alt 20s ease-in-out infinite",
+        "pulse-subtle": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.95", transform: "scale(0.98)" },
+        },
+        "continuous-fall": "continuous-fall var(--fall-duration, 10s) linear infinite",
+        "nebula-shift": "nebula-shift 20s ease-in-out infinite",
+        "nebula-shift-reverse": "nebula-shift-reverse 25s ease-in-out infinite",
       },
       keyframes: {
         flicker: {
@@ -347,9 +355,91 @@ module.exports = {
             filter: "blur(4px)",
           },
         },
-        "pulse-subtle": {
-          "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: "0.95", transform: "scale(0.98)" },
+        starfall: {
+          "0%": {
+            transform: "translateY(-10vh) translateX(-15px) scale(0.2)",
+            opacity: "0",
+          },
+          "5%": {
+            opacity: "1",
+            transform: "translateY(-5vh) translateX(-10px) scale(1)",
+          },
+          "95%": {
+            opacity: "1",
+            transform: "translateY(90vh) translateX(10px) scale(1)",
+          },
+          "100%": {
+            transform: "translateY(110vh) translateX(15px) scale(0.2)",
+            opacity: "0",
+          },
+        },
+        aurora: {
+          "0%, 100%": {
+            transform: "translateY(0) scale(1.5, 1)",
+          },
+          "50%": {
+            transform: "translateY(-15%) scale(1.2, 1.2)",
+          },
+        },
+        "aurora-reverse": {
+          "0%, 100%": {
+            transform: "translateY(-15%) scale(1.2, 1.2)",
+          },
+          "50%": {
+            transform: "translateY(0) scale(1.5, 1)",
+          },
+        },
+        "aurora-shift": {
+          "0%, 100%": {
+            transform: "translate(0%, 0%) scale(1.2)",
+            opacity: "0.4",
+          },
+          "50%": {
+            transform: "translate(5%, 5%) scale(1.3)",
+            opacity: "0.6",
+          },
+        },
+        "aurora-shift-alt": {
+          "0%, 100%": {
+            transform: "translate(5%, 5%) scale(1.3)",
+            opacity: "0.6",
+          },
+          "50%": {
+            transform: "translate(0%, 0%) scale(1.2)",
+            opacity: "0.4",
+          },
+        },
+        rotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+        "continuous-fall": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+          },
+        },
+        "nebula-shift": {
+          "0%, 100%": {
+            transform: "translate(0%, 0%) scale(1.5)",
+          },
+          "50%": {
+            transform: "translate(10%, 10%) scale(1.2)",
+          },
+        },
+        "nebula-shift-reverse": {
+          "0%, 100%": {
+            transform: "translate(10%, 10%) scale(1.2)",
+          },
+          "50%": {
+            transform: "translate(0%, 0%) scale(1.5)",
+          },
         },
       },
       backgroundImage: {

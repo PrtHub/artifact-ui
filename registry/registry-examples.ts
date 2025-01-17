@@ -301,4 +301,10 @@ export const examples: Registry = [
     registryDependencies: ["blob-background"],
     files: ["example/blob-background-demo.tsx"],
   },
+  {
+    name: "starfall-demo",
+    type: "registry:example",
+    registryDependencies: ["starfall"],
+    files: ["example/starfall-demo.tsx"],
+  },
 ];

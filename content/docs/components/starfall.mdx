@@ -1,0 +1,236 @@
+---
+title: Starfall
+description: A beautiful animated starfall effect component with multiple themes and customization options.
+component: true
+---
+
+<ComponentPreview name="starfall-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/starfall.tsx`
+
+<ComponentSource name="starfall" />
+
+<Step>Update your tailwind.config</Step>
+
+Add the following animations to your `tailwind.config`:
+
+```tsx
+{
+  theme: {
+    extend: {
+    animation: {
+       starfall: "starfall 5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        aurora: "aurora 15s ease-in-out infinite",
+        "aurora-reverse": "aurora-reverse 20s ease-in-out infinite",
+        "aurora-shift": "aurora-shift 15s ease-in-out infinite",
+        "aurora-shift-alt": "aurora-shift-alt 20s ease-in-out infinite",
+        "pulse-subtle": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.95", transform: "scale(0.98)" },
+        },
+        "continuous-fall": "continuous-fall var(--fall-duration, 10s) linear infinite",
+        "nebula-shift": "nebula-shift 20s ease-in-out infinite",
+        "nebula-shift-reverse": "nebula-shift-reverse 25s ease-in-out infinite",
+      },
+      keyframes: {
+        starfall: {
+          "0%": {
+            transform: "translateY(-10vh) translateX(-15px) scale(0.2)",
+            opacity: "0",
+          },
+          "5%": {
+            opacity: "1",
+            transform: "translateY(-5vh) translateX(-10px) scale(1)",
+          },
+          "95%": {
+            opacity: "1",
+            transform: "translateY(90vh) translateX(10px) scale(1)",
+          },
+          "100%": {
+            transform: "translateY(110vh) translateX(15px) scale(0.2)",
+            opacity: "0",
+          },
+        },
+        aurora: {
+          "0%, 100%": {
+            transform: "translateY(0) scale(1.5, 1)",
+          },
+          "50%": {
+            transform: "translateY(-15%) scale(1.2, 1.2)",
+          },
+        },
+        "aurora-reverse": {
+          "0%, 100%": {
+            transform: "translateY(-15%) scale(1.2, 1.2)",
+          },
+          "50%": {
+            transform: "translateY(0) scale(1.5, 1)",
+          },
+        },
+        "aurora-shift": {
+          "0%, 100%": {
+            transform: "translate(0%, 0%) scale(1.2)",
+            opacity: "0.4",
+          },
+          "50%": {
+            transform: "translate(5%, 5%) scale(1.3)",
+            opacity: "0.6",
+          },
+        },
+        "aurora-shift-alt": {
+          "0%, 100%": {
+            transform: "translate(5%, 5%) scale(1.3)",
+            opacity: "0.6",
+          },
+          "50%": {
+            transform: "translate(0%, 0%) scale(1.2)",
+            opacity: "0.4",
+          },
+        },
+        rotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+        "continuous-fall": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+          },
+        },
+        "nebula-shift": {
+          "0%, 100%": {
+            transform: "translate(0%, 0%) scale(1.5)",
+          },
+          "50%": {
+            transform: "translate(10%, 10%) scale(1.2)",
+          },
+        },
+        "nebula-shift-reverse": {
+          "0%, 100%": {
+            transform: "translate(10%, 10%) scale(1.2)",
+          },
+          "50%": {
+            transform: "translate(0%, 0%) scale(1.5)",
+          },
+        },
+      }
+    },
+  },
+}
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import Starfall from "@/components/ui/starfall";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import Starfall from "@/components/ui/starfall";
+
+export default function Example() {
+  return (
+    <div className="h-[400px]">
+      <Starfall variant="cosmic" count={20} speed={1.5} />
+    </div>
+  );
+}
+```
+
+## Variants
+
+```tsx
+<Starfall variant="aurora" />
+<Starfall variant="neon" />
+<Starfall variant="ocean" />
+<Starfall variant="cosmic" />
+<Starfall variant="minimal" />
+<Starfall variant="gradient" />
+<Starfall variant="sunset" />
+<Starfall variant="forest" />
+```
+
+## Background Effects
+
+You can customize the background effects using these props:
+
+```tsx
+<Starfall
+  variant="cosmic"
+  showBackground={true} // Toggle background effects
+  backgroundStars={30} // Number of background stars
+  backgroundOpacity={0.3} // Background star opacity
+/>
+```
+
+## Custom Backgrounds
+
+The component works great with custom backgrounds:
+
+```tsx
+<div className="relative h-[400px]">
+  {/* Custom background image */}
+  <Image src="/your-image.jpg" alt="Background" fill className="object-cover" />
+
+  {/* Starfall overlay */}
+  <Starfall variant="minimal" showBackground={false} count={20} speed={1} />
+</div>
+```
+
+## Examples
+
+### Hero Section
+
+```tsx
+<div className="relative h-[500px]">
+  <Starfall
+    className="absolute inset-0"
+    variant="cosmic"
+    count={25}
+    speed={1.5}
+  />
+  <div className="relative flex h-full flex-col items-center justify-center text-white">
+    <h1>Your Hero Content</h1>
+  </div>
+</div>
+```
+
+### Feature Card
+
+```tsx
+<div className="relative overflow-hidden rounded-lg">
+  <Starfall className="h-[300px]" variant="aurora" count={15} speed={1} />
+  <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-6">
+    <h3>Card Title</h3>
+    <p>Card description</p>
+  </div>
+</div>
+```
+
+## Props
+
+| Prop                | Type                                                                                           | Default    | Description                                       |
+| ------------------- | ---------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------- |
+| `variant`           | `"cosmic" \| "aurora" \| "minimal" \| "gradient" \| "neon" \| "sunset" \| "ocean" \| "forest"` | `"cosmic"` | The visual theme of the starfall effect.          |
+| `count`             | `number`                                                                                       | `25`       | Number of falling stars to display.               |
+| `speed`             | `number`                                                                                       | `1`        | Animation speed multiplier for the falling stars. |
+| `showBackground`    | `boolean`                                                                                      | `true`     | Toggle the themed background and effects.         |
+| `backgroundStars`   | `number`                                                                                       | `30`       | Number of static background stars to display.     |
+| `backgroundOpacity` | `number`                                                                                       | `0.3`      | Opacity of the background stars (0-1).            |
+| `className`         | `string`                                                                                       | -          | Additional CSS classes to apply to the container. |

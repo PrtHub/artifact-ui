@@ -655,5 +655,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "starfall",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "ui/starfall.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

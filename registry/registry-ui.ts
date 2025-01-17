@@ -303,4 +303,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/blob-background.tsx"],
   },
+  {
+    name: "starfall",
+    type: "registry:ui",
+    files: ["ui/starfall.tsx"],
+    dependencies: [""],
+  },
 ];

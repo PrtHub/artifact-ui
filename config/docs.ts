@@ -285,6 +285,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/cosmic-scene",
           items: [],
         },
+        {
+          title: "Starfall",
+          href: "/docs/components/starfall",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
