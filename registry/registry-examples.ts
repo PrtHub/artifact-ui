@@ -50,12 +50,6 @@ export const examples: Registry = [
     files: ["example/brush-stroke-loader-demo.tsx"],
   },
   {
-    name: "canvas-slider-demo",
-    type: "registry:example",
-    registryDependencies: ["canvas-slider"],
-    files: ["example/canvas-slider-demo.tsx"],
-  },
-  {
     name: "art-board-layout-demo",
     type: "registry:example",
     registryDependencies: ["art-board-layout"],

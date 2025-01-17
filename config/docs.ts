@@ -151,11 +151,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Canvas Slider",
-          href: "/docs/components/canvas-slider",
-          items: [],
-        },
-        {
           title: "Sketch Accordion",
           href: "/docs/components/sketch-accordion",
           items: [],

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { CanvasSlider } from "@/registry/default/ui/canvas-slider";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -38,6 +37,7 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { format } from "date-fns";
+import { Slider } from "@/components/ui/slider";
 
 export interface TimelineStep {
   id: string;
@@ -338,12 +338,11 @@ export default function CanvasTimeline({
               </DropdownMenu>
 
               <div className="flex items-center gap-2">
-                <CanvasSlider
+                <Slider
                   value={[playbackSpeed]}
                   min={0.25}
                   max={4}
                   step={0.25}
-                  variant="default"
                   className="w-[100px]"
                   onValueChange={([value]) => setPlaybackSpeed(value)}
                 />
@@ -456,12 +455,11 @@ export default function CanvasTimeline({
           </ScrollArea>
 
           <div className="space-y-1">
-            <CanvasSlider
+            <Slider
               value={[currentStepIndex]}
               min={0}
               max={visibleSteps.length - 1}
               step={1}
-              variant="default"
               className="mt-2"
               onValueChange={([value]) => onStepChange?.(value)}
             />
