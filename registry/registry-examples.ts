@@ -313,4 +313,10 @@ export const examples: Registry = [
     registryDependencies: ["beam-portal"],
     files: ["example/beam-portal-demo.tsx"],
   },
+  {
+    name: "pulse-card-demo",
+    type: "registry:example",
+    registryDependencies: ["pulse-card"],
+    files: ["example/pulse-card-demo.tsx"],
+  },
 ];

@@ -1,0 +1,208 @@
+---
+title: Pulse Card
+description: An interactive card component with smooth hover animations, glowing borders, and variant colors.
+component: true
+---
+
+<ComponentPreview name="pulse-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/pulse-card.tsx`
+
+<ComponentSource name="pulse-card" />
+
+<Step>Update your tailwind.config</Step>
+
+Add the following animations to your tailwind.config:
+
+```tsx
+{
+  theme: {
+    extend: {
+      animation: {
+           tile: "tile 8s infinite",
+      },
+      keyframes: {
+        tile: {
+          "0%, 12.5%, 100%": { opacity: 1 },
+          "25%, 82.5%": { opacity: 0 },
+        },
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
+
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import PulseCard from "@/components/ui/pulse-card";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { Zap } from "lucide-react";
+import PulseCard from "@/components/ui/pulse-card";
+
+export default function Example() {
+  return (
+    <PulseCard
+      icon={<Zap />}
+      title="Lightning Fast"
+      description="Optimized for speed and performance"
+      variant="blue"
+      size="lg"
+      glowEffect={true}
+    />
+  );
+}
+```
+
+## Props
+
+| Name        | Type                                                 | Default   | Description                               |
+| ----------- | ---------------------------------------------------- | --------- | ----------------------------------------- |
+| icon        | ReactNode                                            | -         | The icon to display in the card.          |
+| title       | string                                               | -         | The title of the card.                    |
+| description | string                                               | -         | The description of the card.              |
+| variant     | "emerald" \| "blue" \| "purple" \| "amber" \| "rose" | "emerald" | The color variant of the card.            |
+| size        | "sm" \| "md" \| "lg"                                 | "md"      | The size of the card.                     |
+| glowEffect  | boolean                                              | false     | Enable the glow effect on the card.       |
+| interactive | boolean                                              | true      | Enable hover animations and interactions. |
+| hoverScale  | number                                               | 1.05      | The scale factor for the hover animation. |
+| className   | string                                               | -         | Additional CSS classes.                   |
+
+## Examples
+
+### Color Variants
+
+All available color variants of the card.
+
+```tsx
+<div className="grid grid-cols-2 gap-4">
+  <PulseCard
+    icon={<Zap />}
+    title="Emerald"
+    description="Default emerald variant"
+    variant="emerald"
+  />
+  <PulseCard
+    icon={<Moon />}
+    title="Blue"
+    description="Cool blue variant"
+    variant="blue"
+  />
+  <PulseCard
+    icon={<Star />}
+    title="Purple"
+    description="Rich purple variant"
+    variant="purple"
+  />
+  <PulseCard
+    icon={<Sun />}
+    title="Amber"
+    description="Warm amber variant"
+    variant="amber"
+  />
+  <PulseCard
+    icon={<Heart />}
+    title="Rose"
+    description="Vibrant rose variant"
+    variant="rose"
+  />
+</div>
+```
+
+### Sizes
+
+Available size variations.
+
+```tsx
+<div className="flex flex-col gap-4">
+  <PulseCard
+    icon={<Zap />}
+    title="Small Card"
+    description="Compact size for tight spaces"
+    size="sm"
+  />
+  <PulseCard
+    icon={<Zap />}
+    title="Medium Card"
+    description="Default balanced size"
+    size="md"
+  />
+  <PulseCard
+    icon={<Zap />}
+    title="Large Card"
+    description="Prominent size for key features"
+    size="lg"
+  />
+</div>
+```
+
+### With Glow Effect
+
+Cards with the glow effect enabled.
+
+```tsx
+<div className="grid grid-cols-2 gap-4">
+  <PulseCard
+    icon={<Sparkles />}
+    title="Glowing Card"
+    description="With glow effect enabled"
+    glowEffect={true}
+    variant="purple"
+  />
+  <PulseCard
+    icon={<Star />}
+    title="Another Glow"
+    description="Different color glow"
+    glowEffect={true}
+    variant="rose"
+  />
+</div>
+```
+
+### Custom Hover Scale
+
+Adjusting the hover scale animation.
+
+```tsx
+<div className="grid grid-cols-2 gap-4">
+  <PulseCard
+    icon={<ArrowUp />}
+    title="Subtle Hover"
+    description="Small scale increase"
+    hoverScale={1.01}
+  />
+  <PulseCard
+    icon={<ArrowUp />}
+    title="Dramatic Hover"
+    description="Larger scale increase"
+    hoverScale={1.05}
+  />
+</div>
+```
+
+### Non-interactive
+
+Cards without hover animations.
+
+```tsx
+<PulseCard
+  icon={<Lock />}
+  title="Static Card"
+  description="No hover animations"
+  interactive={false}
+/>
+```

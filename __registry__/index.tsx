@@ -577,6 +577,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "pulse-card": {
+      name: "pulse-card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/pulse-card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/pulse-card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1144,6 +1155,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["beam-portal"],
       files: ["registry/default/example/beam-portal-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/beam-portal-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "pulse-card-demo": {
+      name: "pulse-card-demo",
+      type: "registry:example",
+      registryDependencies: ["pulse-card"],
+      files: ["registry/default/example/pulse-card-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/pulse-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

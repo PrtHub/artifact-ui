@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Pulse Card",
+          href: "/docs/components/pulse-card",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Mesh Matrix",
           href: "/docs/components/mesh-matrix",
           items: [],

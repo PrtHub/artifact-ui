@@ -118,6 +118,7 @@ module.exports = {
           "continuous-fall var(--fall-duration, 10s) linear infinite",
         "nebula-shift": "nebula-shift 20s ease-in-out infinite",
         "nebula-shift-reverse": "nebula-shift-reverse 25s ease-in-out infinite",
+        tile: "tile 8s infinite",
       },
       keyframes: {
         flicker: {
@@ -526,6 +527,10 @@ module.exports = {
           to: {
             transform: "rotate(360deg)",
           },
+        },
+        tile: {
+          "0%, 12.5%, 100%": { opacity: 1 },
+          "25%, 82.5%": { opacity: 0 },
         },
       },
       backgroundImage: {

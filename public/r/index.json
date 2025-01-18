@@ -673,11 +673,24 @@
     "name": "beam-portal",
     "type": "registry:ui",
     "dependencies": [
-      "beam-lines"
+      ""
     ],
     "files": [
       {
         "path": "ui/beam-portal.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "pulse-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/pulse-card.tsx",
         "type": "registry:ui"
       }
     ]

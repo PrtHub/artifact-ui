@@ -2,7 +2,7 @@
   "name": "beam-portal",
   "type": "registry:ui",
   "dependencies": [
-    "beam-lines"
+    ""
   ],
   "files": [
     {

@@ -313,6 +313,12 @@ export const ui: Registry = [
     name: "beam-portal",
     type: "registry:ui",
     files: ["ui/beam-portal.tsx"],
-    dependencies: ["beam-lines"],
+    dependencies: [""],
+  },
+  {
+    name: "pulse-card",
+    type: "registry:ui",
+    files: ["ui/pulse-card.tsx"],
+    dependencies: ["framer-motion"],
   },
 ];
