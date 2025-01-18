@@ -291,6 +291,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Beam Portal",
+          href: "/docs/components/beam-portal",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

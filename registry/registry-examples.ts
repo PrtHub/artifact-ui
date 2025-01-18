@@ -307,4 +307,10 @@ export const examples: Registry = [
     registryDependencies: ["starfall"],
     files: ["example/starfall-demo.tsx"],
   },
+  {
+    name: "beam-portal-demo",
+    type: "registry:example",
+    registryDependencies: ["beam-portal"],
+    files: ["example/beam-portal-demo.tsx"],
+  },
 ];

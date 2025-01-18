@@ -1,0 +1,298 @@
+---
+title: Beam Portal
+description: A dynamic portal effect component with customizable patterns and colors.
+component: true
+date: 2024-12-09
+author: ui
+published: true
+---
+
+<ComponentPreview name="beam-portal-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/beam-portal.tsx`
+
+<ComponentSource name="beam-portal" />
+
+<Step>Update your tailwind.config</Step>
+
+Add the following animations to your `tailwind.config`:
+
+```tsx
+{
+  theme: {
+    extend: {
+      animation: {
+       "beam-drop": "beam-drop 7s cubic-bezier(0.4, 0.26, 0, 0.97) infinite",
+        "beam-wave": "beam-wave 10s ease-in-out infinite",
+        "beam-pulse": "beam-pulse 4s ease-in-out infinite",
+        "beam-zigzag": "beam-zigzag 6s ease-in-out infinite",
+        "beam-shimmer": "beam-shimmer 7s linear infinite",
+        spin: "spin 10s linear infinite",
+      },
+      keyframes: {
+        "beam-drop": {
+          "0%": {
+            opacity: 0,
+            "--offset": "-100%",
+          },
+          "5%": {
+            opacity: 1,
+          },
+          "90%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+            "--offset": "100%",
+          },
+        },
+        "beam-wave": {
+          "0%": {
+            "--wave-offset": "-20px",
+          },
+          "50%": {
+            "--wave-offset": "20px",
+          },
+          "100%": {
+            "--wave-offset": "-20px",
+          },
+        },
+        "beam-pulse": {
+          "0%": {
+            opacity: 0.3,
+            "--pulse-scale": "0.95",
+          },
+          "50%": {
+            opacity: 1,
+            "--pulse-scale": "1.05",
+          },
+          "100%": {
+            opacity: 0.3,
+            "--pulse-scale": "0.95",
+          },
+        },
+        "beam-zigzag": {
+          "0%": {
+            "--zigzag-offset": "-20px",
+          },
+          "25%": {
+            "--zigzag-offset": "20px",
+          },
+          "50%": {
+            "--zigzag-offset": "-20px",
+          },
+          "75%": {
+            "--zigzag-offset": "20px",
+          },
+          "100%": {
+            "--zigzag-offset": "-20px",
+          },
+        },
+        "beam-shimmer": {
+          "0%": {
+            opacity: 0.3,
+          },
+          "50%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0.3,
+          },
+        },
+        spin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+    },
+  },
+}
+
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import BeamPortal from "@/components/ui/beam-portal";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import BeamPortal from "@/components/ui/beam-portal";
+
+export default function Example() {
+  return (
+    <BeamPortal
+      colorScheme="matrix"
+      pattern="radial"
+      intensity="active"
+      shimmer={true}
+    >
+      <div className="text-center">
+        <h3 className="text-2xl font-bold text-green-400">Matrix Portal</h3>
+        <p className="text-zinc-300">Digital rain effect</p>
+      </div>
+    </BeamPortal>
+  );
+}
+```
+
+## Core Features
+
+### 1. Color Schemes
+
+Eight predefined themes to match your design:
+
+```tsx
+<BeamPortal colorScheme="cyber">{/* Content */}</BeamPortal>
+```
+
+Available schemes:
+
+- `matrix`: Digital green cyberpunk
+- `sunset`: Warm orange to purple
+- `aurora`: Northern lights effect
+- `cosmic`: Deep space ambiance
+- `cyber`: Neon blue tech theme
+- `frost`: Ice-cold crystalline
+- `fire`: Dynamic flame effect
+- `void`: Dark purple mystique
+
+### 2. Animation Patterns
+
+Five distinct beam patterns:
+
+```tsx
+<BeamPortal pattern="wave">{/* Content */}</BeamPortal>
+```
+
+- `linear`: Straight beam paths
+- `radial`: Circular rotation
+- `wave`: Fluid undulation
+- `pulse`: Energy pulsation
+- `zigzag`: Lightning patterns
+
+### 3. Intensity Levels
+
+Control the animation energy:
+
+```tsx
+<BeamPortal intensity="intense">{/* Content */}</BeamPortal>
+```
+
+- `calm`: Subtle, slow movements
+- `active`: Balanced animation
+- `intense`: High-energy motion
+
+## Props
+
+| Prop          | Type          | Default    | Description              |
+| ------------- | ------------- | ---------- | ------------------------ |
+| `colorScheme` | `ColorScheme` | `"aurora"` | Portal color theme       |
+| `pattern`     | `Pattern`     | `"radial"` | Animation pattern        |
+| `intensity`   | `Intensity`   | `"active"` | Animation intensity      |
+| `reverse`     | `boolean`     | `false`    | Reverse animation        |
+| `shimmer`     | `boolean`     | `false`    | Add shimmer effect       |
+| `pulse`       | `boolean`     | `false`    | Add pulse effect         |
+| `randomize`   | `boolean`     | `false`    | Random beam distribution |
+| `blurAmount`  | `number`      | `6`        | Glow blur radius (px)    |
+
+## Examples
+
+### Hero Section
+
+```tsx
+<BeamPortal
+  colorScheme="aurora"
+  pattern="radial"
+  intensity="active"
+  shimmer={true}
+  className="min-h-[400px]"
+>
+  <div className="max-w-2xl space-y-6 text-center">
+    <h1 className="text-5xl font-bold">
+      Next Generation
+      <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+        Platform
+      </span>
+    </h1>
+    <p className="text-xl text-zinc-300">
+      Transform your workflow with cutting-edge solutions
+    </p>
+  </div>
+</BeamPortal>
+```
+
+### Feature Card
+
+```tsx
+<BeamPortal colorScheme="cyber" pattern="wave" intensity="calm" shimmer={true}>
+  <div className="space-y-4 text-center">
+    <div className="mx-auto h-12 w-12 rounded-full bg-cyan-500/20 p-2">
+      <IconComponent className="h-8 w-8 text-cyan-400" />
+    </div>
+    <h3 className="text-xl font-bold text-cyan-400">Fast Processing</h3>
+    <p className="text-zinc-300">
+      Lightning-fast data processing with optimized algorithms
+    </p>
+  </div>
+</BeamPortal>
+```
+
+### Call to Action
+
+```tsx
+<BeamPortal
+  colorScheme="matrix"
+  pattern="radial"
+  intensity="intense"
+  pulse={true}
+  shimmer={true}
+>
+  <div className="space-y-6 text-center">
+    <h3 className="text-3xl font-bold text-green-400">Ready to Get Started?</h3>
+    <p className="text-lg text-zinc-300">
+      Join thousands of companies transforming their business
+    </p>
+    <div className="flex justify-center gap-4">
+      <Button size="lg">Start Free Trial</Button>
+      <Button size="lg" variant="outline">
+        Schedule Demo
+      </Button>
+    </div>
+  </div>
+</BeamPortal>
+```
+
+## Customization
+
+### Theme Combinations
+
+Mix and match effects for unique visuals:
+
+```tsx
+<BeamPortal
+  colorScheme="void"
+  pattern="zigzag"
+  intensity="intense"
+  shimmer={true}
+  pulse={true}
+  randomize={true}
+  blurAmount={10}
+>
+  {/* Creates a dynamic void portal effect */}
+</BeamPortal>
+```

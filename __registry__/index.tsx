@@ -566,6 +566,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "beam-portal": {
+      name: "beam-portal",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/beam-portal.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/beam-portal.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1122,6 +1133,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["starfall"],
       files: ["registry/default/example/starfall-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/starfall-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "beam-portal-demo": {
+      name: "beam-portal-demo",
+      type: "registry:example",
+      registryDependencies: ["beam-portal"],
+      files: ["registry/default/example/beam-portal-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/beam-portal-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -668,5 +668,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "beam-portal",
+    "type": "registry:ui",
+    "dependencies": [
+      "beam-lines"
+    ],
+    "files": [
+      {
+        "path": "ui/beam-portal.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

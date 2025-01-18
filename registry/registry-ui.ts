@@ -309,4 +309,10 @@ export const ui: Registry = [
     files: ["ui/starfall.tsx"],
     dependencies: [""],
   },
+  {
+    name: "beam-portal",
+    type: "registry:ui",
+    files: ["ui/beam-portal.tsx"],
+    dependencies: ["beam-lines"],
+  },
 ];

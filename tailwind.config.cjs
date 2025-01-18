@@ -67,6 +67,12 @@ module.exports = {
         flicker: "flicker 30s cubic-bezier(0.45, 0, 0.55, 1) infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "beam-drop": "beam-drop 7s cubic-bezier(0.4, 0.26, 0, 0.97) infinite",
+        "beam-wave": "beam-wave 10s ease-in-out infinite",
+        "beam-pulse": "beam-pulse 4s ease-in-out infinite",
+        "beam-zigzag": "beam-zigzag 6s ease-in-out infinite",
+        "beam-shimmer": "beam-shimmer 7s linear infinite",
+        spin: "spin 10s linear infinite",
         gradient: "gradient 8s linear infinite",
         meteor: "meteor 5s linear infinite",
         grid: "grid 15s linear infinite",
@@ -74,13 +80,15 @@ module.exports = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         "shiny-text": "shiny-text 8s infinite",
-        "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "shimmer-slide":
+          "shimmer-slide var(--speed) ease-in-out infinite alternate",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         rippling: "rippling var(--duration, 0.6s) ease-out",
         line: "line 2s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         orbit: "orbit 20s linear infinite",
-        "background-position-spin": "background-position-spin 3000ms infinite alternate",
+        "background-position-spin":
+          "background-position-spin 3000ms infinite alternate",
         shine: "shine var(--duration) infinite linear",
         pulse: "pulse 2s ease-in-out infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
@@ -106,7 +114,8 @@ module.exports = {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.95", transform: "scale(0.98)" },
         },
-        "continuous-fall": "continuous-fall var(--fall-duration, 10s) linear infinite",
+        "continuous-fall":
+          "continuous-fall var(--fall-duration, 10s) linear infinite",
         "nebula-shift": "nebula-shift 20s ease-in-out infinite",
         "nebula-shift-reverse": "nebula-shift-reverse 25s ease-in-out infinite",
       },
@@ -439,6 +448,83 @@ module.exports = {
           },
           "50%": {
             transform: "translate(0%, 0%) scale(1.5)",
+          },
+        },
+        "beam-drop": {
+          "0%": {
+            opacity: 0,
+            "--offset": "-100%",
+          },
+          "5%": {
+            opacity: 1,
+          },
+          "90%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+            "--offset": "100%",
+          },
+        },
+        "beam-wave": {
+          "0%": {
+            "--wave-offset": "-20px",
+          },
+          "50%": {
+            "--wave-offset": "20px",
+          },
+          "100%": {
+            "--wave-offset": "-20px",
+          },
+        },
+        "beam-pulse": {
+          "0%": {
+            opacity: 0.3,
+            "--pulse-scale": "0.95",
+          },
+          "50%": {
+            opacity: 1,
+            "--pulse-scale": "1.05",
+          },
+          "100%": {
+            opacity: 0.3,
+            "--pulse-scale": "0.95",
+          },
+        },
+        "beam-zigzag": {
+          "0%": {
+            "--zigzag-offset": "-20px",
+          },
+          "25%": {
+            "--zigzag-offset": "20px",
+          },
+          "50%": {
+            "--zigzag-offset": "-20px",
+          },
+          "75%": {
+            "--zigzag-offset": "20px",
+          },
+          "100%": {
+            "--zigzag-offset": "-20px",
+          },
+        },
+        "beam-shimmer": {
+          "0%": {
+            opacity: 0.3,
+          },
+          "50%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0.3,
+          },
+        },
+        spin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
           },
         },
       },
