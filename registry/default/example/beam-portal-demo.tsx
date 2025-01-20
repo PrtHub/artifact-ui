@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function BeamPortalDemo() {
   return (
-    <div className="space-y-32">
+    <div className="z-30 space-y-32">
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-black dark:text-white">
           Hero Section Examples

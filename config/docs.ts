@@ -295,13 +295,11 @@ export const docsConfig: DocsConfig = {
           title: "Starfall",
           href: "/docs/components/starfall",
           items: [],
-          label: "New",
         },
         {
           title: "Beam Portal",
           href: "/docs/components/beam-portal",
           items: [],
-          label: "New",
         },
       ],
     },

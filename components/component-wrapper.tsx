@@ -15,7 +15,7 @@ const ComponentWrapper = ({ className, children }: ComponentWrapperProps) => {
       <div
         className={cn(
           `absolute inset-0 size-full`,
-          `bg-[radial-gradient(#00000055_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]`,
+          `bg-[linear-gradient(45deg,#ffffff,#f0f0f0)] dark:bg-[linear-gradient(45deg,#000000,#080808)]`,
           "lab-bg [background-size:16px_16px]",
         )}
       />
