@@ -588,6 +588,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "ghost-text": {
+      name: "ghost-text",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/ghost-text.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/ghost-text.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1166,6 +1177,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["pulse-card"],
       files: ["registry/default/example/pulse-card-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/pulse-card-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "ghost-text-demo": {
+      name: "ghost-text-demo",
+      type: "registry:example",
+      registryDependencies: ["ghost-text"],
+      files: ["registry/default/example/ghost-text-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/ghost-text-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -321,4 +321,10 @@ export const ui: Registry = [
     files: ["ui/pulse-card.tsx"],
     dependencies: ["framer-motion"],
   },
+  {
+    name: "ghost-text",
+    type: "registry:ui",
+    files: ["ui/ghost-text.tsx"],
+    dependencies: ["framer-motion"],
+  },
 ];

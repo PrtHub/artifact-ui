@@ -694,5 +694,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "ghost-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/ghost-text.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

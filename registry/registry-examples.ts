@@ -319,4 +319,10 @@ export const examples: Registry = [
     registryDependencies: ["pulse-card"],
     files: ["example/pulse-card-demo.tsx"],
   },
+  {
+    name: "ghost-text-demo",
+    type: "registry:example",
+    registryDependencies: ["ghost-text"],
+    files: ["example/ghost-text-demo.tsx"],
+  },
 ];

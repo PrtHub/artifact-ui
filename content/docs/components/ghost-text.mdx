@@ -1,0 +1,92 @@
+---
+title: Ghost Text
+description: A text animation component that transitions between blurred and crisp states, with dark and light mode support.
+component: true
+---
+
+<ComponentPreview name="ghost-text-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/ghost-text.tsx`
+
+<ComponentSource name="ghost-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import GhostText from "@/components/ui/ghost-text";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import GhostText from "@/components/ui/ghost-text";
+
+export default function Example() {
+  return (
+    <GhostText
+      text="Creativity blooms in the digital garden"
+      duration={10}
+      wordDelay={0.1}
+      blurRadius={100}
+      fontSize={300}
+      sequential={true}
+    />
+  );
+}
+```
+
+## Props
+
+| Prop         | Type             | Default                              | Description                                  |
+| ------------ | ---------------- | ------------------------------------ | -------------------------------------------- |
+| `text`       | `string`         | Required                             | The text to animate                          |
+| `className`  | `string`         | -                                    | Additional CSS classes                       |
+| `duration`   | `number`         | `10`                                 | Duration of animation in seconds             |
+| `wordDelay`  | `number`         | `0.1`                                | Delay between each word in seconds           |
+| `textColor`  | `string`         | Dark: white, Light: zinc-800         | Optional override for text color             |
+| `blurColor`  | `string`         | Same as text color                   | Optional override for blur effect color      |
+| `blurRadius` | `number`         | `100`                                | Maximum blur radius in pixels                |
+| `fontSize`   | `number`         | `400`                                | Font size in percentage (e.g., 400 for 400%) |
+| `fontWeight` | `number\|string` | `700`                                | Font weight                                  |
+| `timings`    | `number[]`       | `[0, 0.05, 0.15, 0.2, 0.8, 0.95, 1]` | Custom timing array for animation keyframes  |
+| `sequential` | `boolean`        | `true`                               | Enable sequential word animation             |
+
+## Examples
+
+### Basic Usage with Dark/Light Mode Support
+
+```tsx
+<GhostText text="Adapts to theme" />
+```
+
+### Custom Colors Override
+
+```tsx
+<GhostText text="Custom colors" textColor="#00ff00" blurColor="#00ff00" />
+```
+
+### Fast Animation
+
+```tsx
+<GhostText text="Quick blur" duration={5} wordDelay={0.05} blurRadius={50} />
+```
+
+### Simultaneous Animation
+
+```tsx
+<GhostText text="All at once" sequential={false} />
+```
+
+### Large Text
+
+```tsx
+<GhostText text="Big text" fontSize={600} blurRadius={150} />
+```

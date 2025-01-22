@@ -1,0 +1,15 @@
+{
+  "name": "ghost-text",
+  "type": "registry:ui",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "ui/ghost-text.tsx",
+      "content": "import React from \"react\";\nimport { motion } from \"framer-motion\";\nimport { cn } from \"@/lib/utils\";\n\ninterface GhostTextProps {\n  text: string;\n  className?: string;\n  duration?: number;\n  wordDelay?: number;\n  textColor?: string;\n  blurColor?: string;\n  blurRadius?: number;\n  fontSize?: number;\n  fontWeight?: number | string;\n  timings?: number[];\n  sequential?: boolean;\n}\n\nexport default function GhostText({\n  text,\n  className,\n  duration = 10,\n  wordDelay = 0.1,\n  textColor,\n  blurColor,\n  blurRadius = 100,\n  fontSize = 400,\n  fontWeight = 700,\n  timings = [0, 0.05, 0.15, 0.2, 0.8, 0.95, 1],\n  sequential = true,\n}: GhostTextProps) {\n  const words = text.split(\" \");\n\n  return (\n    <p\n      className={cn(\"text-center\", className)}\n      style={{\n        fontSize: `${fontSize}%`,\n        fontWeight,\n        color: textColor,\n      }}\n    >\n      {words.map((word, index) => (\n        <motion.span\n          key={index}\n          style={{\n            [\"--blur-color\" as string]: \"rgb(var(--text-color))\",\n          }}\n          className=\"mx-1 inline-block text-transparent [--text-color:15_23_42] dark:[--text-color:255_255_255]\"\n          animate={{\n            opacity: [0, 0, 1, 1, 1, 1, 0],\n            textShadow: [\n              `0 0 ${blurRadius}px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 ${blurRadius * 0.9}px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 0px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 0px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 0px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 ${blurRadius * 0.9}px ${blurColor || \"var(--blur-color)\"}`,\n              `0 0 ${blurRadius}px ${blurColor || \"var(--blur-color)\"}`,\n            ],\n          }}\n          transition={{\n            duration,\n            times: timings,\n            ease: \"easeOut\",\n            repeat: Infinity,\n            delay: sequential ? index * wordDelay : 0,\n          }}\n        >\n          {word}\n        </motion.span>\n      ))}\n    </p>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

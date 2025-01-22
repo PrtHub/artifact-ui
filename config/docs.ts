@@ -301,6 +301,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/beam-portal",
           items: [],
         },
+        {
+          title: "Ghost Text",
+          href: "/docs/components/ghost-text",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
