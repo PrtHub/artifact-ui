@@ -1,0 +1,111 @@
+---
+title: Infinite Scroll
+description: A smooth infinite scrolling animation component for tags, text, or any content.
+component: true
+---
+
+<ComponentPreview name="infinite-scroll-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/infinite-scroll.tsx`
+
+<ComponentSource name="infinite-scroll" />
+
+<Step>Add the following animations to your Tailwind CSS config.</Step>
+
+```js title="tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        loop: "loop var(--duration) linear infinite",
+        "loop-reverse": "loop var(--duration) linear infinite reverse",
+      },
+    },
+  },
+};
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { InfiniteScroll } from "@/components/ui/infinite-scroll";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { InfiniteScroll } from "@/components/ui/infinite-scroll";
+
+const tags = [
+  { id: "1", label: "JavaScript" },
+  { id: "2", label: "React" },
+  { id: "3", label: "TypeScript" },
+  // ...more tags
+];
+
+export default function Example() {
+  return <InfiniteScroll tags={tags} duration={15000} direction="normal" />;
+}
+```
+
+## Props
+
+| Prop             | Type                  | Default     | Description                            |
+| ---------------- | --------------------- | ----------- | -------------------------------------- |
+| `tags`           | `Tag[]`               | Required    | Array of tag objects with id and label |
+| `className`      | `string`              | -           | Additional CSS classes                 |
+| `duration`       | `number`              | `15000`     | Duration of animation in milliseconds  |
+| `direction`      | `"normal"\|"reverse"` | `"normal"`  | Direction of the scroll animation      |
+| `containerColor` | `string`              | `"#1e293b"` | Background color for fade effect       |
+| `showFade`       | `boolean`             | `true`      | Show fade effect at the edges          |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<InfiniteScroll tags={tags} />
+```
+
+### Custom Duration and Direction
+
+```tsx
+<InfiniteScroll tags={tags} duration={20000} direction="reverse" />
+```
+
+### Without Fade Effect
+
+```tsx
+<InfiniteScroll tags={tags} showFade={false} />
+```
+
+### Custom Container Color
+
+```tsx
+<InfiniteScroll tags={tags} containerColor="#000000" />
+```
+
+### Multiple Rows
+
+```tsx
+<div className="space-y-8">
+  <InfiniteScroll tags={tags} direction="normal" />
+  <InfiniteScroll tags={tags} direction="reverse" duration={20000} />
+  <InfiniteScroll tags={tags} direction="normal" duration={10000} />
+</div>
+```

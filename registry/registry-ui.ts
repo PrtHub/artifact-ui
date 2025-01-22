@@ -327,4 +327,10 @@ export const ui: Registry = [
     files: ["ui/ghost-text.tsx"],
     dependencies: ["framer-motion"],
   },
+  {
+    name: "infinite-scroll",
+    type: "registry:ui",
+    files: ["ui/infinite-scroll.tsx"],
+    dependencies: ["framer-motion"],
+  },
 ];

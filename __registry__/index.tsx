@@ -599,6 +599,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "infinite-scroll": {
+      name: "infinite-scroll",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/infinite-scroll.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/infinite-scroll.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1188,6 +1199,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["ghost-text"],
       files: ["registry/default/example/ghost-text-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/ghost-text-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "infinite-scroll-demo": {
+      name: "infinite-scroll-demo",
+      type: "registry:example",
+      registryDependencies: ["infinite-scroll"],
+      files: ["registry/default/example/infinite-scroll-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/infinite-scroll-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

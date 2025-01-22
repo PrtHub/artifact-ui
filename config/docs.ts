@@ -307,6 +307,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Infinite Scroll",
+          href: "/docs/components/infinite-scroll",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

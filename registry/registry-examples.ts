@@ -325,4 +325,10 @@ export const examples: Registry = [
     registryDependencies: ["ghost-text"],
     files: ["example/ghost-text-demo.tsx"],
   },
+  {
+    name: "infinite-scroll-demo",
+    type: "registry:example",
+    registryDependencies: ["infinite-scroll"],
+    files: ["example/infinite-scroll-demo.tsx"],
+  },
 ];

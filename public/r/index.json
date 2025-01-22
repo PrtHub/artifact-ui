@@ -707,5 +707,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "infinite-scroll",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/infinite-scroll.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
