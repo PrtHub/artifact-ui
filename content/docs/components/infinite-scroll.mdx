@@ -1,6 +1,6 @@
 ---
 title: Infinite Scroll
-description: A smooth infinite scrolling animation component for tags, text, or any content.
+description: A smooth infinite scrolling component for displaying repeating content.
 component: true
 ---
 
@@ -12,31 +12,7 @@ component: true
 
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui/infinite-scroll.tsx`
-
 <ComponentSource name="infinite-scroll" />
-
-<Step>Add the following animations to your Tailwind CSS config.</Step>
-
-```js title="tailwind.config.js"
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  theme: {
-    extend: {
-      keyframes: {
-        loop: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        loop: "loop var(--duration) linear infinite",
-        "loop-reverse": "loop var(--duration) linear infinite reverse",
-      },
-    },
-  },
-};
-```
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -51,61 +27,92 @@ import { InfiniteScroll } from "@/components/ui/infinite-scroll";
 ```tsx
 import { InfiniteScroll } from "@/components/ui/infinite-scroll";
 
-const tags = [
-  { id: "1", label: "JavaScript" },
-  { id: "2", label: "React" },
-  { id: "3", label: "TypeScript" },
-  // ...more tags
-];
-
-export default function Example() {
-  return <InfiniteScroll tags={tags} duration={15000} direction="normal" />;
-}
+const Example = () => {
+  return (
+    <InfiniteScroll duration={25000} direction="normal" pauseOnHover>
+      {items.map((item) => (
+        <YourComponent key={item.id} {...item} />
+      ))}
+    </InfiniteScroll>
+  );
+};
 ```
+
+## Features
+
+- Smooth, continuous scrolling animation
+- Supports both normal and reverse directions
+- Pause on hover functionality
+- Customizable scroll duration
+- Responsive design
+- Dark mode support
+- Automatic content duplication for seamless looping
 
 ## Props
 
-| Prop             | Type                  | Default     | Description                            |
-| ---------------- | --------------------- | ----------- | -------------------------------------- |
-| `tags`           | `Tag[]`               | Required    | Array of tag objects with id and label |
-| `className`      | `string`              | -           | Additional CSS classes                 |
-| `duration`       | `number`              | `15000`     | Duration of animation in milliseconds  |
-| `direction`      | `"normal"\|"reverse"` | `"normal"`  | Direction of the scroll animation      |
-| `containerColor` | `string`              | `"#1e293b"` | Background color for fade effect       |
-| `showFade`       | `boolean`             | `true`      | Show fade effect at the edges          |
+| Prop             | Type                  | Default     | Description                           |
+| ---------------- | --------------------- | ----------- | ------------------------------------- |
+| `children`       | `React.ReactNode`     | Required    | Content to be scrolled infinitely     |
+| `className`      | `string`              | -           | Additional CSS classes                |
+| `duration`       | `number`              | `15000`     | Duration of animation in milliseconds |
+| `direction`      | `"normal"\|"reverse"` | `"normal"`  | Direction of the scroll animation     |
+| `containerColor` | `string`              | `"#ffffff"` | Background color for fade effect      |
+| `showFade`       | `boolean`             | `true`      | Show fade effect at the edges         |
+| `pauseOnHover`   | `boolean`             | `true`      | Pause animation on hover              |
 
 ## Examples
 
 ### Basic Usage
 
 ```tsx
-<InfiniteScroll tags={tags} />
+<InfiniteScroll duration={20000} direction="normal">
+  {items.map((item) => (
+    <Card key={item.id} {...item} />
+  ))}
+</InfiniteScroll>
 ```
 
-### Custom Duration and Direction
+### With Pause on Hover
 
 ```tsx
-<InfiniteScroll tags={tags} duration={20000} direction="reverse" />
+<InfiniteScroll duration={25000} direction="normal" pauseOnHover>
+  {items.map((item) => (
+    <Card key={item.id} {...item} />
+  ))}
+</InfiniteScroll>
 ```
 
-### Without Fade Effect
+### Bidirectional Scrolling
+
+Create an engaging display with content scrolling in opposite directions:
 
 ```tsx
-<InfiniteScroll tags={tags} showFade={false} />
-```
-
-### Custom Container Color
-
-```tsx
-<InfiniteScroll tags={tags} containerColor="#000000" />
-```
-
-### Multiple Rows
-
-```tsx
-<div className="space-y-8">
-  <InfiniteScroll tags={tags} direction="normal" />
-  <InfiniteScroll tags={tags} direction="reverse" duration={20000} />
-  <InfiniteScroll tags={tags} direction="normal" duration={10000} />
+<div className="flex flex-col gap-8">
+  <InfiniteScroll duration={25000} direction="normal">
+    {items.map((item) => (
+      <Card key={item.id} {...item} />
+    ))}
+  </InfiniteScroll>
+  <InfiniteScroll duration={25000} direction="reverse">
+    {items.map((item) => (
+      <Card key={item.id} {...item} />
+    ))}
+  </InfiniteScroll>
 </div>
+```
+
+### Custom Styling
+
+The component accepts className for custom styling:
+
+```tsx
+<InfiniteScroll
+  duration={20000}
+  direction="normal"
+  className="py-4 bg-gray-50 dark:bg-gray-900"
+>
+  {items.map((item) => (
+    <Card key={item.id} {...item} />
+  ))}
+</InfiniteScroll>
 ```

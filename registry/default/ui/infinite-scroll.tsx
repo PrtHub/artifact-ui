@@ -1,36 +1,101 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useAnimationControls } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface Tag {
-  id: string;
-  label: string;
-}
-
 interface InfiniteScrollProps {
+  /** Additional CSS classes to apply to the container */
   className?: string;
-  /** Array of tag objects */
-  tags: Tag[];
-  /** Duration of the animation in milliseconds */
+  /** Duration of the scroll animation in milliseconds. Default is 15000 */
   duration?: number;
-  /** Direction of the scroll */
+  /** Direction of the scroll animation. Can be "normal" (left to right) or "reverse" (right to left) */
   direction?: "normal" | "reverse";
-  /** Background color of the container */
+  /** Background color for the fade effect container. Default is "#ffffff" */
   containerColor?: string;
-  /** Whether to show the fade effect at the edges */
+  /** Whether to show the fade effect at the edges. Default is true */
   showFade?: boolean;
+  /** Content to be scrolled infinitely */
+  children: React.ReactNode;
+  /** Whether to pause the animation when hovering over the content. Default is true */
+  pauseOnHover?: boolean;
 }
 
 export function InfiniteScroll({
   className,
-  tags,
   duration = 15000,
   direction = "normal",
   containerColor = "#ffffff",
   showFade = true,
+  children,
+  pauseOnHover = true,
 }: InfiniteScrollProps) {
-  // Create two groups for seamless scrolling
-  const group = [...tags, ...tags];
+  const [contentWidth, setContentWidth] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimationControls();
+  const elapsedTimeRef = useRef(0);
+  const lastTimeRef = useRef(0);
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const updateWidth = () => {
+      const width = content.offsetWidth;
+      setContentWidth(width);
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, [children]);
+
+  useEffect(() => {
+    if (!contentWidth) return;
+
+    const startX = direction === "normal" ? 0 : -contentWidth;
+    const endX = direction === "normal" ? -contentWidth : 0;
+
+    if (!isPaused) {
+      const remainingDuration = duration - elapsedTimeRef.current;
+      const progress = elapsedTimeRef.current / duration;
+      const currentX =
+        direction === "normal"
+          ? startX + (endX - startX) * progress
+          : endX + (startX - endX) * (1 - progress);
+
+      controls.set({ x: currentX });
+      controls.start({
+        x: endX,
+        transition: {
+          duration: remainingDuration / 1000,
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 0,
+        },
+      });
+
+      lastTimeRef.current = Date.now();
+    }
+  }, [controls, direction, duration, contentWidth, isPaused]);
+
+  const handleMouseEnter = () => {
+    if (!pauseOnHover) return;
+
+    const currentTime = Date.now();
+    const deltaTime = currentTime - lastTimeRef.current;
+    elapsedTimeRef.current = (elapsedTimeRef.current + deltaTime) % duration;
+
+    setIsPaused(true);
+    controls.stop();
+  };
+
+  const handleMouseLeave = () => {
+    if (!pauseOnHover) return;
+    lastTimeRef.current = Date.now();
+    setIsPaused(false);
+  };
 
   return (
     <div
@@ -38,71 +103,26 @@ export function InfiniteScroll({
         "relative flex shrink-0 flex-col gap-4 overflow-hidden py-3",
         className,
       )}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="flex">
         <motion.div
+          ref={scrollerRef}
           className="flex shrink-0"
-          animate={{
-            x: direction === "normal" ? "-50%" : "0%",
-          }}
-          initial={{
-            x: direction === "normal" ? "0%" : "-50%",
-          }}
-          transition={{
-            x: {
-              duration: duration / 1000,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-            },
-          }}
+          animate={controls}
         >
-          {group.map((tag, idx) => (
-            <motion.div
-              key={`${tag.id}-${idx}`}
-              className="mr-4 flex items-center gap-[0.2rem] rounded-[0.4rem] bg-black px-4 py-[0.7rem] text-[0.9rem] text-white shadow-[0_0.1rem_0.2rem_rgb(0_0_0_/_20%),0_0.1rem_0.5rem_rgb(0_0_0_/_30%),0_0.2rem_1.5rem_rgb(0_0_0_/_40%)] dark:bg-white dark:text-black"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              {tag.label}
-            </motion.div>
-          ))}
-        </motion.div>
-        <motion.div
-          className="flex shrink-0"
-          animate={{
-            x: direction === "normal" ? "-50%" : "0%",
-          }}
-          initial={{
-            x: direction === "normal" ? "0%" : "-50%",
-          }}
-          transition={{
-            x: {
-              duration: duration / 1000,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-            },
-          }}
-        >
-          {group.map((tag, idx) => (
-            <motion.div
-              key={`${tag.id}-${idx}-clone`}
-              className="mr-4 flex items-center gap-[0.2rem] rounded-[0.4rem] bg-black px-4 py-[0.7rem] text-[0.9rem] text-white shadow-[0_0.1rem_0.2rem_rgb(0_0_0_/_20%),0_0.1rem_0.5rem_rgb(0_0_0_/_30%),0_0.2rem_1.5rem_rgb(0_0_0_/_40%)] dark:bg-white dark:text-black"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              {tag.label}
-            </motion.div>
-          ))}
+          <div ref={contentRef} className="flex shrink-0">
+            {children}
+          </div>
+          <div className="flex shrink-0">{children}</div>
+          <div className="flex shrink-0">{children}</div>
         </motion.div>
       </div>
       {showFade && (
         <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: `linear-gradient(90deg, ${containerColor}, transparent 30%, transparent 70%, ${containerColor})`,
-          }}
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-transparent to-background"
+          style={{ "--container-color": containerColor } as React.CSSProperties}
         />
       )}
     </div>
