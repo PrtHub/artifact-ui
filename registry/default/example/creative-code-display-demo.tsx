@@ -15,7 +15,7 @@ const sequence = Array.from(
 console.log(sequence);`;
 
 const reactCode = `import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function AnimatedCounter() {
   const [count, setCount] = useState(0);

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "motion/react";
 import { cn } from "@/lib/utils";
 import {
   Share2,
@@ -306,7 +306,7 @@ const ShareButton = ({
       hoverEffect,
       themes[theme].socialButton,
       darkMode ? "dark" : "",
-      className,
+      className
     )}
   >
     <motion.div
@@ -318,7 +318,7 @@ const ShareButton = ({
     <Icon
       className={cn(
         "text-white transition-all duration-300 group-hover:scale-110",
-        iconClassName,
+        iconClassName
       )}
     />
     <motion.span
@@ -326,7 +326,7 @@ const ShareButton = ({
       whileHover={{ opacity: 1, y: 0 }}
       className={cn(
         "absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs",
-        darkMode ? "text-gray-300" : "text-muted-foreground",
+        darkMode ? "text-gray-300" : "text-muted-foreground"
       )}
     >
       {label}
@@ -334,7 +334,7 @@ const ShareButton = ({
     <motion.div
       className={cn(
         "absolute -right-1 -top-1 h-2 w-2 rounded-full",
-        darkMode ? "bg-white/30" : "bg-white/50",
+        darkMode ? "bg-white/30" : "bg-white/50"
       )}
       animate={{
         scale: [1, 1.2, 1],
@@ -393,7 +393,7 @@ export default function StudioShareModule({
         className={cn(
           "fixed bottom-4 right-4 flex h-14 w-14 items-center justify-center rounded-full",
           themes[theme].button,
-          themes[theme].glow,
+          themes[theme].glow
         )}
       >
         <Share2 className="h-6 w-6" />
@@ -426,7 +426,7 @@ export default function StudioShareModule({
             className={cn(
               "relative w-full max-w-md rounded-3xl border p-6",
               themes[theme].container,
-              className,
+              className
             )}
           >
             <motion.button
@@ -461,7 +461,7 @@ export default function StudioShareModule({
             >
               {[
                 ...socialPlatforms.filter((platform: any) =>
-                  platforms.includes(platform.name),
+                  platforms.includes(platform.name)
                 ),
                 ...customPlatforms,
               ].map((platform) => (
@@ -514,7 +514,7 @@ export default function StudioShareModule({
                   onClick={() => setShowQR(!showQR)}
                   className={cn(
                     "flex h-12 w-12 items-center justify-center rounded-xl",
-                    themes[theme].button,
+                    themes[theme].button
                   )}
                 >
                   <QrCode className="h-5 w-5" />

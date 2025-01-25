@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
@@ -86,7 +86,7 @@ export function PaletteNavigation({
       "flex h-[400px] items-center justify-center",
     "before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-white/10 before:backdrop-blur-md dark:before:bg-zinc-950/10",
     "after:absolute after:inset-0 after:-z-20 after:rounded-full after:bg-gradient-to-r after:from-primary/5 after:to-muted/5",
-    className,
+    className
   );
 
   return (
@@ -190,7 +190,7 @@ function PaletteItem({
             className={cn(
               "relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br shadow-lg transition-shadow",
               "hover:shadow-xl hover:ring-2 hover:ring-white/20 dark:hover:ring-zinc-800/20",
-              colorClass,
+              colorClass
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

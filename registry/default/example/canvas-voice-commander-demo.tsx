@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import CanvasVoiceCommander from "@/registry/default/ui/canvas-voice-commander";
 
 export default function CanvasVoiceCommanderDemo() {
   const [lastCommand, setLastCommand] = useState("");
   const [theme, setTheme] = useState<"artist" | "minimal" | "futuristic">(
-    "artist",
+    "artist"
   );
   const [brushSize, setBrushSize] = useState(10);
   const [color, setColor] = useState("#FF5733");

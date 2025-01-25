@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
@@ -47,8 +47,8 @@ export default function SketchCalendarPicker({
       new Date(
         monthStart.getFullYear(),
         monthStart.getMonth(),
-        -firstDayOfMonth + i + 1,
-      ),
+        -firstDayOfMonth + i + 1
+      )
   );
 
   const handlePrevMonth = () => setCurrentMonth(subMonths(currentMonth, 1));
@@ -74,7 +74,7 @@ export default function SketchCalendarPicker({
   const getDayStyles = (
     isSelected: boolean | undefined,
     isCurrentDate: boolean,
-    isCurrentMonth: boolean,
+    isCurrentMonth: boolean
   ) => {
     const baseStyles =
       "relative flex h-8 w-8 items-center justify-center rounded-lg text-sm transition-colors";
@@ -90,14 +90,14 @@ export default function SketchCalendarPicker({
         case "neon":
           return cn(
             baseStyles,
-            "bg-emerald-500/20 font-semibold text-emerald-400 [text-shadow:0_0_10px_rgba(16,185,129,0.8)]",
+            "bg-emerald-500/20 font-semibold text-emerald-400 [text-shadow:0_0_10px_rgba(16,185,129,0.8)]"
           );
         case "candy":
           return cn(baseStyles, "bg-white/30 font-semibold text-white");
         default:
           return cn(
             baseStyles,
-            "bg-primary font-semibold text-primary-foreground",
+            "bg-primary font-semibold text-primary-foreground"
           );
       }
     }
@@ -158,7 +158,7 @@ export default function SketchCalendarPicker({
       className={cn(
         "w-[320px] rounded-xl p-4 shadow-lg backdrop-blur-sm",
         getVariantStyles(),
-        className,
+        className
       )}
     >
       {/* Header */}
@@ -178,7 +178,7 @@ export default function SketchCalendarPicker({
               ? "text-white"
               : variant === "neon"
                 ? "text-emerald-500"
-                : undefined,
+                : undefined
           )}
         >
           {format(currentMonth, "MMMM yyyy")}
@@ -215,7 +215,7 @@ export default function SketchCalendarPicker({
                 ? "text-white/30"
                 : variant === "neon"
                   ? "text-emerald-500/30"
-                  : "text-zinc-300 dark:text-zinc-700",
+                  : "text-zinc-300 dark:text-zinc-700"
             )}
           >
             {date.getDate()}
@@ -240,7 +240,7 @@ export default function SketchCalendarPicker({
               className={getDayStyles(
                 isSelected,
                 isCurrentDate,
-                isCurrentMonth,
+                isCurrentMonth
               )}
             >
               {isHovered && variant === "artistic" && (
@@ -259,7 +259,7 @@ export default function SketchCalendarPicker({
                       ? "bg-white"
                       : variant === "neon"
                         ? "bg-emerald-500"
-                        : "bg-primary",
+                        : "bg-primary"
                   )}
                 />
               )}

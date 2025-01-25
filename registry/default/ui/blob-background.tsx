@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import type { MotionStyle, Variants, Transition } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
+import type { MotionStyle, Variants, Transition } from "motion/react";
 
 interface BlobProps {
   color?: string;

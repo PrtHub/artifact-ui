@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
@@ -111,7 +111,7 @@ export default function ArtisticSettingsPanel({
 
   const handleSettingChange = (
     key: keyof ArtisticSettings,
-    value: number | boolean | string,
+    value: number | boolean | string
   ) => {
     const newSettings = { ...settings, [key]: value };
     if (key === "preset" && typeof value === "string") {
@@ -248,7 +248,7 @@ export default function ArtisticSettingsPanel({
                         onValueChange={([value]) =>
                           handleSettingChange(
                             control.key as keyof ArtisticSettings,
-                            value,
+                            value
                           )
                         }
                       />

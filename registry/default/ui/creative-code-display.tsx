@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import Prism from "prismjs";
@@ -38,7 +38,7 @@ const containerVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 interface CreativeCodeDisplayProps {
@@ -109,7 +109,7 @@ export default function CreativeCodeDisplay({
               "pointer-events-none absolute inset-0 bg-gradient-to-br",
               isDark
                 ? "from-primary/20 to-transparent"
-                : "from-primary/10 to-transparent",
+                : "from-primary/10 to-transparent"
             )}
           />
         )}
@@ -131,13 +131,13 @@ export default function CreativeCodeDisplay({
               <Code2
                 className={cn(
                   "h-4 w-4",
-                  isDark ? "text-primary" : "text-slate-600",
+                  isDark ? "text-primary" : "text-slate-600"
                 )}
               />
               <span
                 className={cn(
                   "text-muted-foreground",
-                  isDark ? "text-slate-400" : "text-slate-600",
+                  isDark ? "text-slate-400" : "text-slate-600"
                 )}
               >
                 {title}
@@ -153,7 +153,7 @@ export default function CreativeCodeDisplay({
                 "rounded-lg p-2 transition-colors",
                 isDark
                   ? "bg-primary/10 hover:bg-primary/20"
-                  : "bg-slate-100 hover:bg-slate-200",
+                  : "bg-slate-100 hover:bg-slate-200"
               )}
               title="Copy code"
             >
@@ -177,7 +177,7 @@ export default function CreativeCodeDisplay({
                     <Clipboard
                       className={cn(
                         "h-4 w-4",
-                        isDark ? "text-primary" : "text-slate-600",
+                        isDark ? "text-primary" : "text-slate-600"
                       )}
                     />
                   </motion.div>
@@ -192,14 +192,14 @@ export default function CreativeCodeDisplay({
                 "rounded-lg p-2 transition-colors",
                 isDark
                   ? "bg-primary/10 hover:bg-primary/20"
-                  : "bg-slate-100 hover:bg-slate-200",
+                  : "bg-slate-100 hover:bg-slate-200"
               )}
               title="Download code"
             >
               <Download
                 className={cn(
                   "h-4 w-4",
-                  isDark ? "text-primary" : "text-slate-600",
+                  isDark ? "text-primary" : "text-slate-600"
                 )}
               />
             </motion.button>
@@ -212,7 +212,7 @@ export default function CreativeCodeDisplay({
           "scrollbar-thin scrollbar-track-transparent hover:scrollbar-thumb-primary/30 mt-2 overflow-x-auto rounded",
           showControls && title && "mt-6",
           showLineNumbers && "line-numbers",
-          isDark ? "scrollbar-thumb-primary/20" : "scrollbar-thumb-slate-300",
+          isDark ? "scrollbar-thumb-primary/20" : "scrollbar-thumb-slate-300"
         )}
       >
         <code className={`language-${language} block`}>{code}</code>
@@ -224,7 +224,7 @@ export default function CreativeCodeDisplay({
             "absolute inset-0 -z-10 bg-gradient-to-br opacity-50",
             isDark
               ? "from-primary/10 via-transparent to-primary/5"
-              : "to-primary/2 from-primary/5 via-transparent",
+              : "to-primary/2 from-primary/5 via-transparent"
           )}
         />
       )}

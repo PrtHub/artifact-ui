@@ -4,7 +4,7 @@ import React, { useState, ErrorInfo } from "react";
 import CreativeErrorBoundaries from "@/registry/default/ui/creative-error-boundaries";
 import { Button } from "@/components/ui/button";
 import { Palette, Brush, Eraser, RefreshCw, AlertTriangle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 const errors = {
   syntax: {
@@ -89,7 +89,7 @@ const ThemeButton = ({
 
 export default function CreativeErrorBoundariesDemo() {
   const [activeError, setActiveError] = useState<keyof typeof errors | null>(
-    null,
+    null
   );
   const [selectedTheme, setSelectedTheme] = useState<
     "watercolor" | "sketch" | "oil-painting"

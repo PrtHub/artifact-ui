@@ -10,45 +10,45 @@ export const ui: Registry = [
   {
     name: "canvas-button",
     type: "registry:ui",
-    dependencies: ["framer-motion", "class-variance-authority"],
+    dependencies: ["motion/react", "class-variance-authority"],
     files: ["ui/canvas-button.tsx"],
     registryDependencies: [],
   },
   {
     name: "sketch-input",
     type: "registry:ui",
-    dependencies: ["framer-motion", "class-variance-authority"],
+    dependencies: ["motion/react", "class-variance-authority"],
     files: ["ui/sketch-input.tsx"],
     registryDependencies: [],
   },
   {
     name: "gallery-grid",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/gallery-grid.tsx"],
   },
   {
     name: "easel-tabs",
     type: "registry:ui",
-    dependencies: ["@radix-ui/react-tabs", "framer-motion"],
+    dependencies: ["@radix-ui/react-tabs", "motion/react"],
     files: ["ui/easel-tabs.tsx"],
   },
   {
     name: "palette-navigation",
     type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react"],
+    dependencies: ["motion/react", "lucide-react"],
     files: ["ui/palette-navigation.tsx"],
   },
   {
     name: "canvas-modal",
     type: "registry:ui",
-    dependencies: ["framer-motion", "@radix-ui/react-dialog", "lucide-react"],
+    dependencies: ["motion/react", "@radix-ui/react-dialog", "lucide-react"],
     files: ["ui/canvas-modal.tsx"],
   },
   {
     name: "brush-stroke-loader",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/brush-stroke-loader.tsx"],
   },
   {
@@ -67,7 +67,7 @@ export const ui: Registry = [
   {
     name: "canvas-drawer",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/canvas-drawer.tsx"],
   },
   {
@@ -79,19 +79,19 @@ export const ui: Registry = [
   {
     name: "artistic-navigation",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/artistic-navigation.tsx"],
   },
   {
     name: "smart-dock",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/smart-dock.tsx"],
   },
   {
     name: "studio-light",
     type: "registry:ui",
-    dependencies: ["framer-motion", "next-themes"],
+    dependencies: ["motion/react", "next-themes"],
     files: ["ui/studio-light.tsx"],
   },
   {
@@ -145,7 +145,7 @@ export const ui: Registry = [
   {
     name: "artistic-data-viz",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/artistic-data-viz.tsx"],
   },
   {
@@ -164,79 +164,79 @@ export const ui: Registry = [
   {
     name: "collapsible-card",
     type: "registry:ui",
-    dependencies: ["lucide-react", "framer-motion"],
+    dependencies: ["lucide-react", "motion/react"],
     files: ["ui/collapsible-card.tsx"],
   },
   {
     name: "gallery-flow",
     type: "registry:ui",
-    dependencies: ["lucide-react", "framer-motion"],
+    dependencies: ["lucide-react", "motion/react"],
     files: ["ui/gallery-flow.tsx"],
   },
   {
     name: "studio-shortcuts-guide",
     type: "registry:ui",
-    dependencies: ["lucide-react", "framer-motion"],
+    dependencies: ["lucide-react", "motion/react"],
     files: ["ui/studio-shortcuts-guide.tsx"],
   },
   {
     name: "creative-otp-input",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/creative-otp-input.tsx"],
   },
   {
     name: "creative-clipboard-actions",
     type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react"],
+    dependencies: ["motion/react", "lucide-react"],
     files: ["ui/creative-clipboard-actions.tsx"],
   },
   {
     name: "studio-share-module",
     type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react", "qrcode.react"],
+    dependencies: ["motion/react", "lucide-react", "qrcode.react"],
     files: ["ui/studio-share-module.tsx"],
   },
   {
     name: "artistic-settings-panel",
     type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react"],
+    dependencies: ["motion/react", "lucide-react"],
     files: ["ui/artistic-settings-panel.tsx"],
   },
   {
     name: "creative-code-display",
     type: "registry:ui",
-    dependencies: ["framer-motion", "next-themes", "prismjs"],
+    dependencies: ["motion/react", "next-themes", "prismjs"],
     files: ["ui/creative-code-display.tsx"],
   },
   {
     name: "sketch-calendar-picker",
     type: "registry:ui",
-    dependencies: ["framer-motion", "date-fns", "lucide-react"],
+    dependencies: ["motion/react", "date-fns", "lucide-react"],
     files: ["ui/sketch-calendar-picker.tsx"],
   },
   {
     name: "texture-blend-transitions",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/texture-blend-transitions.tsx"],
   },
   {
     name: "artistic-cursor-effects",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/artistic-cursor-effects.tsx"],
   },
   {
     name: "canvas-voice-commander",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/canvas-voice-commander.tsx"],
   },
   {
     name: "creative-error-boundaries",
     type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react"],
+    dependencies: ["motion/react", "lucide-react"],
     files: ["ui/creative-error-boundaries.tsx"],
   },
   {
@@ -260,13 +260,13 @@ export const ui: Registry = [
   {
     name: "prism-hero",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/prism-hero.tsx"],
   },
   {
     name: "climate-artboard",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/climate-artboard.tsx"],
   },
   {
@@ -278,7 +278,7 @@ export const ui: Registry = [
   {
     name: "expand-image",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/expand-image.tsx"],
   },
   {
@@ -300,7 +300,7 @@ export const ui: Registry = [
   {
     name: "blob-background",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
     files: ["ui/blob-background.tsx"],
   },
   {
@@ -319,18 +319,18 @@ export const ui: Registry = [
     name: "pulse-card",
     type: "registry:ui",
     files: ["ui/pulse-card.tsx"],
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
   },
   {
     name: "ghost-text",
     type: "registry:ui",
     files: ["ui/ghost-text.tsx"],
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
   },
   {
     name: "infinite-scroll",
     type: "registry:ui",
     files: ["ui/infinite-scroll.tsx"],
-    dependencies: ["framer-motion"],
+    dependencies: ["motion/react"],
   },
 ];

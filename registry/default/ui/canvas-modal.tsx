@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 
 const CanvasModal = DialogPrimitive.Root;
@@ -26,7 +26,7 @@ const CanvasModalClose = React.forwardRef<
       "hover:scale-110 active:scale-95",
       "focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2",
       "disabled:pointer-events-none",
-      className,
+      className
     )}
     {...props}
   >
@@ -44,7 +44,7 @@ const CanvasModalOverlay = React.forwardRef<
     ref={ref}
     className={cn(
       "fixed inset-0 z-50 bg-gradient-to-br from-black/30 via-black/50 to-black/30 backdrop-blur-[2px] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-      className,
+      className
     )}
     {...props}
   />
@@ -66,7 +66,7 @@ const CanvasModalContent = React.forwardRef<
         "border border-primary/10",
         "before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gradient-to-br before:from-primary/20 before:via-primary/10 before:to-primary/5 before:opacity-0 before:transition-opacity hover:before:opacity-100",
         "after:absolute after:inset-0 after:-z-20 after:rounded-2xl after:bg-gradient-to-br after:from-primary/20 after:via-background after:to-background after:blur-xl",
-        className,
+        className
       )}
       {...props}
     >
@@ -87,7 +87,7 @@ const CanvasModalHeader = ({
       "relative pb-4",
       "after:absolute after:inset-x-0 after:bottom-0 after:h-px",
       "after:bg-gradient-to-r after:from-primary/5 after:via-primary/10 after:to-primary/5",
-      className,
+      className
     )}
     {...props}
   />
@@ -101,7 +101,7 @@ const CanvasModalFooter = ({
   <div
     className={cn(
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-      className,
+      className
     )}
     {...props}
   />
@@ -117,7 +117,7 @@ const CanvasModalTitle = React.forwardRef<
     className={cn(
       "text-xl font-semibold leading-none tracking-tight",
       "bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-transparent",
-      className,
+      className
     )}
     {...props}
   />
@@ -133,7 +133,7 @@ const CanvasModalDescription = React.forwardRef<
     className={cn(
       "text-sm text-muted-foreground/90",
       "leading-relaxed",
-      className,
+      className
     )}
     {...props}
   />

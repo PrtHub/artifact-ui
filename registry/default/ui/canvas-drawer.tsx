@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +41,7 @@ export function CanvasDrawer({
           onClick={handleToggle}
           className={cn(
             "group fixed top-1/2 z-50 -translate-y-1/2",
-            side === "left" ? "left-0" : "right-0",
+            side === "left" ? "left-0" : "right-0"
           )}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -54,7 +54,7 @@ export function CanvasDrawer({
               "dark:from-primary/30 dark:to-primary/20",
               "transition-colors duration-200",
               "group-hover:from-primary/30 group-hover:to-primary/20",
-              "dark:group-hover:from-primary/40 dark:group-hover:to-primary/30",
+              "dark:group-hover:from-primary/40 dark:group-hover:to-primary/30"
             )}
           >
             <motion.div
@@ -75,7 +75,7 @@ export function CanvasDrawer({
                 "h-1 w-4 rounded-full bg-primary/50",
                 "transition-transform duration-200",
                 isOpen ? "rotate-180" : "rotate-0",
-                side === "left" ? "-rotate-90" : "rotate-90",
+                side === "left" ? "-rotate-90" : "rotate-90"
               )}
             />
           </div>
@@ -99,7 +99,7 @@ export function CanvasDrawer({
                 "border-primary/10 backdrop-blur-md",
                 side === "left" ? "left-0 border-r" : "right-0 border-l",
                 "overflow-y-auto",
-                className,
+                className
               )}
               initial={{
                 x: side === "left" ? "-100%" : "100%",
@@ -125,7 +125,7 @@ export function CanvasDrawer({
                   "group absolute right-4 top-4 z-20",
                   "rounded-full p-2",
                   "bg-primary/5 hover:bg-primary/10",
-                  "transition-colors duration-200",
+                  "transition-colors duration-200"
                 )}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -149,7 +149,7 @@ export function CanvasDrawer({
                 className={cn(
                   "absolute inset-0",
                   "bg-[url('/canvas-texture.png')] opacity-30",
-                  "pointer-events-none",
+                  "pointer-events-none"
                 )}
               />
               <div className="relative h-full p-6">{children}</div>

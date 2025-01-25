@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion, MotionProps } from "framer-motion";
+import { motion, MotionProps } from "motion/react";
 import { cn } from "@/lib/utils";
 
 const sketchInputVariants = cva(
@@ -29,7 +29,7 @@ const sketchInputVariants = cva(
       variant: "default",
       state: "default",
     },
-  },
+  }
 );
 
 export interface SketchInputProps

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import CreativeOTPInput from "@/registry/default/ui/creative-otp-input";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function CreativeOTPInputDemo() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface CardProps {
@@ -133,7 +133,7 @@ export default function CardHoverEffect({
         "hover:shadow-[0px_5px_15px_rgba(0,0,0,0.03),0px_25px_35px_rgba(0,0,0,0.2)]",
         "dark:shadow-[0px_3px_8px_rgba(0,0,0,0.08),0px_12px_20px_rgba(0,0,0,0.15)]",
         "dark:hover:shadow-[0px_5px_15px_rgba(0,0,0,0.06),0px_25px_35px_rgba(0,0,0,0.4)]",
-        className,
+        className
       )}
       style={
         {
@@ -170,7 +170,7 @@ export default function CardHoverEffect({
             "absolute inset-[4.5px] rounded-[inherit]",
             "bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-3xl",
             "dark:from-white/10 dark:to-white/5",
-            "transition-all duration-300",
+            "transition-all duration-300"
           )}
         />
         <span
@@ -178,7 +178,7 @@ export default function CardHoverEffect({
             "relative z-[1] block transition-colors duration-300",
             "text-black/60 group-hover:text-[var(--card-color)]",
             "dark:text-zinc-400",
-            sizeConfig.iconSize,
+            sizeConfig.iconSize
           )}
         >
           {icon}
@@ -192,7 +192,7 @@ export default function CardHoverEffect({
             "font-medium transition-colors duration-300",
             "text-black/80 group-hover:text-[var(--card-color)]",
             "dark:text-white/80",
-            sizeConfig.titleSize,
+            sizeConfig.titleSize
           )}
         >
           {title}
@@ -202,7 +202,7 @@ export default function CardHoverEffect({
             "mt-1 transition-colors duration-300",
             "text-black/60",
             "dark:text-white/40",
-            sizeConfig.descSize,
+            sizeConfig.descSize
           )}
         >
           {description}
@@ -233,7 +233,7 @@ export default function CardHoverEffect({
                   // eslint-disable-next-line tailwindcss/classnames-order
                   className={cn(
                     "duration-[350ms] absolute inset-x-0 h-[1px] origin-[0%_50%] scale-x-0 transition-transform group-hover:scale-x-100",
-                    `bg-gradient-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-r from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`
                   )}
                   style={{
                     top: `${row.start}%`,
@@ -248,7 +248,7 @@ export default function CardHoverEffect({
                   // eslint-disable-next-line tailwindcss/classnames-order
                   className={cn(
                     "duration-[350ms] absolute inset-y-0 w-[1px] origin-[50%_0%] scale-y-0 transition-transform group-hover:scale-y-100",
-                    `bg-gradient-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`,
+                    `bg-gradient-to-b from-${variantConfig.accent}/0 via-${variantConfig.accent}/20 to-${variantConfig.accent}/0`
                   )}
                   style={{
                     left: `${col.start + col.width}%`,
@@ -268,7 +268,7 @@ export default function CardHoverEffect({
                     key={`cell-${rowIndex}-${colIndex}`}
                     className={cn(
                       "absolute animate-tile opacity-0",
-                      `bg-gradient-to-br ${variantConfig.gradient}`,
+                      `bg-gradient-to-br ${variantConfig.gradient}`
                     )}
                     style={{
                       top: `${row.start}%`,

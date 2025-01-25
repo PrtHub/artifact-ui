@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
 
 interface NavItem {
   label: string;
@@ -27,17 +27,17 @@ export default function ArtisticNavigation({
   const brushStrokeScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [1, 1.1, 1.05],
+    [1, 1.1, 1.05]
   );
   const brushStrokeRotate = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [0, 5, -2],
+    [0, 5, -2]
   );
   const backgroundOpacity = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [0.15, 0.2, 0.25],
+    [0.15, 0.2, 0.25]
   );
   const navScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.02, 1]);
   const navY = useTransform(scrollYProgress, [0, 0.5, 1], [0, -4, -2]);

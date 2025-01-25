@@ -1,5 +1,5 @@
 import { InfiniteScroll } from "@/registry/default/ui/infinite-scroll";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const testimonials = [

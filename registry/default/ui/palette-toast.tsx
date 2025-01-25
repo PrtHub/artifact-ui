@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { X } from "lucide-react";
 
 export interface PaletteToastProps {
@@ -84,20 +84,20 @@ export function PaletteToast({
             "dark:shadow-2xl dark:shadow-black/10",
             "border border-white/20 dark:border-white/10",
             colors.background,
-            className,
+            className
           )}
         >
           {/* Paint drip effect */}
           <div
             className={cn(
               "absolute -left-4 -top-4 h-12 w-12 rounded-full opacity-20 dark:opacity-30",
-              colors.accent,
+              colors.accent
             )}
           />
           <div
             className={cn(
               "absolute -bottom-4 -right-4 h-10 w-10 rounded-full opacity-20 dark:opacity-30",
-              colors.accent,
+              colors.accent
             )}
           />
 
@@ -112,7 +112,7 @@ export function PaletteToast({
               className={cn(
                 "rounded-full p-1",
                 colors.text,
-                "hover:bg-black/5 dark:hover:bg-white/5",
+                "hover:bg-black/5 dark:hover:bg-white/5"
               )}
             >
               <X size={14} />
@@ -134,7 +134,7 @@ export function PaletteToast({
             className={cn(
               "absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-full",
               colors.accent,
-              "pointer-events-none opacity-10 dark:opacity-20",
+              "pointer-events-none opacity-10 dark:opacity-20"
             )}
           />
         </motion.div>

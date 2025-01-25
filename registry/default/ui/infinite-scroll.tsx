@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface InfiniteScrollProps {
@@ -101,7 +101,7 @@ export function InfiniteScroll({
     <div
       className={cn(
         "relative flex shrink-0 flex-col gap-4 overflow-hidden py-3",
-        className,
+        className
       )}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

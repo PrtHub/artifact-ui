@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Check, Copy, Link, ClipboardCheck, ClipboardCopy } from "lucide-react";
 
@@ -135,7 +135,7 @@ export default function CreativeClipboardActions({
         variants[variant].button.base,
         variants[variant].button[copied ? "copied" : "idle"],
         sizes[size].button,
-        className,
+        className
       )}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -151,7 +151,7 @@ export default function CreativeClipboardActions({
           <IconComponent
             className={cn(
               variants[variant].icon[copied ? "copied" : "idle"],
-              sizes[size].icon,
+              sizes[size].icon
             )}
           />
           {variant !== "minimal" && isHovered && !copied && (

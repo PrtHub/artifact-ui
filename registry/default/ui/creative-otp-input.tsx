@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 type Variant = "default" | "neon" | "minimal" | "dots" | "underline";
 type Status = "idle" | "success" | "error";
@@ -138,7 +138,7 @@ export default function CreativeOTPInput({
 
   const handleKeyDown = (
     index: number,
-    e: React.KeyboardEvent<HTMLInputElement>,
+    e: React.KeyboardEvent<HTMLInputElement>
   ) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
@@ -234,7 +234,7 @@ export default function CreativeOTPInput({
               className={cn(
                 variants[variant].input.base,
                 variants[variant].input[status],
-                "focus:outline-none",
+                "focus:outline-none"
               )}
             />
             <AnimatePresence>
@@ -245,7 +245,7 @@ export default function CreativeOTPInput({
                   exit={{ scale: 0, opacity: 0 }}
                   className={cn(
                     "absolute",
-                    variants[variant].indicator[status],
+                    variants[variant].indicator[status]
                   )}
                 />
               )}

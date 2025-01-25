@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import StudioShareModule from "@/registry/default/ui/studio-share-module";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface TeamMember {
   name: string;
@@ -62,7 +62,7 @@ const item = {
 
 const getShadowStyle = (
   color: string,
-  intensity: "light" | "medium" | "heavy",
+  intensity: "light" | "medium" | "heavy"
 ) => {
   const intensityValues = {
     light: "1px 3px 10px",

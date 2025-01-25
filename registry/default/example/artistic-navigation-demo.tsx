@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Home, User, Settings, Mail } from "lucide-react";
 
 import ArtisticNavigation from "@/registry/default/ui/artistic-navigation";

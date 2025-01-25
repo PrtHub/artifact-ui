@@ -1,12 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  motion,
-  AnimatePresence,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, AnimatePresence, useSpring, useTransform } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -48,7 +43,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
       className,
       ...props
     },
-    ref,
+    ref
   ) => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const [isHovered, setIsHovered] = React.useState(false);
@@ -137,7 +132,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
         <div
           className={cn(
             "relative overflow-hidden rounded-lg",
-            aspectRatioClass[aspectRatio],
+            aspectRatioClass[aspectRatio]
           )}
         >
           <AnimatePresence mode="wait" initial={false} custom={slideDirection}>
@@ -277,7 +272,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
                   fill
                   className={cn(
                     "h-full w-full",
-                    fillMode === "cover" ? "object-cover" : "object-contain",
+                    fillMode === "cover" ? "object-cover" : "object-contain"
                   )}
                 />
                 {images[currentIndex].caption && (
@@ -300,9 +295,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
                 onClick={handlePrev}
                 className={cn(
                   "absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/40",
-                  !loop &&
-                    currentIndex === 0 &&
-                    "cursor-not-allowed opacity-50",
+                  !loop && currentIndex === 0 && "cursor-not-allowed opacity-50"
                 )}
                 disabled={!loop && currentIndex === 0}
               >
@@ -314,7 +307,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
                   "absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/40",
                   !loop &&
                     currentIndex === images.length - 1 &&
-                    "cursor-not-allowed opacity-50",
+                    "cursor-not-allowed opacity-50"
                 )}
                 disabled={!loop && currentIndex === images.length - 1}
               >
@@ -334,7 +327,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
                   "h-2 w-2 rounded-full transition-all",
                   index === currentIndex
                     ? "scale-125 bg-primary"
-                    : "bg-gray-300 hover:bg-gray-400",
+                    : "bg-gray-300 hover:bg-gray-400"
                 )}
               />
             ))}
@@ -346,7 +339,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
             className={cn(
               "flex",
               thumbnailContainerClass[thumbnailPosition],
-              thumbnailPosition === "bottom" ? "mt-2" : "",
+              thumbnailPosition === "bottom" ? "mt-2" : ""
             )}
           >
             {images.map((image, index) => (
@@ -360,7 +353,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
                   "relative overflow-hidden rounded-lg transition-all",
                   index === currentIndex
                     ? "ring-2 ring-primary ring-offset-2"
-                    : "opacity-70 hover:opacity-100",
+                    : "opacity-70 hover:opacity-100"
                 )}
               >
                 <Image
@@ -375,7 +368,7 @@ const GalleryFlow = React.forwardRef<HTMLDivElement, GalleryFlowProps>(
         )}
       </div>
     );
-  },
+  }
 );
 
 GalleryFlow.displayName = "GalleryFlow";

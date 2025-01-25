@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 
@@ -78,12 +78,12 @@ export function StudioLight({
   const lightX = useTransform(
     mouseX,
     [0, dimensions.width],
-    [-50 * intensity, 50 * intensity],
+    [-50 * intensity, 50 * intensity]
   );
   const lightY = useTransform(
     mouseY,
     [0, dimensions.height],
-    [-50 * intensity, 50 * intensity],
+    [-50 * intensity, 50 * intensity]
   );
 
   React.useEffect(() => {

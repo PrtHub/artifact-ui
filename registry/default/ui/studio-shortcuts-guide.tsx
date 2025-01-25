@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Command, Search, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 interface ShortcutItemProps {
   keys: string[];
@@ -115,8 +115,8 @@ export default function StudioShortcutsGuide({
         (item) =>
           item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
           item.keys.some((key) =>
-            key.toLowerCase().includes(searchQuery.toLowerCase()),
-          ),
+            key.toLowerCase().includes(searchQuery.toLowerCase())
+          )
       );
 
       if (filteredItems.length > 0) {
@@ -136,7 +136,7 @@ export default function StudioShortcutsGuide({
       animate={{ opacity: 1, y: 0 }}
       className={cn(
         "rounded-lg border bg-card text-card-foreground shadow-sm",
-        className,
+        className
       )}
     >
       <div className="flex items-center justify-between border-b bg-muted/50 px-4 py-2">
@@ -152,14 +152,14 @@ export default function StudioShortcutsGuide({
               whileTap={{ scale: 0.95 }}
               onClick={() =>
                 setSelectedCategory(
-                  selectedCategory === category ? null : category,
+                  selectedCategory === category ? null : category
                 )
               }
               className={cn(
                 "rounded-md px-2 py-1 text-xs font-medium transition-colors",
                 selectedCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80",
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
               )}
             >
               {category}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useSpring, useMotionValue } from "framer-motion";
+import { motion, useSpring, useMotionValue } from "motion/react";
 
 interface ArtisticCursorEffectsProps {
   variant?: "glow" | "trail" | "magnetic";

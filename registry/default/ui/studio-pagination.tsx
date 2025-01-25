@@ -11,7 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useSwipeable } from "react-swipeable";
 
@@ -134,7 +134,7 @@ export default function StudioPagination({
         handlePageChange(currentPage - 1);
       }
     },
-    [currentPage, isLoading],
+    [currentPage, isLoading]
   );
 
   useHotkeys(
@@ -145,7 +145,7 @@ export default function StudioPagination({
         handlePageChange(currentPage + 1);
       }
     },
-    [currentPage, isLoading],
+    [currentPage, isLoading]
   );
 
   // Swipe navigation
@@ -238,7 +238,7 @@ export default function StudioPagination({
     "transition-all duration-200",
     "disabled:pointer-events-none disabled:opacity-50",
     customColors?.hover && `hover:${customColors.hover}`,
-    customColors?.text && customColors.text,
+    customColors?.text && customColors.text
   );
 
   const progressWidth = (currentPage / totalPages) * 100;
@@ -258,7 +258,7 @@ export default function StudioPagination({
           "bg-background/95 text-foreground transition-all duration-200",
           "dark:bg-background/95 dark:text-foreground dark:shadow-md dark:shadow-primary/5",
           isHovered && "scale-102",
-          className,
+          className
         )}
         role="navigation"
         aria-label="Pagination"
@@ -291,7 +291,7 @@ export default function StudioPagination({
                     className={cn(
                       size === "sm" && "h-3 w-3",
                       size === "md" && "h-4 w-4",
-                      size === "lg" && "h-5 w-5",
+                      size === "lg" && "h-5 w-5"
                     )}
                   />
                 </Button>
@@ -313,7 +313,7 @@ export default function StudioPagination({
                   className={cn(
                     size === "sm" && "h-3 w-3",
                     size === "md" && "h-4 w-4",
-                    size === "lg" && "h-5 w-5",
+                    size === "lg" && "h-5 w-5"
                   )}
                 />
               </Button>
@@ -330,7 +330,7 @@ export default function StudioPagination({
                       "px-2 text-muted-foreground dark:text-muted-foreground",
                       size === "sm" && "text-xs",
                       size === "md" && "text-sm",
-                      size === "lg" && "text-base",
+                      size === "lg" && "text-base"
                     )}
                     {...animations[animation]}
                   >
@@ -351,8 +351,8 @@ export default function StudioPagination({
                         currentPage === page &&
                           cn(
                             "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 dark:hover:bg-primary/90",
-                            customColors?.active,
-                          ),
+                            customColors?.active
+                          )
                       )}
                     >
                       {isLoading && currentPage === page ? (
@@ -362,7 +362,7 @@ export default function StudioPagination({
                       )}
                     </Button>
                   </motion.div>
-                ),
+                )
               )}
             </AnimatePresence>
           </div>
@@ -381,7 +381,7 @@ export default function StudioPagination({
                   className={cn(
                     size === "sm" && "h-3 w-3",
                     size === "md" && "h-4 w-4",
-                    size === "lg" && "h-5 w-5",
+                    size === "lg" && "h-5 w-5"
                   )}
                 />
               </Button>
@@ -403,7 +403,7 @@ export default function StudioPagination({
                     className={cn(
                       size === "sm" && "h-3 w-3",
                       size === "md" && "h-4 w-4",
-                      size === "lg" && "h-5 w-5",
+                      size === "lg" && "h-5 w-5"
                     )}
                   />
                 </Button>

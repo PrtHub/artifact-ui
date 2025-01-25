@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export interface CanvasVoiceCommanderProps {
   onCommand?: (command: string) => void;
@@ -131,7 +131,7 @@ export default function CanvasVoiceCommander({
   const [isListening, setIsListening] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [recognition, setRecognition] = useState<SpeechRecognition | null>(
-    null,
+    null
   );
   const [confidence, setConfidence] = useState(0);
   const [audioData, setAudioData] = useState<number[]>(new Array(32).fill(0));
@@ -302,7 +302,7 @@ export default function CanvasVoiceCommander({
   const toggleListening = useCallback(() => {
     if (fallbackMode) {
       setFeedback(
-        "Speech recognition not supported. Please type your commands.",
+        "Speech recognition not supported. Please type your commands."
       );
       return;
     }

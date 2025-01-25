@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "next-themes";
 import { Loader2 } from "lucide-react";
 
@@ -236,7 +236,7 @@ export default function ClimateArtboard({
       setLastMousePosition({ x, y });
       setMousePosition({ x, y });
     },
-    [lastMousePosition],
+    [lastMousePosition]
   );
 
   // Geolocation and Weather Data Fetching
@@ -262,13 +262,13 @@ export default function ClimateArtboard({
 
       try {
         const response = await fetch(
-          `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=1`,
+          `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=1`
         );
         const data = await response.json();
 
         if (!response.ok)
           throw new Error(
-            data.error?.message || "Failed to fetch weather data",
+            data.error?.message || "Failed to fetch weather data"
           );
 
         return {
@@ -294,7 +294,7 @@ export default function ClimateArtboard({
         throw err;
       }
     },
-    [apiKey],
+    [apiKey]
   );
 
   const getLocation = useCallback(() => {
@@ -320,14 +320,14 @@ export default function ClimateArtboard({
         const position = await getLocation();
         const weatherData = await fetchWeatherData(
           position.coords.latitude,
-          position.coords.longitude,
+          position.coords.longitude
         );
         setWeather(weatherData);
         onWeatherChange?.(weatherData);
         setError(null);
       } catch (err) {
         setError(
-          err instanceof Error ? err.message : "Failed to load weather data",
+          err instanceof Error ? err.message : "Failed to load weather data"
         );
         console.error("Weather initialization error:", err);
       } finally {
@@ -412,7 +412,7 @@ export default function ClimateArtboard({
             particle.y,
             particle.size / 2,
             0,
-            Math.PI * 2,
+            Math.PI * 2
           );
           ctx.fill();
         }
@@ -429,7 +429,7 @@ export default function ClimateArtboard({
                   canvas.width) %
                 canvas.width
               : particle.x,
-        })),
+        }))
       );
 
       animationFrame = requestAnimationFrame(animate);
@@ -497,7 +497,7 @@ export default function ClimateArtboard({
       <div
         className={cn(
           "relative min-h-[400px] w-full rounded-lg bg-red-50",
-          className,
+          className
         )}
       >
         <div className="flex h-full flex-col items-center justify-center p-4 text-center">
@@ -525,7 +525,7 @@ export default function ClimateArtboard({
         "before:absolute before:inset-0 before:z-0",
         "after:z-0",
         getWeatherBackground(),
-        className,
+        className
       )}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
@@ -714,7 +714,7 @@ export default function ClimateArtboard({
               animate={{ opacity: 1, y: 0 }}
               className={cn(
                 "absolute left-4 top-4 rounded-full px-4 py-2",
-                getThemeStyles(),
+                getThemeStyles()
               )}
             >
               <span className="mr-2 inline-block animate-bounce">📍</span>
@@ -758,7 +758,7 @@ export default function ClimateArtboard({
               whileTap={{ scale: 0.95 }}
               className={cn(
                 "rounded-full px-6 py-2 shadow-lg transition-all duration-300",
-                getThemeStyles(),
+                getThemeStyles()
               )}
             >
               {weather.temperature}°C
@@ -768,7 +768,7 @@ export default function ClimateArtboard({
               whileTap={{ scale: 0.95 }}
               className={cn(
                 "rounded-full px-6 py-2 capitalize shadow-lg transition-all duration-300",
-                getThemeStyles(),
+                getThemeStyles()
               )}
             >
               {weather.condition}
@@ -780,7 +780,7 @@ export default function ClimateArtboard({
                   whileTap={{ scale: 0.95 }}
                   className={cn(
                     "rounded-full px-6 py-2 shadow-lg transition-all duration-300",
-                    getThemeStyles(),
+                    getThemeStyles()
                   )}
                 >
                   <span className="mr-2 inline-block animate-pulse">💨</span>
@@ -791,7 +791,7 @@ export default function ClimateArtboard({
                   whileTap={{ scale: 0.95 }}
                   className={cn(
                     "rounded-full px-6 py-2 shadow-lg transition-all duration-300",
-                    getThemeStyles(),
+                    getThemeStyles()
                   )}
                 >
                   <span className="mr-2 inline-block animate-pulse">💧</span>
@@ -807,7 +807,7 @@ export default function ClimateArtboard({
               animate={{ opacity: 1, y: 0 }}
               className={cn(
                 "mx-auto mt-8 flex w-fit items-center gap-2 rounded-full px-6 py-2 shadow-lg",
-                getThemeStyles(),
+                getThemeStyles()
               )}
             >
               <span className="text-base">🕒</span>
@@ -830,7 +830,7 @@ export default function ClimateArtboard({
                   transition={{ delay: index * 0.1 }}
                   className={cn(
                     "flex min-w-[100px] shrink-0 flex-col items-center rounded-xl p-4 shadow-lg",
-                    getThemeStyles(),
+                    getThemeStyles()
                   )}
                 >
                   <span className="text-sm font-medium">{item.time}</span>
@@ -985,7 +985,7 @@ export default function ClimateArtboard({
 }
 
 function mapWeatherCondition(
-  code: number,
+  code: number
 ): "sunny" | "rainy" | "cloudy" | "snowy" {
   if (code >= 1000 && code < 2000) return "sunny";
   if (code >= 2000 && code < 3000) return "cloudy";

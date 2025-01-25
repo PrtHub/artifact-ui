@@ -5,7 +5,7 @@ import {
   useAnimation,
   useInView,
   type Variants,
-} from "framer-motion";
+} from "motion/react";
 import { cn } from "@/lib/utils";
 
 type MotionDivProps = HTMLMotionProps<"div">;
@@ -209,7 +209,7 @@ export default function PrismHero({
   className,
   ...props
 }: PrismHeroProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref);
   const [currentTextIndex, setCurrentTextIndex] = React.useState(0);
   const [scrollProgress, setScrollProgress] = React.useState(0);
@@ -247,7 +247,7 @@ export default function PrismHero({
       animate="animate"
       className={cn(
         "relative flex min-h-screen items-center justify-center overflow-hidden rounded",
-        className,
+        className
       )}
       style={{
         backgroundColor: interpolateColor(),
@@ -272,13 +272,13 @@ export default function PrismHero({
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className={cn(
             "relative z-10 overflow-hidden whitespace-nowrap text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl",
-            animationStyle === "typing" && "mx-auto",
+            animationStyle === "typing" && "mx-auto"
           )}
         >
           <span
             className={cn(
               "bg-clip-text text-transparent",
-              animationStyle === "typing" && "block text-center",
+              animationStyle === "typing" && "block text-center"
             )}
             style={{
               ...{

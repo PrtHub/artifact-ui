@@ -2,7 +2,7 @@
 
 import CanvasGrid from "@/registry/default/ui/canvas-grid";
 import { Card } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   IconBrandBehance,
   IconBrandDribbble,

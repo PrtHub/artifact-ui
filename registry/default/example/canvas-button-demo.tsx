@@ -33,7 +33,7 @@ export default function CanvasButtonDemo() {
                 "ml-1 h-3 w-3 transition-transform",
                 activeSection === key
                   ? "rotate-90"
-                  : "rotate-0 opacity-0 group-hover:opacity-100",
+                  : "rotate-0 opacity-0 group-hover:opacity-100"
               )}
             />
           </CanvasButton>
@@ -44,7 +44,7 @@ export default function CanvasButtonDemo() {
       <section
         className={cn(
           "space-y-8 transition-opacity",
-          activeSection === "classic" ? "opacity-100" : "hidden opacity-0",
+          activeSection === "classic" ? "opacity-100" : "hidden opacity-0"
         )}
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -98,7 +98,7 @@ export default function CanvasButtonDemo() {
       <section
         className={cn(
           "space-y-8 transition-opacity",
-          activeSection === "modern" ? "opacity-100" : "hidden opacity-0",
+          activeSection === "modern" ? "opacity-100" : "hidden opacity-0"
         )}
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -134,7 +134,7 @@ export default function CanvasButtonDemo() {
                 "w-full rounded-lg p-8 transition-colors",
                 isDark
                   ? "bg-gradient-to-r from-purple-600 to-pink-600"
-                  : "bg-gradient-to-r from-purple-500 to-pink-500",
+                  : "bg-gradient-to-r from-purple-500 to-pink-500"
               )}
             >
               <CanvasButton
@@ -153,7 +153,7 @@ export default function CanvasButtonDemo() {
       <section
         className={cn(
           "space-y-8 transition-opacity",
-          activeSection === "artistic" ? "opacity-100" : "hidden opacity-0",
+          activeSection === "artistic" ? "opacity-100" : "hidden opacity-0"
         )}
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

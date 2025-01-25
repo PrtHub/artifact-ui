@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -51,7 +51,7 @@ const canvasButtonVariants = cva(
       size: "default",
       effect: "none",
     },
-  },
+  }
 );
 
 export interface CanvasButtonProps
@@ -98,7 +98,7 @@ const CanvasButton = React.forwardRef<HTMLButtonElement, CanvasButtonProps>(
       <Comp
         className={cn(
           canvasButtonVariants({ variant, size, effect, className }),
-          effect === "glow" && "hover:shadow-[0_0_1em_rgba(0,0,0,0.2)]",
+          effect === "glow" && "hover:shadow-[0_0_1em_rgba(0,0,0,0.2)]"
         )}
         ref={ref}
         onClick={handleClick}
@@ -152,7 +152,7 @@ const CanvasButton = React.forwardRef<HTMLButtonElement, CanvasButtonProps>(
           ))}
       </Comp>
     );
-  },
+  }
 );
 CanvasButton.displayName = "CanvasButton";
 

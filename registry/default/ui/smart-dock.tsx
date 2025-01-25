@@ -10,7 +10,7 @@ import {
   useSpring,
   useTransform,
   HTMLMotionProps,
-} from "framer-motion";
+} from "motion/react";
 import { cn } from "@/lib/utils";
 
 type MotionDivProps = HTMLMotionProps<"div">;
@@ -372,7 +372,7 @@ function SmartDockItem({
   const scale = useTransform(
     distance,
     [-hoverConfig.distance, 0, hoverConfig.distance],
-    [1, hoverConfig.scale, 1],
+    [1, hoverConfig.scale, 1]
   );
 
   const x = useTransform(() => {
@@ -410,7 +410,7 @@ function SmartDockItem({
             }}
             className={cn(
               "block aspect-square w-12 origin-bottom rounded-xl shadow backdrop-blur-sm transition-colors",
-              itemVariantStyles[variant],
+              itemVariantStyles[variant]
             )}
           >
             <div className="flex size-full items-center justify-center">
@@ -428,7 +428,7 @@ function SmartDockItem({
                 "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
                 "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
                 tooltipVariantStyles[variant],
-                tooltipTextStyles[variant],
+                tooltipTextStyles[variant]
               )}
             >
               {label}
@@ -443,7 +443,7 @@ function SmartDockItem({
 const SmartDock = React.forwardRef<HTMLDivElement, SmartDockProps>(
   (
     { className, items, variant = "modern", hoverStyle = "default", ...props },
-    ref,
+    ref
   ) => {
     const mouseLeft = useMotionValue(-Infinity);
     const mouseRight = useMotionValue(-Infinity);
@@ -470,14 +470,14 @@ const SmartDock = React.forwardRef<HTMLDivElement, SmartDockProps>(
           }}
           className={cn(
             "relative mx-auto hidden h-20 items-end gap-3 px-4 pb-3 sm:flex",
-            className,
+            className
           )}
           {...props}
         >
           <motion.div
             className={cn(
               "absolute inset-y-0 -z-10 rounded-2xl",
-              variantStyles[variant],
+              variantStyles[variant]
             )}
             style={{ left: leftSpring, right: rightSpring }}
           />
@@ -497,7 +497,7 @@ const SmartDock = React.forwardRef<HTMLDivElement, SmartDockProps>(
           <div
             className={cn(
               "mx-auto flex h-20 max-w-full items-end gap-4 overflow-x-scroll rounded-2xl px-4 pb-3",
-              variantStyles[variant],
+              variantStyles[variant]
             )}
           >
             {items.map((item, i) => (
@@ -505,7 +505,7 @@ const SmartDock = React.forwardRef<HTMLDivElement, SmartDockProps>(
                 key={i}
                 className={cn(
                   "flex aspect-square w-12 shrink-0 items-center justify-center rounded-xl",
-                  itemVariantStyles[variant],
+                  itemVariantStyles[variant]
                 )}
               >
                 {item.icon}
@@ -519,7 +519,7 @@ const SmartDock = React.forwardRef<HTMLDivElement, SmartDockProps>(
         </div>
       </>
     );
-  },
+  }
 );
 
 SmartDock.displayName = "Dock";

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 
 const EaselTabs = TabsPrimitive.Root;
@@ -17,7 +17,7 @@ const EaselTabsList = React.forwardRef<
       "relative flex h-14 items-center justify-start gap-2 rounded-xl bg-muted/20 p-2",
       "before:absolute before:inset-0 before:-z-10 before:rounded-xl before:bg-gradient-to-b before:from-background before:to-muted/50 before:shadow-lg",
       "after:absolute after:inset-0 after:-z-20 after:rounded-xl after:bg-gradient-to-t after:from-primary/5 after:to-muted/5",
-      className,
+      className
     )}
     {...props}
   />
@@ -40,7 +40,7 @@ const EaselTabsTrigger = React.forwardRef<
       "after:absolute after:-bottom-1 after:left-1/2 after:h-6 after:w-6 after:-translate-x-1/2 after:rounded-full after:bg-gradient-to-t after:from-primary/0 after:to-primary/0 after:blur-md after:transition-all after:duration-300 after:content-[''] data-[state=active]:after:from-primary/30 data-[state=active]:after:to-primary/10",
       // Shadow and border effects
       "data-[state=active]:bg-background/50 data-[state=active]:shadow-lg data-[state=active]:shadow-primary/10",
-      className,
+      className
     )}
     {...props}
   >
@@ -98,7 +98,7 @@ const EaselTabsContent = React.forwardRef<
     ref={ref}
     className={cn(
       "mt-6 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-      className,
+      className
     )}
     {...props}
   >
