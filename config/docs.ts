@@ -107,11 +107,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Gallery Grid",
-          href: "/docs/components/gallery-grid",
-          items: [],
-        },
-        {
           title: "Easel Tabs",
           href: "/docs/components/easel-tabs",
           items: [],
@@ -264,11 +259,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Grid Pattern Background",
           href: "/docs/components/grid-pattern-background",
-          items: [],
-        },
-        {
-          title: "Prism Hero",
-          href: "/docs/components/prism-hero",
           items: [],
         },
         {

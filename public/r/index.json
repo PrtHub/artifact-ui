@@ -41,19 +41,6 @@
     ]
   },
   {
-    "name": "gallery-grid",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion"
-    ],
-    "files": [
-      {
-        "path": "ui/gallery-grid.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "easel-tabs",
     "type": "registry:ui",
     "dependencies": [
@@ -554,19 +541,6 @@
     "files": [
       {
         "path": "ui/particle-background.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "prism-hero",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion"
-    ],
-    "files": [
-      {
-        "path": "ui/prism-hero.tsx",
         "type": "registry:ui"
       }
     ]

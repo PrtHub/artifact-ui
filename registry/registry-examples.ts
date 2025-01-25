@@ -20,12 +20,6 @@ export const examples: Registry = [
     files: ["example/sketch-input-demo.tsx"],
   },
   {
-    name: "gallery-grid-demo",
-    type: "registry:example",
-    registryDependencies: ["gallery-grid"],
-    files: ["example/gallery-grid-demo.tsx"],
-  },
-  {
     name: "easel-tabs-demo",
     type: "registry:example",
     registryDependencies: ["easel-tabs"],
@@ -252,12 +246,6 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["particle-background"],
     files: ["example/particle-background-demo.tsx"],
-  },
-  {
-    name: "prism-hero-demo",
-    type: "registry:example",
-    registryDependencies: ["prism-hero"],
-    files: ["example/prism-hero-demo.tsx"],
   },
   {
     name: "climate-artboard-demo",

@@ -38,17 +38,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "gallery-grid": {
-      name: "gallery-grid",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/gallery-grid.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/gallery-grid.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "easel-tabs": {
       name: "easel-tabs",
       type: "registry:ui",
@@ -467,17 +456,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "prism-hero": {
-      name: "prism-hero",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/prism-hero.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/prism-hero.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "climate-artboard": {
       name: "climate-artboard",
       type: "registry:ui",
@@ -638,17 +616,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["sketch-input"],
       files: ["registry/default/example/sketch-input-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/sketch-input-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "gallery-grid-demo": {
-      name: "gallery-grid-demo",
-      type: "registry:example",
-      registryDependencies: ["gallery-grid"],
-      files: ["registry/default/example/gallery-grid-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/gallery-grid-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -1067,17 +1034,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["particle-background"],
       files: ["registry/default/example/particle-background-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/particle-background-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "prism-hero-demo": {
-      name: "prism-hero-demo",
-      type: "registry:example",
-      registryDependencies: ["prism-hero"],
-      files: ["registry/default/example/prism-hero-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/prism-hero-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

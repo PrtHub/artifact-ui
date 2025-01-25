@@ -22,12 +22,6 @@ export const ui: Registry = [
     registryDependencies: [],
   },
   {
-    name: "gallery-grid",
-    type: "registry:ui",
-    dependencies: ["framer-motion"],
-    files: ["ui/gallery-grid.tsx"],
-  },
-  {
     name: "easel-tabs",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-tabs", "framer-motion"],
@@ -256,12 +250,6 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: [],
     files: ["ui/particle-background.tsx"],
-  },
-  {
-    name: "prism-hero",
-    type: "registry:ui",
-    dependencies: ["framer-motion"],
-    files: ["ui/prism-hero.tsx"],
   },
   {
     name: "climate-artboard",
