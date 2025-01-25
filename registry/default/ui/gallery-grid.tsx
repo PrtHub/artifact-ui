@@ -47,7 +47,7 @@ const GalleryItem = React.forwardRef<HTMLDivElement, GalleryItemProps>(
       priority,
       ...props
     },
-    ref,
+    ref
   ) => {
     const [isHovered, setIsHovered] = React.useState(false);
 
@@ -65,7 +65,7 @@ const GalleryItem = React.forwardRef<HTMLDivElement, GalleryItemProps>(
           "group relative overflow-hidden rounded-xl border border-input/10 bg-gradient-to-br from-background/40 via-background/20 to-background/40 backdrop-blur-sm transition-all duration-300",
           "hover:border-input/30 hover:shadow-[0_0_1rem_-0.25rem] hover:shadow-primary/20",
           aspectRatioMap[aspectRatio],
-          className,
+          className
         )}
         initial={false}
         whileHover={hoverEffects[hover]}
@@ -91,9 +91,9 @@ const GalleryItem = React.forwardRef<HTMLDivElement, GalleryItemProps>(
                 {React.Children.map(
                   React.Children.toArray(children).filter(
                     (child) =>
-                      React.isValidElement(child) && child.type === "div",
+                      React.isValidElement(child) && child.type === "div"
                   ),
-                  (child) => child,
+                  (child) => child
                 )}
               </div>
             </motion.div>
@@ -101,14 +101,14 @@ const GalleryItem = React.forwardRef<HTMLDivElement, GalleryItemProps>(
         </AnimatePresence>
       </motion.div>
     );
-  },
+  }
 );
 GalleryItem.displayName = "GalleryItem";
 
 const GalleryGrid = React.forwardRef<HTMLDivElement, GalleryGridProps>(
   (
     { className, columns = 3, gap = 4, children, hover = "zoom", ...props },
-    ref,
+    ref
   ) => {
     return (
       <motion.div
@@ -116,7 +116,7 @@ const GalleryGrid = React.forwardRef<HTMLDivElement, GalleryGridProps>(
         className={cn(
           "masonry-grid",
           `gap- columns-1${gap} lg:columns- sm:columns-2${columns}`,
-          className,
+          className
         )}
         style={{
           columnGap: `${gap * 0.25}rem`,
@@ -150,7 +150,7 @@ const GalleryGrid = React.forwardRef<HTMLDivElement, GalleryGridProps>(
         })}
       </motion.div>
     );
-  },
+  }
 );
 GalleryGrid.displayName = "GalleryGrid";
 
