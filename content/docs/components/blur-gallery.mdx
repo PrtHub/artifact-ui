@@ -1,0 +1,47 @@
+---
+title: Blur Gallery
+description: A responsive and animated gallery component with blur effect and hover interactions.
+component: true
+---
+
+<ComponentPreview name="blur-gallery-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/blur-gallery.tsx`
+
+<ComponentSource name="blur-gallery" />{" "}
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { BlurGallery } from "@/components/ui/blur-gallery";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+
+const images = [
+   // Add your image URLs or objects here
+]
+
+
+export default const Example = () => {
+   return <BlurGallery images={images} />
+}
+
+```
+
+## Props
+
+| Prop        | Type           | Default | Description            |
+| ----------- | -------------- | ------- | ---------------------- |
+| `images`    | `ImageProps[]` | `[]`    | Array of image objects |
+| `className` | `string`       | `-`     | Additional CSS classes |

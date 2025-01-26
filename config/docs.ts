@@ -303,6 +303,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Blur Gallery",
+          href: "/docs/components/blur-gallery",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

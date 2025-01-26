@@ -120,7 +120,8 @@ module.exports = {
         "nebula-shift-reverse": "nebula-shift-reverse 25s ease-in-out infinite",
         tile: "tile 8s infinite",
         "infinite-scroll": "infiniteScroll var(--duration) linear infinite",
-        "infinite-scroll-reverse": "infiniteScroll var(--duration) linear infinite reverse",
+        "infinite-scroll-reverse":
+          "infiniteScroll var(--duration) linear infinite reverse",
       },
       keyframes: {
         flicker: {
@@ -536,8 +537,8 @@ module.exports = {
         },
         infiniteScroll: {
           from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" }
-        }
+          to: { transform: "translateX(-50%)" },
+        },
       },
       backgroundImage: {
         noise:

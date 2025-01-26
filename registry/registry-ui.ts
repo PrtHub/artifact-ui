@@ -321,4 +321,10 @@ export const ui: Registry = [
     files: ["ui/infinite-scroll.tsx"],
     dependencies: ["framer-motion"],
   },
+  {
+    name: "blur-gallery",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/blur-gallery.tsx"],
+  },
 ];

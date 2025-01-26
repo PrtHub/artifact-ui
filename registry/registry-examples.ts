@@ -319,4 +319,10 @@ export const examples: Registry = [
     registryDependencies: ["infinite-scroll"],
     files: ["example/infinite-scroll-demo.tsx"],
   },
+  {
+    name: "blur-gallery-demo",
+    type: "registry:example",
+    registryDependencies: ["blur-gallery"],
+    files: ["example/blur-gallery-demo.tsx"],
+  },
 ];

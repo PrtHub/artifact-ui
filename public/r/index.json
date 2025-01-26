@@ -694,5 +694,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "blur-gallery",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/blur-gallery.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
