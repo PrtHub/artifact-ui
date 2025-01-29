@@ -327,4 +327,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/blur-gallery.tsx"],
   },
+  {
+    name: "circuit-pulse",
+    type: "registry:ui",
+    dependencies: ["framer-motion", "lucide-react"],
+    files: ["ui/circuit-pulse.tsx"],
+  },
 ];

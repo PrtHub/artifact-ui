@@ -309,6 +309,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Circuit Pulse",
+          href: "/docs/components/circuit-pulse",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

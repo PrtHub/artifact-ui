@@ -325,4 +325,10 @@ export const examples: Registry = [
     registryDependencies: ["blur-gallery"],
     files: ["example/blur-gallery-demo.tsx"],
   },
+  {
+    name: "circuit-pulse-demo",
+    type: "registry:example",
+    registryDependencies: ["circuit-pulse"],
+    files: ["example/circuit-pulse-demo.tsx"],
+  },
 ];

@@ -599,6 +599,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "circuit-pulse": {
+      name: "circuit-pulse",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/circuit-pulse.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/circuit-pulse.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1188,6 +1199,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["blur-gallery"],
       files: ["registry/default/example/blur-gallery-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/blur-gallery-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "circuit-pulse-demo": {
+      name: "circuit-pulse-demo",
+      type: "registry:example",
+      registryDependencies: ["circuit-pulse"],
+      files: ["registry/default/example/circuit-pulse-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/circuit-pulse-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

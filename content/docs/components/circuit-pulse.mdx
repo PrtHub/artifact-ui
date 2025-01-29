@@ -1,0 +1,77 @@
+---
+title: Circuit Pulse
+description: A modern tech-themed animated circuit component with pulsing dots and glowing paths.
+component: true
+---
+
+<ComponentPreview name="circuit-pulse-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy the following code to your project.</Step>
+
+<ComponentSource name="circuit-pulse" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import CircuitPulse from "@/components/ui/circuit-pulse";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+export default function Example() {
+  return (
+    <div className="relative min-h-[400px]">
+      <CircuitPulse />
+    </div>
+  );
+}
+```
+
+## Examples
+
+### Custom Color
+
+You can customize the color of the circuit paths and dots.
+
+```tsx
+<CircuitPulse color="#4545ff" />
+```
+
+### Background Integration
+
+For the best visual effect, place the component in a container with a gradient background:
+
+```tsx
+<div className="relative z-30 grid min-h-screen grid-cols-1 gap-8 overflow-hidden bg-gradient-to-b from-background via-background to-black/50 p-8">
+  <div className="relative flex min-h-[400px] items-center justify-center">
+    <CircuitPulse />
+  </div>
+</div>
+```
+
+## Props
+
+| Property  | Type   | Default | Description                                                                         |
+| --------- | ------ | ------- | ----------------------------------------------------------------------------------- |
+| color     | string | #ff4545 | The color of the circuit paths, dots, and icons. Accepts any valid CSS color value. |
+| className | string | -       | Additional CSS classes to apply to the root element.                                |
+
+## Features
+
+- Four unique dot animations with different timing patterns
+- Glowing paths and dots with customizable colors
+- Responsive design that scales with container
+- Dark mode compatible
+- Eight tech-themed icons arranged in a circuit pattern
+- Smooth transitions and animations
+
+## Accessibility
+
+The component is purely decorative and does not require any interaction. All animations are subtle and should not trigger motion sickness.

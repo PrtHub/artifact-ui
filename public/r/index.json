@@ -707,5 +707,19 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "circuit-pulse",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui/circuit-pulse.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
