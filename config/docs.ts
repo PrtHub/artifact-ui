@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Components",
-      href: "/docs/components/canvas-button",
+      href: "/docs/components/texture-browser",
     },
   ],
   sidebarNav: [
@@ -35,11 +35,6 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
-        {
-          title: "Canvas Button",
-          href: "/docs/components/canvas-button",
-          items: [],
-        },
         {
           title: "Texture Browser",
           href: "/docs/components/texture-browser",
@@ -295,23 +290,25 @@ export const docsConfig: DocsConfig = {
           title: "Ghost Text",
           href: "/docs/components/ghost-text",
           items: [],
-          label: "New",
         },
         {
           title: "Infinite Scroll",
           href: "/docs/components/infinite-scroll",
           items: [],
-          label: "New",
         },
         {
           title: "Blur Gallery",
           href: "/docs/components/blur-gallery",
           items: [],
-          label: "New",
         },
         {
           title: "Circuit Pulse",
           href: "/docs/components/circuit-pulse",
+          items: [],
+        },
+        {
+          title: "Neon Button",
+          href: "/docs/components/neon-button",
           items: [],
           label: "New",
         },

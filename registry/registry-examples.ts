@@ -8,12 +8,6 @@ export const examples: Registry = [
     registryDependencies: ["cosmic-scene"],
   },
   {
-    name: "canvas-button-demo",
-    type: "registry:example",
-    registryDependencies: ["canvas-button"],
-    files: ["example/canvas-button-demo.tsx"],
-  },
-  {
     name: "sketch-input-demo",
     type: "registry:example",
     registryDependencies: ["sketch-input"],
@@ -330,5 +324,11 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["circuit-pulse"],
     files: ["example/circuit-pulse-demo.tsx"],
+  },
+  {
+    name: "neon-button-demo",
+    type: "registry:example",
+    registryDependencies: ["neon-button"],
+    files: ["example/neon-button-demo.tsx"],
   },
 ];

@@ -122,6 +122,10 @@ module.exports = {
         "infinite-scroll": "infiniteScroll var(--duration) linear infinite",
         "infinite-scroll-reverse":
           "infiniteScroll var(--duration) linear infinite reverse",
+        neonSlideRight: "neonSlideRight 2s linear infinite",
+        neonSlideDown: "neonSlideDown 2s linear infinite",
+        neonSlideLeft: "neonSlideLeft 2s linear infinite",
+        neonSlideUp: "neonSlideUp 2s linear infinite",
       },
       keyframes: {
         flicker: {
@@ -538,6 +542,22 @@ module.exports = {
         infiniteScroll: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        neonSlideRight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+        neonSlideDown: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" }
+        },
+        neonSlideLeft: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        neonSlideUp: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(-100%)" }
         },
       },
       backgroundImage: {

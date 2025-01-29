@@ -16,17 +16,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "canvas-button": {
-      name: "canvas-button",
-      type: "registry:ui",
-      registryDependencies: [],
-      files: ["registry/default/ui/canvas-button.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/canvas-button.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "sketch-input": {
       name: "sketch-input",
       type: "registry:ui",
@@ -610,23 +599,23 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "neon-button": {
+      name: "neon-button",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/neon-button.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/neon-button.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
       registryDependencies: ["cosmic-scene"],
       files: ["registry/default/example/cosmic-scene-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/cosmic-scene-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "canvas-button-demo": {
-      name: "canvas-button-demo",
-      type: "registry:example",
-      registryDependencies: ["canvas-button"],
-      files: ["registry/default/example/canvas-button-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/canvas-button-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -1210,6 +1199,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["circuit-pulse"],
       files: ["registry/default/example/circuit-pulse-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/circuit-pulse-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "neon-button-demo": {
+      name: "neon-button-demo",
+      type: "registry:example",
+      registryDependencies: ["neon-button"],
+      files: ["registry/default/example/neon-button-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/neon-button-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -1,0 +1,125 @@
+---
+title: Neon Button
+description: A customizable button component with animated neon border effects.
+component: true
+---
+
+<ComponentPreview name="neon-button-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/neon-button.tsx`
+
+<ComponentSource name="neon-button" />
+
+<Step>Update your tailwind.config</Step>
+
+Add the following animations to your `tailwind.config`:
+
+```tsx {5-8} {11-26}
+{
+  theme: {
+    extend: {
+      animation: {
+        neonSlideRight: "neonSlideRight 2s linear infinite",
+        neonSlideDown: "neonSlideDown 2s linear infinite",
+        neonSlideLeft: "neonSlideLeft 2s linear infinite",
+        neonSlideUp: "neonSlideUp 2s linear infinite",
+      },
+      keyframes: {
+        neonSlideRight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+        neonSlideDown: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" }
+        },
+        neonSlideLeft: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        neonSlideUp: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(-100%)" }
+        },
+      }
+    }
+  }
+}
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { NeonButton } from "@/components/ui/neon-button";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { NeonButton } from "@/components/ui/neon-button";
+
+export default function ButtonDemo() {
+  return (
+    <NeonButton
+      backgroundColor="#0c002b"
+      textColor="#1670f0"
+      borderStartColor="rgba(22, 112, 240, 0.1)"
+      borderEndColor="rgba(22, 112, 240, 0.7)"
+    >
+      Neon Button
+    </NeonButton>
+  );
+}
+```
+
+## Props
+
+| Prop               | Type            | Default       | Description                                  |
+| ------------------ | --------------- | ------------- | -------------------------------------------- |
+| `children`         | React.ReactNode | -             | The content of the button.                   |
+| `backgroundColor`  | string          | "transparent" | The background color of the button.          |
+| `textColor`        | string          | "#1670f0"     | The text color of the button.                |
+| `borderStartColor` | string          | "#0c002b"     | The start color of the neon border gradient. |
+| `borderEndColor`   | string          | "#1670f0"     | The end color of the neon border gradient.   |
+
+## Examples
+
+### Default Style
+
+```tsx
+<NeonButton>Default Button</NeonButton>
+```
+
+### Custom Colors
+
+```tsx
+<NeonButton
+  backgroundColor="#1a0b2e"
+  textColor="#ff00ff"
+  borderStartColor="rgba(255, 0, 255, 0.1)"
+  borderEndColor="rgba(0, 255, 255, 0.7)"
+>
+  Custom Colors
+</NeonButton>
+```
+
+### With Background
+
+```tsx
+<NeonButton
+  backgroundColor="rgba(22, 112, 240, 0.1)"
+  textColor="#1670f0"
+  borderStartColor="#0c002b"
+  borderEndColor="#1779ff"
+>
+  With Background
+</NeonButton>
+```

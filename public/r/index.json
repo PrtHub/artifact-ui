@@ -11,21 +11,6 @@
     ]
   },
   {
-    "name": "canvas-button",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion",
-      "class-variance-authority"
-    ],
-    "registryDependencies": [],
-    "files": [
-      {
-        "path": "ui/canvas-button.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "sketch-input",
     "type": "registry:ui",
     "dependencies": [
@@ -718,6 +703,19 @@
     "files": [
       {
         "path": "ui/circuit-pulse.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "neon-button",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "ui/neon-button.tsx",
         "type": "registry:ui"
       }
     ]

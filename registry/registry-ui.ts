@@ -8,13 +8,6 @@ export const ui: Registry = [
     files: ["ui/cosmic-scene.tsx"],
   },
   {
-    name: "canvas-button",
-    type: "registry:ui",
-    dependencies: ["framer-motion", "class-variance-authority"],
-    files: ["ui/canvas-button.tsx"],
-    registryDependencies: [],
-  },
-  {
     name: "sketch-input",
     type: "registry:ui",
     dependencies: ["framer-motion", "class-variance-authority"],
@@ -332,5 +325,11 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui/circuit-pulse.tsx"],
+  },
+  {
+    name: "neon-button",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["ui/neon-button.tsx"],
   },
 ];
