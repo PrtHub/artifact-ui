@@ -331,4 +331,10 @@ export const examples: Registry = [
     registryDependencies: ["neon-button"],
     files: ["example/neon-button-demo.tsx"],
   },
+  {
+    name: "three-d-card-demo",
+    type: "registry:example",
+    registryDependencies: ["three-d-card"],
+    files: ["example/three-d-card-demo.tsx"],
+  },
 ];

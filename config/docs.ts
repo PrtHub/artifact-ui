@@ -312,6 +312,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "3D Card",
+          href: "/docs/components/three-d-card",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

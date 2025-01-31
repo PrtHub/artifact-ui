@@ -1,0 +1,89 @@
+---
+title: 3D Card
+description: An interactive 3D card component with parallax effects and smooth transitions.
+component: true
+---
+
+<ComponentPreview name="three-d-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="three-d-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import ThreeDCard from "@/components/ui/three-d-card";
+```
+
+</Steps>
+
+### Basic Usage
+
+```tsx
+export default function App() {
+  return (
+    <ThreeDCard
+      title="Card Title"
+      imageUrl="/path/to/image.png"
+      backgroundUrl="/path/to/background.jpg"
+      variant="shine"
+    />
+  );
+}
+```
+
+## Props
+
+| Prop          | Type      | Description                                         | Default |
+| ------------- | --------- | --------------------------------------------------- | ------- |
+| title         | string    | The title text to display on the card               | -       |
+| imageUrl      | string    | URL of the main image                               | -       |
+| backgroundUrl | string    | URL of the background image                         | -       |
+| variant       | string    | Visual variant of the card (default, shine, border) | default |
+| className     | string    | Additional CSS classes to apply to the card         | -       |
+| children      | ReactNode | Additional content to render in the card            | -       |
+
+## Examples
+
+### Default Variant
+
+The default variant provides a clean, minimal look with the core 3D and parallax effects.
+
+```tsx
+<ThreeDCard
+  title="Default Card"
+  imageUrl="/path/to/image.png"
+  backgroundUrl="/path/to/background.jpg"
+/>
+```
+
+### Shine Variant
+
+Adds a subtle gradient shine effect that moves with the card rotation.
+
+```tsx
+<ThreeDCard
+  title="Shine Card"
+  imageUrl="/path/to/image.png"
+  backgroundUrl="/path/to/background.jpg"
+  variant="shine"
+/>
+```
+
+### Border Variant
+
+Displays an animated border that becomes more visible on hover.
+
+```tsx
+<ThreeDCard
+  title="Border Card"
+  imageUrl="/path/to/image.png"
+  backgroundUrl="/path/to/background.jpg"
+  variant="border"
+/>
+```

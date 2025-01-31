@@ -719,5 +719,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "three-d-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "@/lib/utils"
+    ],
+    "files": [
+      {
+        "path": "ui/three-d-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

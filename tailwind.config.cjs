@@ -545,19 +545,19 @@ module.exports = {
         },
         neonSlideRight: {
           "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" }
+          "100%": { transform: "translateX(100%)" },
         },
         neonSlideDown: {
           "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(100%)" }
+          "100%": { transform: "translateY(100%)" },
         },
         neonSlideLeft: {
           "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" }
+          "100%": { transform: "translateX(-100%)" },
         },
         neonSlideUp: {
           "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(-100%)" }
+          "100%": { transform: "translateY(-100%)" },
         },
       },
       backgroundImage: {

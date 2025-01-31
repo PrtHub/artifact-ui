@@ -332,4 +332,10 @@ export const ui: Registry = [
     dependencies: [""],
     files: ["ui/neon-button.tsx"],
   },
+  {
+    name: "three-d-card",
+    type: "registry:ui",
+    files: ["ui/three-d-card.tsx"],
+    dependencies: ["@/lib/utils"],
+  },
 ];
