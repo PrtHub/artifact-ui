@@ -159,20 +159,6 @@
     ]
   },
   {
-    "name": "studio-light",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion",
-      "next-themes"
-    ],
-    "files": [
-      {
-        "path": "ui/studio-light.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "sketch-accordion",
     "type": "registry:ui",
     "dependencies": [

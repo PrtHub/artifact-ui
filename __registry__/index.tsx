@@ -137,17 +137,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "studio-light": {
-      name: "studio-light",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/studio-light.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/studio-light.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "sketch-accordion": {
       name: "sketch-accordion",
       type: "registry:ui",
@@ -759,17 +748,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["smart-dock"],
       files: ["registry/default/example/smart-dock-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/smart-dock-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "studio-light-demo": {
-      name: "studio-light-demo",
-      type: "registry:example",
-      registryDependencies: ["studio-light"],
-      files: ["registry/default/example/studio-light-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/studio-light-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -74,12 +74,6 @@ export const examples: Registry = [
     files: ["example/smart-dock-demo.tsx"],
   },
   {
-    name: "studio-light-demo",
-    type: "registry:example",
-    registryDependencies: ["studio-light"],
-    files: ["example/studio-light-demo.tsx"],
-  },
-  {
     name: "sketch-accordion-demo",
     type: "registry:example",
     registryDependencies: ["sketch-accordion"],

@@ -40,7 +40,7 @@ export function SwipeCards({
     <div
       className={cn(
         "relative grid h-full w-full place-items-center",
-        className
+        className,
       )}
       {...props}
     >
@@ -98,7 +98,7 @@ function Card({
       className={cn(
         "relative h-96 w-72 origin-bottom select-none rounded-lg shadow-lg",
         isFront && "cursor-grab active:cursor-grabbing",
-        className
+        className,
       )}
       style={{
         gridRow: 1,

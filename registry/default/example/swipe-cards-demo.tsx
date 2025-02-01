@@ -145,7 +145,7 @@ export default function Demo() {
         data={cardData}
         onSwipe={(id, direction) => {
           console.log(
-            `${cardData.find((card) => card.id === id)?.name} was swiped ${direction}`
+            `${cardData.find((card) => card.id === id)?.name} was swiped ${direction}`,
           );
         }}
       />

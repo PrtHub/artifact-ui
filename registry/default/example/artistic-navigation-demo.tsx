@@ -14,7 +14,7 @@ export default function ArtisticNavigationDemo() {
   ];
 
   return (
-    <div className="relative flex min-h-[500px] w-full flex-col items-center gap-12 overflow-hidden bg-gradient-to-b from-background via-background/90 to-muted/30 p-12">
+    <div className="relative z-30 flex min-h-[500px] w-full flex-col items-center gap-12 overflow-hidden bg-gradient-to-b from-background via-background/90 to-muted/30 p-12">
       {/* Background ambient effects */}
       <div className="bg-grid-white/[0.02] absolute inset-0" />
       <div className="bg-gradient-radial absolute inset-0 from-primary/5 via-transparent to-transparent opacity-50" />

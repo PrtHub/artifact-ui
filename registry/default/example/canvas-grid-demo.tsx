@@ -507,7 +507,7 @@ const gridExamples = {
 
 export default function CanvasGridDemo() {
   return (
-    <div className="w-full space-y-16 p-0 2xl:p-8">
+    <div className="z-30 w-full space-y-16 p-0 2xl:p-8">
       {Object.entries(gridExamples).map(([key, example]) => (
         <div key={key} className="space-y-6">
           <div>

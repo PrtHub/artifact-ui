@@ -2,7 +2,7 @@ import SwarmEffect from "@/registry/default/ui/swarm-effect";
 
 export default function SwarmEffectDemo() {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="z-30 flex flex-col items-center gap-8">
       <SwarmEffect
         src="/placeholder.svg"
         particleSize={2}

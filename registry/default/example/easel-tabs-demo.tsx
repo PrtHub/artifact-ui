@@ -9,7 +9,7 @@ import {
 
 export default function EaselTabsDemo() {
   return (
-    <EaselTabs defaultValue="sketch" className="mx-auto w-full max-w-3xl">
+    <EaselTabs defaultValue="sketch" className="z-30 mx-auto w-full max-w-3xl">
       <EaselTabsList className="w-full">
         <EaselTabsTrigger value="sketch">
           <span>Sketch</span>
@@ -22,7 +22,7 @@ export default function EaselTabsDemo() {
         </EaselTabsTrigger>
       </EaselTabsList>
 
-      <EaselTabsContent value="sketch" className="space-y-4">
+      <EaselTabsContent value="sketch" className="z-30 space-y-4">
         <div className="rounded-xl border-2 border-dashed border-muted-foreground/25 bg-white/5 p-8 dark:bg-zinc-950/5">
           <div className="space-y-2 text-center">
             <h3 className="text-lg font-semibold">Digital Sketchpad</h3>

@@ -7,7 +7,7 @@ export default function ArtisticSettingsPanelDemo() {
   };
 
   return (
-    <div className="relative min-h-[400px] w-full rounded-lg border p-8">
+    <div className="relative z-30 min-h-[400px] w-full rounded-lg border p-8">
       <div className="absolute inset-0 bg-[url('/demo-bg.jpg')] bg-cover bg-center opacity-50" />
       <div className="relative">
         <h2 className="mb-4 text-2xl font-bold">Interactive Demo</h2>

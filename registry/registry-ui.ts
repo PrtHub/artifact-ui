@@ -76,12 +76,6 @@ export const ui: Registry = [
     files: ["ui/smart-dock.tsx"],
   },
   {
-    name: "studio-light",
-    type: "registry:ui",
-    dependencies: ["framer-motion", "next-themes"],
-    files: ["ui/studio-light.tsx"],
-  },
-  {
     name: "sketch-accordion",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-accordion"],

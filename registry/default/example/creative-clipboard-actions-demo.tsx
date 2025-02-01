@@ -8,7 +8,7 @@ export default function CreativeClipboardActionsDemo() {
   const sizes = ["sm", "md", "lg"];
 
   return (
-    <div className="flex flex-col gap-8 p-4">
+    <div className="z-30 flex flex-col gap-8 p-4">
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">Variants</h3>
         <div className="flex flex-wrap gap-4">

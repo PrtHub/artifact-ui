@@ -152,11 +152,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Studio Light",
-          href: "/docs/components/studio-light",
-          items: [],
-        },
-        {
           title: "Canvas Menu",
           href: "/docs/components/canvas-menu",
           items: [],

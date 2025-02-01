@@ -4,7 +4,7 @@ import { ArtBoardLayout } from "@/registry/default/ui/art-board-layout";
 
 export default function ArtBoardLayoutDemo() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="z-30 flex flex-col gap-8">
       {/* Basic Example */}
       <div className="space-y-4">
         <h3 className="text-lg font-medium">Basic Layout</h3>
