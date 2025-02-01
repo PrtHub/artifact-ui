@@ -337,4 +337,10 @@ export const examples: Registry = [
     registryDependencies: ["three-d-card"],
     files: ["example/three-d-card-demo.tsx"],
   },
+  {
+    name: "swipe-cards-demo",
+    type: "registry:example",
+    registryDependencies: ["swipe-cards.tsx"],
+    files: ["example/swipe-cards-demo.tsx"],
+  },
 ];

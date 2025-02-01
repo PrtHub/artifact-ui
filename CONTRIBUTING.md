@@ -1,6 +1,6 @@
-# Contributing to artifact UI
+# Contributing to Artifact UI
 
-Thank you for your interest in contributing to artifact UI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to artifact UI.
+Thank you for your interest in contributing to Artifact UI! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to Artifact UI.
 
 Read the [example PR](https://github.com/PrtHub/artifact-ui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
 

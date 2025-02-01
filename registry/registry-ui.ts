@@ -338,4 +338,10 @@ export const ui: Registry = [
     files: ["ui/three-d-card.tsx"],
     dependencies: ["@/lib/utils"],
   },
+  {
+    name: "swipe-cards",
+    type: "registry:ui",
+    files: ["ui/swipe-cards.tsx"],
+    dependencies: ["framer-motion"],
+  },
 ];

@@ -318,6 +318,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Swipe Cards",
+          href: "/docs/components/swipe-cards",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

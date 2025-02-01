@@ -732,5 +732,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "swipe-cards",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/swipe-cards.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

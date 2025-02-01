@@ -621,6 +621,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "swipe-cards": {
+      name: "swipe-cards",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/swipe-cards.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/swipe-cards.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1232,6 +1243,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["three-d-card"],
       files: ["registry/default/example/three-d-card-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/three-d-card-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "swipe-cards-demo": {
+      name: "swipe-cards-demo",
+      type: "registry:example",
+      registryDependencies: ["swipe-cards.tsx"],
+      files: ["registry/default/example/swipe-cards-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/swipe-cards-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

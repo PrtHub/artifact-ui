@@ -1,0 +1,122 @@
+---
+title: Swipe Cards
+description: A dynamic card swiping component with customizable effects and animations, perfect for creating interactive user interfaces like dating apps or product showcases.
+component: true
+---
+
+<ComponentPreview name="swipe-cards-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/swipe-cards.tsx`
+
+<ComponentSource name="swipe-cards" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import { SwipeCards } from "@/components/ui/swipe-cards";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import { SwipeCards } from "@/components/ui/swipe-cards";
+
+const cardData = [
+  {
+    id: 1,
+    name: "Sarah",
+    age: 28,
+    location: "New York City",
+    bio: "Adventure seeker and coffee enthusiast.",
+    interests: ["Travel", "Photography", "Cooking"],
+    url: "path/to/image.jpg",
+  },
+  // ... more cards
+];
+
+export default function Demo() {
+  return (
+    <div className="h-[500px] w-full">
+      <SwipeCards
+        data={cardData}
+        onSwipe={(id, direction) => {
+          console.log(`Card ${id} swiped ${direction}`);
+        }}
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+### SwipeCards
+
+| Prop        | Type                                                 | Description                               |
+| ----------- | ---------------------------------------------------- | ----------------------------------------- |
+| `data`      | `CardData[]`                                         | Array of card data to display             |
+| `onSwipe`   | `(id: number, direction: "left" \| "right") => void` | Callback when a card is swiped            |
+| `className` | `string`                                             | Optional CSS class to style the container |
+
+### CardData
+
+| Property    | Type        | Description                    |
+| ----------- | ----------- | ------------------------------ |
+| `id`        | `number`    | Unique identifier for the card |
+| `url`       | `string`    | Image URL for the card         |
+| `name`      | `string?`   | Optional name to display       |
+| `age`       | `number?`   | Optional age to display        |
+| `location`  | `string?`   | Optional location to display   |
+| `bio`       | `string?`   | Optional biography text        |
+| `interests` | `string[]?` | Optional array of interests    |
+
+## Examples
+
+### Basic Cards
+
+```tsx
+<SwipeCards
+  data={[
+    {
+      id: 1,
+      url: "path/to/image.jpg",
+    },
+    // ... more cards
+  ]}
+/>
+```
+
+### Profile Cards
+
+```tsx
+<SwipeCards
+  data={[
+    {
+      id: 1,
+      name: "Alex",
+      age: 28,
+      location: "San Francisco",
+      bio: "Tech enthusiast and coffee lover",
+      interests: ["Technology", "Coffee", "Travel"],
+      url: "path/to/profile.jpg",
+    },
+    // ... more profiles
+  ]}
+  onSwipe={(id, direction) => {
+    // Handle swipe action
+    if (direction === "right") {
+      // Handle right swipe (e.g., like)
+    } else {
+      // Handle left swipe (e.g., pass)
+    }
+  }}
+/>
+```
