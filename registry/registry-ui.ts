@@ -338,4 +338,10 @@ export const ui: Registry = [
     files: ["ui/swipe-cards.tsx"],
     dependencies: ["framer-motion"],
   },
+  {
+    name: "motion-text",
+    type: "registry:ui",
+    files: ["ui/motion-text.tsx"],
+    dependencies: ["framer-motion"],
+  },
 ];

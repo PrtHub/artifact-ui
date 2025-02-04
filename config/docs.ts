@@ -102,6 +102,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Motion Text",
+          href: "/docs/components/motion-text",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Easel Tabs",
           href: "/docs/components/easel-tabs",
           items: [],

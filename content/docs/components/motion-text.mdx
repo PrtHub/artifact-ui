@@ -1,0 +1,120 @@
+---
+title: Motion Text
+description: Text that animates character by character with various effects.
+component: true
+---
+
+<ComponentPreview name="motion-text-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/motion-text.tsx`
+
+<ComponentSource name="motion-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import MotionText from "@/components/ui/motion-text";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import MotionText from "@/components/ui/motion-text";
+
+export default function Example() {
+  return (
+    <div className="space-y-8">
+      {/* Fade Effect */}
+      <MotionText
+        text="Character by Character Fade In"
+        effect="fade"
+        stagger={0.1}
+      />
+
+      {/* Glitch Effect */}
+      <MotionText
+        text="Individual Character Glitch Effect"
+        effect="glitch"
+        stagger={0.02}
+      />
+
+      {/* Slide Effect */}
+      <MotionText
+        text="Characters Sliding One By One"
+        effect="slide"
+        stagger={0.08}
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Name        | Type    | Default | Description                                            |
+| ----------- | ------- | ------- | ------------------------------------------------------ |
+| `text`      | string  |         | The text content to animate.                           |
+| `effect`    | `"fade" | "fade"  | The animation effect to apply to each character.       |
+| `duration`  | number  | 0.3     | Duration of the animation in seconds.                  |
+| `delay`     | number  | 0       | Initial delay before starting the animation.           |
+| `stagger`   | number  | 0.05    | Delay between each character's animation.              |
+| `color`     | string  |         | Text color. Accepts any valid CSS color value.         |
+| `fontSize`  | string  |         | Font size. Accepts any valid CSS font-size value.      |
+| `className` | string  |         | Additional CSS classes to apply to the text container. |
+
+## Examples
+
+### Fade Effect
+
+The fade effect smoothly transitions each character from invisible to visible with a subtle upward movement.
+
+```tsx
+<MotionText text="Character by Character Fade In" effect="fade" stagger={0.1} />
+```
+
+### Glitch Effect
+
+The glitch effect creates a cyberpunk-style animation with rapid position shifts and contrast changes.
+
+```tsx
+<MotionText
+  text="Individual Character Glitch Effect"
+  effect="glitch"
+  stagger={0.02}
+/>
+```
+
+### Slide Effect
+
+The slide effect makes characters appear by sliding them in from the left.
+
+```tsx
+<MotionText
+  text="Characters Sliding One By One"
+  effect="slide"
+  stagger={0.08}
+/>
+```
+
+## Customization
+
+You can customize the appearance of the text using standard CSS classes or inline styles:
+
+```tsx
+<MotionText
+  text="Custom Styled Text"
+  effect="fade"
+  className="font-bold text-5xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+  stagger={0.1}
+/>
+```
+
+Each animation effect can be fine-tuned using the `duration` and `stagger` props to achieve the desired timing and flow.

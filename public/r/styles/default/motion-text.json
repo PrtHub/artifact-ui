@@ -1,0 +1,15 @@
+{
+  "name": "motion-text",
+  "type": "registry:ui",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "ui/motion-text.tsx",
+      "content": "import React from \"react\";\nimport { motion } from \"framer-motion\";\nimport { cn } from \"@/lib/utils\";\n\ninterface MotionTextProps {\n  text: string;\n  className?: string;\n  effect?: \"fade\" | \"slide\" | \"glitch\";\n  duration?: number;\n  delay?: number;\n  stagger?: number;\n  color?: string;\n  fontSize?: string | number;\n}\n\ntype VariantType = {\n  initial: any;\n  animate: any;\n  transition?: {\n    duration?: number;\n    repeat?: number;\n    repeatDelay?: number;\n    delay?: number;\n    ease?: string;\n  };\n};\n\nconst effectVariants: Record<string, (index: number) => VariantType> = {\n  fade: (index: number) => ({\n    initial: { opacity: 0, y: 20 },\n    animate: { opacity: 1, y: 0 },\n    transition: {\n      duration: 0.3,\n      delay: index * 0.1,\n    },\n  }),\n  slide: (index: number) => ({\n    initial: { x: -20, opacity: 0 },\n    animate: { x: 0, opacity: 1 },\n    transition: {\n      duration: 0.3,\n      delay: index * 0.08,\n    },\n  }),\n  glitch: (index: number) => ({\n    initial: { x: 0 },\n    animate: {\n      x: [0, -3, 3, -3, 3, 0],\n      y: [0, 2, -2, 2, -2, 0],\n      filter: [\n        \"none\",\n        \"brightness(150%) contrast(150%)\",\n        \"none\",\n        \"brightness(150%) contrast(150%)\",\n        \"none\",\n      ],\n    },\n    transition: {\n      duration: 0.3,\n      repeat: Infinity,\n      repeatDelay: 4,\n      delay: index * 0.05,\n    },\n  }),\n};\n\nexport default function MotionText({\n  text,\n  className,\n  effect = \"fade\",\n  duration = 0.3,\n  delay = 0,\n  stagger = 0.05,\n  color,\n  fontSize,\n}: MotionTextProps) {\n  const characters = text.split(\"\");\n\n  return (\n    <span className={cn(\"inline-block\", className)} style={{ color, fontSize }}>\n      {characters.map((char, index) => {\n        const variant = effectVariants[effect](index);\n\n        return (\n          <motion.span\n            key={index}\n            initial={variant.initial}\n            animate={variant.animate}\n            transition={variant.transition}\n            className=\"relative inline-block\"\n            style={{\n              willChange: \"transform\",\n              backfaceVisibility: \"hidden\",\n            }}\n          >\n            {char === \" \" ? \"\\u00A0\" : char}\n          </motion.span>\n        );\n      })}\n    </span>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

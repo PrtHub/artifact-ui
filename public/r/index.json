@@ -731,5 +731,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "motion-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      {
+        "path": "ui/motion-text.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
