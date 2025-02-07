@@ -1,0 +1,132 @@
+---
+title: Spotlight Card
+date: 2024-02-07
+description: An interactive card component with dynamic spotlight effects that follow cursor movement.
+author: artifact
+published: true
+---
+
+<ComponentPreview name="spotlight-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="spotlight-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import SpotlightCard from "@/components/ui/spotlight-card";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import SpotlightCard from "@/components/ui/spotlight-card";
+
+export default function Example() {
+  return (
+    <SpotlightCard>
+      <h3>Your Content Here</h3>
+      <p>Add any content inside the card.</p>
+    </SpotlightCard>
+  );
+}
+```
+
+## Props
+
+Here are the available props for customizing the SpotlightCard component:
+
+| Prop               | Type              | Default             | Description                                |
+| ------------------ | ----------------- | ------------------- | ------------------------------------------ |
+| `children`         | `React.ReactNode` | Required            | The content to be rendered inside the card |
+| `spotlightSize`    | `number`          | `250`               | Size of the spotlight effect in pixels     |
+| `spotlightOpacity` | `number`          | `0.15`              | Opacity of the spotlight effect (0-1)      |
+| `gradientColor`    | `string`          | `rgb(168, 85, 247)` | Color of the spotlight gradient            |
+| `glowEffect`       | `boolean`         | `false`             | Enables a subtle glow effect               |
+| `multiSpotlight`   | `boolean`         | `false`             | Enables dual spotlight effect              |
+| `spotlightBlur`    | `boolean`         | `false`             | Makes the spotlight more diffused          |
+| `glowSize`         | `number`          | `100`               | Size of the glow effect in pixels          |
+| `glowOpacity`      | `number`          | `0.15`              | Opacity of the glow effect (0-1)           |
+| `animated`         | `boolean`         | `false`             | Enables animated spotlight movement        |
+
+## Notes
+
+1. **Animated and MultiSpotlight Interaction**:
+
+   - When both `animated` and `multiSpotlight` are enabled, the animation takes precedence
+   - The secondary spotlight will move randomly instead of mirroring cursor position
+   - For mirror effect, use `multiSpotlight` without `animated`
+
+2. **Performance Considerations**:
+
+   - Use `spotlightBlur` carefully as it may impact performance on lower-end devices
+   - Large `spotlightSize` or `glowSize` values might affect performance
+   - Consider reducing opacity values when combining multiple effects
+
+3. **Style Customization**:
+   - The component inherits background colors from your theme
+   - Use `gradientColor` to match your brand colors
+   - Dark mode support is built-in with automatic adjustments
+
+## Examples with Code
+
+### Basic Spotlight
+
+```tsx
+<SpotlightCard>
+  <YourContent />
+</SpotlightCard>
+```
+
+### Multi-spotlight with Glow
+
+```tsx
+<SpotlightCard multiSpotlight glowEffect gradientColor="rgb(99, 102, 241)">
+  <YourContent />
+</SpotlightCard>
+```
+
+### Animated Spotlight
+
+```tsx
+<SpotlightCard
+  animated
+  spotlightBlur
+  glowEffect
+  spotlightSize={300}
+  spotlightOpacity={0.2}
+  glowSize={200}
+  glowOpacity={0.3}
+  gradientColor="rgb(244, 63, 94)"
+>
+  <YourContent />
+</SpotlightCard>
+```
+
+### Custom Configuration
+
+```tsx
+<SpotlightCard
+  spotlightSize={300}
+  spotlightOpacity={0.2}
+  glowEffect
+  glowSize={150}
+  glowOpacity={0.2}
+  gradientColor="rgb(34, 197, 94)"
+>
+  <YourContent />
+</SpotlightCard>
+```
+
+## Effect Combinations:
+
+- Start with basic spotlight before adding additional effects
+- Combine `glowEffect` with `spotlightBlur` for softer transitions
+- Use `multiSpotlight` for more dynamic interactions

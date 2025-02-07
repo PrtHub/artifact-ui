@@ -643,6 +643,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "spotlight-card": {
+      name: "spotlight-card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/spotlight-card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/spotlight-card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1276,6 +1287,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["magnetic-card"],
       files: ["registry/default/example/magnetic-card-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/magnetic-card-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "spotlight-card-demo": {
+      name: "spotlight-card-demo",
+      type: "registry:example",
+      registryDependencies: ["spotlight-card"],
+      files: ["registry/default/example/spotlight-card-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/spotlight-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

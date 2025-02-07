@@ -331,6 +331,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Spotlight Card",
+          href: "/docs/components/spotlight-card",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

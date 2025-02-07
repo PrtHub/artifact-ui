@@ -757,5 +757,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "spotlight-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "@/lib/utils"
+    ],
+    "files": [
+      {
+        "path": "ui/spotlight-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

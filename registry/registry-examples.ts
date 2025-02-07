@@ -349,4 +349,10 @@ export const examples: Registry = [
     registryDependencies: ["magnetic-card"],
     files: ["example/magnetic-card-demo.tsx"],
   },
+  {
+    name: "spotlight-card-demo",
+    type: "registry:example",
+    registryDependencies: ["spotlight-card"],
+    files: ["example/spotlight-card-demo.tsx"],
+  },
 ];

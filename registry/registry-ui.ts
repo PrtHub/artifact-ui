@@ -350,4 +350,10 @@ export const ui: Registry = [
     files: ["ui/magnetic-card.tsx"],
     dependencies: ["@/lib/utils"],
   },
+  {
+    name: "spotlight-card",
+    type: "registry:ui",
+    files: ["ui/spotlight-card.tsx"],
+    dependencies: ["@/lib/utils"],
+  },
 ];
