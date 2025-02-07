@@ -343,4 +343,10 @@ export const examples: Registry = [
     registryDependencies: ["motion-text"],
     files: ["example/motion-text-demo.tsx"],
   },
+  {
+    name: "magnetic-card-demo",
+    type: "registry:example",
+    registryDependencies: ["magnetic-card"],
+    files: ["example/magnetic-card-demo.tsx"],
+  },
 ];

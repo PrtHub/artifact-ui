@@ -1,0 +1,128 @@
+---
+title: Magnetic Card
+date: 2025-02-07
+description: An interactive card component with magnetic attraction, 3D rotation, and visual effects
+author: artifact
+published: true
+---
+
+<ComponentPreview name="magnetic-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/magnetic-card.tsx`
+
+<ComponentSource name="magnetic-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import MagneticCard from "@/components/ui/magnetic-card";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import MagneticCard from "@/components/ui/magnetic-card";
+
+export default function Example() {
+  return (
+    <MagneticCard
+      showMagneticField={true}
+      magneticStrength={0.4}
+      className="p-6"
+    >
+      <p>Card content</p>
+    </MagneticCard>
+  )
+}
+```
+
+## Props
+
+| Prop             | Type     | Description                                          | Default |
+| ---------------- | -------- | --------------------------------------------------- | ------- |
+| magneticStrength | number   | Controls the strength of the magnetic effect (0-1)  | 0.5     |
+| rotationStrength | number   | Controls the degree of 3D rotation (0-45)           | 15      |
+| scaleOnHover     | number   | Scale factor when hovering over the card            | 1.1     |
+| showMagneticField| boolean  | Shows a visual magnetic field effect                | false   |
+| fieldColor       | string   | Color of the magnetic field in light mode           | rgba(147, 51, 234, 0.15) |
+| darkFieldColor   | string   | Color of the magnetic field in dark mode            | rgba(168, 85, 247, 0.25) |
+| children         | ReactNode| The content to be rendered inside the card          | -       |
+| className        | string   | Additional CSS classes to apply to the card         | -       |
+
+## Examples
+
+### Glass Effect Card
+
+```tsx
+<MagneticCard
+  className="p-6 bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-purple-200 dark:border-white/20 shadow-xl"
+  showMagneticField={true}
+  magneticStrength={0.4}
+>
+  <p className="text-lg font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+    Glass Effect
+  </p>
+</MagneticCard>
+```
+
+### Outline Style Card
+
+```tsx
+<MagneticCard
+  className="p-6 border-2 border-purple-500/30 dark:border-purple-400/30 bg-white/50 dark:bg-background/50"
+  showMagneticField={true}
+  magneticStrength={0.3}
+  rotationStrength={20}
+>
+  <p className="text-lg font-medium text-purple-950 dark:text-purple-100">
+    Outline Style
+  </p>
+</MagneticCard>
+```
+
+### Gradient Style Card
+
+```tsx
+<MagneticCard
+  className="p-6 bg-gradient-to-br from-purple-500 to-pink-500 dark:from-purple-600 dark:to-pink-600 text-white"
+  showMagneticField={true}
+  fieldColor="rgba(236, 72, 153, 0.15)"
+  darkFieldColor="rgba(236, 72, 153, 0.25)"
+  scaleOnHover={1.15}
+>
+  <p className="text-lg font-medium">Gradient Style</p>
+</MagneticCard>
+```
+
+### Interactive Card with Custom Content
+
+```tsx
+<MagneticCard
+  className="overflow-hidden group bg-white dark:bg-card"
+  showMagneticField={true}
+  magneticStrength={0.5}
+  rotationStrength={12}
+>
+  <div className="p-6 flex flex-col items-center gap-2">
+    <div className="text-2xl group-hover:scale-110 duration-300">
+      💫
+    </div>
+    <p className="text-lg font-medium text-purple-950 dark:text-purple-100">
+      Interactive
+    </p>
+    <div className="flex gap-2">
+      <span className="px-2 py-0.5 rounded-full text-xs bg-purple-100 dark:bg-purple-400/20 text-purple-700 dark:text-purple-300">
+        Magnetic
+      </span>
+    </div>
+  </div>
+</MagneticCard>
+```

@@ -632,6 +632,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "magnetic-card": {
+      name: "magnetic-card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/magnetic-card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/magnetic-card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1254,6 +1265,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["motion-text"],
       files: ["registry/default/example/motion-text-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/motion-text-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "magnetic-card-demo": {
+      name: "magnetic-card-demo",
+      type: "registry:example",
+      registryDependencies: ["magnetic-card"],
+      files: ["registry/default/example/magnetic-card-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/magnetic-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

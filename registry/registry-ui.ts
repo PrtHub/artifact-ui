@@ -344,4 +344,10 @@ export const ui: Registry = [
     files: ["ui/motion-text.tsx"],
     dependencies: ["framer-motion"],
   },
+  {
+    name: "magnetic-card",
+    type: "registry:ui",
+    files: ["ui/magnetic-card.tsx"],
+    dependencies: ["@/lib/utils"],
+  },
 ];

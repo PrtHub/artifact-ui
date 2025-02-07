@@ -325,6 +325,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Magnetic Card",
+          href: "/docs/components/magnetic-card",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

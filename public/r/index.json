@@ -744,5 +744,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "magnetic-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "@/lib/utils"
+    ],
+    "files": [
+      {
+        "path": "ui/magnetic-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]
