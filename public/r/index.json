@@ -783,5 +783,15 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "typewriter-hero",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/typewriter-hero.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

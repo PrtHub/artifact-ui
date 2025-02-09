@@ -1,0 +1,154 @@
+---
+title: Typewriter Hero
+description: A hero section component with dynamic typewriter effect, customizable animations, and multiple text variations.
+featured: true
+---
+
+<ComponentPreview name="typewriter-hero-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/typewriter-hero.tsx`
+
+<ComponentSource name="typewriter-hero" />
+
+<Step> update your tailwind.config</Step>
+
+Add the following animations to your `tailwind.config`:
+
+```tsx
+{
+  theme: {
+    extend: {
+      keyframes: {
+        "text-blink": {
+          "0%, 75%, 100%": { opacity: 1 },
+          "75.1%, 95%": { opacity: 0 },
+        },
+      },
+      animation: {
+        "text-blink": "text-blink 1.2s infinite ease-in-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
+
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import TypewriterHero from "@/components/ui/typewriter-hero";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import TypewriterHero from "@/components/ui/typewriter-hero";
+
+export default function Hero() {
+  return (
+    <TypewriterHero
+      title="Build"
+      description="Create stunning user interfaces with modern components."
+      words={["Faster", "Better", "Smarter", "Together"]}
+      typingSpeed={80}
+      deletingSpeed={40}
+      pauseDuration={2000}
+    />
+  );
+}
+```
+
+## Examples
+
+### With Gradient Text
+
+```tsx
+<TypewriterHero
+  title="Create"
+  description="Build beautiful interfaces with modern components."
+  words={["Faster", "Better", "Together"]}
+  typingClassName="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400"
+  cursorClassName="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400"
+/>
+```
+
+### Custom Alignment
+
+```tsx
+<TypewriterHero
+  align="left"
+  title="Design"
+  description="Craft stunning user experiences that delight."
+  words={["Beautifully", "Efficiently", "Perfectly"]}
+/>
+```
+
+### Custom Animation Timing
+
+```tsx
+<TypewriterHero
+  title="Develop"
+  description="Write clean, maintainable code with confidence."
+  words={["React", "Next.js", "TypeScript"]}
+  typingSpeed={50} // Faster typing
+  deletingSpeed={30} // Faster deleting
+  pauseDuration={3000} // Longer pause
+/>
+```
+
+## Props
+
+| Prop                 | Type                          | Default      | Description                                 |
+| -------------------- | ----------------------------- | ------------ | ------------------------------------------- |
+| title                | string                        | "Welcome to" | The main title text                         |
+| description          | string                        | -            | Secondary description text                  |
+| words                | string[]                      | []           | Array of words to cycle through             |
+| typingSpeed          | number                        | 100          | Speed of typing animation in milliseconds   |
+| deletingSpeed        | number                        | 50           | Speed of deleting animation in milliseconds |
+| pauseDuration        | number                        | 2000         | Duration to pause between words             |
+| align                | "left" \| "center" \| "right" | "center"     | Text alignment                              |
+| className            | string                        | -            | Additional wrapper classes                  |
+| titleClassName       | string                        | -            | Additional title classes                    |
+| descriptionClassName | string                        | -            | Additional description classes              |
+| typingClassName      | string                        | -            | Additional typing text classes              |
+| cursorClassName      | string                        | -            | Additional cursor classes                   |
+
+## Customization
+
+### Cursor Style
+
+The cursor uses Tailwind's animation utilities for a realistic blinking effect. You can customize its appearance using the `cursorClassName` prop:
+
+```tsx
+<TypewriterHero
+  cursorClassName="w-[3px] bg-blue-500" // Thicker, blue cursor
+/>
+```
+
+### Text Gradients
+
+Apply beautiful gradient effects to the typing text:
+
+```tsx
+<TypewriterHero typingClassName="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text" />
+```
+
+### Dark Mode
+
+The component automatically supports dark mode. You can customize dark mode styles using the appropriate Tailwind dark mode classes:
+
+```tsx
+<TypewriterHero
+  titleClassName="text-gray-900 dark:text-white"
+  descriptionClassName="text-gray-600 dark:text-gray-300"
+/>
+```

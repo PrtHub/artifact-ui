@@ -362,4 +362,9 @@ export const ui: Registry = [
     files: ["ui/holographic-card.tsx"],
     dependencies: ["@/lib/utils"],
   },
+  {
+    name: "typewriter-hero",
+    type: "registry:ui",
+    files: ["ui/typewriter-hero.tsx"],
+  },
 ];

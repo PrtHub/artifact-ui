@@ -126,6 +126,7 @@ module.exports = {
         neonSlideDown: "neonSlideDown 2s linear infinite",
         neonSlideLeft: "neonSlideLeft 2s linear infinite",
         neonSlideUp: "neonSlideUp 2s linear infinite",
+        "text-blink": "text-blink 1.2s infinite ease-in-out",
       },
       keyframes: {
         flicker: {
@@ -558,6 +559,10 @@ module.exports = {
         neonSlideUp: {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(-100%)" },
+        },
+        "text-blink": {
+          "0%, 75%, 100%": { opacity: 1 },
+          "75.1%, 95%": { opacity: 0 },
         },
       },
       backgroundImage: {

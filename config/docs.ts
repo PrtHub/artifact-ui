@@ -343,6 +343,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Typewriter Hero",
+          href: "/docs/components/typewriter-hero",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
