@@ -367,4 +367,15 @@ export const ui: Registry = [
     type: "registry:ui",
     files: ["ui/typewriter-hero.tsx"],
   },
+  {
+    name: "floating-navbar",
+    type: "registry:ui",
+    files: ["ui/floating-navbar.tsx"],
+    dependencies: ["@/components/ui/button"],
+  },
+  {
+    name: "particle-veil",
+    type: "registry:ui",
+    files: ["ui/particle-veil.tsx"],
+  },
 ];

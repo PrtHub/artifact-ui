@@ -49,7 +49,6 @@ export const docsConfig: DocsConfig = {
           title: "Pulse Card",
           href: "/docs/components/pulse-card",
           items: [],
-          label: "New",
         },
         {
           title: "Mesh Matrix",
@@ -105,7 +104,6 @@ export const docsConfig: DocsConfig = {
           title: "Motion Text",
           href: "/docs/components/motion-text",
           items: [],
-          label: "New",
         },
         {
           title: "Easel Tabs",
@@ -311,41 +309,46 @@ export const docsConfig: DocsConfig = {
           title: "Neon Button",
           href: "/docs/components/neon-button",
           items: [],
-          label: "New",
         },
         {
           title: "3D Card",
           href: "/docs/components/three-d-card",
           items: [],
-          label: "New",
         },
         {
           title: "Swipe Cards",
           href: "/docs/components/swipe-cards",
           items: [],
-          label: "New",
         },
         {
           title: "Magnetic Card",
           href: "/docs/components/magnetic-card",
           items: [],
-          label: "New",
         },
         {
           title: "Spotlight Card",
           href: "/docs/components/spotlight-card",
           items: [],
-          label: "New",
         },
         {
           title: "Holographic Card",
           href: "/docs/components/holographic-card",
           items: [],
-          label: "New",
         },
         {
           title: "Typewriter Hero",
           href: "/docs/components/typewriter-hero",
+          items: [],
+        },
+        {
+          title: "Floating Navbar",
+          href: "/docs/components/floating-navbar",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Particle Veil",
+          href: "/docs/components/particle-veil",
           items: [],
           label: "New",
         },

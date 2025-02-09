@@ -367,4 +367,16 @@ export const examples: Registry = [
     registryDependencies: ["typewriter-hero"],
     files: ["example/typewriter-hero-demo.tsx"],
   },
+  {
+    name: "floating-navbar-demo",
+    type: "registry:example",
+    registryDependencies: ["floating-navbar"],
+    files: ["example/floating-navbar-demo.tsx"],
+  },
+  {
+    name: "particle-veil-demo",
+    type: "registry:example",
+    registryDependencies: ["particle-veil"],
+    files: ["example/particle-veil-demo.tsx"],
+  },
 ];

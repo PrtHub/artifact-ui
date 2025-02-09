@@ -793,5 +793,28 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "floating-navbar",
+    "type": "registry:ui",
+    "dependencies": [
+      "@/components/ui/button"
+    ],
+    "files": [
+      {
+        "path": "ui/floating-navbar.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "particle-veil",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/particle-veil.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

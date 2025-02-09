@@ -1,0 +1,114 @@
+---
+title: Particle Veil
+description: A dynamic and interactive particle animation component that creates a mesmerizing veil of floating particles. Perfect for creating engaging backgrounds and interactive elements.
+component: true
+---
+
+<ComponentPreview name="particle-veil-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/particle-veil.tsx`
+
+<ComponentSource name="particle-veil" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import ParticleVeil from "@/components/ui/particle-veil";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import ParticleVeil from "@/components/ui/particle-veil";
+
+export default function Example() {
+  // Define your color scheme
+  const colors = [
+    "#22c55e", // Neon green
+    "#06b6d4", // Cyan
+    "#3b82f6", // Bright blue
+    "#ec4899", // Pink
+    "#f97316", // Orange
+  ];
+
+  return (
+    <div className="relative h-[500px] w-full">
+      <ParticleVeil
+        particleCount={200}
+        particleColors={colors}
+        interactionRadius={120}
+        speed={0.8}
+        sizeRange={[2, 5]}
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop                | Type               | Default       | Description                                                        |
+| ------------------- | ------------------ | ------------- | ------------------------------------------------------------------ |
+| `particleCount`     | `number`           | `100`         | Number of particles to render                                      |
+| `particleColors`    | `string[]`         | `["#ffffff"]` | Array of colors for particles. Colors will be randomly distributed |
+| `interactionRadius` | `number`           | `100`         | Radius (in pixels) within which particles react to mouse movement  |
+| `speed`             | `number`           | `1`           | Base movement speed of particles                                   |
+| `sizeRange`         | `[number, number]` | `[1, 3]`      | Range for particle sizes [min, max] in pixels                      |
+| `className`         | `string`           | -             | Additional CSS classes                                             |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<ParticleVeil particleCount={200} />
+```
+
+### Interactive Particle Veil
+
+```tsx
+<ParticleVeil
+  particleCount={200}
+  interactionRadius={120}
+  speed={0.8}
+  sizeRange={[2, 5]}
+/>
+```
+
+### Custom Color Schemes
+
+You can create different moods by customizing the color scheme:
+
+```tsx
+// Cyberpunk theme
+const cyberpunkColors = [
+  "#22c55e", // Neon green
+  "#ec4899", // Hot pink
+  "#3b82f6", // Electric blue
+  "#f97316", // Neon orange
+];
+
+// Ocean theme
+const oceanColors = [
+  "#06b6d4", // Cyan
+  "#3b82f6", // Blue
+  "#10b981", // Emerald
+  "#0ea5e9", // Light blue
+];
+
+// Sunset theme
+const sunsetColors = [
+  "#f97316", // Orange
+  "#ef4444", // Red
+  "#ec4899", // Pink
+  "#f59e0b", // Yellow
+];
+```

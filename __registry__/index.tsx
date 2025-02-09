@@ -676,6 +676,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "floating-navbar": {
+      name: "floating-navbar",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/floating-navbar.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/floating-navbar.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "particle-veil": {
+      name: "particle-veil",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/particle-veil.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/particle-veil.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1342,6 +1364,28 @@ export const Index: Record<string, any> = {
       registryDependencies: ["typewriter-hero"],
       files: ["registry/default/example/typewriter-hero-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/typewriter-hero-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "floating-navbar-demo": {
+      name: "floating-navbar-demo",
+      type: "registry:example",
+      registryDependencies: ["floating-navbar"],
+      files: ["registry/default/example/floating-navbar-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/floating-navbar-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "particle-veil-demo": {
+      name: "particle-veil-demo",
+      type: "registry:example",
+      registryDependencies: ["particle-veil"],
+      files: ["registry/default/example/particle-veil-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/particle-veil-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

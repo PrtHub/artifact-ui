@@ -1,0 +1,82 @@
+---
+title: Floating Navbar
+description: "A modern, animated navbar that elegantly shows/hides on scroll with dark mode support."
+component: true
+date: 2024-12-09
+author: ui
+published: true
+---
+
+<ComponentPreview name="floating-navbar-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/floating-navbar.tsx`
+
+<ComponentSource name="floating-navbar" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import FloatingNavbar from "@/components/ui/floating-navbar";
+```
+
+</Steps>
+
+## Props
+
+| Prop             | Type      | Default | Description                                            |
+| ---------------- | --------- | ------- | ------------------------------------------------------ |
+| children         | ReactNode | -       | The content to be rendered inside the navbar           |
+| className        | string    | -       | Additional CSS classes for customization               |
+| scrollThreshold  | number    | 50      | Pixels to scroll before triggering show/hide animation |
+| showOnScrollUp   | boolean   | true    | Controls navbar visibility when scrolling up           |
+| hideOnScrollDown | boolean   | true    | Controls navbar visibility when scrolling down         |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<FloatingNavbar>
+  <nav className="flex items-center gap-6">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+  </nav>
+</FloatingNavbar>
+```
+
+### Custom Behavior
+
+```tsx
+<FloatingNavbar
+  scrollThreshold={100}
+  showOnScrollUp={false}
+  hideOnScrollDown={true}
+  className="bg-primary text-primary-foreground"
+>
+  <nav className="flex items-center gap-6">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+  </nav>
+</FloatingNavbar>
+```
+
+## Styling
+
+The component uses Tailwind CSS for styling and includes dark mode support by default. You can customize the appearance by:
+
+1. Adding custom classes via the `className` prop
+2. Using dark mode variants with the `dark:` prefix
+3. Modifying the backdrop blur and background opacity
+4. Adjusting the animation timing and easing
+
+```tsx
+<FloatingNavbar className="dark:bg-zinc-900/75 dark:backdrop-blur-xl">
+  {/* Your content */}
+</FloatingNavbar>
+```

@@ -1,0 +1,15 @@
+{
+  "name": "floating-navbar",
+  "type": "registry:ui",
+  "dependencies": [
+    "@/components/ui/button"
+  ],
+  "files": [
+    {
+      "path": "ui/floating-navbar.tsx",
+      "content": "import React, { useEffect, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface FloatingNavbarProps extends React.HTMLAttributes<HTMLElement> {\n  /**\n   * The offset in pixels before the navbar starts hiding/showing\n   * @default 50\n   */\n  scrollThreshold?: number;\n  /**\n   * Whether to show the navbar when scrolling up\n   * @default true\n   */\n  showOnScrollUp?: boolean;\n  /**\n   * Whether to hide the navbar when scrolling down\n   * @default true\n   */\n  hideOnScrollDown?: boolean;\n}\n\nexport default function FloatingNavbar({\n  children,\n  className,\n  scrollThreshold = 50,\n  showOnScrollUp = true,\n  hideOnScrollDown = true,\n  ...props\n}: FloatingNavbarProps) {\n  const [isVisible, setIsVisible] = useState(true);\n  const [lastScrollY, setLastScrollY] = useState(0);\n\n  useEffect(() => {\n    const handleScroll = () => {\n      const currentScrollY = window.scrollY;\n      const scrollDifference = currentScrollY - lastScrollY;\n\n      // Show/hide based on scroll direction and threshold\n      if (currentScrollY < scrollThreshold) {\n        setIsVisible(true);\n      } else if (scrollDifference > 0) {\n        // Scrolling down\n        hideOnScrollDown && setIsVisible(false);\n      } else if (scrollDifference < 0) {\n        // Scrolling up\n        showOnScrollUp && setIsVisible(true);\n      }\n\n      setLastScrollY(currentScrollY);\n    };\n\n    window.addEventListener(\"scroll\", handleScroll, { passive: true });\n    return () => window.removeEventListener(\"scroll\", handleScroll);\n  }, [lastScrollY, scrollThreshold, showOnScrollUp, hideOnScrollDown]);\n\n  return (\n    <nav\n      className={cn(\n        \"fixed left-1/2 top-6 z-50 -translate-x-1/2 transform-gpu rounded-full border bg-background/80 px-8 py-3 shadow-lg backdrop-blur-md transition-all duration-300 ease-in-out dark:border-neutral-800 dark:bg-neutral-950/75\",\n        isVisible ? \"translate-y-0 opacity-100\" : \"-translate-y-full opacity-0\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </nav>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
