@@ -356,4 +356,10 @@ export const ui: Registry = [
     files: ["ui/spotlight-card.tsx"],
     dependencies: ["@/lib/utils"],
   },
+  {
+    name: "holographic-card",
+    type: "registry:ui",
+    files: ["ui/holographic-card.tsx"],
+    dependencies: ["@/lib/utils"],
+  },
 ];

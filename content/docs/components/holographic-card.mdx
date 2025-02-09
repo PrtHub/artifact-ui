@@ -1,0 +1,128 @@
+---
+title: Holographic Card
+description: A beautiful card component with holographic effects, 3D transformations, and interactive animations.
+---
+
+<ComponentPreview name="holographic-card-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/holographic-card.tsx`
+
+<ComponentSource name="holographic-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+```tsx
+import HolographicCard from "@/components/ui/holographic-card";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import HolographicCard from "@/components/ui/holographic-card";
+
+export default function Example() {
+  return (
+    <HolographicCard
+      className="w-80 h-48 p-6"
+      backgroundColor="rgba(0, 10, 30, 0.85)"
+      darkBackgroundColor="rgba(0, 8, 20, 0.9)"
+      depthEffect={true}
+      glowIntensity={1.2}
+      shadowColor="rgba(16, 185, 129, 0.25)"
+    >
+      <h3>Holographic Card</h3>
+      <p>Interactive card with beautiful effects</p>
+    </HolographicCard>
+  );
+}
+```
+
+## Props
+
+| Name                 | Type                                       | Default                  | Description                                  |
+| -------------------- | ------------------------------------------ | ------------------------ | -------------------------------------------- |
+| backgroundColor      | string                                     | "rgba(15, 23, 42, 0.75)" | Background color in light mode               |
+| darkBackgroundColor  | string                                     | "rgba(15, 23, 42, 0.9)"  | Background color in dark mode                |
+| holographicIntensity | number                                     | 0.4                      | Intensity of the holographic effect (0-1)    |
+| rotationFactor       | number                                     | 10                       | Sensitivity of 3D rotation to mouse movement |
+| glowIntensity        | number                                     | 1                        | Intensity of the glow effect                 |
+| prismaticEffect      | boolean                                    | false                    | Enable rainbow-like prismatic effect         |
+| scanlineEffect       | boolean                                    | false                    | Add scanline overlay effect                  |
+| refractionPattern    | "none" \| "diamond" \| "wave" \| "circuit" | "none"                   | Pattern style for the refraction effect      |
+| depthEffect          | boolean                                    | false                    | Enable 3D depth effect                       |
+| glitchEffect         | boolean                                    | false                    | Add glitch animation effect                  |
+| shadowColor          | string                                     | "rgba(0, 0, 0, 0.5)"     | Color of the card's shadow                   |
+| className            | string                                     | -                        | Additional CSS classes                       |
+| style                | CSSProperties                              | -                        | Additional inline styles                     |
+
+## Features
+
+### Interactive 3D Effect
+
+The card responds to mouse movement with smooth 3D transformations. Adjust the `rotationFactor` to control the sensitivity.
+
+### Holographic Effects
+
+- **Prismatic Effect**: Enable with `prismaticEffect` for rainbow-like reflections
+- **Scanlines**: Add retro scanline effect with `scanlineEffect`
+- **Refraction Patterns**: Choose from different patterns with `refractionPattern`
+- **Glitch Effect**: Add cyberpunk-style glitch animations with `glitchEffect`
+
+### Dark Mode Support
+
+The component automatically adapts to dark mode with customizable background colors for both themes.
+
+### Customization
+
+- Adjust effect intensities with `holographicIntensity` and `glowIntensity`
+- Customize shadow appearance with `shadowColor`
+- Full support for custom styling via `className` and `style` props
+
+## Examples
+
+### Basic Card
+
+```tsx
+<HolographicCard className="w-80 h-48 p-6">
+  <h3>Basic Card</h3>
+  <p>Simple and elegant</p>
+</HolographicCard>
+```
+
+### Advanced Effects
+
+```tsx
+<HolographicCard
+  className="w-96 h-52 p-8"
+  prismaticEffect={true}
+  scanlineEffect={true}
+  refractionPattern="diamond"
+  glowIntensity={1.2}
+  shadowColor="rgba(16, 185, 129, 0.25)"
+>
+  <h3>Advanced Card</h3>
+  <p>With all effects enabled</p>
+</HolographicCard>
+```
+
+### Custom Theme
+
+```tsx
+<HolographicCard
+  className="w-80 h-48 p-6"
+  backgroundColor="rgba(0, 0, 30, 0.8)"
+  darkBackgroundColor="rgba(0, 0, 20, 0.9)"
+  shadowColor="rgba(147, 51, 234, 0.3)"
+>
+  <h3>Themed Card</h3>
+  <p>Custom colors and effects</p>
+</HolographicCard>
+```

@@ -337,6 +337,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Holographic Card",
+          href: "/docs/components/holographic-card",
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],

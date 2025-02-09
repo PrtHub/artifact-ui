@@ -770,5 +770,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "holographic-card",
+    "type": "registry:ui",
+    "dependencies": [
+      "@/lib/utils"
+    ],
+    "files": [
+      {
+        "path": "ui/holographic-card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

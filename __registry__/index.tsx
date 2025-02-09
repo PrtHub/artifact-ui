@@ -654,6 +654,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "holographic-card": {
+      name: "holographic-card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/holographic-card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/holographic-card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1298,6 +1309,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["spotlight-card"],
       files: ["registry/default/example/spotlight-card-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/spotlight-card-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "holographic-card-demo": {
+      name: "holographic-card-demo",
+      type: "registry:example",
+      registryDependencies: ["holographic-card"],
+      files: ["registry/default/example/holographic-card-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/holographic-card-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

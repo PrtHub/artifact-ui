@@ -355,4 +355,10 @@ export const examples: Registry = [
     registryDependencies: ["spotlight-card"],
     files: ["example/spotlight-card-demo.tsx"],
   },
+  {
+    name: "holographic-card-demo",
+    type: "registry:example",
+    registryDependencies: ["holographic-card"],
+    files: ["example/holographic-card-demo.tsx"],
+  },
 ];
