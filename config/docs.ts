@@ -81,11 +81,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Artistic Settings Panel",
-          href: "/docs/components/artistic-settings-panel",
-          items: [],
-        },
-        {
           title: "Creative OTP Input",
           href: "/docs/components/creative-otp-input",
           items: [],
@@ -191,16 +186,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Stepper",
-          href: "/docs/components/stepper",
-          items: [],
-        },
-        {
-          title: "Studio Pagination",
-          href: "/docs/components/studio-pagination",
-          items: [],
-        },
-        {
           title: "Gallery Flow",
           href: "/docs/components/gallery-flow",
           items: [],
@@ -218,11 +203,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Creative Code Display",
           href: "/docs/components/creative-code-display",
-          items: [],
-        },
-        {
-          title: "Studio Share Module",
-          href: "/docs/components/studio-share-module",
           items: [],
         },
         {
@@ -344,13 +324,11 @@ export const docsConfig: DocsConfig = {
           title: "Floating Navbar",
           href: "/docs/components/floating-navbar",
           items: [],
-          label: "New",
         },
         {
           title: "Particle Veil",
           href: "/docs/components/particle-veil",
           items: [],
-          label: "New",
         },
       ],
     },

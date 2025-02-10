@@ -274,35 +274,6 @@
     ]
   },
   {
-    "name": "stepper",
-    "type": "registry:ui",
-    "dependencies": [
-      "class-variance-authority"
-    ],
-    "registryDependencies": [
-      "button"
-    ],
-    "files": [
-      {
-        "path": "ui/stepper.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "studio-pagination",
-    "type": "registry:ui",
-    "dependencies": [
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui/studio-pagination.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "collapsible-card",
     "type": "registry:ui",
     "dependencies": [
@@ -367,35 +338,6 @@
     "files": [
       {
         "path": "ui/creative-clipboard-actions.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "studio-share-module",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "qrcode.react"
-    ],
-    "files": [
-      {
-        "path": "ui/studio-share-module.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "artistic-settings-panel",
-    "type": "registry:ui",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react"
-    ],
-    "files": [
-      {
-        "path": "ui/artistic-settings-panel.tsx",
         "type": "registry:ui"
       }
     ]

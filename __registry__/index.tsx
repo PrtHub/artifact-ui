@@ -236,28 +236,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "stepper": {
-      name: "stepper",
-      type: "registry:ui",
-      registryDependencies: ["button"],
-      files: ["registry/default/ui/stepper.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/stepper.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "studio-pagination": {
-      name: "studio-pagination",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/studio-pagination.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/studio-pagination.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "collapsible-card": {
       name: "collapsible-card",
       type: "registry:ui",
@@ -308,28 +286,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/ui/creative-clipboard-actions.tsx"],
       component: React.lazy(() => import("@/registry/default/ui/creative-clipboard-actions.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "studio-share-module": {
-      name: "studio-share-module",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/studio-share-module.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/studio-share-module.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "artistic-settings-panel": {
-      name: "artistic-settings-panel",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: ["registry/default/ui/artistic-settings-panel.tsx"],
-      component: React.lazy(() => import("@/registry/default/ui/artistic-settings-panel.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -929,28 +885,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "stepper-demo": {
-      name: "stepper-demo",
-      type: "registry:example",
-      registryDependencies: ["stepper"],
-      files: ["registry/default/example/stepper-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/stepper-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "studio-pagination-demo": {
-      name: "studio-pagination-demo",
-      type: "registry:example",
-      registryDependencies: ["studio-pagination"],
-      files: ["registry/default/example/studio-pagination-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/studio-pagination-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "collapsible-card-demo": {
       name: "collapsible-card-demo",
       type: "registry:example",
@@ -1001,28 +935,6 @@ export const Index: Record<string, any> = {
       registryDependencies: ["creative-clipboard-actions"],
       files: ["registry/default/example/creative-clipboard-actions-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/creative-clipboard-actions-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "studio-share-module-demo": {
-      name: "studio-share-module-demo",
-      type: "registry:example",
-      registryDependencies: ["studio-share-module"],
-      files: ["registry/default/example/studio-share-module-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/studio-share-module-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "artistic-settings-panel-demo": {
-      name: "artistic-settings-panel-demo",
-      type: "registry:example",
-      registryDependencies: ["artistic-settings-panel"],
-      files: ["registry/default/example/artistic-settings-panel-demo.tsx"],
-      component: React.lazy(() => import("@/registry/default/example/artistic-settings-panel-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

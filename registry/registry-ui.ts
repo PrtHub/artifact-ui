@@ -130,19 +130,6 @@ export const ui: Registry = [
     files: ["ui/artistic-data-viz.tsx"],
   },
   {
-    name: "stepper",
-    type: "registry:ui",
-    dependencies: ["class-variance-authority"],
-    files: ["ui/stepper.tsx"],
-    registryDependencies: ["button"],
-  },
-  {
-    name: "studio-pagination",
-    type: "registry:ui",
-    dependencies: ["lucide-react"],
-    files: ["ui/studio-pagination.tsx"],
-  },
-  {
     name: "collapsible-card",
     type: "registry:ui",
     dependencies: ["lucide-react", "framer-motion"],
@@ -171,18 +158,6 @@ export const ui: Registry = [
     type: "registry:ui",
     dependencies: ["framer-motion", "lucide-react"],
     files: ["ui/creative-clipboard-actions.tsx"],
-  },
-  {
-    name: "studio-share-module",
-    type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react", "qrcode.react"],
-    files: ["ui/studio-share-module.tsx"],
-  },
-  {
-    name: "artistic-settings-panel",
-    type: "registry:ui",
-    dependencies: ["framer-motion", "lucide-react"],
-    files: ["ui/artistic-settings-panel.tsx"],
   },
   {
     name: "creative-code-display",

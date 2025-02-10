@@ -128,18 +128,6 @@ export const examples: Registry = [
     files: ["example/artistic-data-viz-demo.tsx"],
   },
   {
-    name: "stepper-demo",
-    type: "registry:example",
-    registryDependencies: ["stepper"],
-    files: ["example/stepper-demo.tsx"],
-  },
-  {
-    name: "studio-pagination-demo",
-    type: "registry:example",
-    registryDependencies: ["studio-pagination"],
-    files: ["example/studio-pagination-demo.tsx"],
-  },
-  {
     name: "collapsible-card-demo",
     type: "registry:example",
     registryDependencies: ["collapsible-card"],
@@ -168,18 +156,6 @@ export const examples: Registry = [
     type: "registry:example",
     registryDependencies: ["creative-clipboard-actions"],
     files: ["example/creative-clipboard-actions-demo.tsx"],
-  },
-  {
-    name: "studio-share-module-demo",
-    type: "registry:example",
-    registryDependencies: ["studio-share-module"],
-    files: ["example/studio-share-module-demo.tsx"],
-  },
-  {
-    name: "artistic-settings-panel-demo",
-    type: "registry:example",
-    registryDependencies: ["artistic-settings-panel"],
-    files: ["example/artistic-settings-panel-demo.tsx"],
   },
   {
     name: "creative-code-display-demo",
