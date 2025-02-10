@@ -758,5 +758,18 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "sphere-animation",
+    "type": "registry:ui",
+    "dependencies": [
+      "animejs"
+    ],
+    "files": [
+      {
+        "path": "ui/sphere-animation.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

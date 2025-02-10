@@ -1,0 +1,52 @@
+---
+title: Sphere Animation
+description: A mesmerizing 3D sphere animation with customizable color schemes.
+component: true
+links:
+  doc: /docs/components/sphere-animation
+---
+
+<ComponentPreview name="sphere-animation-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/ui/sphere-animation.tsx`
+
+<ComponentSource name="sphere-animation" />
+
+<Step>Update the import paths to match your project setup:</Step>
+
+```tsx
+import SphereAnimation from "@/components/ui/sphere-animation";
+```
+
+</Steps>
+
+## Usage
+
+```tsx
+import SphereAnimation from "@/components/ui/sphere-animation";
+
+export default function Page() {
+  return (
+    <div className="h-[600px] w-full">
+      <SphereAnimation colorScheme="default" />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop          | Type        | Default     | Description                     |
+| ------------- | ----------- | ----------- | ------------------------------- |
+| `colorScheme` | `"default"` | `"default"` | The color scheme for the sphere |
+| `className`   | `string`    | -           | Additional CSS classes          |
+
+## Acknowledgment
+
+This component is inspired by and adapted from [Julian Garnier's CodePen](https://codepen.io/juliangarnier/pen/LMrRNW). We appreciate their creative work and contribution to the web development community.

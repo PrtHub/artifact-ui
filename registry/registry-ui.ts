@@ -353,4 +353,10 @@ export const ui: Registry = [
     type: "registry:ui",
     files: ["ui/particle-veil.tsx"],
   },
+  {
+    name: "sphere-animation",
+    type: "registry:ui",
+    files: ["ui/sphere-animation.tsx"],
+    dependencies: ["animejs"],
+  },
 ];

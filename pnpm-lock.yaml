@@ -92,9 +92,15 @@ importers:
       '@tabler/icons-react':
         specifier: ^3.23.0
         version: 3.23.0(react@18.3.1)
+      '@types/animejs':
+        specifier: ^3.1.13
+        version: 3.1.13
       '@types/lodash.template':
         specifier: ^4.5.3
         version: 4.5.3
+      animejs:
+        specifier: ^3.2.2
+        version: 3.2.2
       autoprefixer:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.39)
@@ -2240,6 +2246,9 @@ packages:
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
 
+  '@types/animejs@3.1.13':
+    resolution: {integrity: sha512-yWg9l1z7CAv/TKpty4/vupEh24jDGUZXv4r26StRkpUPQm04ztJaftgpto8vwdFs8SiTq6XfaPKCSI+wjzNMvQ==}
+
   '@types/aws-lambda@8.10.140':
     resolution: {integrity: sha512-4Dh3dk2TUcbdfHrX0Al90mNGJDvA9NBiTQPzbrjGi/dLxzKCGOYgT8YQ47jUKNFALkAJAadifq0pzyjIUlhVhg==}
 
@@ -2440,6 +2449,9 @@ packages:
 
   ajv@8.16.0:
     resolution: {integrity: sha512-F0twR8U1ZU67JIEtekUcLkXkoO5mMMmgGD8sK/xUFzJ805jxHQl92hImFAqqXMyMYjSPOyUPAwHYhB72g5sTXw==}
+
+  animejs@3.2.2:
+    resolution: {integrity: sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==}
 
   ansi-escapes@6.2.1:
     resolution: {integrity: sha512-4nJ3yixlEthEJ9Rk4vPcdBRkZvQZlYyu8j4/Mqz5sgIkddmEnH2Yj2ZrnP9S3tQOvSNRUIgVNF/1yPpRAGNRig==}
@@ -7883,6 +7895,8 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.5
 
+  '@types/animejs@3.1.13': {}
+
   '@types/aws-lambda@8.10.140': {}
 
   '@types/canvas-confetti@1.6.4': {}
@@ -8087,6 +8101,8 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+
+  animejs@3.2.2: {}
 
   ansi-escapes@6.2.1: {}
 

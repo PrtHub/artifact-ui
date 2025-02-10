@@ -355,4 +355,10 @@ export const examples: Registry = [
     registryDependencies: ["particle-veil"],
     files: ["example/particle-veil-demo.tsx"],
   },
+  {
+    name: "sphere-animation-demo",
+    type: "registry:example",
+    registryDependencies: ["sphere-animation"],
+    files: ["example/sphere-animation-demo.tsx"],
+  },
 ];

@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Sphere Animation",
+          href: "/docs/components/sphere-animation",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Mesh Matrix",
           href: "/docs/components/mesh-matrix",
           items: [],

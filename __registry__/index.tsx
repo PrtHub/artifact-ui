@@ -654,6 +654,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "sphere-animation": {
+      name: "sphere-animation",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/sphere-animation.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/sphere-animation.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "cosmic-scene-demo": {
       name: "cosmic-scene-demo",
       type: "registry:example",
@@ -1298,6 +1309,17 @@ export const Index: Record<string, any> = {
       registryDependencies: ["particle-veil"],
       files: ["registry/default/example/particle-veil-demo.tsx"],
       component: React.lazy(() => import("@/registry/default/example/particle-veil-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sphere-animation-demo": {
+      name: "sphere-animation-demo",
+      type: "registry:example",
+      registryDependencies: ["sphere-animation"],
+      files: ["registry/default/example/sphere-animation-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/sphere-animation-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
